@@ -14,7 +14,10 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AZURE_USERNAME": "debloudts_fox@hotmail.com",
+        "VaultUri": "https://hyliankeys.vault.azure.net/",
+        "AZURE_TENANT_ID": "298e3356-fe3e-4ad6-b63f-447b8ad30ef3"
       }
     },
     "HylianRIS_API": {
@@ -22,7 +25,10 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AZURE_USERNAME": "debloudts_fox@hotmail.com",
+        "VaultUri": "https://hyliankeys.vault.azure.net/",
+        "AZURE_TENANT_ID": "298e3356-fe3e-4ad6-b63f-447b8ad30ef3"
       },
       "dotnetRunMessages": "true",
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
