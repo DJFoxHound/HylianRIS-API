@@ -27,7 +27,7 @@ namespace Hylian.RIS.API.Domain
         public ClassType ClassType { get; set; }
         public RaceCompetition Competition { get; set; }
 
-        public Guid MixedClassID { get; set; }
+        public Guid? MixedClassID { get; set; }
         public virtual RaceClass MixedClass { get; set; }
         public virtual List<Breed> Breeds { get; set; }
         public virtual List<RaceLicense> Licenses { get; set; }

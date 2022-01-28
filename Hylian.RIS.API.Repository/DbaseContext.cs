@@ -1,12 +1,15 @@
 ﻿using Hylian.RIS.API.Domain;
+using Hylian.RIS.API.Domain.Enumerators;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Hylian.RIS.API.Repository
 {
     public class DbaseContext: DbContext, IDbaseContext
     {
-        public DbaseContext(DbContextOptions<DbaseContext> options) : base(options) 
+        public DbaseContext(DbContextOptions<DbaseContext> options) : base(options)
         {
         }
 
@@ -270,6 +273,12 @@ namespace Hylian.RIS.API.Repository
             modelBuilder.Entity<RaceCompetition>().ToTable("Competitions")
                 .HasIndex(i => i.Code)
                 .IsUnique();
+            modelBuilder.Entity<RaceCompetition>()
+                .Property(e => e.RunnerTypes)
+                .HasConversion(
+                    v => string.Join(',',v),
+                    v => v.Split(',',StringSplitOptions.TrimEntries).Select(x => (RunnerType)Enum.Parse(typeof(RunnerType),x)).ToList()
+                );
             #endregion
             #region Relations
             modelBuilder.Entity<RaceCompetition>()
@@ -456,6 +465,35 @@ namespace Hylian.RIS.API.Repository
             #region Relations
             #endregion
         }
+        #endregion
+        #region DbSets
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<AccountRole> AccountRoles { get; set; }
+        public DbSet<AgeRestriction> AgeRestrictions { get; set; }
+        public DbSet<Breed> Breeds { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactType> ContactTypes { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<CrewMember> CrewMembers { get; set; }
+        public DbSet<CrewType> CrewTypes { get; set; }
+        public DbSet<Distance> Distances { get; set; }
+        public DbSet<Dog> Dogs { get; set; }
+        public DbSet<Jersey> Jerseys { get; set; }
+        public DbSet<Language> Languages { get; set; }
+        public DbSet<Organisation> Organisations { get; set; }
+        public DbSet<Person> Persons { get; set; }
+        public DbSet<Race> Races { get; set; }
+        public DbSet<RaceClass> RaceClasses { get; set; }
+        public DbSet<RaceCompetition> Competitions { get; set; }
+        public DbSet<RaceEvent> Events { get; set; }
+        public DbSet<RaceLicense> Licenses { get; set; }
+        public DbSet<RaceTrack> RaceTracks { get; set; }
+        public DbSet<RaceType> RaceTypes { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Run> Runs { get; set; }
+        public DbSet<RunResultType> RunResultTypes { get; set; }
+        public DbSet<Sex> Sexes { get; set; }
+        public DbSet<TrackRecord> TrackRecords { get; set; }
         #endregion
     }
 }

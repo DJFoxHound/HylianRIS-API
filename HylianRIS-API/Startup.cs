@@ -31,7 +31,7 @@ namespace HylianRIS_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration[Environment.GetEnvironmentVariable("SqlConnectionKeyName")]));
+            services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration[Environment.GetEnvironmentVariable("SqlConnectionKeyName")], x => x.UseNetTopologySuite().MigrationsAssembly("HylianRIS-API")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hylian RIS API", Version = "v1" });
@@ -46,6 +46,12 @@ namespace HylianRIS_API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hylian RIS API v1"));
+            }
+
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<DbaseContext>();
+                context.Database.Migrate();
             }
 
             app.UseHttpsRedirection();
