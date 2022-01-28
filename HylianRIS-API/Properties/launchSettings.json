@@ -17,7 +17,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "AZURE_USERNAME": "debloudts_fox@hotmail.com",
         "VaultUri": "https://hyliankeys.vault.azure.net/",
-        "AZURE_TENANT_ID": "298e3356-fe3e-4ad6-b63f-447b8ad30ef3"
+        "AZURE_TENANT_ID": "298e3356-fe3e-4ad6-b63f-447b8ad30ef3",
+        "SqlConnectionKeyName": "HylianRIS-DEV-SqlConnection"
       }
     },
     "HylianRIS_API": {
@@ -28,7 +29,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "AZURE_USERNAME": "debloudts_fox@hotmail.com",
         "VaultUri": "https://hyliankeys.vault.azure.net/",
-        "AZURE_TENANT_ID": "298e3356-fe3e-4ad6-b63f-447b8ad30ef3"
+        "AZURE_TENANT_ID": "298e3356-fe3e-4ad6-b63f-447b8ad30ef3",
+        "SqlConnectionKeyName": "HylianRIS-DEV-SqlConnection"
       },
       "dotnetRunMessages": "true",
       "applicationUrl": "https://localhost:5001;http://localhost:5000"

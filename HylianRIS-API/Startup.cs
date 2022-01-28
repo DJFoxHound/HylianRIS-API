@@ -30,12 +30,8 @@ namespace HylianRIS_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var x = Configuration["HylianRIS-PROD-SqlConnection"];
             services.AddControllers();
-            if (CurrentEnvironment.IsDevelopment())
-                services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration["HylianRIS-DEV-SqlConnection"]));
-            else
-                services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration["HylianRIS-PROD-SqlConnection"]));
+            services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration[Environment.GetEnvironmentVariable("SqlConnectionKeyName")]));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hylian RIS API", Version = "v1" });
