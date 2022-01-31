@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Hylian.RIS.API.Domain.Enumerators;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Hylian.RIS.API.Domain
 {
@@ -19,6 +21,9 @@ namespace Hylian.RIS.API.Domain
         public Guid? BreedID { get; set; }
         public Guid? ClassID { get; set; }
         public Guid? SexID { get; set; }
+        [Required]
+        [DefaultValue(Announcement.LastToFirst)]
+        public Announcement Announcement { get; set; }
 
         public virtual RaceEvent Event { get; set; }
         public virtual RaceType RaceType { get; set; }

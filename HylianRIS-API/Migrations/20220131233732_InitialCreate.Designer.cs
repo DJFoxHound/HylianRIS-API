@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220131153448_InitialCreate")]
+    [Migration("20220131233732_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -533,7 +533,6 @@ namespace HylianRIS_API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Location")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -550,6 +549,10 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Announcement")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("BreedID")
                         .HasColumnType("uniqueidentifier");

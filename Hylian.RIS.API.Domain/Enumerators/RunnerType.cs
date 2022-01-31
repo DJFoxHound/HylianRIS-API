@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Hylian.RIS.API.Domain.Enumerators
+﻿namespace Hylian.RIS.API.Domain.Enumerators
 {
     public enum RunnerType
     {

@@ -14,13 +14,14 @@ namespace Hylian.RIS.API.Domain
         public string Email { get; set; }
         public string? Phone { get; set; }
         [Required]
-        public Address Address { get; set; }
+        public Guid AddressID { get; set; }
         public DateTime? Deleted { get; set; }
         public DateTime? Anonymised { get; set; }
 
         public List<Person>? Persons { get; set; }
         public virtual List<AccountRole>? Roles { get; set; }
         public virtual List<EventDelegate>? DelegatingEvents { get; set; }
+        public virtual Address? Address { get; set; }
 
     }
 }

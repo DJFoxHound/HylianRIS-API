@@ -406,7 +406,7 @@ namespace HylianRIS_API.Migrations
                     ID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CountryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     AccountID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Deleted = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -711,7 +711,8 @@ namespace HylianRIS_API.Migrations
                     DistanceID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     BreedID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     ClassID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    SexID = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    SexID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    Announcement = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

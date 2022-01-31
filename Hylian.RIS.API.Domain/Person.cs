@@ -10,7 +10,7 @@ namespace Hylian.RIS.API.Domain
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        public string Location { get; set; }
+        public string? Location { get; set; }
         [Required]
         public Guid CountryID { get; set; }        
         public Guid? AccountID { get; set; }
