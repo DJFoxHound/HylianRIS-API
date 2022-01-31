@@ -13,6 +13,7 @@ namespace Hylian.RIS.API.Domain
         public Guid RaceID { get; set; }
         public Guid? ResultTypeID { get; set; }
         public long? TimeTicks { get; set; }
+        public int? ResultOrder { get; set; }
 
         public virtual Dog? Dog { get; set; }
         public virtual Jersey Jersey { get; set; }

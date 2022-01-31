@@ -10,6 +10,6 @@ namespace Hylian.RIS.API.Domain
         [Required]
         [DefaultValue(false)]
         public bool IsOfficial { get; set; }
-        public virtual List<RaceCompetition> Competitions { get; set; }
+        public virtual List<RaceCompetition>? Competitions { get; set; }
     }
 }

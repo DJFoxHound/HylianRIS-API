@@ -18,11 +18,11 @@ namespace Hylian.RIS.API.Domain
         [Required]
         [DefaultValue(false)]
         public bool IsProfessional { get; set; }
-        public virtual List<Jersey> Jerseys { get; set; }
-        public virtual List<RaceTrack> Tracks { get; set; }
-        public virtual List<AgeRestriction> AgeRestrictions { get; set; }
-        public virtual List<RaceLicense> Licenses { get; set; }
-        public virtual List<RaceEvent> Events { get; set; }
-        public virtual List<RaceType> RaceTypes { get; set; }
+        public virtual List<Jersey>? Jerseys { get; set; }
+        public virtual List<RaceTrack>? Tracks { get; set; }
+        public virtual List<AgeRestriction>? AgeRestrictions { get; set; }
+        public virtual List<RaceLicense>? Licenses { get; set; }
+        public virtual List<RaceEvent>? Events { get; set; }
+        public virtual List<RaceType>? RaceTypes { get; set; }
     }
 }

@@ -19,9 +19,9 @@ namespace Hylian.RIS.API.Domain
         [DefaultValue(false)]
         public bool IsOfficial { get; set; }
 
-        public virtual List<CrewMember> Crew { get; set; }
-        public virtual List<Dog> Participants { get; set; }
-        public virtual List<Race> Races { get; set; }
+        public virtual List<CrewMember>? Crew { get; set; }
+        public virtual List<Dog>? Participants { get; set; }
+        public virtual List<Race>? Races { get; set; }
         public virtual Organisation Organisation { get; set; }
         public virtual RaceTrack Track { get; set; }
         public virtual RaceCompetition Competition { get; set; }

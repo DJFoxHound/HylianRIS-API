@@ -23,7 +23,5 @@ namespace Hylian.RIS.API.Domain
         }
 
         public virtual RaceCompetition Competition { get; set; }
-
-        //public virtual List<Run> Runs { get; set; }
     }
 }

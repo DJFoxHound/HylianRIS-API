@@ -10,7 +10,7 @@ namespace Hylian.RIS.API.Domain
         [Required]
         public Guid DogID { get; set; }
         [Required]
-        public Guid RaceClassId { get; set; }
+        public Guid RaceClassID { get; set; }
         [Required]
         public Guid CompetitionID { get; set; }
         [Required]

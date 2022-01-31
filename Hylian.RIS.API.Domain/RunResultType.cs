@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hylian.RIS.API.Domain
@@ -25,8 +24,5 @@ namespace Hylian.RIS.API.Domain
         }
         [Required]
         public int Order { get; set; }
-        [Required]
-        [DefaultValue(false)]
-        public bool HasCustomOrder { get; set; }
     }
 }

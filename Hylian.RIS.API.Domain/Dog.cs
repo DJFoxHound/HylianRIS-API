@@ -11,18 +11,18 @@ namespace Hylian.RIS.API.Domain
         [Required]
         public string Name { get; set; }
         [Required]
-        public Guid BreedId { get; set; }
+        public Guid BreedID { get; set; }
         [Required]
-        public Guid SexId { get; set; }
+        public Guid SexID { get; set; }
         public DateTime? BirthDate { get; set; }
         [MaxLength(450)]
-        public string Pedigree { get; set; }
+        public string? Pedigree { get; set; }
         [MaxLength(450)]
-        public string Chip { get; set; }
+        public string? Chip { get; set; }
         [Required]
-        public Guid OwnerId { get; set; }
+        public Guid OwnerID { get; set; }
         [Required]
-        public Guid CountryId { get; set; }
+        public Guid CountryID { get; set; }
         [Required]
         [DefaultValue(true)]
         public bool Active { get; set; }
@@ -34,8 +34,8 @@ namespace Hylian.RIS.API.Domain
         public virtual Breed Breed { get; set; }
         public virtual Sex Sex { get; set; }
         public virtual Person Owner { get; set; }
-        public virtual List<RaceLicense> Licenses { get; set; }
-        public virtual List<RaceEvent> Events { get; set; }
-        public virtual List<Run> Runs { get; set; }
+        public virtual List<RaceLicense>? Licenses { get; set; }
+        public virtual List<RaceEvent>? Events { get; set; }
+        public virtual List<Run>? Runs { get; set; }
     }
 }

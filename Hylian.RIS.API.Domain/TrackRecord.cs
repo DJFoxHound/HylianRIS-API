@@ -6,7 +6,7 @@ namespace Hylian.RIS.API.Domain
     public class TrackRecord
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid ID { get; set; }
         [Required]
         public Guid DistanceID { get; set; }
         [Required]
@@ -28,7 +28,7 @@ namespace Hylian.RIS.API.Domain
         public virtual Breed Breed { get; set; }
         public virtual Sex Sex { get; set; }
         public virtual RaceTrack Track { get; set; }
-        public virtual Run Run { get; set; }
+        public virtual Run? Run { get; set; }
 
     }
 }

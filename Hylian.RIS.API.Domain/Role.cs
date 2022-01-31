@@ -8,6 +8,6 @@ namespace Hylian.RIS.API.Domain
         public Guid ID { get; set; }
         [Required]
         public string Name { get; set; }
-        public virtual List<AccountRole> Accounts { get; set; }
+        public virtual List<AccountRole>? Accounts { get; set; }
     }
 }

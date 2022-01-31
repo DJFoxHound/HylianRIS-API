@@ -2,7 +2,7 @@
 {
     public class CrewMember
     {
-        public Guid EventId { get; set; }
+        public Guid EventID { get; set; }
         public Guid PersonID { get; set; }
         public Guid CrewTypeID { get; set; }
 

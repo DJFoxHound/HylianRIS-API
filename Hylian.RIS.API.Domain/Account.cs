@@ -12,12 +12,14 @@ namespace Hylian.RIS.API.Domain
         public string LastName { get; set; }
         [Required]
         public string Email { get; set; }
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
         [Required]
         public Address Address { get; set; }
+        public DateTime? Deleted { get; set; }
+        public DateTime? Anonymised { get; set; }
 
-        public List<Person> Persons { get; set; }
-        public virtual List<AccountRole> Roles { get; set; }
+        public List<Person>? Persons { get; set; }
+        public virtual List<AccountRole>? Roles { get; set; }
 
     }
 }

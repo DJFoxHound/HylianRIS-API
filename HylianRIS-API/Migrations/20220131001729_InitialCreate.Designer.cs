@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220128164131_InitialCreate")]
+    [Migration("20220131001729_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,6 +79,12 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("AddressID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime?>("Anonymised")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Deleted")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -92,7 +98,6 @@ namespace HylianRIS_API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -129,38 +134,30 @@ namespace HylianRIS_API.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Box")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Point>("Coordinates")
-                        .IsRequired()
                         .HasColumnType("geography");
 
-                    b.Property<Guid>("CountryID")
+                    b.Property<Guid?>("CountryID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PostCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("State")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Street")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StreetNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -172,7 +169,7 @@ namespace HylianRIS_API.Migrations
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.AgeRestriction", b =>
                 {
-                    b.Property<Guid>("BreedId")
+                    b.Property<Guid>("BreedID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("CompetitionID")
@@ -187,7 +184,7 @@ namespace HylianRIS_API.Migrations
                     b.Property<bool>("TillEndOfYear")
                         .HasColumnType("bit");
 
-                    b.HasKey("BreedId", "CompetitionID");
+                    b.HasKey("BreedID", "CompetitionID");
 
                     b.HasIndex("CompetitionID");
 
@@ -201,7 +198,6 @@ namespace HylianRIS_API.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ExternalSystemUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("_Names")
@@ -277,7 +273,8 @@ namespace HylianRIS_API.Migrations
 
                     b.Property<string>("_Names")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Names");
 
                     b.HasKey("ID");
 
@@ -289,7 +286,7 @@ namespace HylianRIS_API.Migrations
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.CrewMember", b =>
                 {
-                    b.Property<Guid>("EventId")
+                    b.Property<Guid>("EventID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("PersonID")
@@ -298,7 +295,7 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("CrewTypeID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("EventId", "PersonID", "CrewTypeID");
+                    b.HasKey("EventID", "PersonID", "CrewTypeID");
 
                     b.HasIndex("CrewTypeID");
 
@@ -315,7 +312,8 @@ namespace HylianRIS_API.Migrations
 
                     b.Property<string>("_Names")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Names");
 
                     b.HasKey("ID");
 
@@ -359,44 +357,42 @@ namespace HylianRIS_API.Migrations
                     b.Property<DateTime?>("BirthDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("BreedId")
+                    b.Property<Guid>("BreedID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Chip")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid>("CountryId")
+                    b.Property<Guid>("CountryID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("OwnerId")
+                    b.Property<Guid>("OwnerID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Pedigree")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("RunnerType")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("SexId")
+                    b.Property<Guid>("SexID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("BreedId");
+                    b.HasIndex("BreedID");
 
-                    b.HasIndex("CountryId");
+                    b.HasIndex("CountryID");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("OwnerID");
 
-                    b.HasIndex("SexId");
+                    b.HasIndex("SexID");
 
                     b.ToTable("Dogs", (string)null);
                 });
@@ -471,8 +467,10 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("CompetitionID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime?>("LicenseExpires")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Logo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -494,11 +492,17 @@ namespace HylianRIS_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("AccountId")
+                    b.Property<Guid?>("AccountID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CountryId")
+                    b.Property<DateTime?>("Anonymised")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CountryID")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("Deleted")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -514,9 +518,9 @@ namespace HylianRIS_API.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("AccountId");
+                    b.HasIndex("AccountID");
 
-                    b.HasIndex("CountryId");
+                    b.HasIndex("CountryID");
 
                     b.ToTable("Persons", (string)null);
                 });
@@ -527,16 +531,16 @@ namespace HylianRIS_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("BreedId")
+                    b.Property<Guid?>("BreedID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ClassId")
+                    b.Property<Guid?>("ClassID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("DistanceId")
+                    b.Property<Guid>("DistanceID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("EventId")
+                    b.Property<Guid>("EventID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Number")
@@ -546,25 +550,25 @@ namespace HylianRIS_API.Migrations
                     b.Property<int>("OrderNr")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("RaceTypeId")
+                    b.Property<Guid>("RaceTypeID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("SexId")
+                    b.Property<Guid?>("SexID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("BreedId");
+                    b.HasIndex("BreedID");
 
-                    b.HasIndex("ClassId");
+                    b.HasIndex("ClassID");
 
-                    b.HasIndex("DistanceId");
+                    b.HasIndex("DistanceID");
 
-                    b.HasIndex("EventId");
+                    b.HasIndex("EventID");
 
-                    b.HasIndex("RaceTypeId");
+                    b.HasIndex("RaceTypeID");
 
-                    b.HasIndex("SexId");
+                    b.HasIndex("SexID");
 
                     b.ToTable("Races", (string)null);
                 });
@@ -586,11 +590,8 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("CompetitionID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("MixedClassID")
+                    b.Property<Guid?>("MixedClassID")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("RequiredAge")
-                        .HasColumnType("int");
 
                     b.Property<string>("_Names")
                         .IsRequired()
@@ -598,9 +599,6 @@ namespace HylianRIS_API.Migrations
                         .HasColumnName("Names");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("Code")
-                        .IsUnique();
 
                     b.HasIndex("CompetitionID");
 
@@ -694,7 +692,7 @@ namespace HylianRIS_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RaceClassId")
+                    b.Property<Guid>("RaceClassID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
@@ -703,7 +701,7 @@ namespace HylianRIS_API.Migrations
 
                     b.HasIndex("DogID");
 
-                    b.HasIndex("RaceClassId");
+                    b.HasIndex("RaceClassID");
 
                     b.ToTable("RaceLicenses", (string)null);
                 });
@@ -717,8 +715,12 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("AddressID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Logo")
+                    b.Property<string>("Code")
                         .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Logo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -726,12 +728,14 @@ namespace HylianRIS_API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
                     b.HasIndex("AddressID");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
 
                     b.ToTable("Tracks", (string)null);
                 });
@@ -747,7 +751,8 @@ namespace HylianRIS_API.Migrations
 
                     b.Property<string>("_Names")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Names");
 
                     b.HasKey("ID");
 
@@ -784,6 +789,9 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("RaceID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int?>("ResultOrder")
+                        .HasColumnType("int");
+
                     b.Property<Guid?>("ResultTypeID")
                         .HasColumnType("uniqueidentifier");
 
@@ -814,15 +822,13 @@ namespace HylianRIS_API.Migrations
                         .HasMaxLength(3)
                         .HasColumnType("nvarchar(3)");
 
-                    b.Property<bool>("HasCustomOrder")
-                        .HasColumnType("bit");
-
                     b.Property<int>("Order")
                         .HasColumnType("int");
 
                     b.Property<string>("_Names")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Names");
 
                     b.HasKey("ID");
 
@@ -855,12 +861,15 @@ namespace HylianRIS_API.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("Code")
+                        .IsUnique();
+
                     b.ToTable("Sexes", (string)null);
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.TrackRecord", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -889,7 +898,7 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("TrackID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
                     b.HasIndex("BreedID");
 
@@ -899,7 +908,8 @@ namespace HylianRIS_API.Migrations
 
                     b.HasIndex("SexID");
 
-                    b.HasIndex("TrackID");
+                    b.HasIndex("TrackID", "DistanceID", "BreedID", "SexID")
+                        .IsUnique();
 
                     b.ToTable("TrackRecords", (string)null);
                 });
@@ -1022,7 +1032,7 @@ namespace HylianRIS_API.Migrations
                     b.HasOne("Hylian.RIS.API.Domain.Organisation", "Organisation")
                         .WithMany("Roles")
                         .HasForeignKey("OrganisationID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.Role", "Role")
@@ -1042,9 +1052,7 @@ namespace HylianRIS_API.Migrations
                 {
                     b.HasOne("Hylian.RIS.API.Domain.Country", "Country")
                         .WithMany()
-                        .HasForeignKey("CountryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CountryID");
 
                     b.Navigation("Country");
                 });
@@ -1053,7 +1061,7 @@ namespace HylianRIS_API.Migrations
                 {
                     b.HasOne("Hylian.RIS.API.Domain.Breed", "Breed")
                         .WithMany("AgeRestrictions")
-                        .HasForeignKey("BreedId")
+                        .HasForeignKey("BreedID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1097,7 +1105,7 @@ namespace HylianRIS_API.Migrations
 
                     b.HasOne("Hylian.RIS.API.Domain.RaceEvent", "Event")
                         .WithMany("Crew")
-                        .HasForeignKey("EventId")
+                        .HasForeignKey("EventID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1118,25 +1126,25 @@ namespace HylianRIS_API.Migrations
                 {
                     b.HasOne("Hylian.RIS.API.Domain.Breed", "Breed")
                         .WithMany()
-                        .HasForeignKey("BreedId")
+                        .HasForeignKey("BreedID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.Country", "Country")
                         .WithMany()
-                        .HasForeignKey("CountryId")
+                        .HasForeignKey("CountryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.Person", "Owner")
                         .WithMany("Dogs")
-                        .HasForeignKey("OwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("OwnerID")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.Sex", "Sex")
                         .WithMany()
-                        .HasForeignKey("SexId")
+                        .HasForeignKey("SexID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1183,13 +1191,11 @@ namespace HylianRIS_API.Migrations
                 {
                     b.HasOne("Hylian.RIS.API.Domain.Account", "Account")
                         .WithMany("Persons")
-                        .HasForeignKey("AccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AccountID");
 
                     b.HasOne("Hylian.RIS.API.Domain.Country", "Country")
                         .WithMany()
-                        .HasForeignKey("CountryId")
+                        .HasForeignKey("CountryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1202,39 +1208,33 @@ namespace HylianRIS_API.Migrations
                 {
                     b.HasOne("Hylian.RIS.API.Domain.Breed", "Breed")
                         .WithMany()
-                        .HasForeignKey("BreedId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BreedID");
 
                     b.HasOne("Hylian.RIS.API.Domain.RaceClass", "Class")
                         .WithMany()
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassID");
 
                     b.HasOne("Hylian.RIS.API.Domain.Distance", "Distance")
                         .WithMany()
-                        .HasForeignKey("DistanceId")
+                        .HasForeignKey("DistanceID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.RaceEvent", "Event")
                         .WithMany("Races")
-                        .HasForeignKey("EventId")
+                        .HasForeignKey("EventID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.RaceType", "RaceType")
                         .WithMany()
-                        .HasForeignKey("RaceTypeId")
+                        .HasForeignKey("RaceTypeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.Sex", "Sex")
                         .WithMany()
-                        .HasForeignKey("SexId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SexID");
 
                     b.Navigation("Breed");
 
@@ -1259,9 +1259,7 @@ namespace HylianRIS_API.Migrations
 
                     b.HasOne("Hylian.RIS.API.Domain.RaceClass", "MixedClass")
                         .WithMany()
-                        .HasForeignKey("MixedClassID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MixedClassID");
 
                     b.Navigation("Competition");
 
@@ -1279,7 +1277,7 @@ namespace HylianRIS_API.Migrations
                     b.HasOne("Hylian.RIS.API.Domain.Organisation", "Organisation")
                         .WithMany("Events")
                         .HasForeignKey("OrganisationID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.RaceTrack", "Track")
@@ -1300,7 +1298,7 @@ namespace HylianRIS_API.Migrations
                     b.HasOne("Hylian.RIS.API.Domain.RaceCompetition", "Competition")
                         .WithMany("Licenses")
                         .HasForeignKey("CompetitionID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.Dog", "Dog")
@@ -1311,7 +1309,7 @@ namespace HylianRIS_API.Migrations
 
                     b.HasOne("Hylian.RIS.API.Domain.RaceClass", "RaceClass")
                         .WithMany("Licenses")
-                        .HasForeignKey("RaceClassId")
+                        .HasForeignKey("RaceClassID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1348,7 +1346,7 @@ namespace HylianRIS_API.Migrations
                     b.HasOne("Hylian.RIS.API.Domain.Race", "Race")
                         .WithMany("Runs")
                         .HasForeignKey("RaceID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Hylian.RIS.API.Domain.RunResultType", "ResultType")
@@ -1451,7 +1449,7 @@ namespace HylianRIS_API.Migrations
                     b.HasOne("Hylian.RIS.API.Domain.RaceTrack", null)
                         .WithMany()
                         .HasForeignKey("TrackID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired()
                         .HasConstraintName("FK_TrackOrganisations_Tracks_TrackID");
                 });

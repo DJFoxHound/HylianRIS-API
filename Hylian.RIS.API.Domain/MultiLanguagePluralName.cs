@@ -7,6 +7,7 @@ namespace Hylian.RIS.API.Domain
     public abstract class MultiLanguagePluralName: MultiLanguageName
     {
         [Required]
+        [Column("PluralNames")]
         public string _PluralNames { get; set; }
 
         [NotMapped]
