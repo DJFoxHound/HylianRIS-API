@@ -20,6 +20,7 @@ namespace Hylian.RIS.API.Domain
 
         public List<Person>? Persons { get; set; }
         public virtual List<AccountRole>? Roles { get; set; }
+        public virtual List<EventDelegate>? DelegatingEvents { get; set; }
 
     }
 }

@@ -159,6 +159,18 @@ namespace HylianRIS_API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Surfaces",
+                columns: table => new
+                {
+                    ID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Names = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Surfaces", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AgeRestrictions",
                 columns: table => new
                 {
@@ -365,6 +377,7 @@ namespace HylianRIS_API.Migrations
                     ID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AddressID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SurfaceID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Logo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Photo = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -376,6 +389,12 @@ namespace HylianRIS_API.Migrations
                         name: "FK_Tracks_Addresses_AddressID",
                         column: x => x.AddressID,
                         principalTable: "Addresses",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Tracks_Surfaces_SurfaceID",
+                        column: x => x.SurfaceID,
+                        principalTable: "Surfaces",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -647,6 +666,37 @@ namespace HylianRIS_API.Migrations
                         principalTable: "Persons",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EventDelegates",
+                columns: table => new
+                {
+                    EventID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CountryID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    AccountID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EventDelegates", x => new { x.EventID, x.CountryID, x.AccountID });
+                    table.ForeignKey(
+                        name: "FK_EventDelegates_Accounts_AccountID",
+                        column: x => x.AccountID,
+                        principalTable: "Accounts",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EventDelegates_Countries_CountryID",
+                        column: x => x.CountryID,
+                        principalTable: "Countries",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EventDelegates_Events_EventID",
+                        column: x => x.EventID,
+                        principalTable: "Events",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -956,6 +1006,16 @@ namespace HylianRIS_API.Migrations
                 column: "SexID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_EventDelegates_AccountID",
+                table: "EventDelegates",
+                column: "AccountID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EventDelegates_CountryID",
+                table: "EventDelegates",
+                column: "CountryID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Events_CompetitionID",
                 table: "Events",
                 column: "CompetitionID");
@@ -1135,6 +1195,11 @@ namespace HylianRIS_API.Migrations
                 table: "Tracks",
                 column: "Code",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tracks_SurfaceID",
+                table: "Tracks",
+                column: "SurfaceID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -1159,6 +1224,9 @@ namespace HylianRIS_API.Migrations
 
             migrationBuilder.DropTable(
                 name: "CrewMembers");
+
+            migrationBuilder.DropTable(
+                name: "EventDelegates");
 
             migrationBuilder.DropTable(
                 name: "Languages");
@@ -1237,6 +1305,9 @@ namespace HylianRIS_API.Migrations
 
             migrationBuilder.DropTable(
                 name: "Addresses");
+
+            migrationBuilder.DropTable(
+                name: "Surfaces");
 
             migrationBuilder.DropTable(
                 name: "Countries");

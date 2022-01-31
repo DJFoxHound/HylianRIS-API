@@ -30,6 +30,7 @@ namespace Hylian.RIS.API.Repository
             CrewTypeModelCreating(modelBuilder);
             DistanceModelCreating(modelBuilder);
             DogModelCreating(modelBuilder);
+            EventDelegateModelCreating (modelBuilder);
             JerseyModelCreating(modelBuilder);
             LanguageModelCreating(modelBuilder);
             OrganisationModelCreating(modelBuilder);
@@ -44,7 +45,8 @@ namespace Hylian.RIS.API.Repository
             RunModelCreating(modelBuilder);
             RunResultModelCreating(modelBuilder);
             SexModelCreating(modelBuilder);
-            TrackRecordCreating(modelBuilder);
+            TrackRecordModelCreating(modelBuilder);
+            TrackSurfaceModelCreating(modelBuilder);
             #endregion
             modelBuilder.HasDbFunction(() => DbFunctions.JsonValue(default, default));
             modelBuilder.HasDbFunction(() => DbFunctions.JsonQuery(default, default));
@@ -201,6 +203,24 @@ namespace Hylian.RIS.API.Repository
                 .HasOne(p => p.Owner)
                 .WithMany(p => p.Dogs)
                 .OnDelete(DeleteBehavior.Restrict);
+            #endregion
+        }
+        private void EventDelegateModelCreating(ModelBuilder modelBuilder)
+        {
+            #region Mapping
+            modelBuilder.Entity<EventDelegate>().ToTable("EventDelegates")
+                .HasKey(k => new { k.EventID, k.CountryID, k.AccountID });
+            #endregion
+            #region Relations
+            modelBuilder.Entity<EventDelegate>()
+                .HasOne(p => p.Event)
+                .WithMany(p => p.Delegates)
+                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<EventDelegate>()
+                .HasOne(p => p.Delegate)
+                .WithMany(p => p.DelegatingEvents);
+            modelBuilder.Entity<EventDelegate>()
+                .HasOne(p => p.Country);
             #endregion
         }
         private void JerseyModelCreating(ModelBuilder modelBuilder)
@@ -435,6 +455,9 @@ namespace Hylian.RIS.API.Repository
             modelBuilder.Entity<RaceTrack>()
                 .HasMany(p => p.TrackRecords)
                 .WithOne(p => p.Track);
+            modelBuilder.Entity<RaceTrack>()
+                .HasOne(p => p.Surface)
+                .WithMany(p => p.Tracks);
             #endregion
         }
         private void RoleModelCreating(ModelBuilder modelBuilder)
@@ -485,12 +508,21 @@ namespace Hylian.RIS.API.Repository
             #region Relations
             #endregion
         }
-        private void TrackRecordCreating(ModelBuilder modelBuilder)
+        private void TrackRecordModelCreating(ModelBuilder modelBuilder)
         {
             #region Mapping
             modelBuilder.Entity<TrackRecord>().ToTable("TrackRecords")
                 .HasIndex(i => new { i.TrackID, i.DistanceID, i.BreedID, i.SexID })
                 .IsUnique();
+            #endregion
+            #region Relations
+            #endregion
+        }
+        private void TrackSurfaceModelCreating(ModelBuilder modelBuilder)
+        {
+            #region Mapping
+            modelBuilder.Entity<TrackSurface>().ToTable("Surfaces");
+            modelBuilder.Entity<TrackSurface>().Property(l => l._Names).HasColumnName("Names");
             #endregion
             #region Relations
             #endregion
@@ -528,19 +560,40 @@ namespace Hylian.RIS.API.Repository
         #region Seeding
         private void Seed(ModelBuilder modelBuilder)
         {
+            SeedRoles(modelBuilder);
             SeedBreeds(modelBuilder);
             SeedSexes(modelBuilder);
             SeedCountries(modelBuilder);
             SeedLanguages(modelBuilder);
             SeedDistances(modelBuilder);
+            SeedSurfaces(modelBuilder);
             SeedRaceTypes(modelBuilder);
             SeedRunResultTypes(modelBuilder);
             SeedCrewTypes(modelBuilder);
             SeedCompetitions(modelBuilder);
+            SeedCompetitionTypes(modelBuilder);
             SeedAgeRestrictions(modelBuilder);
             SeedJerseys(modelBuilder);
             SeedRaceClasses(modelBuilder);
+            SeedBreedClasses(modelBuilder);
+            SeedContactType(modelBuilder);
             SeedAddresses(modelBuilder);
+            SeedTracks(modelBuilder);
+            SeedCompetitionTracks(modelBuilder);
+            SeedTrackDistances(modelBuilder);
+            SeedOrganisations(modelBuilder);
+        }
+
+        private void SeedRoles(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Role>().HasData(new List<Role>(){
+                new Role() { ID = new Guid("A62AEC57-7001-4A6D-8A9B-92E9D7F601A5"), Name = "System Admin" },
+                new Role() { ID = new Guid("651750DC-C61B-4666-863A-5B9AF65E73F0"), Name = "Organisation Admin" },
+                new Role() { ID = new Guid("6FCECEF6-AE36-4430-9174-E7628DCE14E8"), Name = "Timekeeping" },
+                new Role() { ID = new Guid("EE5BC7ED-C0C4-48CD-8C9E-62612D65DD28"), Name = "Secretary" },
+                new Role() { ID = new Guid("7A22E24C-16F0-46DF-A0BE-158C1A9BC4D3"), Name = "Announcer" },
+                new Role() { ID = new Guid("038994BB-5FD1-4A79-8F1A-4D9EF19E5509"), Name = "User" },
+            });
         }
 
         private void SeedBreeds(ModelBuilder modelBuilder)
@@ -812,13 +865,26 @@ namespace Hylian.RIS.API.Repository
         private void SeedDistances(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Distance>().HasData(new List<Distance>(){
+                new Distance() { ID = new Guid("4CA3BC50-8EAB-4B6E-A62F-6EB549BC5A9E"), Length=50, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "50m" }, new LanguageText() { LanguageCode="nl",Text= "50m" }, new LanguageText() { LanguageCode="fr",Text= "50m" }, new LanguageText() { LanguageCode="de",Text= "50m" } }, IsOfficial = false },
+                new Distance() { ID = new Guid("BFE7B982-D7A0-4622-90C3-7BDDAE99A01D"), Length=100, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "100m" }, new LanguageText() { LanguageCode="nl",Text= "100m" }, new LanguageText() { LanguageCode="fr",Text= "100m" }, new LanguageText() { LanguageCode="de",Text= "100m" } }, IsOfficial = false },
+                new Distance() { ID = new Guid("8CF38BF9-6E49-45CA-A5BF-41367413B979"), Length=150, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "150m" }, new LanguageText() { LanguageCode="nl",Text= "150m" }, new LanguageText() { LanguageCode="fr",Text= "150m" }, new LanguageText() { LanguageCode="de",Text= "150m" } }, IsOfficial = false },
+                new Distance() { ID = new Guid("197A1B1B-077C-460B-B235-0D2136DF18D1"), Length=200, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="200m"}, new LanguageText() { LanguageCode="nl",Text= "200m" }, new LanguageText() { LanguageCode="fr",Text= "200m" }, new LanguageText() { LanguageCode="de",Text= "200m" } }, IsOfficial = false },
                 new Distance() { ID = new Guid("440F210C-E1F0-4AA1-9AC8-71E5CDC6B214"), Length=275, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="275m"}, new LanguageText() { LanguageCode="nl",Text="275m"}, new LanguageText() { LanguageCode="fr",Text="275m"}, new LanguageText() { LanguageCode="de",Text="275m"}}, IsOfficial = true },
+                new Distance() { ID = new Guid("715AEC31-A5B2-45DD-B295-A140D1FC0624"), Length=280, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "280m" }, new LanguageText() { LanguageCode="nl",Text= "280m" }, new LanguageText() { LanguageCode="fr",Text= "280m" }, new LanguageText() { LanguageCode="de",Text="280m"}}, IsOfficial = true },
+                new Distance() { ID = new Guid("54085CF5-EFCE-4523-B635-4E615241A8DD"), Length=285, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "285m" }, new LanguageText() { LanguageCode="nl",Text= "285m" }, new LanguageText() { LanguageCode="fr",Text= "285m" }, new LanguageText() { LanguageCode="de",Text="285m"}}, IsOfficial = true },
+                new Distance() { ID = new Guid("EB330F8F-2B93-4C1B-BAAE-CFC3F507EF59"), Length=344, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="344m"}, new LanguageText() { LanguageCode="nl",Text="344m"}, new LanguageText() { LanguageCode="fr",Text="344m"}, new LanguageText() { LanguageCode="de",Text="344m"}}, IsOfficial = true },
                 new Distance() { ID = new Guid("D9AE6E63-1EB3-4C53-AB2C-94471E183120"), Length=345, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="345m"}, new LanguageText() { LanguageCode="nl",Text="345m"}, new LanguageText() { LanguageCode="fr",Text="345m"}, new LanguageText() { LanguageCode="de",Text="345m"}}, IsOfficial = true },
+                new Distance() { ID = new Guid("82C595C6-B980-443B-836D-85A8FA5C564C"), Length=350, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="350m"}, new LanguageText() { LanguageCode="nl",Text="350m"}, new LanguageText() { LanguageCode="fr",Text="350m"}, new LanguageText() { LanguageCode="de",Text="350m"}}, IsOfficial = true },
+                new Distance() { ID = new Guid("C08A2AEA-E211-4EF0-8462-12587D304EB7"), Length=355, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="355m"}, new LanguageText() { LanguageCode="nl",Text="355m"}, new LanguageText() { LanguageCode="fr",Text="355m"}, new LanguageText() { LanguageCode="de",Text="355m"}}, IsOfficial = true },
                 new Distance() { ID = new Guid("AA13072D-7B03-4F77-BAEE-7DB5B76AA524"), Length=480, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="480m"}, new LanguageText() { LanguageCode="nl",Text="480m"}, new LanguageText() { LanguageCode="fr",Text="480m"}, new LanguageText() { LanguageCode="de",Text="480m"}}, IsOfficial = true },
-                new Distance() { ID = new Guid("197A1B1B-077C-460B-B235-0D2136DF18D1"), Length=200, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="Piece from Clock"}, new LanguageText() { LanguageCode="nl",Text="Stukje vanaf de Klok"}, new LanguageText() { LanguageCode="fr",Text="Pièce partir de l'horloge"}, new LanguageText() { LanguageCode="de",Text="Stück vom Takt"}}, IsOfficial = false },
-                new Distance() { ID = new Guid("8CF38BF9-6E49-45CA-A5BF-41367413B979"), Length=150, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="Piece from Red Post"}, new LanguageText() { LanguageCode="nl",Text="Stukje vanaf de Rode Paal"}, new LanguageText() { LanguageCode="fr",Text="Pièce au pôle rouge"}, new LanguageText() { LanguageCode="de",Text="Stück vom roten Pol"}}, IsOfficial = false },
-                new Distance() { ID = new Guid("BFE7B982-D7A0-4622-90C3-7BDDAE99A01D"), Length=100, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="Straight"}, new LanguageText() { LanguageCode="nl",Text="Recht stukje"}, new LanguageText() { LanguageCode="fr",Text="Pièce à droite"}, new LanguageText() { LanguageCode="de",Text="Richtiges Stück"}}, IsOfficial = false },
-                new Distance() { ID = new Guid("4CA3BC50-8EAB-4B6E-A62F-6EB549BC5A9E"), Length=50, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text="Piece from Jury House"}, new LanguageText() { LanguageCode="nl",Text="Stukje vanaf Juryhuis"}, new LanguageText() { LanguageCode="fr",Text="Pièce de la Maison du Jury"}, new LanguageText() { LanguageCode="de",Text="Stück vom Jury Hause"}}, IsOfficial = false },
+                new Distance() { ID = new Guid("EC1FBD10-0019-4609-B843-1E659E992CC9"), Length=490, Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "490m" }, new LanguageText() { LanguageCode="nl",Text= "490m" }, new LanguageText() { LanguageCode="fr",Text= "490m" }, new LanguageText() { LanguageCode="de",Text="490m"}}, IsOfficial = true },
+            });
+        }
+        private void SeedSurfaces(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TrackSurface>().HasData(new List<TrackSurface>(){
+                new TrackSurface() { ID = new Guid("73504BC3-FF6E-4182-811F-93A647A323C9"), Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "Dirt" }, new LanguageText() { LanguageCode="nl",Text= "Zand" }, new LanguageText() { LanguageCode="fr",Text= "Sable" }, new LanguageText() { LanguageCode="de",Text= "Sand" } } },
+                new TrackSurface() { ID = new Guid("751B8D3C-A773-443D-9E16-2F1B5CD87113"), Names = new List<LanguageText>() { new LanguageText() { LanguageCode="en",Text= "Grass" }, new LanguageText() { LanguageCode="nl",Text= "Gras" }, new LanguageText() { LanguageCode="fr",Text= "Herbe" }, new LanguageText() { LanguageCode="de",Text="Gras"} } },
             });
         }
         private void SeedRaceTypes(ModelBuilder modelBuilder)
@@ -865,6 +931,26 @@ namespace Hylian.RIS.API.Repository
             modelBuilder.Entity<RaceCompetition>().HasData(new List<RaceCompetition>(){
                 new RaceCompetition() { ID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6"), Name = "FCI", Code = "FCI", RunnerTypes = new List<RunnerType>(){ RunnerType.Normal, RunnerType.Wide }, IsProfessional = false }
             });
+        }
+        private void SeedCompetitionTypes(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RaceCompetition>()
+               .HasMany(p => p.RaceTypes)
+               .WithMany(c => c.Competitions)
+               .UsingEntity(j => j.HasData(
+                    new { TypeID = new Guid("14E7F603-92D6-437B-B93D-56300C5A4D92"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("E72D9DFB-0E30-4E37-96F8-3DC002EA963D"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("63114685-C48A-4F44-A910-8C6979B5B687"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("D64D05A6-EABC-4820-9011-047FDDED0A84"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("8CA11BBB-CE66-4B79-95D9-EE0AC650561E"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("EE86BFCA-4C3F-437E-84C2-60D236573059"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("5A6454FE-9BBE-4AA8-BE8D-1937D61A29FC"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("F5F7A330-213D-4843-80DA-61BE75D400E8"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("6B10B543-DB0D-423D-B597-0C5C2B5B2FD4"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("88DDFAF8-A5A4-4212-935E-BED616972426"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("3B6DD69C-8903-4DF4-BC04-34ED8802BFB5"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new { TypeID = new Guid("D7625773-FE4B-46A0-A2C6-5F3B3CAF64E9"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") }
+                ));
         }
         private void SeedAgeRestrictions(ModelBuilder modelBuilder)
         {
@@ -921,6 +1007,193 @@ namespace Hylian.RIS.API.Repository
                 new RaceClass() { ID = new Guid("3A22B699-3489-4749-B766-B2C63275068E"), MixedClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6"), Code = "G", Names = new List<LanguageText>() { new LanguageText() { LanguageCode = "en", Text = "Veteran CSS" }, new LanguageText() { LanguageCode = "nl", Text = "Veteranen CSS" }, new LanguageText() { LanguageCode = "fr", Text = "Vétéran CSS" }, new LanguageText() { LanguageCode = "de", Text = "Veteran CSS" } }, ClassType = ClassType.CSS },
             });
         }
+        private void SeedBreedClasses(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Breed>()
+            .HasMany(p => p.Classes)
+            .WithMany(c => c.Breeds)
+            .UsingEntity( j => j.HasData(
+            #region Open
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("4E469CFA-B1F1-452A-B983-70A803AAD06C"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("677F5EFC-E697-4E8D-9FFE-DDF61394D595"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("33BBE8C5-D286-4E45-91A0-0EC52CDEA9C8"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("6786B78B-611E-430A-A589-65DF5C302E11"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("D670C778-A372-455B-9570-05A1FC330023"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("0B50FF12-D15F-4995-9F0F-4B21E96F862B"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("42AC8B3A-BBFB-4243-B104-D608EFDCF7B4"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("59BEC42E-A9B1-44B4-BF6C-57566D8CF8BB"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("A52BCB82-9D9D-41A7-AD2D-F1B037E937A3"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("B64AFE74-5FC1-4D42-BB9C-F2FDD65E90A7"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("1EC110CC-7F70-4060-93EF-58727FCBAEB9"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("72A99B45-1069-4576-AE00-242B563C6BAD"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("3A366646-A678-4706-A7EB-9EB1CC1B4961"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("453ABB88-6912-42C2-9F77-90582D1D467F"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("5E04BDAF-A785-456B-A18E-CC4922A1E776"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+                new { BreedID = new Guid("02B86E36-0CCD-435B-B665-6C7B2B246244"), ClassID = new Guid("C37F460F-E121-433F-8B4E-A04C9B8498E6") },
+            #endregion
+            #region Open FCI-CACIL
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("4E469CFA-B1F1-452A-B983-70A803AAD06C"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("677F5EFC-E697-4E8D-9FFE-DDF61394D595"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("33BBE8C5-D286-4E45-91A0-0EC52CDEA9C8"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("6786B78B-611E-430A-A589-65DF5C302E11"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("D670C778-A372-455B-9570-05A1FC330023"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("0B50FF12-D15F-4995-9F0F-4B21E96F862B"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("42AC8B3A-BBFB-4243-B104-D608EFDCF7B4"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("59BEC42E-A9B1-44B4-BF6C-57566D8CF8BB"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("A52BCB82-9D9D-41A7-AD2D-F1B037E937A3"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("B64AFE74-5FC1-4D42-BB9C-F2FDD65E90A7"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("1EC110CC-7F70-4060-93EF-58727FCBAEB9"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("72A99B45-1069-4576-AE00-242B563C6BAD"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("3A366646-A678-4706-A7EB-9EB1CC1B4961"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("453ABB88-6912-42C2-9F77-90582D1D467F"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("5E04BDAF-A785-456B-A18E-CC4922A1E776"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+                new { BreedID = new Guid("02B86E36-0CCD-435B-B665-6C7B2B246244"), ClassID = new Guid("4FE73B6E-3041-41DD-800D-785221165C71") },
+            #endregion
+            #region Open CSS
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("4E469CFA-B1F1-452A-B983-70A803AAD06C"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("677F5EFC-E697-4E8D-9FFE-DDF61394D595"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("33BBE8C5-D286-4E45-91A0-0EC52CDEA9C8"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("6786B78B-611E-430A-A589-65DF5C302E11"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("D670C778-A372-455B-9570-05A1FC330023"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("0B50FF12-D15F-4995-9F0F-4B21E96F862B"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("42AC8B3A-BBFB-4243-B104-D608EFDCF7B4"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("59BEC42E-A9B1-44B4-BF6C-57566D8CF8BB"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("A52BCB82-9D9D-41A7-AD2D-F1B037E937A3"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("B64AFE74-5FC1-4D42-BB9C-F2FDD65E90A7"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("1EC110CC-7F70-4060-93EF-58727FCBAEB9"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("72A99B45-1069-4576-AE00-242B563C6BAD"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("3A366646-A678-4706-A7EB-9EB1CC1B4961"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("453ABB88-6912-42C2-9F77-90582D1D467F"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("5E04BDAF-A785-456B-A18E-CC4922A1E776"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+                new { BreedID = new Guid("02B86E36-0CCD-435B-B665-6C7B2B246244"), ClassID = new Guid("9C7865EB-56DE-4DD8-8491-2161649D3AAF") },
+            #endregion
+            #region A-Class
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("CA9590FF-1714-4D98-8EE1-FC7BCBC1B836") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("CA9590FF-1714-4D98-8EE1-FC7BCBC1B836") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("CA9590FF-1714-4D98-8EE1-FC7BCBC1B836") },
+            #endregion
+            #region A-Class FCI-CACIL
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("827C18C9-8D10-4CCA-915F-61699560A5EA") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("827C18C9-8D10-4CCA-915F-61699560A5EA") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("827C18C9-8D10-4CCA-915F-61699560A5EA") },
+            #endregion
+            #region A-Class CSS
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("C730BA8C-4D8C-46FD-BDF9-207963321BD6") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("C730BA8C-4D8C-46FD-BDF9-207963321BD6") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("C730BA8C-4D8C-46FD-BDF9-207963321BD6") },
+            #endregion
+            #region B-Class
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("CE6D34B8-D832-4308-A163-CD97E82FCE43") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("CE6D34B8-D832-4308-A163-CD97E82FCE43") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("CE6D34B8-D832-4308-A163-CD97E82FCE43") },
+            #endregion
+            #region B-Class FCI-CACIL
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("3A1B3C22-C1C6-44D7-9608-39FBE92480E7") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("3A1B3C22-C1C6-44D7-9608-39FBE92480E7") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("3A1B3C22-C1C6-44D7-9608-39FBE92480E7") },
+            #endregion
+            #region B-Class CSS
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("D32848B7-4CEA-4201-958D-6578A0019950") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("D32848B7-4CEA-4201-958D-6578A0019950") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("D32848B7-4CEA-4201-958D-6578A0019950") },
+            #endregion
+            #region C-Class
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("3E9108A4-D235-44EF-B0FB-92E8D5E16878") },
+            #endregion
+            #region C-Class FCI-CACIL
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("F9AFDB87-B524-4356-9743-EBB38144AAF6") },
+            #endregion
+            #region C-Class CSS
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("20DFF530-754D-46ED-9CDC-69080A683B22") },
+            #endregion
+            #region Veteran
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("4E469CFA-B1F1-452A-B983-70A803AAD06C"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("677F5EFC-E697-4E8D-9FFE-DDF61394D595"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("33BBE8C5-D286-4E45-91A0-0EC52CDEA9C8"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("6786B78B-611E-430A-A589-65DF5C302E11"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("D670C778-A372-455B-9570-05A1FC330023"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("0B50FF12-D15F-4995-9F0F-4B21E96F862B"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("42AC8B3A-BBFB-4243-B104-D608EFDCF7B4"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("59BEC42E-A9B1-44B4-BF6C-57566D8CF8BB"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("A52BCB82-9D9D-41A7-AD2D-F1B037E937A3"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("B64AFE74-5FC1-4D42-BB9C-F2FDD65E90A7"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("1EC110CC-7F70-4060-93EF-58727FCBAEB9"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("72A99B45-1069-4576-AE00-242B563C6BAD"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("3A366646-A678-4706-A7EB-9EB1CC1B4961"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("453ABB88-6912-42C2-9F77-90582D1D467F"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("5E04BDAF-A785-456B-A18E-CC4922A1E776"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+                new { BreedID = new Guid("02B86E36-0CCD-435B-B665-6C7B2B246244"), ClassID = new Guid("3B204FBF-A1A7-43D2-8B41-A2AA310B29BE") },
+            #endregion
+            #region Veteran FCI-CACIL
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("4E469CFA-B1F1-452A-B983-70A803AAD06C"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("677F5EFC-E697-4E8D-9FFE-DDF61394D595"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("33BBE8C5-D286-4E45-91A0-0EC52CDEA9C8"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("6786B78B-611E-430A-A589-65DF5C302E11"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("D670C778-A372-455B-9570-05A1FC330023"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("0B50FF12-D15F-4995-9F0F-4B21E96F862B"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("42AC8B3A-BBFB-4243-B104-D608EFDCF7B4"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("59BEC42E-A9B1-44B4-BF6C-57566D8CF8BB"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("A52BCB82-9D9D-41A7-AD2D-F1B037E937A3"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("B64AFE74-5FC1-4D42-BB9C-F2FDD65E90A7"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("1EC110CC-7F70-4060-93EF-58727FCBAEB9"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("72A99B45-1069-4576-AE00-242B563C6BAD"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("3A366646-A678-4706-A7EB-9EB1CC1B4961"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("453ABB88-6912-42C2-9F77-90582D1D467F"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("5E04BDAF-A785-456B-A18E-CC4922A1E776"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+                new { BreedID = new Guid("02B86E36-0CCD-435B-B665-6C7B2B246244"), ClassID = new Guid("809D7D3A-4BA2-4B89-ACF6-50735199FDA2") },
+            #endregion
+            #region Veteran CSS
+                new { BreedID = new Guid("7F991E29-2E61-48E7-B97A-50F90A573CAC"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("4E469CFA-B1F1-452A-B983-70A803AAD06C"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("677F5EFC-E697-4E8D-9FFE-DDF61394D595"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("33BBE8C5-D286-4E45-91A0-0EC52CDEA9C8"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("6786B78B-611E-430A-A589-65DF5C302E11"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("D670C778-A372-455B-9570-05A1FC330023"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("0B50FF12-D15F-4995-9F0F-4B21E96F862B"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("42AC8B3A-BBFB-4243-B104-D608EFDCF7B4"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("59BEC42E-A9B1-44B4-BF6C-57566D8CF8BB"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("A52BCB82-9D9D-41A7-AD2D-F1B037E937A3"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("B64AFE74-5FC1-4D42-BB9C-F2FDD65E90A7"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("1EC110CC-7F70-4060-93EF-58727FCBAEB9"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("72A99B45-1069-4576-AE00-242B563C6BAD"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("3A366646-A678-4706-A7EB-9EB1CC1B4961"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("453ABB88-6912-42C2-9F77-90582D1D467F"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("5E04BDAF-A785-456B-A18E-CC4922A1E776"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("C1D0390A-A688-498E-A1F1-782ED18B2787"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("2BB65B3A-0D1C-4D8E-AA2D-1648358DF96C"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") },
+                new { BreedID = new Guid("02B86E36-0CCD-435B-B665-6C7B2B246244"), ClassID = new Guid("3A22B699-3489-4749-B766-B2C63275068E") }
+            #endregion
+            ));
+        }
+        private void SeedContactType(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ContactType>().HasData(new List<ContactType>(){
+                new ContactType() { ID = new Guid("97A80250-BA3A-401F-B1F0-FD50437FF6F2"), Name = "Website", Icon = "website" },
+                new ContactType() { ID = new Guid("39375430-B7A2-434C-98CA-42D88B1FE704"), Name = "Email", Icon = "email" },
+                new ContactType() { ID = new Guid("257D2353-B1CE-45CC-9003-BE4718CEF13F"), Name = "Phone", Icon = "phone" },
+                new ContactType() { ID = new Guid("4D551EFE-4F78-4616-BC4A-3792040EB539"), Name = "Mobile", Icon = "mobile" },
+                new ContactType() { ID = new Guid("828954AE-D655-4E25-A586-44156002C292"), Name = "Facebook", Icon = "facebook" },
+                new ContactType() { ID = new Guid("6D2ECCE5-39CC-4C1A-B20B-481AA774D86F"), Name = "WhatsApp", Icon = "whatsapp" },
+                new ContactType() { ID = new Guid("B579610E-16EA-4010-AB62-ADFBD12EA75F"), Name = "Instagram", Icon = "instagram" },
+                new ContactType() { ID = new Guid("110F14F6-CF16-4F0A-B3E0-6BC7641CBE5C"), Name = "Twitter", Icon = "twitter" },
+                new ContactType() { ID = new Guid("0A44F059-3E0E-4409-874C-0B07D4526221"), Name = "Twitch", Icon = "twitch" }
+            });
+        }
         private void SeedAddresses(ModelBuilder modelBuilder)
         {
             int srid = 4326;
@@ -930,6 +1203,77 @@ namespace Hylian.RIS.API.Repository
                 new Address() { ID = new Guid("0A7100B9-A371-475E-843D-5681D4123320"), Street = "Alberdingweg", StreetNumber = "171", PostCode = "48161", City = "Münster", CountryID = new Guid("21D61853-43C2-422F-993B-EF96FA75AFEA"), Coordinates = new Point(7.512220369318495, 52.00803087574718) { SRID = srid } },
                 new Address() { ID = new Guid("FE8AC32B-10FD-43AF-AC29-C8749AF9ECB0"), Street = "Wiedehopfstraße", StreetNumber = "197", PostCode = "45892", City = "Gelsenkirchen-Resse", CountryID = new Guid("21D61853-43C2-422F-993B-EF96FA75AFEA"), Coordinates = new Point(7.141436499999999, 51.553632324864154) { SRID = srid } },
                 new Address() { ID = new Guid("75CC3997-7D8B-4AC3-B46C-F1CA12D6A060"), Street = "Bosrand", StreetNumber = "130", PostCode = "5665 ET", City = "Geldrop", CountryID = new Guid("ADE8E58E-F037-48AA-8FAE-5BEDCB6AD0D8"), Coordinates = new Point(5.577288230681506, 51.41417833236854) { SRID = srid } },
+                new Address() { ID = new Guid("B9EED83A-E902-46FA-A6CC-D1B2EB10CC7A"), Street = "Bisschoppenhoflaan", StreetNumber = "428", Box = "37", PostCode = "2100", City = "Antwerpen", CountryID = new Guid("0AFEC050-198A-4248-B736-E5BD611550A9"), Coordinates = new Point(4.468728069460676, 51.23424654091822) { SRID = srid } },
+            });
+        }
+        private void SeedTracks(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RaceTrack>().HasData(new List<RaceTrack>(){
+                new RaceTrack() { ID =new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), Name = "Windhondenrenbaan Ter Beek", Code="KVWB", AddressID = new Guid("A55714D4-A40A-4F2A-9D68-282BBADECB46"), SurfaceID = new Guid("751B8D3C-A773-443D-9E16-2F1B5CD87113")  },
+                new RaceTrack() { ID =new Guid("1B1DB07D-5A98-4298-9E2A-4F91AA476674"), Name = "Cynodrome du C.N.B.C.L. Awans", Code="CNBCL", AddressID = new Guid("CEEA56E8-6193-4541-B760-89AF6F762A4A"), SurfaceID = new Guid("751B8D3C-A773-443D-9E16-2F1B5CD87113") },
+                new RaceTrack() { ID =new Guid("82E73038-463A-4701-A041-17734C194EA1"), Name = "Windhundrennbahn Waltruper Forst", Code="WRVM", AddressID = new Guid("0A7100B9-A371-475E-843D-5681D4123320"), SurfaceID = new Guid("73504BC3-FF6E-4182-811F-93A647A323C9") },
+                new RaceTrack() { ID =new Guid("21483DC9-22B7-46E1-88C2-870EF978B3CA"), Name = "Windhundstadion Emscherbruch", Code="WRVWR", AddressID = new Guid("FE8AC32B-10FD-43AF-AC29-C8749AF9ECB0"), SurfaceID = new Guid("73504BC3-FF6E-4182-811F-93A647A323C9") },
+                new RaceTrack() { ID =new Guid("4F061980-A8B0-4DC5-8B04-B65E66174F31"), Name = "Windhondenrenbaan De Coevering", Code="GWRV", AddressID = new Guid("75CC3997-7D8B-4AC3-B46C-F1CA12D6A060"), SurfaceID = new Guid("73504BC3-FF6E-4182-811F-93A647A323C9") },
+            });
+        }
+        private void SeedCompetitionTracks(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RaceTrack>()
+               .HasMany(p => p.Competitions)
+               .WithMany(c => c.Tracks)
+               .UsingEntity(j => j.HasData(
+                    new  { TrackID =new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new  { TrackID =new Guid("1B1DB07D-5A98-4298-9E2A-4F91AA476674"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new  { TrackID =new Guid("82E73038-463A-4701-A041-17734C194EA1"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new  { TrackID =new Guid("21483DC9-22B7-46E1-88C2-870EF978B3CA"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                    new  { TrackID =new Guid("4F061980-A8B0-4DC5-8B04-B65E66174F31"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") }
+            ));
+        }
+        private void SeedTrackDistances(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RaceTrack>()
+               .HasMany(p => p.Distances)
+               .WithMany(c => c.Tracks)
+               .UsingEntity(j => j.HasData(
+               #region Beringen
+                new { TrackID = new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), DistanceID = new Guid("4CA3BC50-8EAB-4B6E-A62F-6EB549BC5A9E") },
+                new { TrackID = new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), DistanceID = new Guid("BFE7B982-D7A0-4622-90C3-7BDDAE99A01D") },
+                new { TrackID = new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), DistanceID = new Guid("8CF38BF9-6E49-45CA-A5BF-41367413B979") },
+                new { TrackID = new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), DistanceID = new Guid("197A1B1B-077C-460B-B235-0D2136DF18D1") },
+                new { TrackID = new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), DistanceID = new Guid("440F210C-E1F0-4AA1-9AC8-71E5CDC6B214") },
+                new { TrackID = new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), DistanceID = new Guid("D9AE6E63-1EB3-4C53-AB2C-94471E183120") },
+                new { TrackID = new Guid("D4665821-75F0-4266-ADFD-373266D146E9"), DistanceID = new Guid("AA13072D-7B03-4F77-BAEE-7DB5B76AA524") },
+               #endregion
+               #region Awans
+                new { TrackID = new Guid("1B1DB07D-5A98-4298-9E2A-4F91AA476674"), DistanceID = new Guid("54085CF5-EFCE-4523-B635-4E615241A8DD") },
+                new { TrackID = new Guid("1B1DB07D-5A98-4298-9E2A-4F91AA476674"), DistanceID = new Guid("EB330F8F-2B93-4C1B-BAAE-CFC3F507EF59") },
+                new { TrackID = new Guid("1B1DB07D-5A98-4298-9E2A-4F91AA476674"), DistanceID = new Guid("AA13072D-7B03-4F77-BAEE-7DB5B76AA524") },
+               #endregion
+               #region Munster
+                new { TrackID = new Guid("82E73038-463A-4701-A041-17734C194EA1"), DistanceID = new Guid("440F210C-E1F0-4AA1-9AC8-71E5CDC6B214") },
+                new { TrackID = new Guid("82E73038-463A-4701-A041-17734C194EA1"), DistanceID = new Guid("82C595C6-B980-443B-836D-85A8FA5C564C") },
+                new { TrackID = new Guid("82E73038-463A-4701-A041-17734C194EA1"), DistanceID = new Guid("AA13072D-7B03-4F77-BAEE-7DB5B76AA524") },
+               #endregion
+               #region Gelsenkirchen
+                new { TrackID = new Guid("21483DC9-22B7-46E1-88C2-870EF978B3CA"), DistanceID = new Guid("715AEC31-A5B2-45DD-B295-A140D1FC0624") },
+                new { TrackID = new Guid("21483DC9-22B7-46E1-88C2-870EF978B3CA"), DistanceID = new Guid("C08A2AEA-E211-4EF0-8462-12587D304EB7") },
+                new { TrackID = new Guid("21483DC9-22B7-46E1-88C2-870EF978B3CA"), DistanceID = new Guid("AA13072D-7B03-4F77-BAEE-7DB5B76AA524") },
+               #endregion
+               #region Geldrop
+                new { TrackID = new Guid("4F061980-A8B0-4DC5-8B04-B65E66174F31"), DistanceID = new Guid("715AEC31-A5B2-45DD-B295-A140D1FC0624") },
+                new { TrackID = new Guid("4F061980-A8B0-4DC5-8B04-B65E66174F31"), DistanceID = new Guid("82C595C6-B980-443B-836D-85A8FA5C564C") },
+                new { TrackID = new Guid("4F061980-A8B0-4DC5-8B04-B65E66174F31"), DistanceID = new Guid("EC1FBD10-0019-4609-B843-1E659E992CC9") }
+                #endregion
+            ));
+        }
+        private void SeedOrganisations(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Organisation>().HasData(new List<Organisation>(){
+                new Organisation() { ID = new Guid("E6EF488F-C7D2-48A6-92EA-C7CD0353CB3F"), Name = "Kempische Vereniging voor Windhondenrennen Beringen",  AddressID = new Guid("A55714D4-A40A-4F2A-9D68-282BBADECB46"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6") },
+                new Organisation() { ID = new Guid("8C806BB5-D53F-4827-A82B-1CFA114EED32"), Name = "Club National Belge de Courses de Lévriers Awans", AddressID = new Guid("CEEA56E8-6193-4541-B760-89AF6F762A4A"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6"), LicenseExpires = new DateTime(2022,1,1) },
+                new Organisation() { ID = new Guid("B908D4FE-922D-47A7-A168-0B8427EF04F5"), Name = "Windhundrennverein Münster e.V. 1980", AddressID = new Guid("0A7100B9-A371-475E-843D-5681D4123320"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6"), LicenseExpires = new DateTime(2022,1,1) },
+                new Organisation() { ID = new Guid("DC088FB2-98BA-4725-91FE-EB44056CA577"), Name = "Windhundrennverein Westfalen-Ruhr", AddressID = new Guid("FE8AC32B-10FD-43AF-AC29-C8749AF9ECB0"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6"), LicenseExpires = new DateTime(2022,1,1) },
+                new Organisation() { ID = new Guid("5F3A3747-7252-4946-A7A3-D223DADB4D26"), Name = "Geldropse Windhonden Renvereniging", AddressID = new Guid("75CC3997-7D8B-4AC3-B46C-F1CA12D6A060"), CompetitionID = new Guid("64B11D35-97FC-4223-82DA-23E09BEC1BD6"), LicenseExpires = new DateTime(2022,1,1) },
             });
         }
         #endregion

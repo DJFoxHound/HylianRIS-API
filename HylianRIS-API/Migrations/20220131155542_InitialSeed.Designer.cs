@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220131001812_InitialSeed")]
+    [Migration("20220131155542_InitialSeed")]
     partial class InitialSeed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,683 @@ namespace HylianRIS_API.Migrations
                     b.HasIndex("ClassID");
 
                     b.ToTable("BreedClasses");
+
+                    b.HasData(
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("6786b78b-611e-430a-a589-65df5c302e11"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("72a99b45-1069-4576-ae00-242b563c6bad"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"),
+                            ClassID = new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("6786b78b-611e-430a-a589-65df5c302e11"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("72a99b45-1069-4576-ae00-242b563c6bad"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"),
+                            ClassID = new Guid("4fe73b6e-3041-41dd-800d-785221165c71")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("6786b78b-611e-430a-a589-65df5c302e11"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("72a99b45-1069-4576-ae00-242b563c6bad"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"),
+                            ClassID = new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("827c18c9-8d10-4cca-915f-61699560a5ea")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("827c18c9-8d10-4cca-915f-61699560a5ea")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("827c18c9-8d10-4cca-915f-61699560a5ea")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("d32848b7-4cea-4201-958d-6578a0019950")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("d32848b7-4cea-4201-958d-6578a0019950")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("d32848b7-4cea-4201-958d-6578a0019950")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("f9afdb87-b524-4356-9743-ebb38144aaf6")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("20dff530-754d-46ed-9cdc-69080a683b22")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("6786b78b-611e-430a-a589-65df5c302e11"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("72a99b45-1069-4576-ae00-242b563c6bad"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"),
+                            ClassID = new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("6786b78b-611e-430a-a589-65df5c302e11"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("72a99b45-1069-4576-ae00-242b563c6bad"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"),
+                            ClassID = new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("6786b78b-611e-430a-a589-65df5c302e11"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("72a99b45-1069-4576-ae00-242b563c6bad"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        },
+                        new
+                        {
+                            BreedID = new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"),
+                            ClassID = new Guid("3a22b699-3489-4749-b766-b2c63275068e")
+                        });
                 });
 
             modelBuilder.Entity("CompetitionTracks", b =>
@@ -53,6 +730,33 @@ namespace HylianRIS_API.Migrations
                     b.HasIndex("TrackID");
 
                     b.ToTable("CompetitionTracks");
+
+                    b.HasData(
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TrackID = new Guid("82e73038-463a-4701-a041-17734c194ea1")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TrackID = new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TrackID = new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31")
+                        });
                 });
 
             modelBuilder.Entity("CompetitionTypes", b =>
@@ -68,6 +772,68 @@ namespace HylianRIS_API.Migrations
                     b.HasIndex("TypeID");
 
                     b.ToTable("CompetitionTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("63114685-c48a-4f44-a910-8c6979b5b687")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("d64d05a6-eabc-4820-9011-047fdded0a84")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("ee86bfca-4c3f-437e-84c2-60d236573059")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("5a6454fe-9bbe-4aa8-be8d-1937d61a29fc")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("f5f7a330-213d-4843-80da-61be75d400e8")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("6b10b543-db0d-423d-b597-0c5c2b5b2fd4")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("88ddfaf8-a5a4-4212-935e-bed616972426")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5")
+                        },
+                        new
+                        {
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            TypeID = new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9")
+                        });
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Account", b =>
@@ -216,6 +982,17 @@ namespace HylianRIS_API.Migrations
                             PostCode = "5665 ET",
                             Street = "Bosrand",
                             StreetNumber = "130"
+                        },
+                        new
+                        {
+                            ID = new Guid("b9eed83a-e902-46fa-a6cc-d1b2eb10cc7a"),
+                            Box = "37",
+                            City = "Antwerpen",
+                            Coordinates = (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (4.468728069460676 51.23424654091822)"),
+                            CountryID = new Guid("0afec050-198a-4248-b736-e5bd611550a9"),
+                            PostCode = "2100",
+                            Street = "Bisschoppenhoflaan",
+                            StreetNumber = "428"
                         });
                 });
 
@@ -580,6 +1357,62 @@ namespace HylianRIS_API.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("ContactTypes", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ID = new Guid("97a80250-ba3a-401f-b1f0-fd50437ff6f2"),
+                            Icon = "website",
+                            Name = "Website"
+                        },
+                        new
+                        {
+                            ID = new Guid("39375430-b7a2-434c-98ca-42d88b1fe704"),
+                            Icon = "email",
+                            Name = "Email"
+                        },
+                        new
+                        {
+                            ID = new Guid("257d2353-b1ce-45cc-9003-be4718cef13f"),
+                            Icon = "phone",
+                            Name = "Phone"
+                        },
+                        new
+                        {
+                            ID = new Guid("4d551efe-4f78-4616-bc4a-3792040eb539"),
+                            Icon = "mobile",
+                            Name = "Mobile"
+                        },
+                        new
+                        {
+                            ID = new Guid("828954ae-d655-4e25-a586-44156002c292"),
+                            Icon = "facebook",
+                            Name = "Facebook"
+                        },
+                        new
+                        {
+                            ID = new Guid("6d2ecce5-39cc-4c1a-b20b-481aa774d86f"),
+                            Icon = "whatsapp",
+                            Name = "WhatsApp"
+                        },
+                        new
+                        {
+                            ID = new Guid("b579610e-16ea-4010-ab62-adfbd12ea75f"),
+                            Icon = "instagram",
+                            Name = "Instagram"
+                        },
+                        new
+                        {
+                            ID = new Guid("110f14f6-cf16-4f0a-b3e0-6bc7641cbe5c"),
+                            Icon = "twitter",
+                            Name = "Twitter"
+                        },
+                        new
+                        {
+                            ID = new Guid("0a44f059-3e0e-4409-874c-0b07d4526221"),
+                            Icon = "twitch",
+                            Name = "Twitch"
+                        });
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Country", b =>
@@ -1902,10 +2735,59 @@ namespace HylianRIS_API.Migrations
                     b.HasData(
                         new
                         {
+                            ID = new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"),
+                            IsOfficial = false,
+                            Length = 50,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"50m\"},{\"LanguageCode\":\"nl\",\"Text\":\"50m\"},{\"LanguageCode\":\"fr\",\"Text\":\"50m\"},{\"LanguageCode\":\"de\",\"Text\":\"50m\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"),
+                            IsOfficial = false,
+                            Length = 100,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"100m\"},{\"LanguageCode\":\"nl\",\"Text\":\"100m\"},{\"LanguageCode\":\"fr\",\"Text\":\"100m\"},{\"LanguageCode\":\"de\",\"Text\":\"100m\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"),
+                            IsOfficial = false,
+                            Length = 150,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"150m\"},{\"LanguageCode\":\"nl\",\"Text\":\"150m\"},{\"LanguageCode\":\"fr\",\"Text\":\"150m\"},{\"LanguageCode\":\"de\",\"Text\":\"150m\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"),
+                            IsOfficial = false,
+                            Length = 200,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"200m\"},{\"LanguageCode\":\"nl\",\"Text\":\"200m\"},{\"LanguageCode\":\"fr\",\"Text\":\"200m\"},{\"LanguageCode\":\"de\",\"Text\":\"200m\"}]"
+                        },
+                        new
+                        {
                             ID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
                             IsOfficial = true,
                             Length = 275,
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"275m\"},{\"LanguageCode\":\"nl\",\"Text\":\"275m\"},{\"LanguageCode\":\"fr\",\"Text\":\"275m\"},{\"LanguageCode\":\"de\",\"Text\":\"275m\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"),
+                            IsOfficial = true,
+                            Length = 280,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"280m\"},{\"LanguageCode\":\"nl\",\"Text\":\"280m\"},{\"LanguageCode\":\"fr\",\"Text\":\"280m\"},{\"LanguageCode\":\"de\",\"Text\":\"280m\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("54085cf5-efce-4523-b635-4e615241a8dd"),
+                            IsOfficial = true,
+                            Length = 285,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"285m\"},{\"LanguageCode\":\"nl\",\"Text\":\"285m\"},{\"LanguageCode\":\"fr\",\"Text\":\"285m\"},{\"LanguageCode\":\"de\",\"Text\":\"285m\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"),
+                            IsOfficial = true,
+                            Length = 344,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"344m\"},{\"LanguageCode\":\"nl\",\"Text\":\"344m\"},{\"LanguageCode\":\"fr\",\"Text\":\"344m\"},{\"LanguageCode\":\"de\",\"Text\":\"344m\"}]"
                         },
                         new
                         {
@@ -1916,6 +2798,20 @@ namespace HylianRIS_API.Migrations
                         },
                         new
                         {
+                            ID = new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"),
+                            IsOfficial = true,
+                            Length = 350,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"350m\"},{\"LanguageCode\":\"nl\",\"Text\":\"350m\"},{\"LanguageCode\":\"fr\",\"Text\":\"350m\"},{\"LanguageCode\":\"de\",\"Text\":\"350m\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("c08a2aea-e211-4ef0-8462-12587d304eb7"),
+                            IsOfficial = true,
+                            Length = 355,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"355m\"},{\"LanguageCode\":\"nl\",\"Text\":\"355m\"},{\"LanguageCode\":\"fr\",\"Text\":\"355m\"},{\"LanguageCode\":\"de\",\"Text\":\"355m\"}]"
+                        },
+                        new
+                        {
                             ID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
                             IsOfficial = true,
                             Length = 480,
@@ -1923,31 +2819,10 @@ namespace HylianRIS_API.Migrations
                         },
                         new
                         {
-                            ID = new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"),
-                            IsOfficial = false,
-                            Length = 200,
-                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Piece from Clock\"},{\"LanguageCode\":\"nl\",\"Text\":\"Stukje vanaf de Klok\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce partir de l'horloge\"},{\"LanguageCode\":\"de\",\"Text\":\"Stück vom Takt\"}]"
-                        },
-                        new
-                        {
-                            ID = new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"),
-                            IsOfficial = false,
-                            Length = 150,
-                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Piece from Red Post\"},{\"LanguageCode\":\"nl\",\"Text\":\"Stukje vanaf de Rode Paal\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce au pôle rouge\"},{\"LanguageCode\":\"de\",\"Text\":\"Stück vom roten Pol\"}]"
-                        },
-                        new
-                        {
-                            ID = new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"),
-                            IsOfficial = false,
-                            Length = 100,
-                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Straight\"},{\"LanguageCode\":\"nl\",\"Text\":\"Recht stukje\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce à droite\"},{\"LanguageCode\":\"de\",\"Text\":\"Richtiges Stück\"}]"
-                        },
-                        new
-                        {
-                            ID = new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"),
-                            IsOfficial = false,
-                            Length = 50,
-                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Piece from Jury House\"},{\"LanguageCode\":\"nl\",\"Text\":\"Stukje vanaf Juryhuis\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce de la Maison du Jury\"},{\"LanguageCode\":\"de\",\"Text\":\"Stück vom Jury Hause\"}]"
+                            ID = new Guid("ec1fbd10-0019-4609-b843-1e659e992cc9"),
+                            IsOfficial = true,
+                            Length = 490,
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"490m\"},{\"LanguageCode\":\"nl\",\"Text\":\"490m\"},{\"LanguageCode\":\"fr\",\"Text\":\"490m\"},{\"LanguageCode\":\"de\",\"Text\":\"490m\"}]"
                         });
                 });
 
@@ -2001,6 +2876,26 @@ namespace HylianRIS_API.Migrations
                     b.HasIndex("SexID");
 
                     b.ToTable("Dogs", (string)null);
+                });
+
+            modelBuilder.Entity("Hylian.RIS.API.Domain.EventDelegate", b =>
+                {
+                    b.Property<Guid>("EventID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CountryID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AccountID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("EventID", "CountryID", "AccountID");
+
+                    b.HasIndex("AccountID");
+
+                    b.HasIndex("CountryID");
+
+                    b.ToTable("EventDelegates", (string)null);
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Jersey", b =>
@@ -2317,6 +3212,47 @@ namespace HylianRIS_API.Migrations
                     b.HasIndex("CompetitionID");
 
                     b.ToTable("Organisations", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            AddressID = new Guid("a55714d4-a40a-4f2a-9d68-282bbadecb46"),
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            Name = "Kempische Vereniging voor Windhondenrennen Beringen"
+                        },
+                        new
+                        {
+                            ID = new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"),
+                            AddressID = new Guid("ceea56e8-6193-4541-b760-89af6f762a4a"),
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            LicenseExpires = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Club National Belge de Courses de Lévriers Awans"
+                        },
+                        new
+                        {
+                            ID = new Guid("b908d4fe-922d-47a7-a168-0b8427ef04f5"),
+                            AddressID = new Guid("0a7100b9-a371-475e-843d-5681d4123320"),
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            LicenseExpires = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Windhundrennverein Münster e.V. 1980"
+                        },
+                        new
+                        {
+                            ID = new Guid("dc088fb2-98ba-4725-91fe-eb44056ca577"),
+                            AddressID = new Guid("fe8ac32b-10fd-43af-ac29-c8749af9ecb0"),
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            LicenseExpires = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Windhundrennverein Westfalen-Ruhr"
+                        },
+                        new
+                        {
+                            ID = new Guid("5f3a3747-7252-4946-a7a3-d223dadb4d26"),
+                            AddressID = new Guid("75cc3997-7d8b-4ac3-b46c-f1ca12d6a060"),
+                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
+                            LicenseExpires = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Geldropse Windhonden Renvereniging"
+                        });
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Person", b =>
@@ -2705,6 +3641,9 @@ namespace HylianRIS_API.Migrations
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("SurfaceID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("ID");
 
                     b.HasIndex("AddressID");
@@ -2712,7 +3651,51 @@ namespace HylianRIS_API.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
+                    b.HasIndex("SurfaceID");
+
                     b.ToTable("Tracks", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
+                            AddressID = new Guid("a55714d4-a40a-4f2a-9d68-282bbadecb46"),
+                            Code = "KVWB",
+                            Name = "Windhondenrenbaan Ter Beek",
+                            SurfaceID = new Guid("751b8d3c-a773-443d-9e16-2f1b5cd87113")
+                        },
+                        new
+                        {
+                            ID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"),
+                            AddressID = new Guid("ceea56e8-6193-4541-b760-89af6f762a4a"),
+                            Code = "CNBCL",
+                            Name = "Cynodrome du C.N.B.C.L. Awans",
+                            SurfaceID = new Guid("751b8d3c-a773-443d-9e16-2f1b5cd87113")
+                        },
+                        new
+                        {
+                            ID = new Guid("82e73038-463a-4701-a041-17734c194ea1"),
+                            AddressID = new Guid("0a7100b9-a371-475e-843d-5681d4123320"),
+                            Code = "WRVM",
+                            Name = "Windhundrennbahn Waltruper Forst",
+                            SurfaceID = new Guid("73504bc3-ff6e-4182-811f-93a647a323c9")
+                        },
+                        new
+                        {
+                            ID = new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca"),
+                            AddressID = new Guid("fe8ac32b-10fd-43af-ac29-c8749af9ecb0"),
+                            Code = "WRVWR",
+                            Name = "Windhundstadion Emscherbruch",
+                            SurfaceID = new Guid("73504bc3-ff6e-4182-811f-93a647a323c9")
+                        },
+                        new
+                        {
+                            ID = new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31"),
+                            AddressID = new Guid("75cc3997-7d8b-4ac3-b46c-f1ca12d6a060"),
+                            Code = "GWRV",
+                            Name = "Windhondenrenbaan De Coevering",
+                            SurfaceID = new Guid("73504bc3-ff6e-4182-811f-93a647a323c9")
+                        });
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.RaceType", b =>
@@ -2821,6 +3804,38 @@ namespace HylianRIS_API.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Roles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ID = new Guid("a62aec57-7001-4a6d-8a9b-92e9d7f601a5"),
+                            Name = "System Admin"
+                        },
+                        new
+                        {
+                            ID = new Guid("651750dc-c61b-4666-863a-5b9af65e73f0"),
+                            Name = "Organisation Admin"
+                        },
+                        new
+                        {
+                            ID = new Guid("6fcecef6-ae36-4430-9174-e7628dce14e8"),
+                            Name = "Timekeeping"
+                        },
+                        new
+                        {
+                            ID = new Guid("ee5bc7ed-c0c4-48cd-8c9e-62612d65dd28"),
+                            Name = "Secretary"
+                        },
+                        new
+                        {
+                            ID = new Guid("7a22e24c-16f0-46df-a0be-158c1a9bc4d3"),
+                            Name = "Announcer"
+                        },
+                        new
+                        {
+                            ID = new Guid("038994bb-5fd1-4a79-8f1a-4d9ef19e5509"),
+                            Name = "User"
+                        });
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Run", b =>
@@ -3023,6 +4038,34 @@ namespace HylianRIS_API.Migrations
                     b.ToTable("TrackRecords", (string)null);
                 });
 
+            modelBuilder.Entity("Hylian.RIS.API.Domain.TrackSurface", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("_Names")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Names");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Surfaces", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ID = new Guid("73504bc3-ff6e-4182-811f-93a647a323c9"),
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Dirt\"},{\"LanguageCode\":\"nl\",\"Text\":\"Zand\"},{\"LanguageCode\":\"fr\",\"Text\":\"Sable\"},{\"LanguageCode\":\"de\",\"Text\":\"Sand\"}]"
+                        },
+                        new
+                        {
+                            ID = new Guid("751b8d3c-a773-443d-9e16-2f1b5cd87113"),
+                            _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Grass\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gras\"},{\"LanguageCode\":\"fr\",\"Text\":\"Herbe\"},{\"LanguageCode\":\"de\",\"Text\":\"Gras\"}]"
+                        });
+                });
+
             modelBuilder.Entity("Participants", b =>
                 {
                     b.Property<Guid>("DogID")
@@ -3051,6 +4094,103 @@ namespace HylianRIS_API.Migrations
                     b.HasIndex("TrackID");
 
                     b.ToTable("TrackDistances");
+
+                    b.HasData(
+                        new
+                        {
+                            DistanceID = new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("54085cf5-efce-4523-b635-4e615241a8dd"),
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"),
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            TrackID = new Guid("82e73038-463a-4701-a041-17734c194ea1")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"),
+                            TrackID = new Guid("82e73038-463a-4701-a041-17734c194ea1")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            TrackID = new Guid("82e73038-463a-4701-a041-17734c194ea1")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"),
+                            TrackID = new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("c08a2aea-e211-4ef0-8462-12587d304eb7"),
+                            TrackID = new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            TrackID = new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"),
+                            TrackID = new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"),
+                            TrackID = new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31")
+                        },
+                        new
+                        {
+                            DistanceID = new Guid("ec1fbd10-0019-4609-b843-1e659e992cc9"),
+                            TrackID = new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31")
+                        });
                 });
 
             modelBuilder.Entity("TrackOrganisations", b =>
@@ -3266,6 +4406,33 @@ namespace HylianRIS_API.Migrations
                     b.Navigation("Sex");
                 });
 
+            modelBuilder.Entity("Hylian.RIS.API.Domain.EventDelegate", b =>
+                {
+                    b.HasOne("Hylian.RIS.API.Domain.Account", "Delegate")
+                        .WithMany("DelegatingEvents")
+                        .HasForeignKey("AccountID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hylian.RIS.API.Domain.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hylian.RIS.API.Domain.RaceEvent", "Event")
+                        .WithMany("Delegates")
+                        .HasForeignKey("EventID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+
+                    b.Navigation("Delegate");
+
+                    b.Navigation("Event");
+                });
+
             modelBuilder.Entity("Hylian.RIS.API.Domain.Jersey", b =>
                 {
                     b.HasOne("Hylian.RIS.API.Domain.RaceCompetition", "Competition")
@@ -3437,7 +4604,15 @@ namespace HylianRIS_API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Hylian.RIS.API.Domain.TrackSurface", "Surface")
+                        .WithMany("Tracks")
+                        .HasForeignKey("SurfaceID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Address");
+
+                    b.Navigation("Surface");
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Run", b =>
@@ -3565,6 +4740,8 @@ namespace HylianRIS_API.Migrations
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Account", b =>
                 {
+                    b.Navigation("DelegatingEvents");
+
                     b.Navigation("Persons");
 
                     b.Navigation("Roles");
@@ -3621,6 +4798,8 @@ namespace HylianRIS_API.Migrations
                 {
                     b.Navigation("Crew");
 
+                    b.Navigation("Delegates");
+
                     b.Navigation("Races");
                 });
 
@@ -3634,6 +4813,11 @@ namespace HylianRIS_API.Migrations
             modelBuilder.Entity("Hylian.RIS.API.Domain.Role", b =>
                 {
                     b.Navigation("Accounts");
+                });
+
+            modelBuilder.Entity("Hylian.RIS.API.Domain.TrackSurface", b =>
+                {
+                    b.Navigation("Tracks");
                 });
 #pragma warning restore 612, 618
         }

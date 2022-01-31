@@ -42,6 +42,22 @@ namespace HylianRIS_API.Migrations
                 values: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), "FCI", false, "FCI", "Normal,Wide" });
 
             migrationBuilder.InsertData(
+                table: "ContactTypes",
+                columns: new[] { "ID", "Icon", "Name" },
+                values: new object[,]
+                {
+                    { new Guid("0a44f059-3e0e-4409-874c-0b07d4526221"), "twitch", "Twitch" },
+                    { new Guid("110f14f6-cf16-4f0a-b3e0-6bc7641cbe5c"), "twitter", "Twitter" },
+                    { new Guid("257d2353-b1ce-45cc-9003-be4718cef13f"), "phone", "Phone" },
+                    { new Guid("39375430-b7a2-434c-98ca-42d88b1fe704"), "email", "Email" },
+                    { new Guid("4d551efe-4f78-4616-bc4a-3792040eb539"), "mobile", "Mobile" },
+                    { new Guid("6d2ecce5-39cc-4c1a-b20b-481aa774d86f"), "whatsapp", "WhatsApp" },
+                    { new Guid("828954ae-d655-4e25-a586-44156002c292"), "facebook", "Facebook" },
+                    { new Guid("97a80250-ba3a-401f-b1f0-fd50437ff6f2"), "website", "Website" },
+                    { new Guid("b579610e-16ea-4010-ab62-adfbd12ea75f"), "instagram", "Instagram" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Countries",
                 columns: new[] { "ID", "Code", "Names" },
                 values: new object[,]
@@ -58,7 +74,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("10795cac-9d91-41c2-b5d0-658b02b07f95"), "SAU", "[{\"LanguageCode\":\"en\",\"Text\":\"Saudi Arabia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Saoedi-Arabië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Arabie saoudite\"},{\"LanguageCode\":\"de\",\"Text\":\"Saudi-Arabien\"}]" },
                     { new Guid("10b94735-2a5c-4994-9462-1c5227a5f84a"), "TWN", "[{\"LanguageCode\":\"en\",\"Text\":\"Taiwan\"},{\"LanguageCode\":\"nl\",\"Text\":\"Taiwan\"},{\"LanguageCode\":\"fr\",\"Text\":\"Taïwan\"},{\"LanguageCode\":\"de\",\"Text\":\"Taiwan\"}]" },
                     { new Guid("128d4b8b-cac9-4349-a8c9-a17ca4839d1b"), "ISR", "[{\"LanguageCode\":\"en\",\"Text\":\"Israel\"},{\"LanguageCode\":\"nl\",\"Text\":\"Israël\"},{\"LanguageCode\":\"fr\",\"Text\":\"Israël\"},{\"LanguageCode\":\"de\",\"Text\":\"Israel\"}]" },
-                    { new Guid("1836bce0-c94b-40f3-81d7-21edc7e9a74e"), "GTM", "[{\"LanguageCode\":\"en\",\"Text\":\"Guatemala\"},{\"LanguageCode\":\"nl\",\"Text\":\"Guatemala\"},{\"LanguageCode\":\"fr\",\"Text\":\"Guatemala\"},{\"LanguageCode\":\"de\",\"Text\":\"Guatemala\"}]" },
+                    { new Guid("1836bce0-c94b-40f3-81d7-21edc7e9a74e"), "GTM", "[{\"LanguageCode\":\"en\",\"Text\":\"Guatemala\"},{\"LanguageCode\":\"nl\",\"Text\":\"Guatemala\"},{\"LanguageCode\":\"fr\",\"Text\":\"Guatemala\"},{\"LanguageCode\":\"de\",\"Text\":\"Guatemala\"}]" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Countries",
+                columns: new[] { "ID", "Code", "Names" },
+                values: new object[,]
+                {
                     { new Guid("189b5ec1-8edd-4d3f-9e94-9a37d9c7fa68"), "YEM", "[{\"LanguageCode\":\"en\",\"Text\":\"Yemen\"},{\"LanguageCode\":\"nl\",\"Text\":\"Jemen\"},{\"LanguageCode\":\"fr\",\"Text\":\"Yémen\"},{\"LanguageCode\":\"de\",\"Text\":\"Jemen\"}]" },
                     { new Guid("1a6629f0-3df6-4f4d-9366-652d7babc3eb"), "LIE", "[{\"LanguageCode\":\"en\",\"Text\":\"Liechtenstein\"},{\"LanguageCode\":\"nl\",\"Text\":\"Liechtenstein\"},{\"LanguageCode\":\"fr\",\"Text\":\"Liechtenstein\"},{\"LanguageCode\":\"de\",\"Text\":\"Liechtenstein\"}]" },
                     { new Guid("1b977d51-4832-493d-b163-7d3188777cc8"), "UKR", "[{\"LanguageCode\":\"en\",\"Text\":\"Ukraine\"},{\"LanguageCode\":\"nl\",\"Text\":\"Oekraïne\"},{\"LanguageCode\":\"fr\",\"Text\":\"Ukraine\"},{\"LanguageCode\":\"de\",\"Text\":\"Ukraine\"}]" },
@@ -67,14 +90,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("1e6a616f-d9f5-4744-947b-8e37839ebfa2"), "BFA", "[{\"LanguageCode\":\"en\",\"Text\":\"Burkina Faso\"},{\"LanguageCode\":\"nl\",\"Text\":\"Burkina Faso\"},{\"LanguageCode\":\"fr\",\"Text\":\"Burkina Faso\"},{\"LanguageCode\":\"de\",\"Text\":\"Burkina Faso\"}]" },
                     { new Guid("21d61853-43c2-422f-993b-ef96fa75afea"), "DEU", "[{\"LanguageCode\":\"en\",\"Text\":\"Germany\"},{\"LanguageCode\":\"nl\",\"Text\":\"Duitsland\"},{\"LanguageCode\":\"fr\",\"Text\":\"Allemagne\"},{\"LanguageCode\":\"de\",\"Text\":\"Deutschland\"}]" },
                     { new Guid("22fde9e8-1192-4c27-908f-f1a3732fedcf"), "MNG", "[{\"LanguageCode\":\"en\",\"Text\":\"Mongolia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Mongolië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Mongolie\"},{\"LanguageCode\":\"de\",\"Text\":\"Mongolei\"}]" },
-                    { new Guid("2335932d-decc-46ae-a4e0-066e1b7756c3"), "CZE", "[{\"LanguageCode\":\"en\",\"Text\":\"Czech Republic\"},{\"LanguageCode\":\"nl\",\"Text\":\"Tsjechië\"},{\"LanguageCode\":\"fr\",\"Text\":\"République tchèque\"},{\"LanguageCode\":\"de\",\"Text\":\"Tschechien\"}]" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Countries",
-                columns: new[] { "ID", "Code", "Names" },
-                values: new object[,]
-                {
+                    { new Guid("2335932d-decc-46ae-a4e0-066e1b7756c3"), "CZE", "[{\"LanguageCode\":\"en\",\"Text\":\"Czech Republic\"},{\"LanguageCode\":\"nl\",\"Text\":\"Tsjechië\"},{\"LanguageCode\":\"fr\",\"Text\":\"République tchèque\"},{\"LanguageCode\":\"de\",\"Text\":\"Tschechien\"}]" },
                     { new Guid("238fd90f-b7a7-4134-a1fb-8a717f8f1bb9"), "SYR", "[{\"LanguageCode\":\"en\",\"Text\":\"Syria\"},{\"LanguageCode\":\"nl\",\"Text\":\"Syrië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Syrie\"},{\"LanguageCode\":\"de\",\"Text\":\"Syrien\"}]" },
                     { new Guid("26a0c02f-fd03-4066-a0bf-2ada5e3345bb"), "PLW", "[{\"LanguageCode\":\"en\",\"Text\":\"Palau\"},{\"LanguageCode\":\"nl\",\"Text\":\"Palau\"},{\"LanguageCode\":\"fr\",\"Text\":\"Palaos\"},{\"LanguageCode\":\"de\",\"Text\":\"Palau\"}]" },
                     { new Guid("27e1b987-a017-4519-bdf6-2652420f9b37"), "SWE", "[{\"LanguageCode\":\"en\",\"Text\":\"Sweden\"},{\"LanguageCode\":\"nl\",\"Text\":\"Zweden\"},{\"LanguageCode\":\"fr\",\"Text\":\"Suède\"},{\"LanguageCode\":\"de\",\"Text\":\"Schweden\"}]" },
@@ -107,7 +123,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("4dfca244-8c66-40b0-82bc-7076542ad027"), "AND", "[{\"LanguageCode\":\"en\",\"Text\":\"Andorra\"},{\"LanguageCode\":\"nl\",\"Text\":\"Andorra\"},{\"LanguageCode\":\"fr\",\"Text\":\"Andorre\"},{\"LanguageCode\":\"de\",\"Text\":\"Andorra\"}]" },
                     { new Guid("50abe28e-6664-43b7-956c-f12be24b7811"), "BHR", "[{\"LanguageCode\":\"en\",\"Text\":\"Bahrain\"},{\"LanguageCode\":\"nl\",\"Text\":\"Bahrein\"},{\"LanguageCode\":\"fr\",\"Text\":\"Bahreïn\"},{\"LanguageCode\":\"de\",\"Text\":\"Bahrain\"}]" },
                     { new Guid("512f874e-6379-4f77-878b-75ad565a10ce"), "MLT", "[{\"LanguageCode\":\"en\",\"Text\":\"Malta\"},{\"LanguageCode\":\"nl\",\"Text\":\"Malta\"},{\"LanguageCode\":\"fr\",\"Text\":\"Malte\"},{\"LanguageCode\":\"de\",\"Text\":\"Malta\"}]" },
-                    { new Guid("525c2d6b-c2da-49e9-a351-69af276813a7"), "GIN", "[{\"LanguageCode\":\"en\",\"Text\":\"Guinea\"},{\"LanguageCode\":\"nl\",\"Text\":\"Guinee\"},{\"LanguageCode\":\"fr\",\"Text\":\"Guinée\"},{\"LanguageCode\":\"de\",\"Text\":\"Guinea\"}]" },
+                    { new Guid("525c2d6b-c2da-49e9-a351-69af276813a7"), "GIN", "[{\"LanguageCode\":\"en\",\"Text\":\"Guinea\"},{\"LanguageCode\":\"nl\",\"Text\":\"Guinee\"},{\"LanguageCode\":\"fr\",\"Text\":\"Guinée\"},{\"LanguageCode\":\"de\",\"Text\":\"Guinea\"}]" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Countries",
+                columns: new[] { "ID", "Code", "Names" },
+                values: new object[,]
+                {
                     { new Guid("53724950-d2f6-401f-b40b-72e0df1f6552"), "SWZ", "[{\"LanguageCode\":\"en\",\"Text\":\"Swaziland\"},{\"LanguageCode\":\"nl\",\"Text\":\"Swaziland\"},{\"LanguageCode\":\"fr\",\"Text\":\"Swaziland\"},{\"LanguageCode\":\"de\",\"Text\":\"Swasiland\"}]" },
                     { new Guid("5372fdaa-99ea-40a6-9ff2-fba37e6c55ea"), "CHL", "[{\"LanguageCode\":\"en\",\"Text\":\"Chile\"},{\"LanguageCode\":\"nl\",\"Text\":\"Chili\"},{\"LanguageCode\":\"fr\",\"Text\":\"Chili\"},{\"LanguageCode\":\"de\",\"Text\":\"Chile\"}]" },
                     { new Guid("54985a37-0ef9-46db-8e70-cfc4325e2ecf"), "PAK", "[{\"LanguageCode\":\"en\",\"Text\":\"Pakistan\"},{\"LanguageCode\":\"nl\",\"Text\":\"Pakistan\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pakistan\"},{\"LanguageCode\":\"de\",\"Text\":\"Pakistan\"}]" },
@@ -116,14 +139,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("5d47bf68-8a66-4456-99b3-e93268e7278b"), "GRC", "[{\"LanguageCode\":\"en\",\"Text\":\"Greece\"},{\"LanguageCode\":\"nl\",\"Text\":\"Griekenland\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grèce\"},{\"LanguageCode\":\"de\",\"Text\":\"Griechenland\"}]" },
                     { new Guid("5ffa6c6e-8835-4237-824b-96deea84cc4c"), "COD", "[{\"LanguageCode\":\"en\",\"Text\":\"Democratic Republic of the Congo\"},{\"LanguageCode\":\"nl\",\"Text\":\"Democratische Republiek Congo\"},{\"LanguageCode\":\"fr\",\"Text\":\"République démocratique du Congo\"},{\"LanguageCode\":\"de\",\"Text\":\"Demokratische Republik Kongo\"}]" },
                     { new Guid("61060a1e-8565-417a-beea-2212562384ef"), "MLI", "[{\"LanguageCode\":\"en\",\"Text\":\"Mali\"},{\"LanguageCode\":\"nl\",\"Text\":\"Mali\"},{\"LanguageCode\":\"fr\",\"Text\":\"Mali\"},{\"LanguageCode\":\"de\",\"Text\":\"Mali\"}]" },
-                    { new Guid("636a4461-f0f8-4538-9c9f-5f8fb826d9f3"), "ITA", "[{\"LanguageCode\":\"en\",\"Text\":\"Italy\"},{\"LanguageCode\":\"nl\",\"Text\":\"Italië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Italie\"},{\"LanguageCode\":\"de\",\"Text\":\"Italien\"}]" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Countries",
-                columns: new[] { "ID", "Code", "Names" },
-                values: new object[,]
-                {
+                    { new Guid("636a4461-f0f8-4538-9c9f-5f8fb826d9f3"), "ITA", "[{\"LanguageCode\":\"en\",\"Text\":\"Italy\"},{\"LanguageCode\":\"nl\",\"Text\":\"Italië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Italie\"},{\"LanguageCode\":\"de\",\"Text\":\"Italien\"}]" },
                     { new Guid("6465214d-59d3-43b8-a4be-551c97580858"), "AFG", "[{\"LanguageCode\":\"en\",\"Text\":\"Afghanistan\"},{\"LanguageCode\":\"nl\",\"Text\":\"Afghanistan\"},{\"LanguageCode\":\"fr\",\"Text\":\"Afghanistan\"},{\"LanguageCode\":\"de\",\"Text\":\"Afghanistan\"}]" },
                     { new Guid("66fe58a6-a1ec-43db-84fe-1e88fddbe01f"), "COG", "[{\"LanguageCode\":\"en\",\"Text\":\"Republic of Congo\"},{\"LanguageCode\":\"nl\",\"Text\":\"Republiek Congo\"},{\"LanguageCode\":\"fr\",\"Text\":\"Congo\"},{\"LanguageCode\":\"de\",\"Text\":\"Republik Kongo\"}]" },
                     { new Guid("692bff96-9a0a-4ebb-bf3c-4700cbb43472"), "MOZ", "[{\"LanguageCode\":\"en\",\"Text\":\"Mozambique\"},{\"LanguageCode\":\"nl\",\"Text\":\"Mozambique\"},{\"LanguageCode\":\"fr\",\"Text\":\"Mozambique\"},{\"LanguageCode\":\"de\",\"Text\":\"Mosambik\"}]" },
@@ -156,7 +172,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("874b4262-cd0b-4498-aad7-58987a270ad7"), "MRT", "[{\"LanguageCode\":\"en\",\"Text\":\"Mauritania\"},{\"LanguageCode\":\"nl\",\"Text\":\"Mauritanië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Mauritanie\"},{\"LanguageCode\":\"de\",\"Text\":\"Mauretanien\"}]" },
                     { new Guid("87e22dd2-fac7-43bb-97ed-7f6aba95cebe"), "BLZ", "[{\"LanguageCode\":\"en\",\"Text\":\"Belize\"},{\"LanguageCode\":\"nl\",\"Text\":\"Belize\"},{\"LanguageCode\":\"fr\",\"Text\":\"Belize\"},{\"LanguageCode\":\"de\",\"Text\":\"Belize\"}]" },
                     { new Guid("8a45ceef-61a3-4973-8053-b27ffbd14a10"), "KEN", "[{\"LanguageCode\":\"en\",\"Text\":\"Kenya\"},{\"LanguageCode\":\"nl\",\"Text\":\"Kenia\"},{\"LanguageCode\":\"fr\",\"Text\":\"Kenya\"},{\"LanguageCode\":\"de\",\"Text\":\"Kenia\"}]" },
-                    { new Guid("8bfe495d-bb0e-4819-b792-1372913f825b"), "BRN", "[{\"LanguageCode\":\"en\",\"Text\":\"Brunei\"},{\"LanguageCode\":\"nl\",\"Text\":\"Brunei\"},{\"LanguageCode\":\"fr\",\"Text\":\"Brunei\"},{\"LanguageCode\":\"de\",\"Text\":\"Brunei\"}]" },
+                    { new Guid("8bfe495d-bb0e-4819-b792-1372913f825b"), "BRN", "[{\"LanguageCode\":\"en\",\"Text\":\"Brunei\"},{\"LanguageCode\":\"nl\",\"Text\":\"Brunei\"},{\"LanguageCode\":\"fr\",\"Text\":\"Brunei\"},{\"LanguageCode\":\"de\",\"Text\":\"Brunei\"}]" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Countries",
+                columns: new[] { "ID", "Code", "Names" },
+                values: new object[,]
+                {
                     { new Guid("8efe5473-19a5-4109-b2d3-91c02a975209"), "STP", "[{\"LanguageCode\":\"en\",\"Text\":\"Sao Tome and Principe\"},{\"LanguageCode\":\"nl\",\"Text\":\"Sao Tomé en Principe\"},{\"LanguageCode\":\"fr\",\"Text\":\"Sao Tomé-et-Principe\"},{\"LanguageCode\":\"de\",\"Text\":\"São Tomé und Príncipe\"}]" },
                     { new Guid("926044f4-29e3-49dd-8755-3523ec024a06"), "MMR", "[{\"LanguageCode\":\"en\",\"Text\":\"Myanmar\"},{\"LanguageCode\":\"nl\",\"Text\":\"Myanmar\"},{\"LanguageCode\":\"fr\",\"Text\":\"Myanmar\"},{\"LanguageCode\":\"de\",\"Text\":\"Myanmar\"}]" },
                     { new Guid("970aaf9b-7a90-4021-b942-f1b73c1812f8"), "LBR", "[{\"LanguageCode\":\"en\",\"Text\":\"Liberia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Liberia\"},{\"LanguageCode\":\"fr\",\"Text\":\"Liberia\"},{\"LanguageCode\":\"de\",\"Text\":\"Liberia\"}]" },
@@ -165,14 +188,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("98f990e4-d4d6-4f6c-9684-b3bd9b8d3771"), "MUS", "[{\"LanguageCode\":\"en\",\"Text\":\"Mauritius\"},{\"LanguageCode\":\"nl\",\"Text\":\"Mauritius\"},{\"LanguageCode\":\"fr\",\"Text\":\"Maurice\"},{\"LanguageCode\":\"de\",\"Text\":\"Mauritius\"}]" },
                     { new Guid("9bc93d03-6c4e-4b76-9ca2-1ed7a6b5c743"), "SMR", "[{\"LanguageCode\":\"en\",\"Text\":\"San Marino\"},{\"LanguageCode\":\"nl\",\"Text\":\"San Marino\"},{\"LanguageCode\":\"fr\",\"Text\":\"Saint-Marin\"},{\"LanguageCode\":\"de\",\"Text\":\"San Marino\"}]" },
                     { new Guid("9c678bd9-8cb8-48d4-bf3c-094b5f20d718"), "FSM", "[{\"LanguageCode\":\"en\",\"Text\":\"Micronesia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Micronesia\"},{\"LanguageCode\":\"fr\",\"Text\":\"Micronésie\"},{\"LanguageCode\":\"de\",\"Text\":\"Mikronesien\"}]" },
-                    { new Guid("9c870b2c-fce6-401d-abbf-385f07efc55d"), "NRU", "[{\"LanguageCode\":\"en\",\"Text\":\"Nauru\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nauru\"},{\"LanguageCode\":\"fr\",\"Text\":\"Nauru\"},{\"LanguageCode\":\"de\",\"Text\":\"Nauru\"}]" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Countries",
-                columns: new[] { "ID", "Code", "Names" },
-                values: new object[,]
-                {
+                    { new Guid("9c870b2c-fce6-401d-abbf-385f07efc55d"), "NRU", "[{\"LanguageCode\":\"en\",\"Text\":\"Nauru\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nauru\"},{\"LanguageCode\":\"fr\",\"Text\":\"Nauru\"},{\"LanguageCode\":\"de\",\"Text\":\"Nauru\"}]" },
                     { new Guid("9cbe6d4f-ef9e-4ca0-a18c-cdbdda840267"), "SEN", "[{\"LanguageCode\":\"en\",\"Text\":\"Senegal\"},{\"LanguageCode\":\"nl\",\"Text\":\"Senegal\"},{\"LanguageCode\":\"fr\",\"Text\":\"Sénégal\"},{\"LanguageCode\":\"de\",\"Text\":\"Senegal\"}]" },
                     { new Guid("9d23bb42-ee31-409b-90c2-0a5ab88485f4"), "PER", "[{\"LanguageCode\":\"en\",\"Text\":\"Peru\"},{\"LanguageCode\":\"nl\",\"Text\":\"Peru\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pérou\"},{\"LanguageCode\":\"de\",\"Text\":\"Peru\"}]" },
                     { new Guid("9d7f4e5c-90b2-42ca-973e-5360021ce1cd"), "UNK", "[{\"LanguageCode\":\"en\",\"Text\":\"Kosovo\"},{\"LanguageCode\":\"nl\",\"Text\":\"Kosovo\"},{\"LanguageCode\":\"fr\",\"Text\":\"Kosovo\"},{\"LanguageCode\":\"de\",\"Text\":\"Kosovo\"}]" },
@@ -205,7 +221,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("b882edc8-3799-4592-a4db-0c785a8ec9f6"), "LKA", "[{\"LanguageCode\":\"en\",\"Text\":\"Sri Lanka\"},{\"LanguageCode\":\"nl\",\"Text\":\"Sri Lanka\"},{\"LanguageCode\":\"fr\",\"Text\":\"Sri Lanka\"},{\"LanguageCode\":\"de\",\"Text\":\"Sri Lanka\"}]" },
                     { new Guid("b97fed10-bcbc-4653-8d2a-76e8c85b826a"), "PRT", "[{\"LanguageCode\":\"en\",\"Text\":\"Portugal\"},{\"LanguageCode\":\"nl\",\"Text\":\"Portugal\"},{\"LanguageCode\":\"fr\",\"Text\":\"Portugal\"},{\"LanguageCode\":\"de\",\"Text\":\"Portugal\"}]" },
                     { new Guid("b981d442-5509-43a2-b3a1-affa64972664"), "ECU", "[{\"LanguageCode\":\"en\",\"Text\":\"Ecuador\"},{\"LanguageCode\":\"nl\",\"Text\":\"Ecuador\"},{\"LanguageCode\":\"fr\",\"Text\":\"Équateur\"},{\"LanguageCode\":\"de\",\"Text\":\"Ecuador\"}]" },
-                    { new Guid("bb33a24b-0498-4e86-b5bf-a0a73b066d42"), "LBN", "[{\"LanguageCode\":\"en\",\"Text\":\"Lebanon\"},{\"LanguageCode\":\"nl\",\"Text\":\"Libanon\"},{\"LanguageCode\":\"fr\",\"Text\":\"Liban\"},{\"LanguageCode\":\"de\",\"Text\":\"Libanon\"}]" },
+                    { new Guid("bb33a24b-0498-4e86-b5bf-a0a73b066d42"), "LBN", "[{\"LanguageCode\":\"en\",\"Text\":\"Lebanon\"},{\"LanguageCode\":\"nl\",\"Text\":\"Libanon\"},{\"LanguageCode\":\"fr\",\"Text\":\"Liban\"},{\"LanguageCode\":\"de\",\"Text\":\"Libanon\"}]" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Countries",
+                columns: new[] { "ID", "Code", "Names" },
+                values: new object[,]
+                {
                     { new Guid("bc4a3e7f-1c47-47f1-b881-0d671564fd4c"), "BGD", "[{\"LanguageCode\":\"en\",\"Text\":\"Bangladesh\"},{\"LanguageCode\":\"nl\",\"Text\":\"Bangladesh\"},{\"LanguageCode\":\"fr\",\"Text\":\"Bangladesh\"},{\"LanguageCode\":\"de\",\"Text\":\"Bangladesch\"}]" },
                     { new Guid("bdf9e765-e93b-4308-ad06-3238bc009833"), "TGO", "[{\"LanguageCode\":\"en\",\"Text\":\"Togo\"},{\"LanguageCode\":\"nl\",\"Text\":\"Togo\"},{\"LanguageCode\":\"fr\",\"Text\":\"Togo\"},{\"LanguageCode\":\"de\",\"Text\":\"Togo\"}]" },
                     { new Guid("bf1f1a38-1904-4b87-ab5c-4888dd2e24f1"), "JOR", "[{\"LanguageCode\":\"en\",\"Text\":\"Jordan\"},{\"LanguageCode\":\"nl\",\"Text\":\"Jordanië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Jordanie\"},{\"LanguageCode\":\"de\",\"Text\":\"Jordanien\"}]" },
@@ -214,14 +237,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("c0084b10-3755-44cf-8552-5d2d8269ecac"), "FJI", "[{\"LanguageCode\":\"en\",\"Text\":\"Fiji\"},{\"LanguageCode\":\"nl\",\"Text\":\"Fiji\"},{\"LanguageCode\":\"fr\",\"Text\":\"Fidji\"},{\"LanguageCode\":\"de\",\"Text\":\"Fidschi\"}]" },
                     { new Guid("c0559341-609b-48ce-8406-1a305c227689"), "LTU", "[{\"LanguageCode\":\"en\",\"Text\":\"Lithuania\"},{\"LanguageCode\":\"nl\",\"Text\":\"Litouwen\"},{\"LanguageCode\":\"fr\",\"Text\":\"Lituanie\"},{\"LanguageCode\":\"de\",\"Text\":\"Litauen\"}]" },
                     { new Guid("c0629d48-da5f-43c1-be22-1cd02c417a7b"), "ZAF", "[{\"LanguageCode\":\"en\",\"Text\":\"South Africa\"},{\"LanguageCode\":\"nl\",\"Text\":\"Zuid-Afrika\"},{\"LanguageCode\":\"fr\",\"Text\":\"Afrique du Sud\"},{\"LanguageCode\":\"de\",\"Text\":\"Südafrika\"}]" },
-                    { new Guid("c0fa519d-c094-4f9a-89d6-12e14a52a2b8"), "TUV", "[{\"LanguageCode\":\"en\",\"Text\":\"Tuvalu\"},{\"LanguageCode\":\"nl\",\"Text\":\"Tuvalu\"},{\"LanguageCode\":\"fr\",\"Text\":\"Tuvalu\"},{\"LanguageCode\":\"de\",\"Text\":\"Tuvalu\"}]" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Countries",
-                columns: new[] { "ID", "Code", "Names" },
-                values: new object[,]
-                {
+                    { new Guid("c0fa519d-c094-4f9a-89d6-12e14a52a2b8"), "TUV", "[{\"LanguageCode\":\"en\",\"Text\":\"Tuvalu\"},{\"LanguageCode\":\"nl\",\"Text\":\"Tuvalu\"},{\"LanguageCode\":\"fr\",\"Text\":\"Tuvalu\"},{\"LanguageCode\":\"de\",\"Text\":\"Tuvalu\"}]" },
                     { new Guid("c284464a-4175-425f-bd6c-5afe9a4c5f4a"), "VEN", "[{\"LanguageCode\":\"en\",\"Text\":\"Venezuela\"},{\"LanguageCode\":\"nl\",\"Text\":\"Venezuela\"},{\"LanguageCode\":\"fr\",\"Text\":\"Venezuela\"},{\"LanguageCode\":\"de\",\"Text\":\"Venezuela\"}]" },
                     { new Guid("c3152ad1-5190-4dec-9ff8-6d91cb5a66c2"), "SUR", "[{\"LanguageCode\":\"en\",\"Text\":\"Suriname\"},{\"LanguageCode\":\"nl\",\"Text\":\"Suriname\"},{\"LanguageCode\":\"fr\",\"Text\":\"Suriname\"},{\"LanguageCode\":\"de\",\"Text\":\"Suriname\"}]" },
                     { new Guid("c3bde949-09f9-47d7-99e2-1897b71290f9"), "GBR", "[{\"LanguageCode\":\"en\",\"Text\":\"United Kingdom\"},{\"LanguageCode\":\"nl\",\"Text\":\"Verenigd Koninkrijk\"},{\"LanguageCode\":\"fr\",\"Text\":\"Royaume-Uni\"},{\"LanguageCode\":\"de\",\"Text\":\"Vereinigtes Königreich\"}]" },
@@ -254,7 +270,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("e624c6e2-4937-4422-a083-d502c772859c"), "ETH", "[{\"LanguageCode\":\"en\",\"Text\":\"Ethiopia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Ethiopië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Éthiopie\"},{\"LanguageCode\":\"de\",\"Text\":\"Äthiopien\"}]" },
                     { new Guid("e6e6b40d-2d78-4f35-90d5-fc5ac28a5cbd"), "ERI", "[{\"LanguageCode\":\"en\",\"Text\":\"Eritrea\"},{\"LanguageCode\":\"nl\",\"Text\":\"Eritrea\"},{\"LanguageCode\":\"fr\",\"Text\":\"Érythrée\"},{\"LanguageCode\":\"de\",\"Text\":\"Eritrea\"}]" },
                     { new Guid("e7584eea-f033-4f5a-a609-b5ce29ade267"), "EGY", "[{\"LanguageCode\":\"en\",\"Text\":\"Egypt\"},{\"LanguageCode\":\"nl\",\"Text\":\"Egypte\"},{\"LanguageCode\":\"fr\",\"Text\":\"Égypte\"},{\"LanguageCode\":\"de\",\"Text\":\"Ägypten\"}]" },
-                    { new Guid("e89f370f-b87b-4234-a392-42e4ff43deb1"), "ARG", "[{\"LanguageCode\":\"en\",\"Text\":\"Argentina\"},{\"LanguageCode\":\"nl\",\"Text\":\"Argentinië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Argentine\"},{\"LanguageCode\":\"de\",\"Text\":\"Argentinien\"}]" },
+                    { new Guid("e89f370f-b87b-4234-a392-42e4ff43deb1"), "ARG", "[{\"LanguageCode\":\"en\",\"Text\":\"Argentina\"},{\"LanguageCode\":\"nl\",\"Text\":\"Argentinië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Argentine\"},{\"LanguageCode\":\"de\",\"Text\":\"Argentinien\"}]" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Countries",
+                columns: new[] { "ID", "Code", "Names" },
+                values: new object[,]
+                {
                     { new Guid("ea4d1817-9b1c-4f24-bcde-2940737a5a5e"), "ISL", "[{\"LanguageCode\":\"en\",\"Text\":\"Iceland\"},{\"LanguageCode\":\"nl\",\"Text\":\"IJsland\"},{\"LanguageCode\":\"fr\",\"Text\":\"Islande\"},{\"LanguageCode\":\"de\",\"Text\":\"Island\"}]" },
                     { new Guid("ec3c1b33-4c55-4b4a-8f4e-c49ccd0a89c9"), "PRY", "[{\"LanguageCode\":\"en\",\"Text\":\"Paraguay\"},{\"LanguageCode\":\"nl\",\"Text\":\"Paraguay\"},{\"LanguageCode\":\"fr\",\"Text\":\"Paraguay\"},{\"LanguageCode\":\"de\",\"Text\":\"Paraguay\"}]" },
                     { new Guid("ec4ebc6a-a4c1-4897-b793-f17c93e173e9"), "BRA", "[{\"LanguageCode\":\"en\",\"Text\":\"Brazil\"},{\"LanguageCode\":\"nl\",\"Text\":\"Brazilië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Brésil\"},{\"LanguageCode\":\"de\",\"Text\":\"Brasilien\"}]" },
@@ -263,14 +286,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("f0270845-1810-40f1-b3ac-bf111c42892d"), "CIV", "[{\"LanguageCode\":\"en\",\"Text\":\"Cote d'Ivoire\"},{\"LanguageCode\":\"nl\",\"Text\":\"Ivoorkust\"},{\"LanguageCode\":\"fr\",\"Text\":\"Côte d'Ivoire\"},{\"LanguageCode\":\"de\",\"Text\":\"Elfenbeinküste\"}]" },
                     { new Guid("f3edc011-9a2f-4ad4-8c00-2193bd4d5f49"), "SRB", "[{\"LanguageCode\":\"en\",\"Text\":\"Serbia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Servië\"},{\"LanguageCode\":\"fr\",\"Text\":\"Serbie\"},{\"LanguageCode\":\"de\",\"Text\":\"Serbien\"}]" },
                     { new Guid("f4537bb4-c120-4f5c-ac8d-7157e6988fd8"), "PHL", "[{\"LanguageCode\":\"en\",\"Text\":\"Philippines\"},{\"LanguageCode\":\"nl\",\"Text\":\"Filipijnen\"},{\"LanguageCode\":\"fr\",\"Text\":\"Philippines\"},{\"LanguageCode\":\"de\",\"Text\":\"Philippinen\"}]" },
-                    { new Guid("f522dcd6-6129-40b9-8265-8015696ffbae"), "GMB", "[{\"LanguageCode\":\"en\",\"Text\":\"Gambia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gambia\"},{\"LanguageCode\":\"fr\",\"Text\":\"Gambie\"},{\"LanguageCode\":\"de\",\"Text\":\"Gambia\"}]" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Countries",
-                columns: new[] { "ID", "Code", "Names" },
-                values: new object[,]
-                {
+                    { new Guid("f522dcd6-6129-40b9-8265-8015696ffbae"), "GMB", "[{\"LanguageCode\":\"en\",\"Text\":\"Gambia\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gambia\"},{\"LanguageCode\":\"fr\",\"Text\":\"Gambie\"},{\"LanguageCode\":\"de\",\"Text\":\"Gambia\"}]" },
                     { new Guid("f725e114-c733-4bb4-ba24-57a5758355db"), "JAM", "[{\"LanguageCode\":\"en\",\"Text\":\"Jamaica\"},{\"LanguageCode\":\"nl\",\"Text\":\"Jamaica\"},{\"LanguageCode\":\"fr\",\"Text\":\"Jamaïque\"},{\"LanguageCode\":\"de\",\"Text\":\"Jamaika\"}]" },
                     { new Guid("f992c83b-0ca4-45aa-bb41-bf740ee53610"), "IRL", "[{\"LanguageCode\":\"en\",\"Text\":\"Ireland\"},{\"LanguageCode\":\"nl\",\"Text\":\"Ierland\"},{\"LanguageCode\":\"fr\",\"Text\":\"Irlande\"},{\"LanguageCode\":\"de\",\"Text\":\"Irland\"}]" },
                     { new Guid("f9955c31-d822-41ea-89a6-5907e360b3e5"), "PRK", "[{\"LanguageCode\":\"en\",\"Text\":\"North Korea\"},{\"LanguageCode\":\"nl\",\"Text\":\"Noord-Korea\"},{\"LanguageCode\":\"fr\",\"Text\":\"Corée du Nord\"},{\"LanguageCode\":\"de\",\"Text\":\"Nord Korea\"}]" },
@@ -301,13 +317,19 @@ namespace HylianRIS_API.Migrations
                 columns: new[] { "ID", "IsOfficial", "Length", "Names" },
                 values: new object[,]
                 {
-                    { new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"), false, 200, "[{\"LanguageCode\":\"en\",\"Text\":\"Piece from Clock\"},{\"LanguageCode\":\"nl\",\"Text\":\"Stukje vanaf de Klok\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce partir de l'horloge\"},{\"LanguageCode\":\"de\",\"Text\":\"Stück vom Takt\"}]" },
+                    { new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"), false, 200, "[{\"LanguageCode\":\"en\",\"Text\":\"200m\"},{\"LanguageCode\":\"nl\",\"Text\":\"200m\"},{\"LanguageCode\":\"fr\",\"Text\":\"200m\"},{\"LanguageCode\":\"de\",\"Text\":\"200m\"}]" },
                     { new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), true, 275, "[{\"LanguageCode\":\"en\",\"Text\":\"275m\"},{\"LanguageCode\":\"nl\",\"Text\":\"275m\"},{\"LanguageCode\":\"fr\",\"Text\":\"275m\"},{\"LanguageCode\":\"de\",\"Text\":\"275m\"}]" },
-                    { new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"), false, 50, "[{\"LanguageCode\":\"en\",\"Text\":\"Piece from Jury House\"},{\"LanguageCode\":\"nl\",\"Text\":\"Stukje vanaf Juryhuis\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce de la Maison du Jury\"},{\"LanguageCode\":\"de\",\"Text\":\"Stück vom Jury Hause\"}]" },
-                    { new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"), false, 150, "[{\"LanguageCode\":\"en\",\"Text\":\"Piece from Red Post\"},{\"LanguageCode\":\"nl\",\"Text\":\"Stukje vanaf de Rode Paal\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce au pôle rouge\"},{\"LanguageCode\":\"de\",\"Text\":\"Stück vom roten Pol\"}]" },
+                    { new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"), false, 50, "[{\"LanguageCode\":\"en\",\"Text\":\"50m\"},{\"LanguageCode\":\"nl\",\"Text\":\"50m\"},{\"LanguageCode\":\"fr\",\"Text\":\"50m\"},{\"LanguageCode\":\"de\",\"Text\":\"50m\"}]" },
+                    { new Guid("54085cf5-efce-4523-b635-4e615241a8dd"), true, 285, "[{\"LanguageCode\":\"en\",\"Text\":\"285m\"},{\"LanguageCode\":\"nl\",\"Text\":\"285m\"},{\"LanguageCode\":\"fr\",\"Text\":\"285m\"},{\"LanguageCode\":\"de\",\"Text\":\"285m\"}]" },
+                    { new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), true, 280, "[{\"LanguageCode\":\"en\",\"Text\":\"280m\"},{\"LanguageCode\":\"nl\",\"Text\":\"280m\"},{\"LanguageCode\":\"fr\",\"Text\":\"280m\"},{\"LanguageCode\":\"de\",\"Text\":\"280m\"}]" },
+                    { new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"), true, 350, "[{\"LanguageCode\":\"en\",\"Text\":\"350m\"},{\"LanguageCode\":\"nl\",\"Text\":\"350m\"},{\"LanguageCode\":\"fr\",\"Text\":\"350m\"},{\"LanguageCode\":\"de\",\"Text\":\"350m\"}]" },
+                    { new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"), false, 150, "[{\"LanguageCode\":\"en\",\"Text\":\"150m\"},{\"LanguageCode\":\"nl\",\"Text\":\"150m\"},{\"LanguageCode\":\"fr\",\"Text\":\"150m\"},{\"LanguageCode\":\"de\",\"Text\":\"150m\"}]" },
                     { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), true, 480, "[{\"LanguageCode\":\"en\",\"Text\":\"480m\"},{\"LanguageCode\":\"nl\",\"Text\":\"480m\"},{\"LanguageCode\":\"fr\",\"Text\":\"480m\"},{\"LanguageCode\":\"de\",\"Text\":\"480m\"}]" },
-                    { new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"), false, 100, "[{\"LanguageCode\":\"en\",\"Text\":\"Straight\"},{\"LanguageCode\":\"nl\",\"Text\":\"Recht stukje\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pièce à droite\"},{\"LanguageCode\":\"de\",\"Text\":\"Richtiges Stück\"}]" },
-                    { new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), true, 345, "[{\"LanguageCode\":\"en\",\"Text\":\"345m\"},{\"LanguageCode\":\"nl\",\"Text\":\"345m\"},{\"LanguageCode\":\"fr\",\"Text\":\"345m\"},{\"LanguageCode\":\"de\",\"Text\":\"345m\"}]" }
+                    { new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"), false, 100, "[{\"LanguageCode\":\"en\",\"Text\":\"100m\"},{\"LanguageCode\":\"nl\",\"Text\":\"100m\"},{\"LanguageCode\":\"fr\",\"Text\":\"100m\"},{\"LanguageCode\":\"de\",\"Text\":\"100m\"}]" },
+                    { new Guid("c08a2aea-e211-4ef0-8462-12587d304eb7"), true, 355, "[{\"LanguageCode\":\"en\",\"Text\":\"355m\"},{\"LanguageCode\":\"nl\",\"Text\":\"355m\"},{\"LanguageCode\":\"fr\",\"Text\":\"355m\"},{\"LanguageCode\":\"de\",\"Text\":\"355m\"}]" },
+                    { new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), true, 345, "[{\"LanguageCode\":\"en\",\"Text\":\"345m\"},{\"LanguageCode\":\"nl\",\"Text\":\"345m\"},{\"LanguageCode\":\"fr\",\"Text\":\"345m\"},{\"LanguageCode\":\"de\",\"Text\":\"345m\"}]" },
+                    { new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), true, 344, "[{\"LanguageCode\":\"en\",\"Text\":\"344m\"},{\"LanguageCode\":\"nl\",\"Text\":\"344m\"},{\"LanguageCode\":\"fr\",\"Text\":\"344m\"},{\"LanguageCode\":\"de\",\"Text\":\"344m\"}]" },
+                    { new Guid("ec1fbd10-0019-4609-b843-1e659e992cc9"), true, 490, "[{\"LanguageCode\":\"en\",\"Text\":\"490m\"},{\"LanguageCode\":\"nl\",\"Text\":\"490m\"},{\"LanguageCode\":\"fr\",\"Text\":\"490m\"},{\"LanguageCode\":\"de\",\"Text\":\"490m\"}]" }
                 });
 
             migrationBuilder.InsertData(
@@ -318,7 +340,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("0f1d7a6a-1a39-4cec-bbde-cdf640110838"), "sl", "Slovenski", false },
                     { new Guid("184f350a-12d7-413b-a582-7dec0493eee0"), "lt", "Lietuvių", false },
                     { new Guid("1a45dcb1-94e9-4d29-8cb0-aaa47cd702a7"), "ro", "Română", false },
-                    { new Guid("23b9a00e-a261-4fac-aa4b-8d9db81bee44"), "nl", "Nederlands", true },
+                    { new Guid("23b9a00e-a261-4fac-aa4b-8d9db81bee44"), "nl", "Nederlands", true }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Languages",
+                columns: new[] { "ID", "Code", "Name", "Translated" },
+                values: new object[,]
+                {
                     { new Guid("2f815813-93af-406b-ba6f-7103df25edd7"), "et", "Eesti", false },
                     { new Guid("3995e0c7-c3ee-4ea3-84c2-d35e93b51c9e"), "pt", "Português", false },
                     { new Guid("3d0cd848-b194-47e4-8602-a37af4c91cc3"), "sv", "Svenska", false },
@@ -333,14 +362,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("aa8c88a7-c083-4fb2-acae-616a8b853011"), "pl", "Polski", false },
                     { new Guid("b547ac64-2e43-4293-9a8e-c253927f5280"), "el", "Ελληνικά", false },
                     { new Guid("b59548e3-d2ce-471e-9763-63606a7d8f22"), "cs", "Čeština", false },
-                    { new Guid("b86e859e-693b-4dc5-ac56-5f7ed7e88841"), "ga", "Gaeilge", false }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Languages",
-                columns: new[] { "ID", "Code", "Name", "Translated" },
-                values: new object[,]
-                {
+                    { new Guid("b86e859e-693b-4dc5-ac56-5f7ed7e88841"), "ga", "Gaeilge", false },
                     { new Guid("c0b4cae0-ecca-4213-ad88-ff38d19a537c"), "it", "Italiano", false },
                     { new Guid("c5b79b83-af19-45ce-8347-3e4052f4e367"), "es", "Espagnol", false },
                     { new Guid("cd273eb2-5159-4ab0-862a-1491085cb7fd"), "da", "Dansk", false },
@@ -369,13 +391,33 @@ namespace HylianRIS_API.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Roles",
+                columns: new[] { "ID", "Name" },
+                values: new object[,]
+                {
+                    { new Guid("038994bb-5fd1-4a79-8f1a-4d9ef19e5509"), "User" },
+                    { new Guid("651750dc-c61b-4666-863a-5b9af65e73f0"), "Organisation Admin" },
+                    { new Guid("6fcecef6-ae36-4430-9174-e7628dce14e8"), "Timekeeping" },
+                    { new Guid("7a22e24c-16f0-46df-a0be-158c1a9bc4d3"), "Announcer" },
+                    { new Guid("a62aec57-7001-4a6d-8a9b-92e9d7f601a5"), "System Admin" },
+                    { new Guid("ee5bc7ed-c0c4-48cd-8c9e-62612d65dd28"), "Secretary" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "RunResultTypes",
                 columns: new[] { "ID", "Code", "Order", "Names" },
                 values: new object[,]
                 {
                     { new Guid("04af5196-9108-432d-b9d0-6a6ee540ed16"), "OK", 0, "[{\"LanguageCode\":\"en\",\"Text\":\"OK\"},{\"LanguageCode\":\"nl\",\"Text\":\"OK\"},{\"LanguageCode\":\"fr\",\"Text\":\"Bon\"},{\"LanguageCode\":\"de\",\"Text\":\"OK\"}]" },
                     { new Guid("6ed4bd7d-ef60-4528-9d71-e4915d810a04"), "DNS", 3, "[{\"LanguageCode\":\"en\",\"Text\":\"Did Not Start\"},{\"LanguageCode\":\"nl\",\"Text\":\"Niet Gestart\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pas Commencé\"},{\"LanguageCode\":\"de\",\"Text\":\"Nicht Gestartet\"}]" },
-                    { new Guid("b5f052cf-2818-4a58-8c57-01abb088b04b"), "NR", 1, "[{\"LanguageCode\":\"en\",\"Text\":\"No Result\"},{\"LanguageCode\":\"nl\",\"Text\":\"Geen Resultaat\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pas de résultat\"},{\"LanguageCode\":\"de\",\"Text\":\"Kein Ergebnis\"}]" },
+                    { new Guid("b5f052cf-2818-4a58-8c57-01abb088b04b"), "NR", 1, "[{\"LanguageCode\":\"en\",\"Text\":\"No Result\"},{\"LanguageCode\":\"nl\",\"Text\":\"Geen Resultaat\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pas de résultat\"},{\"LanguageCode\":\"de\",\"Text\":\"Kein Ergebnis\"}]" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "RunResultTypes",
+                columns: new[] { "ID", "Code", "Order", "Names" },
+                values: new object[,]
+                {
                     { new Guid("dbe4699a-3b22-4dd1-b86b-ab44bb600cfb"), "DNF", 2, "[{\"LanguageCode\":\"en\",\"Text\":\"Did Not Finish\"},{\"LanguageCode\":\"nl\",\"Text\":\"Niet Gefinisht\"},{\"LanguageCode\":\"fr\",\"Text\":\"Pas fini\"},{\"LanguageCode\":\"de\",\"Text\":\"Nicht Beendet\"}]" },
                     { new Guid("f5eea2b5-c69b-49f3-9f54-b5b9876ab6b4"), "DIS", 4, "[{\"LanguageCode\":\"en\",\"Text\":\"Disqualified\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gediskwalificeerd\"},{\"LanguageCode\":\"fr\",\"Text\":\"Disqualifié\"},{\"LanguageCode\":\"de\",\"Text\":\"Disqualifiziert\"}]" }
                 });
@@ -391,6 +433,15 @@ namespace HylianRIS_API.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Surfaces",
+                columns: new[] { "ID", "Names" },
+                values: new object[,]
+                {
+                    { new Guid("73504bc3-ff6e-4182-811f-93a647a323c9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Dirt\"},{\"LanguageCode\":\"nl\",\"Text\":\"Zand\"},{\"LanguageCode\":\"fr\",\"Text\":\"Sable\"},{\"LanguageCode\":\"de\",\"Text\":\"Sand\"}]" },
+                    { new Guid("751b8d3c-a773-443d-9e16-2f1b5cd87113"), "[{\"LanguageCode\":\"en\",\"Text\":\"Grass\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gras\"},{\"LanguageCode\":\"fr\",\"Text\":\"Herbe\"},{\"LanguageCode\":\"de\",\"Text\":\"Gras\"}]" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Addresses",
                 columns: new[] { "ID", "Box", "City", "Coordinates", "CountryID", "Name", "PostCode", "State", "Street", "StreetNumber" },
                 values: new object[,]
@@ -398,6 +449,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("0a7100b9-a371-475e-843d-5681d4123320"), null, "Münster", (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (7.512220369318495 52.00803087574718)"), new Guid("21d61853-43c2-422f-993b-ef96fa75afea"), null, "48161", null, "Alberdingweg", "171" },
                     { new Guid("75cc3997-7d8b-4ac3-b46c-f1ca12d6a060"), null, "Geldrop", (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (5.577288230681506 51.41417833236854)"), new Guid("ade8e58e-f037-48aa-8fae-5bedcb6ad0d8"), null, "5665 ET", null, "Bosrand", "130" },
                     { new Guid("a55714d4-a40a-4f2a-9d68-282bbadecb46"), null, "Beringen", (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (5.2043387767037625 51.04629826617232)"), new Guid("0afec050-198a-4248-b736-e5bd611550a9"), null, "3580", null, "Paalsesteenweg", "91" },
+                    { new Guid("b9eed83a-e902-46fa-a6cc-d1b2eb10cc7a"), "37", "Antwerpen", (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (4.468728069460676 51.23424654091822)"), new Guid("0afec050-198a-4248-b736-e5bd611550a9"), null, "2100", null, "Bisschoppenhoflaan", "428" },
                     { new Guid("ceea56e8-6193-4541-b760-89af6f762a4a"), null, "Awans", (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (5.469089715340752 50.67511672146613)"), new Guid("0afec050-198a-4248-b736-e5bd611550a9"), null, "4340", null, "Rue Jean Lambert Defrêne", "98" },
                     { new Guid("fe8ac32b-10fd-43af-ac29-c8749af9ecb0"), null, "Gelsenkirchen-Resse", (NetTopologySuite.Geometries.Point)new NetTopologySuite.IO.WKTReader().Read("SRID=4326;POINT (7.141436499999999 51.553632324864154)"), new Guid("21d61853-43c2-422f-993b-ef96fa75afea"), null, "45892", null, "Wiedehopfstraße", "197" }
                 });
@@ -441,6 +493,25 @@ namespace HylianRIS_API.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "CompetitionTypes",
+                columns: new[] { "CompetitionID", "TypeID" },
+                values: new object[,]
+                {
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("5a6454fe-9bbe-4aa8-be8d-1937d61a29fc") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("63114685-c48a-4f44-a910-8c6979b5b687") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("6b10b543-db0d-423d-b597-0c5c2b5b2fd4") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("88ddfaf8-a5a4-4212-935e-bed616972426") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("d64d05a6-eabc-4820-9011-047fdded0a84") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("ee86bfca-4c3f-437e-84c2-60d236573059") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("f5f7a330-213d-4843-80da-61be75d400e8") }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Jerseys",
                 columns: new[] { "ID", "CompetitionID", "Number", "Codes", "Names" },
                 values: new object[,]
@@ -451,6 +522,65 @@ namespace HylianRIS_API.Migrations
                     { new Guid("935cfa45-62d1-483d-8dd3-5264b57b7f09"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), 6, "[{\"LanguageCode\":\"en\",\"Text\":\"BK/W\"},{\"LanguageCode\":\"nl\",\"Text\":\"Z/W\"},{\"LanguageCode\":\"fr\",\"Text\":\"N/BC\"},{\"LanguageCode\":\"de\",\"Text\":\"S/W\"}]", "[{\"LanguageCode\":\"en\",\"Text\":\"B/W Stripes\"},{\"LanguageCode\":\"nl\",\"Text\":\"Z/W Gestreept\"},{\"LanguageCode\":\"fr\",\"Text\":\"N/Bc Rayé\"},{\"LanguageCode\":\"de\",\"Text\":\"S/W Gestreift\"}]" },
                     { new Guid("c2c8dd39-e395-468b-8be9-90580013c659"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), 5, "[{\"LanguageCode\":\"en\",\"Text\":\"Y\"},{\"LanguageCode\":\"nl\",\"Text\":\"G\"},{\"LanguageCode\":\"fr\",\"Text\":\"J\"},{\"LanguageCode\":\"de\",\"Text\":\"G\"}]", "[{\"LanguageCode\":\"en\",\"Text\":\"Yellow\"},{\"LanguageCode\":\"nl\",\"Text\":\"Geel\"},{\"LanguageCode\":\"fr\",\"Text\":\"Jaune\"},{\"LanguageCode\":\"de\",\"Text\":\"Gelb\"}]" },
                     { new Guid("f5570613-57c4-423b-b45f-c87f03995099"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), 2, "[{\"LanguageCode\":\"en\",\"Text\":\"B\"},{\"LanguageCode\":\"nl\",\"Text\":\"B\"},{\"LanguageCode\":\"fr\",\"Text\":\"B\"},{\"LanguageCode\":\"de\",\"Text\":\"B\"}]", "[{\"LanguageCode\":\"en\",\"Text\":\"Blue\"},{\"LanguageCode\":\"nl\",\"Text\":\"Blauw\"},{\"LanguageCode\":\"fr\",\"Text\":\"Bleu\"},{\"LanguageCode\":\"de\",\"Text\":\"Blau\"}]" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "BreedClasses",
+                columns: new[] { "BreedID", "ClassID" },
+                values: new object[,]
+                {
+                    { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43") },
+                    { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43") },
+                    { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "BreedClasses",
+                columns: new[] { "BreedID", "ClassID" },
+                values: new object[,]
+                {
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43") },
+                    { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") },
+                    { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") }
                 });
 
             migrationBuilder.InsertData(
@@ -469,6 +599,179 @@ namespace HylianRIS_API.Migrations
                     { new Guid("d32848b7-4cea-4201-958d-6578a0019950"), 2, "B", new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), "[{\"LanguageCode\":\"en\",\"Text\":\"B-Class CSS\"},{\"LanguageCode\":\"nl\",\"Text\":\"B-Klasse CSS\"},{\"LanguageCode\":\"fr\",\"Text\":\"B-Class CSS\"},{\"LanguageCode\":\"de\",\"Text\":\"B-Klasse CSS\"}]" },
                     { new Guid("f9afdb87-b524-4356-9743-ebb38144aaf6"), 1, "C", new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), "[{\"LanguageCode\":\"en\",\"Text\":\"C-Class FCI-CACIL\"},{\"LanguageCode\":\"nl\",\"Text\":\"C-Klasse FCI-CACIL\"},{\"LanguageCode\":\"fr\",\"Text\":\"C-Class FCI-CACIL\"},{\"LanguageCode\":\"de\",\"Text\":\"C-Klasse FCI-CACIL\"}]" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Organisations",
+                columns: new[] { "ID", "AddressID", "CompetitionID", "LicenseExpires", "Logo", "Name" },
+                values: new object[,]
+                {
+                    { new Guid("5f3a3747-7252-4946-a7a3-d223dadb4d26"), new Guid("75cc3997-7d8b-4ac3-b46c-f1ca12d6a060"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Geldropse Windhonden Renvereniging" },
+                    { new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"), new Guid("ceea56e8-6193-4541-b760-89af6f762a4a"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Club National Belge de Courses de Lévriers Awans" },
+                    { new Guid("b908d4fe-922d-47a7-a168-0b8427ef04f5"), new Guid("0a7100b9-a371-475e-843d-5681d4123320"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Windhundrennverein Münster e.V. 1980" },
+                    { new Guid("dc088fb2-98ba-4725-91fe-eb44056ca577"), new Guid("fe8ac32b-10fd-43af-ac29-c8749af9ecb0"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Windhundrennverein Westfalen-Ruhr" },
+                    { new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new Guid("a55714d4-a40a-4f2a-9d68-282bbadecb46"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), null, null, "Kempische Vereniging voor Windhondenrennen Beringen" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Tracks",
+                columns: new[] { "ID", "AddressID", "Code", "Logo", "Name", "Photo", "SurfaceID" },
+                values: new object[,]
+                {
+                    { new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"), new Guid("ceea56e8-6193-4541-b760-89af6f762a4a"), "CNBCL", null, "Cynodrome du C.N.B.C.L. Awans", null, new Guid("751b8d3c-a773-443d-9e16-2f1b5cd87113") },
+                    { new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca"), new Guid("fe8ac32b-10fd-43af-ac29-c8749af9ecb0"), "WRVWR", null, "Windhundstadion Emscherbruch", null, new Guid("73504bc3-ff6e-4182-811f-93a647a323c9") },
+                    { new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31"), new Guid("75cc3997-7d8b-4ac3-b46c-f1ca12d6a060"), "GWRV", null, "Windhondenrenbaan De Coevering", null, new Guid("73504bc3-ff6e-4182-811f-93a647a323c9") },
+                    { new Guid("82e73038-463a-4701-a041-17734c194ea1"), new Guid("0a7100b9-a371-475e-843d-5681d4123320"), "WRVM", null, "Windhundrennbahn Waltruper Forst", null, new Guid("73504bc3-ff6e-4182-811f-93a647a323c9") },
+                    { new Guid("d4665821-75f0-4266-adfd-373266d146e9"), new Guid("a55714d4-a40a-4f2a-9d68-282bbadecb46"), "KVWB", null, "Windhondenrenbaan Ter Beek", null, new Guid("751b8d3c-a773-443d-9e16-2f1b5cd87113") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "BreedClasses",
+                columns: new[] { "BreedID", "ClassID" },
+                values: new object[,]
+                {
+                    { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("827c18c9-8d10-4cca-915f-61699560a5ea") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6") },
+                    { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("d32848b7-4cea-4201-958d-6578a0019950") },
+                    { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "BreedClasses",
+                columns: new[] { "BreedID", "ClassID" },
+                values: new object[,]
+                {
+                    { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("827c18c9-8d10-4cca-915f-61699560a5ea") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6") },
+                    { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("d32848b7-4cea-4201-958d-6578a0019950") },
+                    { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("20dff530-754d-46ed-9cdc-69080a683b22") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("827c18c9-8d10-4cca-915f-61699560a5ea") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "BreedClasses",
+                columns: new[] { "BreedID", "ClassID" },
+                values: new object[,]
+                {
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("d32848b7-4cea-4201-958d-6578a0019950") },
+                    { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("f9afdb87-b524-4356-9743-ebb38144aaf6") },
+                    { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") },
+                    { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") },
+                    { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") },
+                    { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "CompetitionTracks",
+                columns: new[] { "CompetitionID", "TrackID" },
+                values: new object[,]
+                {
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("82e73038-463a-4701-a041-17734c194ea1") },
+                    { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "TrackDistances",
+                columns: new[] { "DistanceID", "TrackID" },
+                values: new object[,]
+                {
+                    { new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") },
+                    { new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("82e73038-463a-4701-a041-17734c194ea1") },
+                    { new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") },
+                    { new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") },
+                    { new Guid("54085cf5-efce-4523-b635-4e615241a8dd"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") },
+                    { new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") },
+                    { new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") },
+                    { new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"), new Guid("82e73038-463a-4701-a041-17734c194ea1") },
+                    { new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") },
+                    { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") },
+                    { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("82e73038-463a-4701-a041-17734c194ea1") },
+                    { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") },
+                    { new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") },
+                    { new Guid("c08a2aea-e211-4ef0-8462-12587d304eb7"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") },
+                    { new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") },
+                    { new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("ec1fbd10-0019-4609-b843-1e659e992cc9"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") }
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -476,27 +779,7 @@ namespace HylianRIS_API.Migrations
             migrationBuilder.DeleteData(
                 table: "Addresses",
                 keyColumn: "ID",
-                keyValue: new Guid("0a7100b9-a371-475e-843d-5681d4123320"));
-
-            migrationBuilder.DeleteData(
-                table: "Addresses",
-                keyColumn: "ID",
-                keyValue: new Guid("75cc3997-7d8b-4ac3-b46c-f1ca12d6a060"));
-
-            migrationBuilder.DeleteData(
-                table: "Addresses",
-                keyColumn: "ID",
-                keyValue: new Guid("a55714d4-a40a-4f2a-9d68-282bbadecb46"));
-
-            migrationBuilder.DeleteData(
-                table: "Addresses",
-                keyColumn: "ID",
-                keyValue: new Guid("ceea56e8-6193-4541-b760-89af6f762a4a"));
-
-            migrationBuilder.DeleteData(
-                table: "Addresses",
-                keyColumn: "ID",
-                keyValue: new Guid("fe8ac32b-10fd-43af-ac29-c8749af9ecb0"));
+                keyValue: new Guid("b9eed83a-e902-46fa-a6cc-d1b2eb10cc7a"));
 
             migrationBuilder.DeleteData(
                 table: "AgeRestrictions",
@@ -594,54 +877,809 @@ namespace HylianRIS_API.Migrations
                 keyValues: new object[] { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("20dff530-754d-46ed-9cdc-69080a683b22"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("3a22b699-3489-4749-b766-b2c63275068e"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("4fe73b6e-3041-41dd-800d-785221165c71"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("827c18c9-8d10-4cca-915f-61699560a5ea"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
-                keyColumn: "ID",
-                keyValue: new Guid("d32848b7-4cea-4201-958d-6578a0019950"));
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
 
             migrationBuilder.DeleteData(
-                table: "Classes",
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("827c18c9-8d10-4cca-915f-61699560a5ea") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("d32848b7-4cea-4201-958d-6578a0019950") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("59bec42e-a9b1-44b4-bf6c-57566d8cf8bb"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("72a99b45-1069-4576-ae00-242b563c6bad"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("827c18c9-8d10-4cca-915f-61699560a5ea") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("d32848b7-4cea-4201-958d-6578a0019950") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("20dff530-754d-46ed-9cdc-69080a683b22") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("827c18c9-8d10-4cca-915f-61699560a5ea") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("d32848b7-4cea-4201-958d-6578a0019950") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("f9afdb87-b524-4356-9743-ebb38144aaf6") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("3a22b699-3489-4749-b766-b2c63275068e") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("4fe73b6e-3041-41dd-800d-785221165c71") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf") });
+
+            migrationBuilder.DeleteData(
+                table: "BreedClasses",
+                keyColumns: new[] { "BreedID", "ClassID" },
+                keyValues: new object[] { new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTracks",
+                keyColumns: new[] { "CompetitionID", "TrackID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTracks",
+                keyColumns: new[] { "CompetitionID", "TrackID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTracks",
+                keyColumns: new[] { "CompetitionID", "TrackID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTracks",
+                keyColumns: new[] { "CompetitionID", "TrackID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("82e73038-463a-4701-a041-17734c194ea1") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTracks",
+                keyColumns: new[] { "CompetitionID", "TrackID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("5a6454fe-9bbe-4aa8-be8d-1937d61a29fc") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("63114685-c48a-4f44-a910-8c6979b5b687") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("6b10b543-db0d-423d-b597-0c5c2b5b2fd4") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("88ddfaf8-a5a4-4212-935e-bed616972426") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("d64d05a6-eabc-4820-9011-047fdded0a84") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("ee86bfca-4c3f-437e-84c2-60d236573059") });
+
+            migrationBuilder.DeleteData(
+                table: "CompetitionTypes",
+                keyColumns: new[] { "CompetitionID", "TypeID" },
+                keyValues: new object[] { new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new Guid("f5f7a330-213d-4843-80da-61be75d400e8") });
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
                 keyColumn: "ID",
-                keyValue: new Guid("f9afdb87-b524-4356-9743-ebb38144aaf6"));
+                keyValue: new Guid("0a44f059-3e0e-4409-874c-0b07d4526221"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("110f14f6-cf16-4f0a-b3e0-6bc7641cbe5c"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("257d2353-b1ce-45cc-9003-be4718cef13f"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("39375430-b7a2-434c-98ca-42d88b1fe704"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("4d551efe-4f78-4616-bc4a-3792040eb539"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("6d2ecce5-39cc-4c1a-b20b-481aa774d86f"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("828954ae-d655-4e25-a586-44156002c292"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("97a80250-ba3a-401f-b1f0-fd50437ff6f2"));
+
+            migrationBuilder.DeleteData(
+                table: "ContactTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("b579610e-16ea-4010-ab62-adfbd12ea75f"));
 
             migrationBuilder.DeleteData(
                 table: "Countries",
@@ -1659,41 +2697,6 @@ namespace HylianRIS_API.Migrations
                 keyValue: new Guid("f7dfa36a-bd7d-468e-aba1-0a9171d67af7"));
 
             migrationBuilder.DeleteData(
-                table: "Distances",
-                keyColumn: "ID",
-                keyValue: new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"));
-
-            migrationBuilder.DeleteData(
-                table: "Distances",
-                keyColumn: "ID",
-                keyValue: new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"));
-
-            migrationBuilder.DeleteData(
-                table: "Distances",
-                keyColumn: "ID",
-                keyValue: new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"));
-
-            migrationBuilder.DeleteData(
-                table: "Distances",
-                keyColumn: "ID",
-                keyValue: new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"));
-
-            migrationBuilder.DeleteData(
-                table: "Distances",
-                keyColumn: "ID",
-                keyValue: new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"));
-
-            migrationBuilder.DeleteData(
-                table: "Distances",
-                keyColumn: "ID",
-                keyValue: new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"));
-
-            migrationBuilder.DeleteData(
-                table: "Distances",
-                keyColumn: "ID",
-                keyValue: new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"));
-
-            migrationBuilder.DeleteData(
                 table: "Jerseys",
                 keyColumn: "ID",
                 keyValue: new Guid("04446811-485d-4c1b-a759-40f372983b08"));
@@ -1849,64 +2852,59 @@ namespace HylianRIS_API.Migrations
                 keyValue: new Guid("f849ff9c-080f-4eb1-b286-a16b6cca58b8"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Organisations",
                 keyColumn: "ID",
-                keyValue: new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"));
+                keyValue: new Guid("5f3a3747-7252-4946-a7a3-d223dadb4d26"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Organisations",
                 keyColumn: "ID",
-                keyValue: new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"));
+                keyValue: new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Organisations",
                 keyColumn: "ID",
-                keyValue: new Guid("5a6454fe-9bbe-4aa8-be8d-1937d61a29fc"));
+                keyValue: new Guid("b908d4fe-922d-47a7-a168-0b8427ef04f5"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Organisations",
                 keyColumn: "ID",
-                keyValue: new Guid("63114685-c48a-4f44-a910-8c6979b5b687"));
+                keyValue: new Guid("dc088fb2-98ba-4725-91fe-eb44056ca577"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Organisations",
                 keyColumn: "ID",
-                keyValue: new Guid("6b10b543-db0d-423d-b597-0c5c2b5b2fd4"));
+                keyValue: new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Roles",
                 keyColumn: "ID",
-                keyValue: new Guid("88ddfaf8-a5a4-4212-935e-bed616972426"));
+                keyValue: new Guid("038994bb-5fd1-4a79-8f1a-4d9ef19e5509"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Roles",
                 keyColumn: "ID",
-                keyValue: new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"));
+                keyValue: new Guid("651750dc-c61b-4666-863a-5b9af65e73f0"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Roles",
                 keyColumn: "ID",
-                keyValue: new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"));
+                keyValue: new Guid("6fcecef6-ae36-4430-9174-e7628dce14e8"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Roles",
                 keyColumn: "ID",
-                keyValue: new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9"));
+                keyValue: new Guid("7a22e24c-16f0-46df-a0be-158c1a9bc4d3"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Roles",
                 keyColumn: "ID",
-                keyValue: new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"));
+                keyValue: new Guid("a62aec57-7001-4a6d-8a9b-92e9d7f601a5"));
 
             migrationBuilder.DeleteData(
-                table: "RaceTypes",
+                table: "Roles",
                 keyColumn: "ID",
-                keyValue: new Guid("ee86bfca-4c3f-437e-84c2-60d236573059"));
-
-            migrationBuilder.DeleteData(
-                table: "RaceTypes",
-                keyColumn: "ID",
-                keyValue: new Guid("f5f7a330-213d-4843-80da-61be75d400e8"));
+                keyValue: new Guid("ee5bc7ed-c0c4-48cd-8c9e-62612d65dd28"));
 
             migrationBuilder.DeleteData(
                 table: "RunResultTypes",
@@ -1947,6 +2945,101 @@ namespace HylianRIS_API.Migrations
                 table: "Sexes",
                 keyColumn: "ID",
                 keyValue: new Guid("83b150fe-89c0-4fe2-947e-18198244963f"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("82e73038-463a-4701-a041-17734c194ea1") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("54085cf5-efce-4523-b635-4e615241a8dd"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"), new Guid("82e73038-463a-4701-a041-17734c194ea1") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("82e73038-463a-4701-a041-17734c194ea1") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("c08a2aea-e211-4ef0-8462-12587d304eb7"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackDistances",
+                keyColumns: new[] { "DistanceID", "TrackID" },
+                keyValues: new object[] { new Guid("ec1fbd10-0019-4609-b843-1e659e992cc9"), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31") });
 
             migrationBuilder.DeleteData(
                 table: "Breeds",
@@ -2046,6 +3139,231 @@ namespace HylianRIS_API.Migrations
             migrationBuilder.DeleteData(
                 table: "Classes",
                 keyColumn: "ID",
+                keyValue: new Guid("20dff530-754d-46ed-9cdc-69080a683b22"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("3a1b3c22-c1c6-44d7-9608-39fbe92480e7"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("3a22b699-3489-4749-b766-b2c63275068e"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("4fe73b6e-3041-41dd-800d-785221165c71"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("809d7d3a-4ba2-4b89-acf6-50735199fda2"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("827c18c9-8d10-4cca-915f-61699560a5ea"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("9c7865eb-56de-4dd8-8491-2161649d3aaf"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("c730ba8c-4d8c-46fd-bdf9-207963321bd6"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("d32848b7-4cea-4201-958d-6578a0019950"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
+                keyValue: new Guid("f9afdb87-b524-4356-9743-ebb38144aaf6"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("197a1b1b-077c-460b-b235-0d2136df18d1"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("4ca3bc50-8eab-4b6e-a62f-6eb549bc5a9e"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("54085cf5-efce-4523-b635-4e615241a8dd"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("82c595c6-b980-443b-836d-85a8fa5c564c"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("8cf38bf9-6e49-45ca-a5bf-41367413b979"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("bfe7b982-d7a0-4622-90c3-7bddae99a01d"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("c08a2aea-e211-4ef0-8462-12587d304eb7"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"));
+
+            migrationBuilder.DeleteData(
+                table: "Distances",
+                keyColumn: "ID",
+                keyValue: new Guid("ec1fbd10-0019-4609-b843-1e659e992cc9"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("5a6454fe-9bbe-4aa8-be8d-1937d61a29fc"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("63114685-c48a-4f44-a910-8c6979b5b687"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("6b10b543-db0d-423d-b597-0c5c2b5b2fd4"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("88ddfaf8-a5a4-4212-935e-bed616972426"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("ee86bfca-4c3f-437e-84c2-60d236573059"));
+
+            migrationBuilder.DeleteData(
+                table: "RaceTypes",
+                keyColumn: "ID",
+                keyValue: new Guid("f5f7a330-213d-4843-80da-61be75d400e8"));
+
+            migrationBuilder.DeleteData(
+                table: "Tracks",
+                keyColumn: "ID",
+                keyValue: new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"));
+
+            migrationBuilder.DeleteData(
+                table: "Tracks",
+                keyColumn: "ID",
+                keyValue: new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca"));
+
+            migrationBuilder.DeleteData(
+                table: "Tracks",
+                keyColumn: "ID",
+                keyValue: new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31"));
+
+            migrationBuilder.DeleteData(
+                table: "Tracks",
+                keyColumn: "ID",
+                keyValue: new Guid("82e73038-463a-4701-a041-17734c194ea1"));
+
+            migrationBuilder.DeleteData(
+                table: "Tracks",
+                keyColumn: "ID",
+                keyValue: new Guid("d4665821-75f0-4266-adfd-373266d146e9"));
+
+            migrationBuilder.DeleteData(
+                table: "Addresses",
+                keyColumn: "ID",
+                keyValue: new Guid("0a7100b9-a371-475e-843d-5681d4123320"));
+
+            migrationBuilder.DeleteData(
+                table: "Addresses",
+                keyColumn: "ID",
+                keyValue: new Guid("75cc3997-7d8b-4ac3-b46c-f1ca12d6a060"));
+
+            migrationBuilder.DeleteData(
+                table: "Addresses",
+                keyColumn: "ID",
+                keyValue: new Guid("a55714d4-a40a-4f2a-9d68-282bbadecb46"));
+
+            migrationBuilder.DeleteData(
+                table: "Addresses",
+                keyColumn: "ID",
+                keyValue: new Guid("ceea56e8-6193-4541-b760-89af6f762a4a"));
+
+            migrationBuilder.DeleteData(
+                table: "Addresses",
+                keyColumn: "ID",
+                keyValue: new Guid("fe8ac32b-10fd-43af-ac29-c8749af9ecb0"));
+
+            migrationBuilder.DeleteData(
+                table: "Classes",
+                keyColumn: "ID",
                 keyValue: new Guid("3b204fbf-a1a7-43d2-8b41-a2aa310b29be"));
 
             migrationBuilder.DeleteData(
@@ -2069,6 +3387,21 @@ namespace HylianRIS_API.Migrations
                 keyValue: new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"));
 
             migrationBuilder.DeleteData(
+                table: "Surfaces",
+                keyColumn: "ID",
+                keyValue: new Guid("73504bc3-ff6e-4182-811f-93a647a323c9"));
+
+            migrationBuilder.DeleteData(
+                table: "Surfaces",
+                keyColumn: "ID",
+                keyValue: new Guid("751b8d3c-a773-443d-9e16-2f1b5cd87113"));
+
+            migrationBuilder.DeleteData(
+                table: "Competitions",
+                keyColumn: "ID",
+                keyValue: new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"));
+
+            migrationBuilder.DeleteData(
                 table: "Countries",
                 keyColumn: "ID",
                 keyValue: new Guid("0afec050-198a-4248-b736-e5bd611550a9"));
@@ -2082,11 +3415,6 @@ namespace HylianRIS_API.Migrations
                 table: "Countries",
                 keyColumn: "ID",
                 keyValue: new Guid("ade8e58e-f037-48aa-8fae-5bedcb6ad0d8"));
-
-            migrationBuilder.DeleteData(
-                table: "Competitions",
-                keyColumn: "ID",
-                keyValue: new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"));
         }
     }
 }

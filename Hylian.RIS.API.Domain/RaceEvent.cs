@@ -25,6 +25,7 @@ namespace Hylian.RIS.API.Domain
         public virtual Organisation Organisation { get; set; }
         public virtual RaceTrack Track { get; set; }
         public virtual RaceCompetition Competition { get; set; }
+        public virtual List<EventDelegate>? Delegates { get; set; }
 
     }
 }

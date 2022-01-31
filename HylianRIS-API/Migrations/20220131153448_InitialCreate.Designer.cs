@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220131001729_InitialCreate")]
+    [Migration("20220131153448_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -397,6 +397,26 @@ namespace HylianRIS_API.Migrations
                     b.ToTable("Dogs", (string)null);
                 });
 
+            modelBuilder.Entity("Hylian.RIS.API.Domain.EventDelegate", b =>
+                {
+                    b.Property<Guid>("EventID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CountryID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AccountID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("EventID", "CountryID", "AccountID");
+
+                    b.HasIndex("AccountID");
+
+                    b.HasIndex("CountryID");
+
+                    b.ToTable("EventDelegates", (string)null);
+                });
+
             modelBuilder.Entity("Hylian.RIS.API.Domain.Jersey", b =>
                 {
                     b.Property<Guid>("ID")
@@ -730,12 +750,17 @@ namespace HylianRIS_API.Migrations
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("SurfaceID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("ID");
 
                     b.HasIndex("AddressID");
 
                     b.HasIndex("Code")
                         .IsUnique();
+
+                    b.HasIndex("SurfaceID");
 
                     b.ToTable("Tracks", (string)null);
                 });
@@ -912,6 +937,22 @@ namespace HylianRIS_API.Migrations
                         .IsUnique();
 
                     b.ToTable("TrackRecords", (string)null);
+                });
+
+            modelBuilder.Entity("Hylian.RIS.API.Domain.TrackSurface", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("_Names")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Names");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Surfaces", (string)null);
                 });
 
             modelBuilder.Entity("Participants", b =>
@@ -1157,6 +1198,33 @@ namespace HylianRIS_API.Migrations
                     b.Navigation("Sex");
                 });
 
+            modelBuilder.Entity("Hylian.RIS.API.Domain.EventDelegate", b =>
+                {
+                    b.HasOne("Hylian.RIS.API.Domain.Account", "Delegate")
+                        .WithMany("DelegatingEvents")
+                        .HasForeignKey("AccountID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hylian.RIS.API.Domain.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Hylian.RIS.API.Domain.RaceEvent", "Event")
+                        .WithMany("Delegates")
+                        .HasForeignKey("EventID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+
+                    b.Navigation("Delegate");
+
+                    b.Navigation("Event");
+                });
+
             modelBuilder.Entity("Hylian.RIS.API.Domain.Jersey", b =>
                 {
                     b.HasOne("Hylian.RIS.API.Domain.RaceCompetition", "Competition")
@@ -1328,7 +1396,15 @@ namespace HylianRIS_API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Hylian.RIS.API.Domain.TrackSurface", "Surface")
+                        .WithMany("Tracks")
+                        .HasForeignKey("SurfaceID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Address");
+
+                    b.Navigation("Surface");
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Run", b =>
@@ -1456,6 +1532,8 @@ namespace HylianRIS_API.Migrations
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.Account", b =>
                 {
+                    b.Navigation("DelegatingEvents");
+
                     b.Navigation("Persons");
 
                     b.Navigation("Roles");
@@ -1512,6 +1590,8 @@ namespace HylianRIS_API.Migrations
                 {
                     b.Navigation("Crew");
 
+                    b.Navigation("Delegates");
+
                     b.Navigation("Races");
                 });
 
@@ -1525,6 +1605,11 @@ namespace HylianRIS_API.Migrations
             modelBuilder.Entity("Hylian.RIS.API.Domain.Role", b =>
                 {
                     b.Navigation("Accounts");
+                });
+
+            modelBuilder.Entity("Hylian.RIS.API.Domain.TrackSurface", b =>
+                {
+                    b.Navigation("Tracks");
                 });
 #pragma warning restore 612, 618
         }

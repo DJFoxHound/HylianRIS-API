@@ -9,7 +9,7 @@ namespace Hylian.RIS.API.Domain
         [Required]
         public string Name { get; set; }
         [Required]
-        public Address Address { get; set; }
+        public Guid AddressID { get; set; }
         [Required]
         public Guid CompetitionID { get; set; }
         public string? Logo { get; set; }
@@ -20,5 +20,6 @@ namespace Hylian.RIS.API.Domain
         public virtual List<AccountRole>? Roles { get; set; }
         public virtual List<RaceTrack>? RaceTracks { get; set; }
         public virtual List<RaceEvent>? Events { get; set; }
+        public virtual Address? Address { get; set; }
     }
 }
