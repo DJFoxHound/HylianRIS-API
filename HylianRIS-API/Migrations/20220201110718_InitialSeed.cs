@@ -3364,6 +3364,1403 @@ namespace HylianRIS_API.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("0011c36a-553a-47b2-b35b-5899a8da2816"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("0011c36a-553a-47b2-b35b-5899a8da2816"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("001575d4-c182-441a-aa13-916996248bdc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("004f055c-6d45-423c-80f0-e0ac16ab4a90"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("0075ff83-cf87-472c-8545-3b0f958f8bc1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("007cbcdc-7b90-4cf6-956b-9a2ee7b2394f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("009ba8bf-5d8d-47b3-8cd1-2e0ff742bf52"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("00cee974-6ba6-438c-946d-4fa04f179ca9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("00f3d0f3-d95a-4dbb-88a9-af6d90dace6c"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0118a119-ec04-41f6-b56b-c65e3129815c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("011d872c-35d7-4317-b143-a7b0dfef0bee"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("011d872c-35d7-4317-b143-a7b0dfef0bee"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("0204a862-3c08-4497-bebd-bdbc87c85ec1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("026b09c3-fd2d-4567-b9fa-ab7e28292524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("026b09c3-fd2d-4567-b9fa-ab7e28292524"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("026b09c3-fd2d-4567-b9fa-ab7e28292524"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("02cc99f7-3375-43bc-8145-dead12dbc702"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("02e972e1-c28f-4234-8200-5375a53aefa9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("0326d839-4b65-46cb-8d09-13cf0e2e1f90"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("0326d839-4b65-46cb-8d09-13cf0e2e1f90"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("042773f0-ccec-42a5-8cc4-c702b3ed0eba"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("04fbf194-b6f2-49d6-b949-c13a4c2dc68c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("04fbf194-b6f2-49d6-b949-c13a4c2dc68c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("0503ebb2-13f2-4244-8135-202fbc01b38b"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("0503ebb2-13f2-4244-8135-202fbc01b38b"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("05062b1a-4748-46dc-b554-646aca44f96b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("0528de09-f1dd-4288-83be-16e584d919a9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("0528de09-f1dd-4288-83be-16e584d919a9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("056ced4d-cb7b-4bbe-b232-cf9ee7f9a1ba"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("05d46981-a1c8-4dae-b9e8-ac1243444476"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("0611b1ad-f9ab-4588-b057-9ea759354160"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("0629eb6b-4e6f-4606-a5aa-25ff6de32eaf"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("06d078ae-56f6-4cd8-ab5e-7e7f2d6c8bee"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("0714d2f3-001d-4a4c-8532-7efcf6a9f959"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("07a2c50d-9e6f-4c2f-8e19-3f49d091b02a"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("07a2c50d-9e6f-4c2f-8e19-3f49d091b02a"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("08e420b8-9ec2-488f-aa87-4f685b584ce0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("08ed05e7-02b4-4814-a130-d6c9d3118638"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("0960a00c-62cc-4672-b4ca-1d9245e8a323"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("09a333aa-74ce-41f3-873d-607936ee1457"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("09e9c91c-0304-4fd8-88b8-525bbbfc025d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("0a09573c-5825-4d1d-a3de-ecdd59610f13"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("0a509b3f-6a30-4016-9540-401f5c60ae20"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("0adeb239-44d7-4047-881a-eabd8242a38b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("0adeb239-44d7-4047-881a-eabd8242a38b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("0b2ef7ec-ab54-4665-b215-41c9252df612"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("0b337456-da5d-4960-9d28-11141a1dd7ea"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("0bb58496-1353-4ae9-9104-607af0264f2d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("0c2995cc-1dfa-49ab-91f9-48badb65beed"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("0c44fad5-2ddd-4605-bd28-15173d71f3de"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0d2582e9-8c80-4d7c-a2d8-749873a557ac"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("0d636317-3d39-453f-96bc-59817413d5ee"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0d7463d9-19d3-4751-a47c-c343700b7df0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("0d7463d9-19d3-4751-a47c-c343700b7df0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("0e1c22e5-77f3-4bef-b574-6507cffc8a06"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0f1d36ef-9a82-48d4-8b15-23cbb8e822eb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0f38554a-28da-4a10-b6b4-1982d3198cbd"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("0f9dcf52-75bd-4d24-b387-09560d1cf5e4"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("0f9dcf52-75bd-4d24-b387-09560d1cf5e4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("0fef2efc-7aef-45d4-8a8c-6d168e36ed4a"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("101c9a2b-7b9a-434a-8725-cf5dc0d05c05"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("105d2d35-ed46-46ea-85c0-510c0102bdc0"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("105d2d35-ed46-46ea-85c0-510c0102bdc0"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("105d2d35-ed46-46ea-85c0-510c0102bdc0"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("10bb404c-1754-4ff8-aaf0-624e6cdc6983"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("10f776bd-bd00-43dc-bce3-142611a4316c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("10f776bd-bd00-43dc-bce3-142611a4316c"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("10f776bd-bd00-43dc-bce3-142611a4316c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("110665a4-04d9-46de-baa2-694307932b71"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("111b56ea-afff-4857-b279-7ffab0f026ea"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("11680657-4695-44c7-85df-fccb83aeb1ae"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("11fc71d3-6fda-428c-a2ce-90efe839d2a9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("1200d253-5935-4b2d-9636-b2ae2e7b5733"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("1226d737-112b-4d38-afa9-3f000cdfeece"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("1242906f-23f4-4a9b-b827-6b07d64a28b1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("129b0e31-1023-47b0-9c58-6d6b6c3d0e31"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("130a45e4-7af8-43be-b64c-6aa980f4b5bd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("1316ac97-5c66-4da7-bf37-9902bce24bc1"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("139020d0-1087-40a2-b1b7-3d14c7d3fa4e"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("13d53982-2a96-45c7-8752-bea4b3b3aac1"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("145e7a3e-3d0f-4777-8e2b-1fac42a070b5"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("1483c59b-5928-41a2-ab76-c28e25b5c28a"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("148a8652-ab72-4b25-96ef-dd8651fc4382"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("15018e4f-accc-4be3-ab13-b936a3caf6c6"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("163a0901-37b0-46dc-821f-0c9d22d880e9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("16c115e0-3728-47f7-af94-930a27d6efc1"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("16c115e0-3728-47f7-af94-930a27d6efc1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("176cc8ca-481b-4c75-b754-b1591fd58cbb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("17840f8c-456b-4674-b807-6da94e65f26b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("17b88be3-8221-4326-8e48-387a8c5bb249"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("17d191d2-3a0a-41ec-844c-ee96428bb617"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("18304646-ef40-427f-ba81-e39b7f0b5a19"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("18304646-ef40-427f-ba81-e39b7f0b5a19"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("18304646-ef40-427f-ba81-e39b7f0b5a19"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("18d64121-baa2-43a3-85f9-15895bdd58fc"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("19f7cd7a-4314-4144-ad71-81724d775c7a"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("1a260fd9-2e61-4a39-89b9-dc49f83c1ee4"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("1afe62f4-3e4d-4562-85b2-db6fa116b374"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("1b43139e-a1ec-4311-a4c3-541b0cd5ccd4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("1b6f497e-b823-4aea-8c89-73477b66e93c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("1c4fd471-d665-4829-ba99-527010a6e85e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("1c94c0fe-8856-416c-9669-1d22dc9ecde6"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("1ccca19d-e50f-402d-9493-4c5261e6b843"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("1ce408a1-e97b-4116-891a-27324db5b0d2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("1d636958-a189-4297-8940-1672dc544cb2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("1d81312c-4ea0-4bfc-89dc-6f16f2257255"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("1d94c660-de2a-4a08-bbb6-236664f3267e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("1d95cf95-9fb7-4123-acc5-593b81ab08e9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("1e15ce30-96b4-4732-a430-c4ab67758378"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("1e15ce30-96b4-4732-a430-c4ab67758378"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("1e3b84ff-5d2f-4384-ae78-56879cfbd8c8"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("1e84572c-a545-456f-8ac9-e8783a30bc44"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("1ea1055a-3192-4fcd-9b8f-dbeba19c9146"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("1f327474-7371-4f76-9380-f76a4ed9c47c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("1f71c9ff-d5cc-4bbd-8755-a5edcc191cf3"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("1f71c9ff-d5cc-4bbd-8755-a5edcc191cf3"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("1f71c9ff-d5cc-4bbd-8755-a5edcc191cf3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("1f7e40be-861e-4268-97ca-e9d037cbd446"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("1faebd6a-a050-4f28-bf0e-d79471d39178"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("2037f122-7c0f-4a1b-97d7-da68af9ca0f5"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("20a0fd13-5812-4a37-ac2c-1803851cb36e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("20a27df8-b20d-444a-bf30-c6a611c9ba4c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("20e3e575-65ee-4220-a0fa-0cfe9ca9326d"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("20e3e575-65ee-4220-a0fa-0cfe9ca9326d"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("210039d6-97c6-423a-80bc-f9ebab3e4902"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("21837fca-bf01-4b8b-8628-771305d1c803"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("21c4d2a3-7c50-4311-8144-8f6ebe9cfc78"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("21dd3f80-1a59-4de4-9a36-9a80f13fe356"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("229e8860-7671-42b7-8377-976a13bf1b28"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("2374f867-12cc-4843-83f7-fa9063ceeee3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("2387c0cb-d302-404f-aa61-192c6a21a026"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("23b3126e-1fd6-4c36-a62e-16b8feda9d1d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("240e03bb-f29e-4406-9508-24500184e109"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("246256a8-5afd-4416-87be-baf8c3cb1e06"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("2476a4bf-141c-4544-982b-434c31127e07"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("2499e384-ad38-49dd-bedf-e48a3e703b34"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("249cd0e6-6a89-4073-8121-ea94caaf32d9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("253560e5-29e6-41f5-be0c-6c36ebdef1d0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("256581bc-550f-4568-a95e-ce9f175fb61b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("25a0cf66-1095-4eb1-b9f8-2db665a3fd10"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("25ac36e7-a894-484a-968f-1dc2aa7d8ad4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("264819f9-18d5-4429-b4f4-aae17f4be8b0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("266b1338-3976-4ef6-a284-9a634375b1b9"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("266b1338-3976-4ef6-a284-9a634375b1b9"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("266b1338-3976-4ef6-a284-9a634375b1b9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("286c688d-732d-4403-8a10-b1cf00f57b8e"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("288be86d-a5b0-42fc-b244-339aa7a1befe"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("2a17462f-ba12-4aa0-9256-add51bffb702"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("2b1e7a70-1b54-4b9e-8eb5-228d23a4f686"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("2b1e7a70-1b54-4b9e-8eb5-228d23a4f686"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("2b8d2baf-cae7-4d6f-9b3c-45c184844b9b"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("2b8d2baf-cae7-4d6f-9b3c-45c184844b9b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("2bb38655-35b9-44a3-8fca-78c7e087dc1c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("2bd8c60e-2ee4-4e98-add4-c8454bd441aa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("2be39fa2-485f-475c-9ceb-0511ae2e640b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("2be39fa2-485f-475c-9ceb-0511ae2e640b"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("2be39fa2-485f-475c-9ceb-0511ae2e640b"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("2bebee7c-acbd-4303-9df5-83a88046230a"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("2bebee7c-acbd-4303-9df5-83a88046230a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("2bebee7c-acbd-4303-9df5-83a88046230a"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("2bf185a7-63d0-4791-8231-9d2e08c121a4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("2c97c0a3-d611-49c6-84ac-2ff1deb7b751"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("2d386c26-29de-414c-8909-678ab564fe71"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("2d46364d-558e-435e-ae88-44b3d7792109"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("2d84de06-79c7-4476-a220-34b3623a91f5"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("2e05f98a-9060-4f1a-814f-7b563e3115db"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("2e6485f5-4ad3-417f-978c-6fab660dbb12"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("2eb8ebf8-a527-481a-856a-4a5191e4a606"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("2ee99651-7729-4fc4-841f-8e1c38cb07a5"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("2f5a5c33-f020-4a07-b27e-84a125d58948"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("2f71f6cd-0858-4a3d-9531-4a58bf7c2aea"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("2fe73fc6-5682-4320-a600-afd52b8ee761"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("308a01bd-138d-455a-8b9c-b1a3050da7e5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("32353038-94e4-4271-8806-6c6fdd9f4ed8"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("32353038-94e4-4271-8806-6c6fdd9f4ed8"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("3281e49f-a786-4e5e-8f24-baa140a2925b"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("3360242f-400b-4e10-906a-13668538c611"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("33d67d38-4769-49ce-be25-cb4cf64707e3"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("351c2142-2c31-4923-82ba-d54fa508ead2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("35a725d1-7c3e-4ba2-8ec5-75e17ec6d954"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("36d10a39-2226-462f-bec8-c0293b730d0f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("37267a22-feff-4e2f-9447-8d4854165528"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("377ee5fd-b1f0-4fa1-b554-90c53d2fc3a4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("377ee5fd-b1f0-4fa1-b554-90c53d2fc3a4"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("3874925e-472c-423c-bfb4-7595c8feeb5b"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("38c16dff-6fc4-4db1-b5a6-da24c6252b6a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("398cf6b7-eee3-44dc-b001-66d6320b7898"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("39ae666b-3cee-4cd8-a10c-88a5f72eb696"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("39ae666b-3cee-4cd8-a10c-88a5f72eb696"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("3a2bf568-de89-4b11-80aa-21ab984917fb"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("3a84afe2-f075-4619-b51b-56ea5075e968"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("3b46c150-b4b0-492b-9e32-c7a7f545e0c2"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("3b46c150-b4b0-492b-9e32-c7a7f545e0c2"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("3b72144c-cf88-4064-8e0d-5ca70621a99b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("3b9c98e1-bdf4-435f-a628-30cdfd371b63"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("3ba3bd14-dfcf-43fc-8ba4-15006edf75e3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("3bb3ada7-6d73-4301-9ef6-4c666c87b214"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("3bf16ad1-11ee-429d-9f87-c3780ed06160"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("3c2edcad-ff25-4c50-931c-71411cf681ca"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("3ce6967a-327b-4c31-b909-6c1b0e63f2e7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("3d4043e8-f69b-4ec3-990c-8284da3a7304"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("3d4043e8-f69b-4ec3-990c-8284da3a7304"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("3d9afba7-1b4c-44e5-a468-d043cb366613"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("3e5786b8-e9c3-4372-b378-f1c68f8a2d11"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("3f1845d5-6920-4970-b168-9def1ae4005e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("3f1845d5-6920-4970-b168-9def1ae4005e"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("3f1845d5-6920-4970-b168-9def1ae4005e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("3f3f0245-17c4-470d-979a-5d3cdd83e29e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("3f4a012f-29a9-43c8-801c-9663deef4b15"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("3fb40c56-2b7f-4ea7-9536-cf821875a3be"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("3fffdbc3-663c-41aa-91ed-3dfca17ad1fc"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("40af2614-038c-4bec-9ffa-130dff714595"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("40af2614-038c-4bec-9ffa-130dff714595"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("40cebd59-def1-472b-b7fe-084a6725394d"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("40d76ba1-b03c-4040-bcb2-e448cc34f4af"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("411fdcfa-ef5d-42f8-bfd8-17d9d6e879b9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("42665431-9f43-4e4a-8455-cd9f25d5e8cc"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("428071b8-8cbe-4c79-9b28-b5323fd42ff4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("433ba464-43cb-422c-a83b-155f5c45d909"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("43855f5a-5989-4a74-95a7-df6231f5f3be"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("43b9231e-ef7c-46ff-a555-1c0b1de69de9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("44a0065a-5060-4750-bd8e-e428cf198815"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("459f4962-bfe2-4189-975d-afbe230c8a8c"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("47463f33-3b39-4a8c-ac50-4a3f24ee8e14"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("47463f33-3b39-4a8c-ac50-4a3f24ee8e14"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("47463f33-3b39-4a8c-ac50-4a3f24ee8e14"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("484af3d9-5ef7-4cfb-bd57-dd05da3d79f0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("484af3d9-5ef7-4cfb-bd57-dd05da3d79f0"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("484af3d9-5ef7-4cfb-bd57-dd05da3d79f0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("4875e3dd-df5a-4589-a8c4-fb7507b47661"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("48d5d383-ee7e-47ed-bab9-77e2f34354cf"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("4a8ddac5-8c14-4691-8062-0d88c92de541"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("4a8ddac5-8c14-4691-8062-0d88c92de541"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("4b124784-f183-4871-93ce-4dc908dcaa6a"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("4b8727da-9ec2-49d7-b4bd-76018ed2637b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("4c79374f-c757-4c52-a8d1-7ac4f148a06d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("4c7a17bc-6cdb-4c83-83d4-7221b18180da"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("4cebbf08-a70e-4dd6-9235-fb8315405fc2"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("4cebbf08-a70e-4dd6-9235-fb8315405fc2"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("4cebbf08-a70e-4dd6-9235-fb8315405fc2"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("4e9a6523-d6e6-40e3-b21e-b03cdfb61cd1"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("5030fd75-0c07-4dcc-9b78-fbef8b28cf44"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("506cd0c4-a949-436c-b298-bc350ac2e050"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("5099d6cb-8c1e-4739-b708-2fcd82e2c44e"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("50bfa050-4ba7-4fdb-8e3b-67eb51bcb30f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("50e03542-d86a-43c3-b6d7-6e2a1661cf73"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("50f305cf-e331-4e95-bed0-9f3d6dd8e156"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("510e6ea6-0c0f-4ed9-b7a8-866dd423bc78"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("512f3a3e-7cba-4fcc-abfe-5fc994bedce0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("51917c60-f568-49c3-9365-1a6f50983b2d"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("51bc2bf0-5597-4673-a599-73a12d3d6c46"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("51c334ef-1992-4c42-a5f3-389719c252fd"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("51c334ef-1992-4c42-a5f3-389719c252fd"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("51ccf59e-5a39-4c51-8a29-9c2c1c68df23"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("51ccf59e-5a39-4c51-8a29-9c2c1c68df23"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("52086444-7fe7-4070-960d-69327b7caf8e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("52086444-7fe7-4070-960d-69327b7caf8e"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("521b93e4-01e5-4a2c-9ee3-74853fc61d84"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("526d468c-7f60-48d2-b491-eb3876afc321"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("52c15276-0f3c-4fca-bdd9-c007799b2bb8"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("531c65d7-79c0-43df-ab97-2a65c48fd0c0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("53764c02-4d7d-44ea-89e4-0a36e104ff53"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("5397b29f-a9df-4cce-91da-03a104726362"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("547cb3b2-f354-4b49-9b43-cf4364d6b35d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("54a1570a-590d-48a2-a060-f4e5402970e4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("55066c54-68cf-46b4-8bd0-639ef396605d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("552e0e95-31c9-4b8d-8d58-b2cbac0aa379"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("55b07067-c87f-4fe0-bb02-b551218c2edc"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("55e0bedf-5af7-48ca-8713-7cba291201cf"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("5699a79e-6b57-4934-8f50-fd25e95aa869"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("56ae67dc-3154-45ae-a91b-310305bf156d"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("56ae67dc-3154-45ae-a91b-310305bf156d"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("56f472f3-aaff-4d55-a86c-d6b463155768"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("5743e0cd-4045-4957-9d42-1fa4730d1b93"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("5775945b-cb4d-4469-b567-7c6813586721"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("58b36d41-d7b8-4c8b-b144-5d252f0f0c81"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("58c60ca5-eb3f-4e68-8326-13d8d5afb901"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("599a9647-2a2e-4f8a-91f5-cda97a6349ec"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("59aae70e-1511-47e2-afc8-35184233136a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("59aae70e-1511-47e2-afc8-35184233136a"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("59c5ca16-7334-4cb3-b83a-4e2ee6b2aec6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("5a3008e3-7c20-4251-8ec3-bc0e8fb73f95"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("5c164f52-885d-40ed-a1ed-f080f90e20be"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("5c164f52-885d-40ed-a1ed-f080f90e20be"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("5c91d054-b217-4ce1-bcb1-02ef492414bb"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("5ca4e7fd-6b50-4b5e-834a-8ca78ba2bc14"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("5ca4e7fd-6b50-4b5e-834a-8ca78ba2bc14"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("5cbb7717-2d85-46fe-8e69-6ba4ac73ba98"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("5cbb7717-2d85-46fe-8e69-6ba4ac73ba98"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("5cbb7717-2d85-46fe-8e69-6ba4ac73ba98"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("5dad6d81-5b62-4d45-a93a-be54372d2360"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("5dc85a7a-3e0e-453a-808e-61f949661957"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("5dcab3f5-ba1e-4430-bff6-45bd7687752e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("5dcc8725-8505-4ac2-a885-81b913ca39c5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("5dd7f374-ad57-4e5b-9fb9-e3e22e529ff8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("5de25826-26d3-4992-a497-dcc07f121c65"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("5ea6c7b0-14fe-4100-ab7d-61a2f2c11768"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("5eaa39e2-a395-4e07-92fa-47d8708a2e86"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("5ed43167-46c9-4984-8f3a-6cb271cb8a37"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("5eea8f30-924f-4517-b45a-b256c43caf5f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("5ef5c7f1-ad70-4ad5-995b-e5a1bd471bfb"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("5f18f6c5-53eb-451a-8198-bc004b28d3f6"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("5f18f6c5-53eb-451a-8198-bc004b28d3f6"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("5f3fa814-2c8f-4d84-a39b-2e77dd0f3b74"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("5f7779cd-cb06-404a-83e3-72589ee13935"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("5ff3546d-e3eb-4fa6-9945-2eb9065d67d4"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("606347c6-b9f7-4f76-8492-6a4f5995f04e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("609e4c91-5dad-4388-aba8-03bd88d1573b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("61ca91f4-d7d2-481f-96ee-e2b47a0e2373"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("61d95f81-717b-4bbb-880d-61c2e506748f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("61f1482f-18e4-46ee-8b8d-e9477b4a12d3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("620ab630-a27b-4de3-ab4d-9c28864e7fb9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("62295c53-eaeb-43e3-81ed-6bc211ec4652"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("626a01b1-bf36-4667-ad33-2414c14b1380"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("626a01b1-bf36-4667-ad33-2414c14b1380"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("62f8b22e-1503-46c6-bd00-50473e0a345e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("636c29a4-11c2-4012-a5e0-75370c2bc705"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("63b8ef1f-3b6c-4787-8f15-2f647a60640a"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("63b8ef1f-3b6c-4787-8f15-2f647a60640a"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("64049267-294e-45e4-841b-f86b997d2793"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("643e12c8-6619-4a98-8d02-65ea515d8e1e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("64605b15-4eab-4544-b4fd-63251b5d90ad"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("64e6a877-fc60-4a32-ba65-73558b9e5bdd"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("64ed9b88-8d2b-4591-9eda-170c6693fdc0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("65570dc4-4b36-4c11-893a-0400db1db82d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("65e5a7da-50d3-4d90-aac1-b2117da2df84"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("66ad3787-5ee8-43bc-9faa-54235ee32287"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("66b3ef61-d2db-4860-9190-6f3d4f6c1f1f"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("66b3ef61-d2db-4860-9190-6f3d4f6c1f1f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("66f25eb4-fca6-4397-be0b-d2976bdc2236"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("6723532a-7c2f-49ce-8f5b-9c1af16ce68c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("6723532a-7c2f-49ce-8f5b-9c1af16ce68c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("6723532a-7c2f-49ce-8f5b-9c1af16ce68c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("674a0f47-570c-45d6-ba34-82865d913849"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("678418f5-7873-4a9a-979a-8b2005be1d41"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("68084996-e9ee-4bcf-beac-4a36556d38b2"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("68e59327-0418-4806-a476-76418aaf392d"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("68fb90aa-ac75-45ba-a526-f6be44f5cee0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("69560bc7-3bd5-46fb-a9e8-9d5a4ec105a9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("69597e07-33d8-4446-9964-43ae09c7e78d"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("695bb3e4-819b-4fcf-95e3-9a54211078b5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("695bb3e4-819b-4fcf-95e3-9a54211078b5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("6978c46c-1043-4d9e-820c-35bcd6cbced1"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("6978c46c-1043-4d9e-820c-35bcd6cbced1"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("69f97501-b017-4d04-9e36-5e3aa8ed829b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("6a29b69f-9cdd-443b-a18c-5e2699054527"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("6af0dd3c-45dc-45eb-87cd-e52c1db2a05f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("6b0874e6-832e-41b1-9d7f-8d65a0bd5b20"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("6b30c129-6c88-4832-b918-796283a14bb1"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("6b678663-0cc3-4db1-a308-b1c97f0adc95"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("6b75334f-242f-46df-870f-6bb294db4a34"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("6bc3a409-7d09-423c-8645-a64040da501a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("6c2fabef-849d-427c-997b-e6ad6f1ba270"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("6c7a8fd4-e1e6-474d-ab97-23e41a785646"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("6d640755-79c0-4db7-8054-d81c7bf87622"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("6dee4ace-4492-46d7-8a3a-8ef392d896fe"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("6df078b3-6035-4639-9b7e-f82cb68ef47a"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("6e1b5b0e-8686-432a-b05d-d6c3a3875d05"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("6f476815-e7b3-4243-bf7c-d20c74537fe4"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("6f8d3cce-89c8-491f-833f-4c6490e4065c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("6f8d3cce-89c8-491f-833f-4c6490e4065c"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("6f8dddbf-bcc8-4249-afc7-c1d2d820cf71"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("7041f7f7-b44a-4568-8aec-bbb7ed249fdc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("704270a8-e17e-4270-bc34-cb832df8a982"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("70a26cfd-d69d-4b5a-b890-42ce7fcce7aa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("70aa8f57-8e52-4b21-b9b2-68c058d829f9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("70e9d7a6-ba78-404d-a489-1bbd4267aa21"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("71955ec6-9cf9-41b7-84c4-dda6ff43c7cf"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("7341f50f-9cb5-4a54-bf9c-1d277c4abbce"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("7341f50f-9cb5-4a54-bf9c-1d277c4abbce"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("73a80ce7-51de-4469-8872-c4b36b8bb545"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("73b03858-1ac5-41c1-bc02-3f224a23095f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("73f782cc-b3a3-4f13-868e-f0419cb82846"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("74ce0a84-88d5-42e3-bbaa-91139970b439"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("74ce0a84-88d5-42e3-bbaa-91139970b439"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("74db332f-8ef3-47a4-81ae-0f65e3a4404e"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("74db332f-8ef3-47a4-81ae-0f65e3a4404e"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("74db332f-8ef3-47a4-81ae-0f65e3a4404e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("75c1e0ee-412c-4f1f-8886-d81b7916ac3b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("75caaff9-e50f-4f12-884a-17448043bf93"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("766b2f45-79d2-49b2-a957-5193eeefbf67"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("768454c4-d896-4608-a903-1b7bfb02858f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("773c055c-03f7-4362-a1f9-56d8d2168eee"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("773c055c-03f7-4362-a1f9-56d8d2168eee"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("773c055c-03f7-4362-a1f9-56d8d2168eee"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("77402f13-849d-4ed0-b5b5-119996a29ce7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("784d07ca-e671-4db1-8be9-847dab5efeaf"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("784d2ba1-5f05-4c50-92db-4e9bc28430bb"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("784d2ba1-5f05-4c50-92db-4e9bc28430bb"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("784d2ba1-5f05-4c50-92db-4e9bc28430bb"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("7878a0bf-3ed7-4ea2-bd9f-5d25c996a54a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("78907ebf-456f-4953-9334-428ba0a51cf4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("78b13e8d-1f15-4e5b-b806-cdb65a5d4ef8"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("78b13e8d-1f15-4e5b-b806-cdb65a5d4ef8"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("78b13e8d-1f15-4e5b-b806-cdb65a5d4ef8"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("79630ddf-dcd5-43b4-93a6-29a28aea4df9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("79b6e80e-5157-4ab9-be23-811b95c8559f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("7a5cf84b-b123-4e6c-8002-0a9a7a80bca9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("7b0d9bd8-6636-4ead-a66c-0280a2b84653"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("7b0d9bd8-6636-4ead-a66c-0280a2b84653"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("7c12679b-f588-474a-bfdd-496a0fe09845"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("7c4c92f2-be4b-482e-9d92-0b04307bf18e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("7c87df54-0e69-42a5-b0ee-3c6a7bd0961f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("7cc1dae9-8771-4973-afd9-bf0269b921d6"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("7d3185da-9c06-4762-9430-6a69684e06b6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("7e5deb4d-33cb-44a3-b053-59123775c4ba"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("7e5deb4d-33cb-44a3-b053-59123775c4ba"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("7fe7e004-6c5d-41b3-8440-71ba0ee6cb3b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("80c8a17d-8677-4089-a0f0-490bfe3136e0"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("80c8f0b9-c5d1-4b5c-91ae-3f32eb790c93"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("8114bbb0-d683-4dec-855a-e7f0f2e84a3e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("825d4aa8-d2d6-4ea2-ad40-0a6b30b08cc3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("828e1c85-93ea-4e83-818a-8c20eafda155"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("835e8747-893c-4e13-a762-721fc729bb8f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("838ed159-f7ba-4b1b-962e-a59b66abfecf"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("838ed159-f7ba-4b1b-962e-a59b66abfecf"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("848e28c3-ddec-4368-b097-155bad397ab4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("848e28c3-ddec-4368-b097-155bad397ab4"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("848e28c3-ddec-4368-b097-155bad397ab4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("84927d8e-86e5-4d03-a7da-8cb18f6510fa"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("84927d8e-86e5-4d03-a7da-8cb18f6510fa"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("859f1403-d2f1-4adb-9cf7-443e1a3fd835"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("85deb67d-76ef-4948-98a3-87e3baeb59d7"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("8640bb92-6908-45f3-bdca-773e114bfd65"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("86927e80-97d5-4779-96f9-8403d1e782ad"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("875e2434-6d8e-43b2-957e-07d242eb4939"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("875e2434-6d8e-43b2-957e-07d242eb4939"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("87e3b0e8-f8e5-4ef2-aa15-4a6ea82cd045"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("88707c5d-982f-4b82-a11b-503d396e5f8a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("893ae561-3c5d-4652-b2c9-6c99248262d7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("899b0b47-ccf5-4242-b167-4bbc48b5fe9d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("89dcbf65-a17a-4a5b-868e-590e2610d4c6"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("89fc2e36-4bf7-446b-ba41-643cedeeaaf6"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("89fc2e36-4bf7-446b-ba41-643cedeeaaf6"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("89fc2e36-4bf7-446b-ba41-643cedeeaaf6"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("8a18c3dd-3808-454b-a3bb-95fdf68de41f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("8a7bd92a-d33e-4b11-b300-49b86b05bfb0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("8a7bd92a-d33e-4b11-b300-49b86b05bfb0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("8a91d213-6b7c-4be7-9606-50d837334822"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("8a91d213-6b7c-4be7-9606-50d837334822"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("8a980fa2-0e79-40fa-9b7f-a8ba9104e5d9"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("8a980fa2-0e79-40fa-9b7f-a8ba9104e5d9"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("8a9c7df9-5e79-4cf9-8b48-0e363df09658"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("8b117d8b-f893-4f1c-b02f-56699861f7f7"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("8bcc2987-2327-427d-abe6-737bf4056a1d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("8bd1cc68-211e-4b64-9dc8-2da885aa2ade"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("8c167fb8-26e5-4719-980e-09f2665242c7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("8c1ee69b-4714-4687-8d5b-a08f2400ff58"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("8cdb05aa-1529-40ca-9a28-5722338bfef7"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("8cdb05aa-1529-40ca-9a28-5722338bfef7"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("8d8d1048-55e5-4bc3-9530-90d7d7cb9c05"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("8d8da4bd-e831-48e7-993e-ed8d891482c1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("8dbfa201-cc30-45b5-b9a5-838fef9e459a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("8dd4512a-7d55-46de-bc0f-7203f1181e6a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("8e66ae26-36e0-4d42-aaa9-b95a7f6883f3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("8fa03423-6b02-48db-bfe4-c01e7b1f0ff8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("8fa03423-6b02-48db-bfe4-c01e7b1f0ff8"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("8fd82819-5f79-41d5-989b-ba6446658905"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("8fd82819-5f79-41d5-989b-ba6446658905"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("8fd82819-5f79-41d5-989b-ba6446658905"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("905f6262-4d53-496e-90d6-9351dc37132d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("90d5f91f-50d9-4bf4-a9fa-2fd03d60bed4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("91c02482-6dfe-4ada-8767-5b13734578d1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("924c889d-c720-4dbf-a449-311184bdc9fe"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("9295d89b-91d8-40ed-8934-cbddec92b531"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("92a375f6-f1e3-4061-aaf8-7558e9f8eb59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("94453329-fced-489b-865f-b2ba6093eee8"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("946ffbd1-b509-4bc3-bd3b-b06a3f0338c3"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("947a2452-f869-4920-bfba-a4a98f025b78"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("949d8536-0a27-4171-a662-4c97066ddcb9"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("949d8536-0a27-4171-a662-4c97066ddcb9"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("949d8536-0a27-4171-a662-4c97066ddcb9"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("951341d9-d163-4eef-a0f0-efd07c150e78"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("95632818-9300-4f78-925a-852116bff6d9"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("95632818-9300-4f78-925a-852116bff6d9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("95632818-9300-4f78-925a-852116bff6d9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("95cd6039-fd74-417e-b1d1-f5b208dd980c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("95fbd752-375e-4025-83ff-e1b646e8146e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("9621c2d2-a7e6-45b0-8fe0-948b0f0d03b5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("966942fc-a330-4679-be97-efe0ec6ef1da"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("96784121-d630-432a-b694-6845bec0ee53"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("96d40769-4c20-4ec6-8138-d409bfc73b61"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("96d40769-4c20-4ec6-8138-d409bfc73b61"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("96d40769-4c20-4ec6-8138-d409bfc73b61"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("96d55c76-1854-4c1e-953e-64a2f6289eb7"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("977a6f30-87cb-4246-85d6-e4e175c02179"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("9805e6e4-56c2-492c-a652-f7b26119aae8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("981330ed-85db-419f-9fd1-667bb8c7777f"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("981330ed-85db-419f-9fd1-667bb8c7777f"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("981330ed-85db-419f-9fd1-667bb8c7777f"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("9897a264-858e-4e69-837e-32859333952c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("9897a264-858e-4e69-837e-32859333952c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("9897a264-858e-4e69-837e-32859333952c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("993c0023-034f-47d0-b2d4-0bc7fff94eec"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("993d3431-456a-4e8a-bb34-a0ef7c62e933"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("99c292ef-cd8f-433a-a85c-3bc06f524f6e"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("9a47d6e7-d7c2-4c25-93ea-11fd4d48eaf0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("9a47d6e7-d7c2-4c25-93ea-11fd4d48eaf0"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("9a47d6e7-d7c2-4c25-93ea-11fd4d48eaf0"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("9ba4220e-4a85-4c1a-9902-71edcf2bd6b9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("9c286fcd-bd97-401c-83e2-241a15ebbfa0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("9c3b49ec-245e-45ea-ae9a-87f1937fe960"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("9c66b420-1615-4575-b2d6-d27dadb18cf3"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("9cf65c84-886e-42f9-bad2-35eb880e54dd"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("9cfbb711-de98-421b-9f69-165e564453c8"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("9df58131-5c43-402b-9254-551b33e4567c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("9dff65b0-8e5b-43c6-a243-25ee2a5e706b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("9dff65b0-8e5b-43c6-a243-25ee2a5e706b"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("9dff65b0-8e5b-43c6-a243-25ee2a5e706b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("9e0aab2a-09a4-44b7-bb6c-b3372eefcaa2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("9e0aab2a-09a4-44b7-bb6c-b3372eefcaa2"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("9e7a417c-918a-4bb8-8fcd-886c2ccc7a6e"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("9f7978a3-34bf-4b46-bdc8-43fd0b0ba548"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("9f7a0f4e-532a-40fe-bf67-dae776b4272d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("9fadb179-1166-440b-9c3a-69232d75eadd"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("9fd19ef1-e9d1-4122-ac58-594858351be1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("9fd233b4-d289-4bea-9bec-bb42058dd8f2"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("a04027db-eb29-43c4-9c24-6408abe65168"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("a04027db-eb29-43c4-9c24-6408abe65168"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("a0753898-b1b1-4303-83d1-5f266f4195a9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("a0ce5a4b-0067-4f26-9706-b7514adcd91e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("a168fcee-8393-408c-b1bb-cc6440205ffa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("a168fcee-8393-408c-b1bb-cc6440205ffa"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("a18acbfc-6922-4330-9556-983f274dd254"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("a18acbfc-6922-4330-9556-983f274dd254"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("a225f6a1-244d-47c5-9f99-1d04de93dbc5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("a2b0816c-5723-434d-9ce3-21f08f34e08c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("a2bc7d18-2880-4ce8-ba90-b094adaeb7f5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("a2bc7d18-2880-4ce8-ba90-b094adaeb7f5"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("a2bc7d18-2880-4ce8-ba90-b094adaeb7f5"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("a2d5e505-27f0-40fc-8371-925ebfc222bc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("a2d5e505-27f0-40fc-8371-925ebfc222bc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("a2e88c1b-330c-4beb-af74-15e079ac1ba0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("a2ecd62a-b7d4-413c-b412-b5259eb066e0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("a36e25f1-c2bd-4371-b541-88611bb63bce"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("a38b5ac2-f3b3-4867-abc3-603344bd71cd"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("a3bd0448-dec5-401f-9103-3f863a46fc62"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("a3f563f6-1777-4c5d-8558-0c6f0ed832c6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("a46a91ab-2396-4c2a-ae80-fc663519b740"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("a47d988e-20e8-4540-ad51-8113b22ae1cd"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("a50bce83-67b3-4c14-9386-9f183de08eaa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("a54a940e-bb58-446b-bcbc-514d091ac643"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("a5bd80b2-b61d-4aba-95be-7403507c7805"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("a5bd80b2-b61d-4aba-95be-7403507c7805"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("a5bd80b2-b61d-4aba-95be-7403507c7805"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("a5e26917-ac79-4b6d-a029-b201da877ff5"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("a5f8ce06-5fb2-4833-9702-c0b4e94ade3b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("a6422093-c606-40b8-87c5-c471fee80c99"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("a6b156fb-6af5-4db0-b0b2-fc10120502b5"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("a709cfb3-245f-4174-a3fa-495a0655dcf1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("a784967e-5f92-4877-b999-18d3949442a3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("a7b32132-945c-4d2a-a4d2-a56bed92ed20"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("a8176082-1037-4f87-9b8c-b34be107d6e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("a87dfb37-3d60-4f1c-ab9c-ca3f4e649982"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("a87dfb37-3d60-4f1c-ab9c-ca3f4e649982"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("a8cff047-8e8a-46e1-a2d3-b29ba03a5872"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("a9b9507f-a00a-429e-b906-0515d9df84cd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("aa513b87-5e05-4d5c-a5a6-693781d711b9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("ab55a98f-2a3d-48ab-a81f-e7a600174434"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("ab7a7c93-aca1-40a0-89e0-48629e24b357"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("ab8183c2-f715-4ba8-ba71-a1e87804b494"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("abb5275b-865d-4278-ba8e-09377de7a835"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("abb5275b-865d-4278-ba8e-09377de7a835"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("abc65167-8795-4093-a7c9-9e4a0c4b1f70"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("abc65167-8795-4093-a7c9-9e4a0c4b1f70"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("ac13ca28-6cd4-4654-915a-e2ebf8308bef"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("aceacb23-5279-4c40-b087-b17eb82d02e9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("aceacb23-5279-4c40-b087-b17eb82d02e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("aceacb23-5279-4c40-b087-b17eb82d02e9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("aced262c-e886-412d-a68d-33583fb553d9"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("aced262c-e886-412d-a68d-33583fb553d9"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("ad2f0520-4f27-41f0-b51f-0458987db57d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("ad713a35-f353-409c-b472-b4b9e8c108b3"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ad713a35-f353-409c-b472-b4b9e8c108b3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("add283f7-12c7-4216-a55b-e88664ec4cfa"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("ae1f41f4-128c-4713-846d-f24a8ad0c171"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ae1f41f4-128c-4713-846d-f24a8ad0c171"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("ae1f41f4-128c-4713-846d-f24a8ad0c171"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("ae57d948-1360-469f-ae24-4555bf807ed7"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("ae8a0121-c626-422e-8eba-49b876f26af0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("aed8a849-149c-474e-b19b-bdd1e36120eb"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("aefb7cfa-b51b-45e7-9363-7182f1df2535"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("af52840d-15e4-44c2-b26e-3d0e09d9cd27"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("af52840d-15e4-44c2-b26e-3d0e09d9cd27"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("afb9086b-407a-48db-a6f0-ba6be1b656e0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b00caf8d-1100-48b6-b3da-5cd942816bdc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("b0899259-5e02-40ec-952b-8963b97feeeb"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("b1829a12-8703-443e-b226-b36764ff4f10"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b1995afc-2f20-47da-9dd3-e2e172c28817"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b1db1dc3-8097-4a24-99e6-2930a11b3997"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b1ee5bb2-50db-45ea-8d6e-71c4fd4276a5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b1ee5bb2-50db-45ea-8d6e-71c4fd4276a5"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("b24db990-676c-46a1-97b7-e9f45fc76cdb"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b2a9c12f-c059-4296-8f43-411f0ed080bf"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("b2a9c12f-c059-4296-8f43-411f0ed080bf"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("b2a9c12f-c059-4296-8f43-411f0ed080bf"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b2f18cd7-d8e3-4419-9187-ceaffd1d8c9f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b2fb1d79-dda7-474d-9c62-8cc294798246"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b2fb1d79-dda7-474d-9c62-8cc294798246"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("b3d4e5a6-b370-4c45-9f8c-89b04a9424d9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("b40aa816-9028-4330-8214-08da11e5293f"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("b40aa816-9028-4330-8214-08da11e5293f"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("b457005d-f2c5-46de-9c5b-14e1743abe85"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("b51f9ec3-368e-46d8-9db0-8d2ad999990d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("b5f18e51-9eba-4d39-8efc-40ff175f7e03"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("b637438e-750e-4a30-bd3c-6fac412bc1a8"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("b637438e-750e-4a30-bd3c-6fac412bc1a8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b686794b-f0f5-4bd3-9b36-e886f6e0875b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("b6c03432-4d97-466f-b240-c9287639a2d6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("b7a1aade-0714-49b8-a44b-06fd0a24a3a9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("b88ac3cf-24ee-4389-8079-87ddb5cfea19"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b88ac3cf-24ee-4389-8079-87ddb5cfea19"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("b88d1d8d-681f-48e8-a5f9-7d816dc6d2dc"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("b890dafc-8515-4587-a686-cca89b03d8cd"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b8a52ae0-392c-48f3-aad2-5c2b3d481b06"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b9524485-d932-4593-a2bf-f99e5eea41e8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("b9524485-d932-4593-a2bf-f99e5eea41e8"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b972f098-f15f-47d1-9ac8-f76a14229253"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("ba2805b1-4d6b-4337-9ca8-27a772617d26"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ba31457e-49d1-465d-9652-d50a5d611d1e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("ba3ea20a-6f76-4c26-85a8-e380a6c1c566"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("ba8d3ed8-e877-4c3e-afe0-0532c43d6e7d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("baa6f2ad-1835-4bd8-87e9-9afc914adb60"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("baa6f2ad-1835-4bd8-87e9-9afc914adb60"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("baa6f2ad-1835-4bd8-87e9-9afc914adb60"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("bb0d72e2-7644-45e6-81f2-1cafc5427aec"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("bb1105f1-4b6c-4731-b34c-728901beacdc"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("bb942c64-ee95-40e9-8702-2c4a9b46dc86"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("bbac4a9c-6e87-4230-aee9-cba3b4a400e3"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("bce280dd-7f43-4a3c-a980-a5fb18992549"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("bce280dd-7f43-4a3c-a980-a5fb18992549"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("bcf2cd9d-0c38-4d0f-8928-ae0b36ebe2ea"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("bd6b64b0-283a-4695-8b6d-3a84121dd8ff"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("be3f4576-315e-43c8-afe1-1629be7e782c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("be71bba3-c2a3-4035-8fd7-15972649e982"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("beb95f82-44fb-4291-91fc-b322d29c9949"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("bf89e821-6c85-466d-817e-be5c830ca77b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("bf9bacb3-d52b-4bfc-9a96-a4be1e16b82c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("c0bb34ce-a453-4801-bbc7-ce423306f288"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("c0d69d2c-eb40-4899-a5ed-1373c4982ae7"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c0d69d2c-eb40-4899-a5ed-1373c4982ae7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("c0d69d2c-eb40-4899-a5ed-1373c4982ae7"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("c12803a0-d95a-4e6c-9dc2-1e2e25ccf015"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("c1301dd2-f61a-4b42-8f66-68b686a99125"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("c131cd96-9f7f-4bb1-960a-5ede42287241"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c131cd96-9f7f-4bb1-960a-5ede42287241"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("c131cd96-9f7f-4bb1-960a-5ede42287241"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("c2bf3fef-0394-490d-870e-d1c61bb73f82"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("c2d3f1d4-7f75-471a-8aba-33100a6d8b42"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("c2fff5b4-d468-48d7-966e-5752b0dccaeb"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("c363ca01-19b6-44d3-a3e2-ce545ace3c16"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("c3fd5707-3488-40e1-ad59-b561cc4cda5c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("c45b261e-56c1-4e4b-887b-1ed0f182adfe"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("c47ef9ac-66eb-4399-ad5e-5c5089b22aad"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("c4a5a136-1ed0-4de5-97fb-cfc24ec77e43"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("c4bf2322-9e53-445a-aff2-5f3ce70ea435"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("c4d1d8ee-114f-4e76-8eb6-1f30447196e4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c4d1d8ee-114f-4e76-8eb6-1f30447196e4"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("c4d1d8ee-114f-4e76-8eb6-1f30447196e4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("c4f4334f-04ca-4267-9c34-082474ed2ea3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("c5520eea-3291-4654-9df9-7d74ae195197"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("c5eb6807-817f-4011-9d6b-62a6ad997ba0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c5eb6807-817f-4011-9d6b-62a6ad997ba0"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("c5eb6807-817f-4011-9d6b-62a6ad997ba0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("c60d92e3-c721-4a10-9ac4-2ebfe7f030f2"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("c60d92e3-c721-4a10-9ac4-2ebfe7f030f2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("c61c3bcb-a50f-45ba-ab13-c4cd29896ea4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("c61c3bcb-a50f-45ba-ab13-c4cd29896ea4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("c635bb79-bd11-42eb-b4ff-6c0de5c3ad96"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c67d5089-2a4e-4563-9809-4c18e03278f1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c6af527b-0a95-40ef-9390-7c0a82d19483"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("c8a79627-e1c4-4432-afcc-fc376405ff94"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("c8d4d987-25d0-46cb-9e8e-0c512bbd5c0e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c8d59b36-edfd-4b53-aaaa-954069b63e6c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("c9030b13-163a-4ce3-a517-dff8de60a183"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("c9030b13-163a-4ce3-a517-dff8de60a183"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("c9030b13-163a-4ce3-a517-dff8de60a183"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("c9b9f60c-d314-45a9-9cd3-82e9059e7358"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("ca24f4fa-c851-4daa-9761-a6d0e2f7f607"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("ca46f7e2-1085-4ac7-a1d2-ad53005a809b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("ca46f7e2-1085-4ac7-a1d2-ad53005a809b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ca4c57d6-9f7a-49e3-a31c-13662ee9b746"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("ca913d84-5308-4c3e-a79f-ecad5421ecc8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("caeeb667-5342-4333-86cb-c017740b8493"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("cc33a8b4-2d68-4420-846f-e01e514534d1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("cca3d26b-b8f7-4a93-a2df-fc1bacd3934f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("ccff565f-a15b-4d70-bcde-c34f8521c459"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("cd129d73-e1e3-4270-912d-472f11a65be1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("cd623c02-e5b4-402e-bee3-e01a2713de62"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("cd623c02-e5b4-402e-bee3-e01a2713de62"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("cdb3e39e-be24-4d6d-8c17-3f886e163508"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("cdbeac0e-fff9-42f5-ab40-b4db1d0ad0d0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("cdec08cb-90b8-4122-b2e9-537844598338"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("cf39fd3f-c0a0-4bad-9b9f-51af6bafb65b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("cfaca0eb-3f77-402a-9cfe-bad0c9b343c7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("cfc198f8-c782-401b-b93f-aed4cfbf9717"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("d0594d74-aaa0-4850-a403-b740e4d12c59"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("d0594d74-aaa0-4850-a403-b740e4d12c59"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("d0d77d01-cea4-4988-8efd-c0341119b5db"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("d1059ecf-858a-4241-a7bb-ce544f6622f4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d113bf0b-8c06-4db9-8cfe-8998f5700a09"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("d113bf0b-8c06-4db9-8cfe-8998f5700a09"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("d113bf0b-8c06-4db9-8cfe-8998f5700a09"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("d146650d-3e7a-4b8a-ab1e-59ce84b280af"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("d14863e8-ebb1-4491-a298-1a93903d3c2e"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("d1ed0210-8660-4b90-bc66-e9e5ead64f6b"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d2a83057-3221-4c7b-8abc-2d6b54f3f984"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("d2a83057-3221-4c7b-8abc-2d6b54f3f984"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("d2ce968f-1c6a-4bab-892a-62d2bb5f93a3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("d35f82bb-ff38-4e7b-8023-af5b979e31e3"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d3645d2f-8f92-4b5d-9158-689310b41459"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("d3645d2f-8f92-4b5d-9158-689310b41459"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("d3645d2f-8f92-4b5d-9158-689310b41459"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("d38fe649-a559-4706-bec2-54ad806aa7c9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d38fe649-a559-4706-bec2-54ad806aa7c9"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("d38fe649-a559-4706-bec2-54ad806aa7c9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("d3c545d2-8044-487b-a289-b15b6671a498"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("d41f7a79-1296-42a0-946b-2ee65fa42b93"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("d49e05e7-802d-49be-adde-dac80f7a90e9"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("d49e05e7-802d-49be-adde-dac80f7a90e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("d49e05e7-802d-49be-adde-dac80f7a90e9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("d54e79f7-8af5-478f-bdc7-498c5cf8ba47"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("d5d022fa-3d62-4546-9ace-278a5ef0133a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("d61a2ee6-8046-40dd-9bd7-d4b640449b06"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("d642e26c-9504-49ce-bbd3-3416e2b1639a"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("d642e26c-9504-49ce-bbd3-3416e2b1639a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("d642e26c-9504-49ce-bbd3-3416e2b1639a"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("d6adf44f-7000-4478-958a-9424e13050b9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d6b59e92-3738-4a87-bf5d-119a7d3621b0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d737f6a4-9eb9-477a-aee4-ed91940cf3ec"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("d788617a-9444-44f2-9d8a-4b9f83e850b6"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("d7add9b6-5911-42fc-acb3-2d45dda1a0a7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("d873a2f7-e446-49e7-b22d-391e6338f39a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d8efb712-d98e-484e-b6da-4daa2a960f90"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("d8efb712-d98e-484e-b6da-4daa2a960f90"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("d906b7be-5bd1-419e-9d1a-7affe95fbab4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d9a6c84f-e488-4e6e-9837-eff0dfb4d70e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("d9d224cc-979e-4149-bf8e-c9f9bf633a4e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("da288d05-b88a-498d-8ae2-1dc72de495bf"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("da7d4439-666f-4382-9cbd-d8291e2074f4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("dc3d8c7a-3781-40dc-b776-99195b515eda"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("dcedc8b2-601e-4e49-a18d-26b97d26f5be"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("dcedc8b2-601e-4e49-a18d-26b97d26f5be"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("dd340f22-8618-480c-9285-685424e56c19"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("dd340f22-8618-480c-9285-685424e56c19"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("dd7f24a8-40c0-4dfe-8e52-16cdedc713f1"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("dd852c2b-7634-49f5-a3b1-17e193574a23"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("dd852c2b-7634-49f5-a3b1-17e193574a23"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("de3cd5eb-984d-497a-a3e4-ba953c0a0cc3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("de54976a-9a81-49cc-9ac4-df43bd462986"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("def9204a-4651-4fd4-afda-4ee75cee0c06"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("dfed7839-3c52-4145-a9f1-7c719e462ddd"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("dff1b3c6-e471-4d04-a94a-41b72d9380dc"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("e01eee4e-53a6-44d8-a57f-5ee0ea45ce98"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("e03a1cc2-fcd9-4b83-a439-42c1470acad5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("e041e289-8dc2-499e-a0a9-c575f44252c0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("e0612234-1974-432e-87f9-83cab6d967b0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("e099beec-45ee-4d2b-ba4b-61c1717bac1c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("e18c7842-3ba2-4bb4-befe-b59160308a76"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("e1b8dd25-73f2-4b93-86ac-2efe1e56a03c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("e339951d-285b-4500-8880-5e94c7286fe7"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("e3aa784d-1cda-425c-bd56-cd855ef9dbb6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("e4164904-e888-410d-8112-70b92ea76a84"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("e49e7b13-ae38-4b27-94ad-35b3b125bf5c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("e4e55d38-94e7-4ee5-b239-527e436e802e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("e4e7eb33-7dc5-4571-85b6-98ee1e817abd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("e4e7eb33-7dc5-4571-85b6-98ee1e817abd"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("e4e7eb33-7dc5-4571-85b6-98ee1e817abd"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("e4ecad75-7601-464f-94f9-ca2a7c6ea2af"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("e5ae80ad-0c90-42b5-9c54-7341d66e134f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("e5ddb88a-839e-4d63-abbb-be23db90eb78"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("e6c85de9-c27f-4562-81a4-c1719bc48f28"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("e6c85de9-c27f-4562-81a4-c1719bc48f28"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("e6c85de9-c27f-4562-81a4-c1719bc48f28"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("e705c2c8-bafc-4da8-960b-e05dd0b3b22c"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("e764ceba-14c2-4b32-abd4-0788bd648364"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("e7962602-aae7-4181-96dc-f7c6f68c9a14"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("e79a8299-b138-47d4-a1e6-2191ab4f4377"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("e7a121db-58e0-4b7c-9f94-fc511c337cce"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("e7aa37d0-e570-4458-827a-727f9d05f1f7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("e81665e2-fb80-4c97-b209-14642212e881"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("e8f51a6a-4ca2-4768-9b77-ec6c812c15a2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("e965febd-0b4b-440f-bb09-3e59902c2399"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("e965febd-0b4b-440f-bb09-3e59902c2399"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("e965febd-0b4b-440f-bb09-3e59902c2399"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("e9c28291-477b-473d-8776-0a3db97842a4"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("ea415ad3-2e85-4b6e-b45f-945bb68a8142"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("ea534973-8899-4a8c-851b-42cde00f6a67"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("ea534973-8899-4a8c-851b-42cde00f6a67"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("ea534973-8899-4a8c-851b-42cde00f6a67"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("ea54e41c-ab2d-4d92-9339-2e30404cf88d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("ea86aedb-2c5e-4b32-a529-9df13fcd5721"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("ea86aedb-2c5e-4b32-a529-9df13fcd5721"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("eb691079-3f26-466e-b67f-d0b39434cfa6"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("eb79b804-7a08-46e9-beb2-9de097e6f368"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("eb79b804-7a08-46e9-beb2-9de097e6f368"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("ec1387f8-fdc4-4e4d-8b1a-6d1e738a64a5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("ec4aaf33-7cd6-4a0c-800c-92a31e2b2d98"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("ec9884eb-7f89-4cdc-9c33-d2630f5f12a8"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("eceec044-9278-4ec1-8b97-7d457629806c"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("eda2e505-b9e2-4b84-b926-1bcf33720b06"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("edf2d4ad-6e2c-4390-bdb2-20e2aa8f8eb6"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("edf2d4ad-6e2c-4390-bdb2-20e2aa8f8eb6"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ee37bb5a-2c0e-4648-b76e-e3add486c621"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ee37bb5a-2c0e-4648-b76e-e3add486c621"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("ee60044d-4565-4af6-a76d-985018874bc3"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("ee60044d-4565-4af6-a76d-985018874bc3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("ee60044d-4565-4af6-a76d-985018874bc3"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("ee6279a8-2df0-4498-9938-09dac608da98"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ee6279a8-2df0-4498-9938-09dac608da98"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("ee6279a8-2df0-4498-9938-09dac608da98"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("eed21aee-6d0b-438a-9016-b216bd7b9d9f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("eed3f7b6-ea31-42ae-9b0d-4b685fb8fd6a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("ef16b574-39d1-43ad-828a-db41314642bb"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("ef16b574-39d1-43ad-828a-db41314642bb"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("ef25dd91-7fe4-4dae-b0e7-7bcfd35e2425"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("efbd8eca-c91b-4183-9215-ca5613e983a7"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("efbe250b-86a3-4fe1-8ff3-9383fcbe1d0c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("efbe250b-86a3-4fe1-8ff3-9383fcbe1d0c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("efbe250b-86a3-4fe1-8ff3-9383fcbe1d0c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("efee4712-fe34-4f58-98d8-9b58b710671b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("efee4712-fe34-4f58-98d8-9b58b710671b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("eff24c3c-6f68-405a-ae42-a006447fe5e2"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("f10d9951-4f13-452d-9893-34a0d486f143"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("f20f368e-86e2-43e7-b2b9-1063a6d3c625"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("f2289b92-afc2-4126-bfcd-a7a6d3613ebb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("f26165b6-6a06-45b7-b3fa-8b37eb75e556"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("f26165b6-6a06-45b7-b3fa-8b37eb75e556"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("f2b114cd-abdd-44bc-b788-ab9da2faeb60"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("f3c1fa6e-46e8-4f3d-8d71-cf83543c131a"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("f3c1fa6e-46e8-4f3d-8d71-cf83543c131a"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("f3c1fa6e-46e8-4f3d-8d71-cf83543c131a"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("f428c1da-e893-4cbd-ae57-0b80c9230051"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("f44a12cf-e423-4c54-a811-0d14f01528fc"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") },
+                    { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("f47f166d-670f-49ce-bcd4-592fcc1b5d91"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("f490e23c-96d9-460c-90c1-628752ac5d2b"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") },
+                    { new Guid("f490e23c-96d9-460c-90c1-628752ac5d2b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("f51d2181-5315-4cba-80f5-197a5283e8f0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("f51dd0ee-2c29-4820-807d-20d8d85d2695"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("f5c50e0e-ece6-43ae-8923-28dff36f92fd"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("f5cadcad-abe5-4775-a26d-c4382607b8ce"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("f66194bb-1845-4d29-b21f-e5686073c59a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("f7230109-6165-40b3-a3f5-a0fb5bce7aef"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") },
+                    { new Guid("f7230109-6165-40b3-a3f5-a0fb5bce7aef"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("f72486a8-8b13-4e47-9ec3-992cf7b7362f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("f77c24ea-9ba1-4f93-83ce-7798dc8b956d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("f879e6d7-2077-4d09-a968-1cf4efe451d5"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") },
+                    { new Guid("f879e6d7-2077-4d09-a968-1cf4efe451d5"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") },
+                    { new Guid("f91b7ba7-3d35-41ba-8abc-a69d22b6e858"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("f9491fca-7311-417e-a271-8a85a377d38e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("fa5bcc2d-828c-4126-ae38-c3b87bb46c0f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("fbb9dd03-82da-41a5-a98b-80c3384365b3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("fbbbd115-33ff-4f70-aff0-dfa7be3f2a2b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("fbcbe747-c66b-41ab-9f89-528168c50374"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("fca79d4d-77db-4f9c-9a00-aea576fe1218"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("fca79d4d-77db-4f9c-9a00-aea576fe1218"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Participants",
+                columns: new[] { "DogID", "EventID" },
+                values: new object[,]
+                {
+                    { new Guid("fca79d4d-77db-4f9c-9a00-aea576fe1218"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") },
+                    { new Guid("fd30fe6b-e47b-410f-a3d9-14cadc56039f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") },
+                    { new Guid("fd30fe6b-e47b-410f-a3d9-14cadc56039f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("fd344e91-99cc-4c6b-8bf2-ebc6628210d3"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") },
+                    { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") },
+                    { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") },
+                    { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") },
+                    { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") },
+                    { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("fdb12144-5a75-4356-895c-6297d616b5d8"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") },
+                    { new Guid("fdf9d6d2-5094-4432-819b-bf811ac8628b"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") },
+                    { new Guid("ff6305dc-bfc8-4c93-91d9-194eb76e0add"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") },
+                    { new Guid("ffd906a3-d894-4bc3-b79a-72f0e82fce77"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") },
+                    { new Guid("ffd906a3-d894-4bc3-b79a-72f0e82fce77"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") },
+                    { new Guid("ffeb8764-401a-43d0-bf4d-1be7730837d1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Races",
                 columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
                 values: new object[,]
@@ -3389,7 +4786,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("072401e5-769a-4e1e-8fb5-87349599374f"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "6", 6, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("075fbf4e-1cc0-4d6f-b698-eaebb0c340ff"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "16", 15, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("07821a6b-ed79-4d8a-8f82-f99ac2c2a488"), "FirstToLast", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "53", 48, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("08106184-7a26-4068-99fb-f7264c582974"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("08106184-7a26-4068-99fb-f7264c582974"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("085907b4-b336-4e6d-8038-9846048c79a4"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "38", 35, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("0893fc72-9f5b-42fc-b93d-6e11c83ff237"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "6", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("090e5a56-3471-42b0-b18d-f32b86f1d1bb"), "FirstToLast", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "51", 46, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
@@ -3407,14 +4811,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("0baf5676-173e-4164-8f12-b3bf0c1daf29"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "12", 12, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("0be7818c-d4f0-45f0-9334-25b2606b72e9"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "70", 66, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("0c08e2f9-0e6c-4145-ac29-2c46127af0ac"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "35", 29, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("0c3cc730-cf77-46c2-bcc8-fc24b5447e18"), "LIVE", new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "60", 44, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("0c3cc730-cf77-46c2-bcc8-fc24b5447e18"), "LIVE", new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "60", 44, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("0c455e2f-3506-48b5-a471-44ed5b9f268b"), "LIVE", new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "39", 28, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("0c5f5c7a-8e87-4d1e-b8b2-ec54a950a67e"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "13", 12, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("0cc480a0-ee71-48fb-a421-ab3e9f1c8115"), "LIVE", new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "32", 25, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
@@ -3438,7 +4835,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("1220826d-b8b7-4510-becc-542388fb4cd0"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "53", 52, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("128aceee-7b36-4480-8d22-3979a8ff3727"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "42", 33, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("1369cbd8-444b-45d1-856e-8af01bf2b1f9"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "68", 63, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("1398ad30-eef0-4a04-8c39-8dfc348e2bc2"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "16", 15, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("1398ad30-eef0-4a04-8c39-8dfc348e2bc2"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "16", 15, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("13ba3fec-db9e-49be-80b5-9d1648437602"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "34", 34, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("142cab57-6ad9-4c9f-8f1c-789cbd93edd7"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "65", 65, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("1461cf9f-f557-4ea8-b23f-02915cd7d863"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "54", 49, new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
@@ -3456,14 +4860,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("1793108f-b658-48f1-96ad-841f7ab81a05"), "LastToFirst", new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "87", 57, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("179daaac-ca95-4143-af81-5cdaf0e53df6"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "27", 30, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("17ac4905-d150-4a08-995b-a756ebec2742"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "32", 30, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("17b24e0c-c04c-4ab4-8a26-3d84e9d53f22"), "LIVE", new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "82", 53, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("17b24e0c-c04c-4ab4-8a26-3d84e9d53f22"), "LIVE", new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "82", 53, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("180114aa-a271-4bfe-a2d4-a1781e3ba5b1"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "46", 46, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("189b5848-4737-4315-81de-cdc5a2aa8f30"), "LIVE", new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "28", 21, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("1909ba9d-8c57-43e4-89b6-f6fa40beff2c"), "LIVE", new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "58", 42, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
@@ -3487,7 +4884,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("209e9d10-1885-466f-93b5-115946bfc60a"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("20c4ee17-735f-4cba-a9ef-4d12f7742f9e"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "61", 21, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("20ef60db-2014-4996-8fbb-b4aa1afdc175"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "17", 18, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("21278112-849c-4ede-93dc-e8bb2ce52667"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), "7", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("21278112-849c-4ede-93dc-e8bb2ce52667"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), "7", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("212b4659-f071-4bf4-a15a-31669ed4cccc"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "61", 58, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("212c203c-1a30-410a-8c65-65fdd0cee033"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "26", 25, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("214d590f-e9d2-42c6-a4b3-dc7564e65799"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "5", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3505,14 +4909,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("24555e98-3574-4bda-8009-b181786c0d43"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "51", 27, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("248514ff-65df-42ce-896e-9b84bd2184bc"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "4", 4, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("24852566-d256-4b67-a13f-ce5211746907"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8"), "4", 4, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("24ac13ff-9238-4d88-85e7-736de2cc9bd8"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "41", 39, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("24ac13ff-9238-4d88-85e7-736de2cc9bd8"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "41", 39, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("24cfd56c-234f-4e01-bcc1-c184fccf8ef7"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "36", 36, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("250d94cf-fbba-4d04-9ebf-61f29994f53f"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "8", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("258628e7-3714-4fec-9afe-26310dc21475"), "LastToFirst", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "79", 73, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
@@ -3536,7 +4933,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("2a93bec3-2f22-47de-949d-4fb3d2622994"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "33", 33, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("2acde693-ce84-4ac0-bc74-5d6bbdee4b26"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "15", 11, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("2ad08e3d-23ed-4796-ade6-258f4820f512"), "FirstToLast", new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "58", 56, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("2adb8713-852b-4627-97ed-e0e5639de684"), "FirstToLast", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "60", 60, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("2adb8713-852b-4627-97ed-e0e5639de684"), "FirstToLast", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "60", 60, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("2af148fa-c3a4-4dc9-ad1f-0a124e62dc97"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "68", 66, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("2b0b109e-2de3-4583-b226-0e18d3ff6c2d"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "26", 27, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("2b2a8c28-e3d1-4937-b7cc-1627f54c59c4"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "19", 18, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
@@ -3554,14 +4958,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("2f21fcf2-14b9-4fd9-8fd5-1dd8e7fe6436"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "10", 10, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("2f515d2d-0905-4bbf-8904-6196b1a23eb7"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "8", 7, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("2f6c2f20-36d2-4afc-b2f5-f111741cc859"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "59", 56, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("30af6574-6961-48f6-83cf-6b92dac6a313"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "43", 39, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("30af6574-6961-48f6-83cf-6b92dac6a313"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "43", 39, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("3100c151-642d-4287-82fb-fbfb6c099831"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "23", 25, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("315bbbaa-2afd-4330-86ef-acaea3ca84a5"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "5", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("317cb045-2e32-43fc-82b6-d9248b8c1211"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3585,7 +4982,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("3596b0cd-36b9-4cdd-86e1-0c179c033a3e"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("35d66668-b5ee-4bd7-9e2c-39bf53106f65"), "FirstToLast", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "61", 61, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("3634d6a1-b072-4d02-aae2-5b54c4d706cd"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "56", 56, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("3684d97e-601c-46aa-9da9-ff5854d492fe"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8"), "5", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("3684d97e-601c-46aa-9da9-ff5854d492fe"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8"), "5", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("36a17ef2-9ac7-4ca2-b041-340761d45c1b"), "FirstToLast", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "38", 37, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("375a04a4-80a5-495d-ac9c-0aecf71d33bf"), "LIVE", new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "10", 10, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("378485bf-e9af-4086-887c-9b2ae5c7b512"), "LastToFirst", new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "82", 76, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3603,14 +5007,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("3e709d91-3b2f-4585-b436-0c89d3020df1"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "73", 56, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("3e921637-1936-4775-9700-d2023c151e40"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "61", 45, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("3ed93d00-9f86-4dfb-944e-fe563e966de9"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "4", 4, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("3f19744e-2c99-4fd3-8a65-f0024f27b3a0"), "LastToFirst", new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "90", 60, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("3f19744e-2c99-4fd3-8a65-f0024f27b3a0"), "LastToFirst", new Guid("d670c778-a372-455b-9570-05a1fc330023"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "90", 60, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("3f92f32b-6422-4a24-be1f-ee609e8cf054"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "29", 28, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("40443225-72b7-4ea7-bfea-71eab80f99b4"), "LastToFirst", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "83", 77, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("404ffa7b-af2b-4a84-8d2a-4541cc54d3fe"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "82", 60, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3634,7 +5031,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("45fd6bf6-5259-4d4b-9f2f-cf643998acac"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "44", 42, new Guid("63114685-c48a-4f44-a910-8c6979b5b687"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("468316c4-5fe1-4470-8698-169506735907"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("4687b6c1-d525-43be-93e0-50eaea2c4748"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "28", 29, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("46d8f230-aa7a-444a-a6be-880b5cda1fe8"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "69", 65, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
+                    { new Guid("46d8f230-aa7a-444a-a6be-880b5cda1fe8"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "69", 65, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("46e6345e-4476-4df1-9e8d-847694d3490a"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "38", 31, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("46f83591-0278-4951-8931-c7be03e11c9d"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "19", 19, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("472608b9-c0d8-4605-a758-b3f443b31302"), "FirstToLast", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "62", 60, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3652,14 +5056,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("4a579e9f-b79f-4594-b552-0926e06675d3"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "35", 33, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("4a7dd768-a204-42f1-92e8-52e6bf83124e"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "41", 45, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("4ad89a33-d834-4962-a0c2-7962c3b6b8b4"), "LastToFirst", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "92", 86, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("4bec52e5-4ab6-4c3a-8596-8c2f0d86ce59"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "7", 6, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("4bec52e5-4ab6-4c3a-8596-8c2f0d86ce59"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "7", 6, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("4c9677b2-c57c-4ef6-9b6c-632dc3644244"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "19", 18, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("4cac1f83-7d8f-4911-bea5-62a79f67d751"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "29", 29, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("4cddcac6-1199-4a3c-afad-5b4a11da8e4e"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "31", 29, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3683,7 +5080,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("544584b2-c9dd-44e1-864a-fe9bd35ecb3a"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "31", 29, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("5447bc4c-2062-4264-af1a-80a780949dac"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "39", 39, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("54741403-ccb1-465e-bc66-97ade31db92f"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "7", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("54ae63e0-8ac7-4143-ac5c-f5e044597e8a"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "49", 47, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("54ae63e0-8ac7-4143-ac5c-f5e044597e8a"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "49", 47, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("54b7c6fe-d24a-444f-ac00-94b0aacf05cd"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "41", 32, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("5563868a-68b3-41fb-9244-0e3ec66bcbf8"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("558a1b68-736b-4b3b-b1c3-95beb4e7b9dd"), "LIVE", new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "18", 19, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3701,14 +5105,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("58175c67-72df-4a16-a0a4-95001c3ea4d5"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "58", 53, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("5837f15f-a5d3-431a-801a-6cc418094103"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "10", 6, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("583a13a6-3133-4022-9f80-65dc5a960cd1"), "LIVE", new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "32", 24, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
-                    { new Guid("58951217-b5da-4744-832c-53df3061e755"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "40", 41, new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("58951217-b5da-4744-832c-53df3061e755"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "40", 41, new Guid("d7625773-fe4b-46a0-a2c6-5f3b3caf64e9"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("58f293b4-8f4b-45f4-b63d-ef4feaaf1b60"), "LIVE", new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "30", 23, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("58fa52d6-9fd9-498d-b841-1b7adbf254d2"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "5", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("592a74c5-87a8-4af4-b274-bf83e46fffea"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "40", 38, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3732,7 +5129,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("5fb11952-1ffa-4603-b7f2-3766242537a5"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "8", 8, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("5fba7384-0a08-4b84-8561-e90f67d7a178"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "40", 18, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("60173136-358c-4a24-aa9b-198c9c6f26a5"), "LIVE", new Guid("02b86e36-0ccd-435b-b665-6c7b2b246244"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "36", 27, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
-                    { new Guid("60379192-0152-424c-84c5-1df3cd5f4c41"), "FirstToLast", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "32", 31, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("60379192-0152-424c-84c5-1df3cd5f4c41"), "FirstToLast", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "32", 31, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("60d89f58-ec46-47f1-a61d-6dfc3e08a0e7"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("6142f76b-4bb3-47c2-976f-da9c8b3297b4"), "LastToFirst", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "35", 35, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("61b77046-f950-497b-9e4f-43f09d6e6103"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
@@ -3750,14 +5154,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("66f9d5ce-b263-461a-b67a-9c1ce12b6bf8"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "28", 29, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("67120186-acb8-48ee-99fc-40dd218dc4df"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "71", 54, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("6770c851-8fef-4e7f-bf1f-01d71d4b1130"), "LIVE", new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "13", 12, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("678d7440-b7d3-4f07-8865-6c47026c5087"), "LastToFirst", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "30", 30, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("678d7440-b7d3-4f07-8865-6c47026c5087"), "LastToFirst", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "30", 30, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("68156f66-a8f4-456d-ba48-56de57b9c277"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "8", 8, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("68387bdb-d395-4297-bbe7-2fde6c08b616"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "50", 35, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("6847f444-986b-4303-8b31-15fcd40b461d"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "42", 35, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3781,7 +5178,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("70d54ce2-7cb3-42e8-8a32-b8bbe9b34bff"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "65", 63, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("724735b1-d61a-43bf-a1be-73c10542d2d2"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "26", 25, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("7283eeb4-c1e6-4b2b-a3d5-b86b444c9879"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "90", 66, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("72d5c326-bfff-4a60-8cb6-cf105f0f3ab1"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "63", 63, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("72d5c326-bfff-4a60-8cb6-cf105f0f3ab1"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "63", 63, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("7380ce80-4f42-4635-bca8-e8e9f230c392"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "65", 60, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("73c50103-a36e-4f0a-a84c-644b682dc296"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "34", 33, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("741330f6-0fd2-4be4-81fc-8ee6a4a4fc51"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "11", 11, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
@@ -3799,14 +5203,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("76bfcad4-0360-4965-9442-2b1a5c423697"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "34", 28, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("781dab2d-21ae-44f2-b77a-9ee2bf2ce9a8"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "23", 22, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("7834cc4a-8e05-4d65-9fed-1beeb8c06d95"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "20", 16, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("7835e11e-3df3-4429-9990-14619a8b1a85"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("7835e11e-3df3-4429-9990-14619a8b1a85"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("791cdbe7-489e-4461-b7f7-6ed75a0ea9ff"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "38", 39, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("793bcc42-1f8c-4264-91f0-e84d931072a3"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "50", 48, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("79722359-197c-4a41-a331-22ae233c26d9"), "LIVE", new Guid("677f5efc-e697-4e8d-9ffe-ddf61394d595"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3830,7 +5227,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("7ed71fef-4ed1-4b82-a9b0-26d327d09ae9"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "25", 25, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("7edcced7-0d62-4f6b-a6bf-45340552cb7a"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "67", 62, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("7eec7b99-95be-4596-be92-6bbb0b111959"), "LIVE", new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "22", 21, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("7f0732d3-c11a-46a1-8aa5-73c0c16dc60d"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "36", 28, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("7f0732d3-c11a-46a1-8aa5-73c0c16dc60d"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "36", 28, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("7f20df51-35c7-4795-9eee-020fead0644f"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "67", 64, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("7f3b947a-2b1b-4ee4-8b9c-85047692ccd1"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("ec1fbd10-0019-4609-b843-1e659e992cc9"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8"), "56", 13, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("7fb6ad41-556f-424a-9755-762d56888c39"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "52", 51, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
@@ -3848,14 +5252,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("84b58377-0d42-46af-9070-c3306ba62ea8"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "96", 90, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("84bca834-c4c3-4653-a5ca-6a4111123426"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("8610af4f-5a3f-4f53-9335-e6c16b134364"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "6", 4, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("8676bfdb-abb7-4985-b1e8-816a9b70aff2"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "23", 21, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("8676bfdb-abb7-4985-b1e8-816a9b70aff2"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "23", 21, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("87eb176c-dfbb-4cbd-bcd6-9e5c7c09baa1"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "5", 5, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("8867f745-d33c-4358-8606-32608735c683"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("88eeb1ce-30c5-4041-81de-25ac696bef68"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "21", 20, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3879,7 +5276,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("8e13c7c7-7d8d-4b0d-9075-0e25e05f0745"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "51", 41, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("8e24793d-1425-438a-83bf-646529300f42"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "24", 24, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("8e8cf7cd-ddff-42af-a2d1-6d67652c4bb8"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "25", 23, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("8e9d0906-91a2-458b-b2df-dc2673140998"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "46", 44, new Guid("63114685-c48a-4f44-a910-8c6979b5b687"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
+                    { new Guid("8e9d0906-91a2-458b-b2df-dc2673140998"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "46", 44, new Guid("63114685-c48a-4f44-a910-8c6979b5b687"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("8eb3f0f3-78f8-489c-991b-6b9bade04a1a"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("8ee4988e-89b9-4086-95db-e77181bd55ca"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "41", 41, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("8f6042fb-5d0f-48e4-a058-54edc5c50225"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "51", 36, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3897,14 +5301,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("934c57a0-fc4d-4f51-b5be-32d68a3fc264"), "LastToFirst", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "86", 80, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("936ab55b-0cfe-4eed-9803-97baef45ac19"), "LIVE", new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "84", 54, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("93b9e0d5-757c-4c45-ac6a-e67ecc0f6c69"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "15", 14, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("93e724a6-4a27-4648-97c3-436dc8d37179"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("93e724a6-4a27-4648-97c3-436dc8d37179"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("93fd7b95-d036-4d68-9d59-c5cd95aa47d5"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "9", 8, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("941cb9be-e81e-44c9-93e0-3b7af90c8dc0"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "80", 58, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("941debf0-0eb8-4c0f-b075-afefacdee2dc"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "23", 18, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3928,7 +5325,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("9b2f3d8d-b67f-4ff9-991e-ea2c70fe3a0b"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "11", 11, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("9b438bec-3680-4ffc-91a9-76bd9d92b816"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("715aec31-a5b2-45dd-b295-a140d1fc0624"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8"), "6", 6, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("9b49ddf9-f412-4d41-ba06-89377538b35b"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "20", 20, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
-                    { new Guid("9b796b62-2ec4-4338-81ae-f1056f97bce1"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "37", 35, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
+                    { new Guid("9b796b62-2ec4-4338-81ae-f1056f97bce1"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "37", 35, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("9bd70314-74a1-41fd-a469-42f7b66d336d"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "64", 61, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("9c7430e5-820b-45b0-93da-21a034bbe197"), "FirstToLast", new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "42", 36, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("9d2111b2-6218-4cb5-b35a-405536080b13"), "LastToFirst", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "81", 75, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3946,14 +5350,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("9fd12038-0f9a-4ef6-bb1e-c294bb6ae409"), "FirstToLast", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "74", 72, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("a0e9da4c-cb13-4524-a9f5-85322fd2d697"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "58", 58, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("a101369e-9224-4377-9fcc-5c7e200f71f3"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "64", 64, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("a15a01fe-9187-43b0-93f7-be0ecf74b2bf"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "43", 41, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("a15a01fe-9187-43b0-93f7-be0ecf74b2bf"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "43", 41, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("a19efaa7-3030-4697-8399-1c3ae7c255b2"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "27", 28, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("a1d7845a-121c-48c1-b448-f296c7262e4b"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "12", 12, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("a1e8ecb0-e1b4-4088-a296-84b3d6bfb88e"), "LastToFirst", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "89", 83, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3977,7 +5374,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("a86b2126-e4c0-479d-899e-1ce26d561f3c"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "5", 4, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("a8779e1c-28d6-4c69-9d2d-2d27cd37a36f"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "4", 4, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("a8bc3c4c-649a-45f2-b131-7aeb2a38a6e7"), "LIVE", new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "37", 38, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("a959cffb-95f7-4860-85d6-44d612577d66"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "23", 23, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
+                    { new Guid("a959cffb-95f7-4860-85d6-44d612577d66"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "23", 23, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("a98800f9-c548-49cf-b3b0-63ba20a24364"), "LIVE", new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "31", 24, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("aa176367-d6a2-46e2-b442-e59593215e5e"), "LIVE", new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "71", 53, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("aa5bf9e6-dd8a-45a1-bc5f-ca282b03d351"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "21", 21, new Guid("63114685-c48a-4f44-a910-8c6979b5b687"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -3995,14 +5399,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("ace1e55d-bcb0-4977-81b0-7de9e12f2005"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "10", 8, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("ad1adc6e-961b-4fd4-9456-4a3043e6bda5"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("adb6ce6e-3310-446a-ad16-e51d90c34832"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "19", 20, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
-                    { new Guid("ae4a68d5-7211-465b-be8b-b8ca0502b415"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "59", 54, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("ae4a68d5-7211-465b-be8b-b8ca0502b415"), "FirstToLast", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "59", 54, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("ae67f15d-5a97-4e2f-b7ec-8cfdf0fa796d"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "18", 17, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("aebc4de1-1dca-402a-a24e-4ce027074cba"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("aed50a34-c9c5-4fb4-acb3-cc735100258a"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "12", 12, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -4026,7 +5423,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("b61f5c8c-a9d0-4d63-8d13-00d868de014f"), "LastToFirst", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "55", 51, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("b6ca2cde-d69d-4e81-a90f-a28006a2ea81"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "8", 8, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("b6e4242c-f25e-4869-846b-e0a43be3f737"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "4", 4, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("b6f3621d-56dc-4119-a63d-09d8dfd5dda2"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "39", 39, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("b6f3621d-56dc-4119-a63d-09d8dfd5dda2"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "39", 39, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("b70886bc-b3f8-4d8a-b135-eda4fc1e22bb"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "21", 21, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("b786bb41-3398-4454-a837-525d5c0e68e5"), "LIVE", new Guid("6786b78b-611e-430a-a589-65df5c302e11"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "64", 46, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("b7ede3bb-1ff0-44c6-aa2a-0d6f41d68e87"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "6", 6, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -4044,14 +5448,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("bc6c4507-c86c-42ec-9e15-65dd8ee2efd6"), "LastToFirst", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "44", 48, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("bda5e237-0d09-4fb8-9210-00c23765f897"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "11", 9, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("beb90d92-7f7b-44da-a5bc-1649f00a46a6"), "LIVE", new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "75", 50, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
-                    { new Guid("bf25e758-0ffb-4664-80c0-9ab28b6da64a"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "30", 24, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("bf25e758-0ffb-4664-80c0-9ab28b6da64a"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "30", 24, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("bf9b1295-674f-47e5-910d-d76a37c5e238"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "114", 15, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("bff182ed-a31e-4398-9f63-1bf1bd410555"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "60", 20, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("c1563df8-33ec-400d-908b-be216136a6b9"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -4075,7 +5472,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("c6f9bb2e-59eb-4890-a502-455d6ad6295b"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "15", 14, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("c71560fe-ef16-4ddf-ad38-b4717941b8d2"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "46", 46, new Guid("d64d05a6-eabc-4820-9011-047fdded0a84"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("c71c04ce-e153-4c95-af06-a510ee3f00ad"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "13", 11, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("c79c45d6-a9f1-4044-ad3f-6cbfcd59f4b5"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "24", 19, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("c79c45d6-a9f1-4044-ad3f-6cbfcd59f4b5"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "24", 19, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("c79ee274-b25f-4f02-a2fb-085a3a54a371"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "49", 48, new Guid("63114685-c48a-4f44-a910-8c6979b5b687"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("c7e385b8-2539-43f7-b2f9-0623976b7b5c"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "26", 21, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("c7f84eae-78f2-4559-a5ed-d8c7b8eccc79"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "14", 14, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
@@ -4093,14 +5497,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("c98fffd0-9c85-4e7c-8b6b-aa4022c1a294"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "24", 22, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("ca437465-173a-427f-8506-7d720b2b2e17"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("ca4a6267-c904-4910-b2c4-c6fd59d7e8f4"), "LastToFirst", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "47", 43, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("ca8f300f-9128-44c6-9dd8-b7947e2055c3"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "80", 61, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("ca8f300f-9128-44c6-9dd8-b7947e2055c3"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "80", 61, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("ca99efa7-6a72-42e5-b292-13cebd6dc1a1"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "14", 10, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("cad1db12-b091-4602-a465-1128661d7e16"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("cb12f117-598f-4ef7-9406-ffa8c9503a57"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "11", 11, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
@@ -4124,7 +5521,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("d0af6a65-2f1e-4f89-b9a5-a2b3378ac8f0"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "8", 8, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("d0b72b1e-48c0-4c7b-b17a-154265f8cab0"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "9", 7, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("d0c06b76-88ee-4823-98ce-75d73cdafb9c"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "42", 46, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("d16e8e74-9a6e-48fd-bb1f-233a84d6615c"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), "112", 15, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("d16e8e74-9a6e-48fd-bb1f-233a84d6615c"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), "112", 15, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("d2039cbe-5170-456a-80bc-fe608164574f"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), "12", 6, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("d2310c70-4f90-4162-b23d-503944678b7a"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "15", 15, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("d34d27ba-1d77-4c0a-82e7-0343fe885705"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "34", 35, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -4142,14 +5546,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("d6623ab8-f8f6-4a76-8c33-05834636a7d6"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "17", 17, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("d715753f-132d-481c-a26c-ea77041df96a"), "FirstToLast", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("3e9108a4-d235-44ef-b0fb-92e8d5e16878"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "55", 55, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("d7808a6e-dae4-4a3b-a03d-e38888b0e6a2"), "LIVE", new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "69", 52, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
-                    { new Guid("d7f8cc9b-a875-4e38-98e7-46f6d672aefd"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("d7f8cc9b-a875-4e38-98e7-46f6d672aefd"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("d81afe7e-422f-48a6-a7ef-11c9f98f1192"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "14", 14, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("d8f16ac6-9a25-4ed8-a583-baf2fd28d7f4"), "LastToFirst", new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "96", 70, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("d940f31b-ed58-482d-952c-7997f47c82d8"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "3", 3, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -4173,7 +5570,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("dea3cab0-a828-48c3-aa1d-c5220fd35d4f"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "2", 2, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("e10dc28a-e916-4b13-9efc-5888c87c0a6b"), "FirstToLast", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "62", 62, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("e1bed5cf-f8bd-46a0-9d7a-7c534794fa42"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "44", 32, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("e21f9109-b8ee-4910-a965-1ff7657191ee"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "40", 31, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
+                    { new Guid("e21f9109-b8ee-4910-a965-1ff7657191ee"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "40", 31, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("e25d68b0-bd89-4c37-b962-a8a40b0e29db"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "39", 40, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("e339b465-2253-4378-bb19-9735ece15e25"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), "14", 8, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("e34d5c4c-f82c-45f9-8405-90cc5b13c1d4"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), "22", 20, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -4191,14 +5595,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("e78db90f-bd66-4ae5-820e-e34539ce1cde"), "LIVE", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "43", 31, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("e7a4ef71-84b5-474e-9da9-2c363ca59014"), "LastToFirst", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "26", 26, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("e7bae7c5-1820-45d8-bacc-487be7fe402e"), "LastToFirst", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "93", 87, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("e8c1da97-2f60-4486-a108-0c5e2af5b460"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "30", 28, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("e8c1da97-2f60-4486-a108-0c5e2af5b460"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "30", 28, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("e910acf7-8f97-4c61-a0fd-8792b2331cf3"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "49", 22, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("e93fc56b-a29b-46ba-8adf-9cd41ff7162d"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "49", 38, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("e9596d42-9054-42bb-9763-64297d75b9ae"), "LIVE", new Guid("1ec110cc-7f70-4060-93ef-58727fcbaeb9"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "74", 49, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
@@ -4222,7 +5619,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("f0f68117-7272-4208-9258-e8b49ed40594"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "27", 26, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("f10abc11-4fe7-4da4-96a0-36e01f4dec1a"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), "113", 16, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("f11b9460-5711-433b-9ae2-b3ad0037f4df"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), "25", 24, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
-                    { new Guid("f1474288-7dd9-44d8-a03d-fecec520d5fc"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "25", 25, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("f1474288-7dd9-44d8-a03d-fecec520d5fc"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "25", 25, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("f1a6d2dd-7990-4df7-85ca-b40292892c95"), "LIVE", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "35", 36, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("f23d5402-f7ec-4546-9463-e2d17111f456"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), "29", 27, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("f2883bbb-b304-4db3-a5b8-67b6df50c41b"), "LastToFirst", new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), "86", 56, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
@@ -4240,14 +5644,7 @@ namespace HylianRIS_API.Migrations
                     { new Guid("f60ed18a-2fde-465d-9fba-027c03dc6740"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "18", 15, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("f625149e-525e-45ab-8b8a-45cecc2801bf"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), "58", 44, new Guid("e72d9dfb-0e30-4e37-96f8-3dc002ea963d"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("f625beb2-ad6a-40d1-8b33-9a1311310cd2"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "15", 15, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
-                    { new Guid("f6ca33b8-5468-458f-85b6-3a6a63526d62"), "LastToFirst", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "32", 32, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Races",
-                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
-                values: new object[,]
-                {
+                    { new Guid("f6ca33b8-5468-458f-85b6-3a6a63526d62"), "LastToFirst", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "32", 32, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("f6cf0509-58d5-4c03-bb64-03ae46a14f30"), "LIVE", new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "19", 19, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("f7685d66-abea-4a16-abd1-fa71c138f24c"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "47", 45, new Guid("63114685-c48a-4f44-a910-8c6979b5b687"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("f77e1879-bd1d-4afd-a7f9-dda3e9f11d0b"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), "22", 22, new Guid("63114685-c48a-4f44-a910-8c6979b5b687"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -4271,7 +5668,14 @@ namespace HylianRIS_API.Migrations
                     { new Guid("fbe42b1c-4c54-4cdd-9f58-b35f62ce8671"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("eb330f8f-2b93-4c1b-baae-cfc3f507ef59"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), "27", 22, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
                     { new Guid("fd7e2485-9936-4815-b9c0-29c06d27ff01"), "LIVE", new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), "14", 14, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("fe2f97db-c982-45c0-9e6c-1ab096b469ca"), "FirstToLast", new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new Guid("ce6d34b8-d832-4308-a163-cd97e82fce43"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), "55", 53, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
-                    { new Guid("fe68a680-d68f-4f0d-adcf-2c11d930829e"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "95", 89, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
+                    { new Guid("fe68a680-d68f-4f0d-adcf-2c11d930829e"), "LastToFirst", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("ca9590ff-1714-4d98-8ee1-fc7bcbc1b836"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), "95", 89, new Guid("8ca11bbb-ce66-4b79-95d9-ee0ac650561e"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Races",
+                columns: new[] { "ID", "Announcement", "BreedID", "ClassID", "DistanceID", "EventID", "Number", "OrderNr", "RaceTypeID", "SexID" },
+                values: new object[,]
+                {
                     { new Guid("feb9ddb2-f6cc-4805-a31e-e74deab1b387"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), "26", 29, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("818ff154-7208-4f28-880e-19f48ccb94ad") },
                     { new Guid("feef5ee9-8680-4dfd-bf36-c3a6b9abf164"), "LIVE", new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), "13", 13, new Guid("3b6dd69c-8903-4df4-bc04-34ed8802bfb5"), new Guid("83b150fe-89c0-4fe2-947e-18198244963f") },
                     { new Guid("ff040aaf-f476-4cde-997e-6a408b3fa8a3"), "LIVE", new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new Guid("c37f460f-e121-433f-8b4e-a04c9b8498e6"), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), "1", 1, new Guid("14e7f603-92d6-437b-b93d-56300c5a4d92"), new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72") },
@@ -6399,6 +7803,5976 @@ namespace HylianRIS_API.Migrations
                 table: "Languages",
                 keyColumn: "ID",
                 keyValue: new Guid("f849ff9c-080f-4eb1-b286-a16b6cca58b8"));
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0011c36a-553a-47b2-b35b-5899a8da2816"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0011c36a-553a-47b2-b35b-5899a8da2816"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("001575d4-c182-441a-aa13-916996248bdc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("004f055c-6d45-423c-80f0-e0ac16ab4a90"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0075ff83-cf87-472c-8545-3b0f958f8bc1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("007cbcdc-7b90-4cf6-956b-9a2ee7b2394f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("009ba8bf-5d8d-47b3-8cd1-2e0ff742bf52"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("00cee974-6ba6-438c-946d-4fa04f179ca9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("00f3d0f3-d95a-4dbb-88a9-af6d90dace6c"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0118a119-ec04-41f6-b56b-c65e3129815c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("011d872c-35d7-4317-b143-a7b0dfef0bee"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("011d872c-35d7-4317-b143-a7b0dfef0bee"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0204a862-3c08-4497-bebd-bdbc87c85ec1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("026b09c3-fd2d-4567-b9fa-ab7e28292524"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("026b09c3-fd2d-4567-b9fa-ab7e28292524"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("026b09c3-fd2d-4567-b9fa-ab7e28292524"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("02cc99f7-3375-43bc-8145-dead12dbc702"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("02e972e1-c28f-4234-8200-5375a53aefa9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0326d839-4b65-46cb-8d09-13cf0e2e1f90"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0326d839-4b65-46cb-8d09-13cf0e2e1f90"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("042773f0-ccec-42a5-8cc4-c702b3ed0eba"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("04fbf194-b6f2-49d6-b949-c13a4c2dc68c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("04fbf194-b6f2-49d6-b949-c13a4c2dc68c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0503ebb2-13f2-4244-8135-202fbc01b38b"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0503ebb2-13f2-4244-8135-202fbc01b38b"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("05062b1a-4748-46dc-b554-646aca44f96b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0528de09-f1dd-4288-83be-16e584d919a9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0528de09-f1dd-4288-83be-16e584d919a9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("056ced4d-cb7b-4bbe-b232-cf9ee7f9a1ba"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("05d46981-a1c8-4dae-b9e8-ac1243444476"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0611b1ad-f9ab-4588-b057-9ea759354160"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0629eb6b-4e6f-4606-a5aa-25ff6de32eaf"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("06d078ae-56f6-4cd8-ab5e-7e7f2d6c8bee"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0714d2f3-001d-4a4c-8532-7efcf6a9f959"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("07a2c50d-9e6f-4c2f-8e19-3f49d091b02a"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("07a2c50d-9e6f-4c2f-8e19-3f49d091b02a"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("08e420b8-9ec2-488f-aa87-4f685b584ce0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("08ed05e7-02b4-4814-a130-d6c9d3118638"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0960a00c-62cc-4672-b4ca-1d9245e8a323"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("09a333aa-74ce-41f3-873d-607936ee1457"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("09e9c91c-0304-4fd8-88b8-525bbbfc025d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a09573c-5825-4d1d-a3de-ecdd59610f13"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0a509b3f-6a30-4016-9540-401f5c60ae20"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0adeb239-44d7-4047-881a-eabd8242a38b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0adeb239-44d7-4047-881a-eabd8242a38b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0b2ef7ec-ab54-4665-b215-41c9252df612"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0b337456-da5d-4960-9d28-11141a1dd7ea"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0bb58496-1353-4ae9-9104-607af0264f2d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0c2995cc-1dfa-49ab-91f9-48badb65beed"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0c44fad5-2ddd-4605-bd28-15173d71f3de"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0d2582e9-8c80-4d7c-a2d8-749873a557ac"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0d636317-3d39-453f-96bc-59817413d5ee"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0d7463d9-19d3-4751-a47c-c343700b7df0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0d7463d9-19d3-4751-a47c-c343700b7df0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0e1c22e5-77f3-4bef-b574-6507cffc8a06"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0f1d36ef-9a82-48d4-8b15-23cbb8e822eb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0f38554a-28da-4a10-b6b4-1982d3198cbd"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0f9dcf52-75bd-4d24-b387-09560d1cf5e4"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0f9dcf52-75bd-4d24-b387-09560d1cf5e4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("0fef2efc-7aef-45d4-8a8c-6d168e36ed4a"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("101c9a2b-7b9a-434a-8725-cf5dc0d05c05"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("105d2d35-ed46-46ea-85c0-510c0102bdc0"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("105d2d35-ed46-46ea-85c0-510c0102bdc0"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("105d2d35-ed46-46ea-85c0-510c0102bdc0"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10bb404c-1754-4ff8-aaf0-624e6cdc6983"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10f776bd-bd00-43dc-bce3-142611a4316c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10f776bd-bd00-43dc-bce3-142611a4316c"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("10f776bd-bd00-43dc-bce3-142611a4316c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("110665a4-04d9-46de-baa2-694307932b71"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("111b56ea-afff-4857-b279-7ffab0f026ea"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("11680657-4695-44c7-85df-fccb83aeb1ae"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("11fc71d3-6fda-428c-a2ce-90efe839d2a9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1200d253-5935-4b2d-9636-b2ae2e7b5733"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1226d737-112b-4d38-afa9-3f000cdfeece"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1242906f-23f4-4a9b-b827-6b07d64a28b1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("129b0e31-1023-47b0-9c58-6d6b6c3d0e31"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("130a45e4-7af8-43be-b64c-6aa980f4b5bd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1316ac97-5c66-4da7-bf37-9902bce24bc1"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("139020d0-1087-40a2-b1b7-3d14c7d3fa4e"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("13d53982-2a96-45c7-8752-bea4b3b3aac1"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("145e7a3e-3d0f-4777-8e2b-1fac42a070b5"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1483c59b-5928-41a2-ab76-c28e25b5c28a"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("148a8652-ab72-4b25-96ef-dd8651fc4382"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("15018e4f-accc-4be3-ab13-b936a3caf6c6"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("163a0901-37b0-46dc-821f-0c9d22d880e9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("16c115e0-3728-47f7-af94-930a27d6efc1"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("16c115e0-3728-47f7-af94-930a27d6efc1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("176cc8ca-481b-4c75-b754-b1591fd58cbb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("17840f8c-456b-4674-b807-6da94e65f26b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("17b88be3-8221-4326-8e48-387a8c5bb249"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("17d191d2-3a0a-41ec-844c-ee96428bb617"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("18304646-ef40-427f-ba81-e39b7f0b5a19"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("18304646-ef40-427f-ba81-e39b7f0b5a19"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("18304646-ef40-427f-ba81-e39b7f0b5a19"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("18d64121-baa2-43a3-85f9-15895bdd58fc"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("19f7cd7a-4314-4144-ad71-81724d775c7a"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1a260fd9-2e61-4a39-89b9-dc49f83c1ee4"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1afe62f4-3e4d-4562-85b2-db6fa116b374"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1b43139e-a1ec-4311-a4c3-541b0cd5ccd4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1b6f497e-b823-4aea-8c89-73477b66e93c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1c4fd471-d665-4829-ba99-527010a6e85e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1c94c0fe-8856-416c-9669-1d22dc9ecde6"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1ccca19d-e50f-402d-9493-4c5261e6b843"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1ce408a1-e97b-4116-891a-27324db5b0d2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1d636958-a189-4297-8940-1672dc544cb2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1d81312c-4ea0-4bfc-89dc-6f16f2257255"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1d94c660-de2a-4a08-bbb6-236664f3267e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1d95cf95-9fb7-4123-acc5-593b81ab08e9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1e15ce30-96b4-4732-a430-c4ab67758378"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1e15ce30-96b4-4732-a430-c4ab67758378"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1e3b84ff-5d2f-4384-ae78-56879cfbd8c8"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1e84572c-a545-456f-8ac9-e8783a30bc44"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1ea1055a-3192-4fcd-9b8f-dbeba19c9146"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1f327474-7371-4f76-9380-f76a4ed9c47c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1f71c9ff-d5cc-4bbd-8755-a5edcc191cf3"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1f71c9ff-d5cc-4bbd-8755-a5edcc191cf3"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1f71c9ff-d5cc-4bbd-8755-a5edcc191cf3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1f7e40be-861e-4268-97ca-e9d037cbd446"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1faebd6a-a050-4f28-bf0e-d79471d39178"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2037f122-7c0f-4a1b-97d7-da68af9ca0f5"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20a0fd13-5812-4a37-ac2c-1803851cb36e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20a27df8-b20d-444a-bf30-c6a611c9ba4c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20e3e575-65ee-4220-a0fa-0cfe9ca9326d"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("20e3e575-65ee-4220-a0fa-0cfe9ca9326d"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("210039d6-97c6-423a-80bc-f9ebab3e4902"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("21837fca-bf01-4b8b-8628-771305d1c803"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("21c4d2a3-7c50-4311-8144-8f6ebe9cfc78"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("21dd3f80-1a59-4de4-9a36-9a80f13fe356"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("229e8860-7671-42b7-8377-976a13bf1b28"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2374f867-12cc-4843-83f7-fa9063ceeee3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2387c0cb-d302-404f-aa61-192c6a21a026"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("23b3126e-1fd6-4c36-a62e-16b8feda9d1d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("240e03bb-f29e-4406-9508-24500184e109"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("246256a8-5afd-4416-87be-baf8c3cb1e06"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2476a4bf-141c-4544-982b-434c31127e07"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2499e384-ad38-49dd-bedf-e48a3e703b34"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("249cd0e6-6a89-4073-8121-ea94caaf32d9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("253560e5-29e6-41f5-be0c-6c36ebdef1d0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("256581bc-550f-4568-a95e-ce9f175fb61b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("25a0cf66-1095-4eb1-b9f8-2db665a3fd10"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("25ac36e7-a894-484a-968f-1dc2aa7d8ad4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("264819f9-18d5-4429-b4f4-aae17f4be8b0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("266b1338-3976-4ef6-a284-9a634375b1b9"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("266b1338-3976-4ef6-a284-9a634375b1b9"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("266b1338-3976-4ef6-a284-9a634375b1b9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("286c688d-732d-4403-8a10-b1cf00f57b8e"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("288be86d-a5b0-42fc-b244-339aa7a1befe"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2a17462f-ba12-4aa0-9256-add51bffb702"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2b1e7a70-1b54-4b9e-8eb5-228d23a4f686"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2b1e7a70-1b54-4b9e-8eb5-228d23a4f686"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2b8d2baf-cae7-4d6f-9b3c-45c184844b9b"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2b8d2baf-cae7-4d6f-9b3c-45c184844b9b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2bb38655-35b9-44a3-8fca-78c7e087dc1c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2bd8c60e-2ee4-4e98-add4-c8454bd441aa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2be39fa2-485f-475c-9ceb-0511ae2e640b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2be39fa2-485f-475c-9ceb-0511ae2e640b"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2be39fa2-485f-475c-9ceb-0511ae2e640b"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2bebee7c-acbd-4303-9df5-83a88046230a"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2bebee7c-acbd-4303-9df5-83a88046230a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2bebee7c-acbd-4303-9df5-83a88046230a"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2bf185a7-63d0-4791-8231-9d2e08c121a4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2c97c0a3-d611-49c6-84ac-2ff1deb7b751"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2d386c26-29de-414c-8909-678ab564fe71"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2d46364d-558e-435e-ae88-44b3d7792109"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2d84de06-79c7-4476-a220-34b3623a91f5"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2e05f98a-9060-4f1a-814f-7b563e3115db"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2e6485f5-4ad3-417f-978c-6fab660dbb12"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2eb8ebf8-a527-481a-856a-4a5191e4a606"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ee99651-7729-4fc4-841f-8e1c38cb07a5"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2f5a5c33-f020-4a07-b27e-84a125d58948"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2f71f6cd-0858-4a3d-9531-4a58bf7c2aea"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2fe73fc6-5682-4320-a600-afd52b8ee761"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("308a01bd-138d-455a-8b9c-b1a3050da7e5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("32353038-94e4-4271-8806-6c6fdd9f4ed8"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("32353038-94e4-4271-8806-6c6fdd9f4ed8"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3281e49f-a786-4e5e-8f24-baa140a2925b"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3360242f-400b-4e10-906a-13668538c611"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("33d67d38-4769-49ce-be25-cb4cf64707e3"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("351c2142-2c31-4923-82ba-d54fa508ead2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("35367b85-55e6-46ed-9685-51199101b81f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("35a725d1-7c3e-4ba2-8ec5-75e17ec6d954"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("36970120-d30c-4db5-9577-869bd6424c62"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("36d10a39-2226-462f-bec8-c0293b730d0f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("37267a22-feff-4e2f-9447-8d4854165528"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("377ee5fd-b1f0-4fa1-b554-90c53d2fc3a4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("377ee5fd-b1f0-4fa1-b554-90c53d2fc3a4"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3874925e-472c-423c-bfb4-7595c8feeb5b"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("38c16dff-6fc4-4db1-b5a6-da24c6252b6a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("398cf6b7-eee3-44dc-b001-66d6320b7898"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("39ae666b-3cee-4cd8-a10c-88a5f72eb696"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("39ae666b-3cee-4cd8-a10c-88a5f72eb696"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3a2bf568-de89-4b11-80aa-21ab984917fb"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3a84afe2-f075-4619-b51b-56ea5075e968"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3b46c150-b4b0-492b-9e32-c7a7f545e0c2"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3b46c150-b4b0-492b-9e32-c7a7f545e0c2"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3b72144c-cf88-4064-8e0d-5ca70621a99b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3b9c98e1-bdf4-435f-a628-30cdfd371b63"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3ba3bd14-dfcf-43fc-8ba4-15006edf75e3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3bb3ada7-6d73-4301-9ef6-4c666c87b214"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3bf16ad1-11ee-429d-9f87-c3780ed06160"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3c2edcad-ff25-4c50-931c-71411cf681ca"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3ce6967a-327b-4c31-b909-6c1b0e63f2e7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3d4043e8-f69b-4ec3-990c-8284da3a7304"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3d4043e8-f69b-4ec3-990c-8284da3a7304"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3d9afba7-1b4c-44e5-a468-d043cb366613"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3e5786b8-e9c3-4372-b378-f1c68f8a2d11"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3f1845d5-6920-4970-b168-9def1ae4005e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3f1845d5-6920-4970-b168-9def1ae4005e"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3f1845d5-6920-4970-b168-9def1ae4005e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3f3f0245-17c4-470d-979a-5d3cdd83e29e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3f4a012f-29a9-43c8-801c-9663deef4b15"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3fb40c56-2b7f-4ea7-9536-cf821875a3be"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("3fffdbc3-663c-41aa-91ed-3dfca17ad1fc"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("40af2614-038c-4bec-9ffa-130dff714595"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("40af2614-038c-4bec-9ffa-130dff714595"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("40cebd59-def1-472b-b7fe-084a6725394d"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("40d76ba1-b03c-4040-bcb2-e448cc34f4af"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("411fdcfa-ef5d-42f8-bfd8-17d9d6e879b9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("42665431-9f43-4e4a-8455-cd9f25d5e8cc"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("428071b8-8cbe-4c79-9b28-b5323fd42ff4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("433ba464-43cb-422c-a83b-155f5c45d909"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("43855f5a-5989-4a74-95a7-df6231f5f3be"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("43b9231e-ef7c-46ff-a555-1c0b1de69de9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("44a0065a-5060-4750-bd8e-e428cf198815"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("459f4962-bfe2-4189-975d-afbe230c8a8c"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("47463f33-3b39-4a8c-ac50-4a3f24ee8e14"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("47463f33-3b39-4a8c-ac50-4a3f24ee8e14"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("47463f33-3b39-4a8c-ac50-4a3f24ee8e14"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("484af3d9-5ef7-4cfb-bd57-dd05da3d79f0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("484af3d9-5ef7-4cfb-bd57-dd05da3d79f0"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("484af3d9-5ef7-4cfb-bd57-dd05da3d79f0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4875e3dd-df5a-4589-a8c4-fb7507b47661"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("48d5d383-ee7e-47ed-bab9-77e2f34354cf"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4a8ddac5-8c14-4691-8062-0d88c92de541"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4a8ddac5-8c14-4691-8062-0d88c92de541"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4b124784-f183-4871-93ce-4dc908dcaa6a"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4b8727da-9ec2-49d7-b4bd-76018ed2637b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4c79374f-c757-4c52-a8d1-7ac4f148a06d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4c7a17bc-6cdb-4c83-83d4-7221b18180da"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4cebbf08-a70e-4dd6-9235-fb8315405fc2"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4cebbf08-a70e-4dd6-9235-fb8315405fc2"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4cebbf08-a70e-4dd6-9235-fb8315405fc2"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4e9a6523-d6e6-40e3-b21e-b03cdfb61cd1"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5030fd75-0c07-4dcc-9b78-fbef8b28cf44"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("506cd0c4-a949-436c-b298-bc350ac2e050"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5099d6cb-8c1e-4739-b708-2fcd82e2c44e"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("50bfa050-4ba7-4fdb-8e3b-67eb51bcb30f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("50e03542-d86a-43c3-b6d7-6e2a1661cf73"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("50f305cf-e331-4e95-bed0-9f3d6dd8e156"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("510e6ea6-0c0f-4ed9-b7a8-866dd423bc78"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("512f3a3e-7cba-4fcc-abfe-5fc994bedce0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("51917c60-f568-49c3-9365-1a6f50983b2d"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("51bc2bf0-5597-4673-a599-73a12d3d6c46"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("51c334ef-1992-4c42-a5f3-389719c252fd"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("51c334ef-1992-4c42-a5f3-389719c252fd"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("51ccf59e-5a39-4c51-8a29-9c2c1c68df23"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("51ccf59e-5a39-4c51-8a29-9c2c1c68df23"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("52086444-7fe7-4070-960d-69327b7caf8e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("52086444-7fe7-4070-960d-69327b7caf8e"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("521b93e4-01e5-4a2c-9ee3-74853fc61d84"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("526d468c-7f60-48d2-b491-eb3876afc321"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("52c15276-0f3c-4fca-bdd9-c007799b2bb8"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("531c65d7-79c0-43df-ab97-2a65c48fd0c0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("53764c02-4d7d-44ea-89e4-0a36e104ff53"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5397b29f-a9df-4cce-91da-03a104726362"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("547cb3b2-f354-4b49-9b43-cf4364d6b35d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("54a1570a-590d-48a2-a060-f4e5402970e4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("55066c54-68cf-46b4-8bd0-639ef396605d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("552e0e95-31c9-4b8d-8d58-b2cbac0aa379"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("55b07067-c87f-4fe0-bb02-b551218c2edc"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("55e0bedf-5af7-48ca-8713-7cba291201cf"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5699a79e-6b57-4934-8f50-fd25e95aa869"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("56ae67dc-3154-45ae-a91b-310305bf156d"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("56ae67dc-3154-45ae-a91b-310305bf156d"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("56f472f3-aaff-4d55-a86c-d6b463155768"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5743e0cd-4045-4957-9d42-1fa4730d1b93"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5775945b-cb4d-4469-b567-7c6813586721"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("581ce754-5013-4050-a41a-2eb010e9751c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("58b36d41-d7b8-4c8b-b144-5d252f0f0c81"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("58c60ca5-eb3f-4e68-8326-13d8d5afb901"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("599a9647-2a2e-4f8a-91f5-cda97a6349ec"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("59aae70e-1511-47e2-afc8-35184233136a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("59aae70e-1511-47e2-afc8-35184233136a"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("59c5ca16-7334-4cb3-b83a-4e2ee6b2aec6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5a3008e3-7c20-4251-8ec3-bc0e8fb73f95"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5c164f52-885d-40ed-a1ed-f080f90e20be"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5c164f52-885d-40ed-a1ed-f080f90e20be"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5c91d054-b217-4ce1-bcb1-02ef492414bb"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5ca4e7fd-6b50-4b5e-834a-8ca78ba2bc14"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5ca4e7fd-6b50-4b5e-834a-8ca78ba2bc14"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5cbb7717-2d85-46fe-8e69-6ba4ac73ba98"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5cbb7717-2d85-46fe-8e69-6ba4ac73ba98"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5cbb7717-2d85-46fe-8e69-6ba4ac73ba98"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5dad6d81-5b62-4d45-a93a-be54372d2360"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5dc85a7a-3e0e-453a-808e-61f949661957"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5dcab3f5-ba1e-4430-bff6-45bd7687752e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5dcc8725-8505-4ac2-a885-81b913ca39c5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5dd7f374-ad57-4e5b-9fb9-e3e22e529ff8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5de25826-26d3-4992-a497-dcc07f121c65"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5ea6c7b0-14fe-4100-ab7d-61a2f2c11768"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5eaa39e2-a395-4e07-92fa-47d8708a2e86"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5ed43167-46c9-4984-8f3a-6cb271cb8a37"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5eea8f30-924f-4517-b45a-b256c43caf5f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5ef5c7f1-ad70-4ad5-995b-e5a1bd471bfb"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5f18f6c5-53eb-451a-8198-bc004b28d3f6"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5f18f6c5-53eb-451a-8198-bc004b28d3f6"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5f3fa814-2c8f-4d84-a39b-2e77dd0f3b74"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5f7779cd-cb06-404a-83e3-72589ee13935"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("5ff3546d-e3eb-4fa6-9945-2eb9065d67d4"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("606347c6-b9f7-4f76-8492-6a4f5995f04e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("609e4c91-5dad-4388-aba8-03bd88d1573b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("61ca91f4-d7d2-481f-96ee-e2b47a0e2373"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("61d95f81-717b-4bbb-880d-61c2e506748f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("61f1482f-18e4-46ee-8b8d-e9477b4a12d3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("620ab630-a27b-4de3-ab4d-9c28864e7fb9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("62295c53-eaeb-43e3-81ed-6bc211ec4652"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("626a01b1-bf36-4667-ad33-2414c14b1380"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("626a01b1-bf36-4667-ad33-2414c14b1380"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("62f8b22e-1503-46c6-bd00-50473e0a345e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("636c29a4-11c2-4012-a5e0-75370c2bc705"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("63b8ef1f-3b6c-4787-8f15-2f647a60640a"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("63b8ef1f-3b6c-4787-8f15-2f647a60640a"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("64049267-294e-45e4-841b-f86b997d2793"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("643e12c8-6619-4a98-8d02-65ea515d8e1e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("64605b15-4eab-4544-b4fd-63251b5d90ad"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("64e6a877-fc60-4a32-ba65-73558b9e5bdd"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("64ed9b88-8d2b-4591-9eda-170c6693fdc0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("65570dc4-4b36-4c11-893a-0400db1db82d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("65e5a7da-50d3-4d90-aac1-b2117da2df84"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("66ad3787-5ee8-43bc-9faa-54235ee32287"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("66b3ef61-d2db-4860-9190-6f3d4f6c1f1f"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("66b3ef61-d2db-4860-9190-6f3d4f6c1f1f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("66f25eb4-fca6-4397-be0b-d2976bdc2236"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6723532a-7c2f-49ce-8f5b-9c1af16ce68c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6723532a-7c2f-49ce-8f5b-9c1af16ce68c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6723532a-7c2f-49ce-8f5b-9c1af16ce68c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("674a0f47-570c-45d6-ba34-82865d913849"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("678418f5-7873-4a9a-979a-8b2005be1d41"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("68084996-e9ee-4bcf-beac-4a36556d38b2"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("68e59327-0418-4806-a476-76418aaf392d"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("68fb90aa-ac75-45ba-a526-f6be44f5cee0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("69560bc7-3bd5-46fb-a9e8-9d5a4ec105a9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("69597e07-33d8-4446-9964-43ae09c7e78d"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("695bb3e4-819b-4fcf-95e3-9a54211078b5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("695bb3e4-819b-4fcf-95e3-9a54211078b5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6978c46c-1043-4d9e-820c-35bcd6cbced1"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6978c46c-1043-4d9e-820c-35bcd6cbced1"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("69f97501-b017-4d04-9e36-5e3aa8ed829b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6a29b69f-9cdd-443b-a18c-5e2699054527"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6af0dd3c-45dc-45eb-87cd-e52c1db2a05f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6b0874e6-832e-41b1-9d7f-8d65a0bd5b20"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6b30c129-6c88-4832-b918-796283a14bb1"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6b678663-0cc3-4db1-a308-b1c97f0adc95"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6b75334f-242f-46df-870f-6bb294db4a34"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6bc3a409-7d09-423c-8645-a64040da501a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6c2fabef-849d-427c-997b-e6ad6f1ba270"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6c7a8fd4-e1e6-474d-ab97-23e41a785646"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6d640755-79c0-4db7-8054-d81c7bf87622"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6dee4ace-4492-46d7-8a3a-8ef392d896fe"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6df078b3-6035-4639-9b7e-f82cb68ef47a"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6e1b5b0e-8686-432a-b05d-d6c3a3875d05"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6f476815-e7b3-4243-bf7c-d20c74537fe4"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6f8d3cce-89c8-491f-833f-4c6490e4065c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6f8d3cce-89c8-491f-833f-4c6490e4065c"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("6f8dddbf-bcc8-4249-afc7-c1d2d820cf71"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7041f7f7-b44a-4568-8aec-bbb7ed249fdc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("704270a8-e17e-4270-bc34-cb832df8a982"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70a26cfd-d69d-4b5a-b890-42ce7fcce7aa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70aa8f57-8e52-4b21-b9b2-68c058d829f9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("70e9d7a6-ba78-404d-a489-1bbd4267aa21"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("71955ec6-9cf9-41b7-84c4-dda6ff43c7cf"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7341f50f-9cb5-4a54-bf9c-1d277c4abbce"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7341f50f-9cb5-4a54-bf9c-1d277c4abbce"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("73a80ce7-51de-4469-8872-c4b36b8bb545"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("73b03858-1ac5-41c1-bc02-3f224a23095f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("73f782cc-b3a3-4f13-868e-f0419cb82846"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("74ce0a84-88d5-42e3-bbaa-91139970b439"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("74ce0a84-88d5-42e3-bbaa-91139970b439"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("74db332f-8ef3-47a4-81ae-0f65e3a4404e"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("74db332f-8ef3-47a4-81ae-0f65e3a4404e"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("74db332f-8ef3-47a4-81ae-0f65e3a4404e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("75775a59-067c-4149-aada-cab39eca08f4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("75c1e0ee-412c-4f1f-8886-d81b7916ac3b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("75caaff9-e50f-4f12-884a-17448043bf93"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("766b2f45-79d2-49b2-a957-5193eeefbf67"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("768454c4-d896-4608-a903-1b7bfb02858f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("773c055c-03f7-4362-a1f9-56d8d2168eee"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("773c055c-03f7-4362-a1f9-56d8d2168eee"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("773c055c-03f7-4362-a1f9-56d8d2168eee"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("77402f13-849d-4ed0-b5b5-119996a29ce7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("784d07ca-e671-4db1-8be9-847dab5efeaf"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("784d2ba1-5f05-4c50-92db-4e9bc28430bb"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("784d2ba1-5f05-4c50-92db-4e9bc28430bb"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("784d2ba1-5f05-4c50-92db-4e9bc28430bb"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7878a0bf-3ed7-4ea2-bd9f-5d25c996a54a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("78907ebf-456f-4953-9334-428ba0a51cf4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("78b13e8d-1f15-4e5b-b806-cdb65a5d4ef8"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("78b13e8d-1f15-4e5b-b806-cdb65a5d4ef8"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("78b13e8d-1f15-4e5b-b806-cdb65a5d4ef8"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("79630ddf-dcd5-43b4-93a6-29a28aea4df9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("79b6e80e-5157-4ab9-be23-811b95c8559f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7a5cf84b-b123-4e6c-8002-0a9a7a80bca9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7b0d9bd8-6636-4ead-a66c-0280a2b84653"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7b0d9bd8-6636-4ead-a66c-0280a2b84653"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7c12679b-f588-474a-bfdd-496a0fe09845"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7c4c92f2-be4b-482e-9d92-0b04307bf18e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7c87df54-0e69-42a5-b0ee-3c6a7bd0961f"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7cc1dae9-8771-4973-afd9-bf0269b921d6"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7d3185da-9c06-4762-9430-6a69684e06b6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7e5deb4d-33cb-44a3-b053-59123775c4ba"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7e5deb4d-33cb-44a3-b053-59123775c4ba"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("7fe7e004-6c5d-41b3-8440-71ba0ee6cb3b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("80c8a17d-8677-4089-a0f0-490bfe3136e0"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("80c8f0b9-c5d1-4b5c-91ae-3f32eb790c93"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8114bbb0-d683-4dec-855a-e7f0f2e84a3e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("825d4aa8-d2d6-4ea2-ad40-0a6b30b08cc3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("828e1c85-93ea-4e83-818a-8c20eafda155"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("835e8747-893c-4e13-a762-721fc729bb8f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("838ed159-f7ba-4b1b-962e-a59b66abfecf"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("838ed159-f7ba-4b1b-962e-a59b66abfecf"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("848e28c3-ddec-4368-b097-155bad397ab4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("848e28c3-ddec-4368-b097-155bad397ab4"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("848e28c3-ddec-4368-b097-155bad397ab4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("84927d8e-86e5-4d03-a7da-8cb18f6510fa"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("84927d8e-86e5-4d03-a7da-8cb18f6510fa"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("852e3450-062b-45fc-a3be-16378c294831"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("859f1403-d2f1-4adb-9cf7-443e1a3fd835"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("85deb67d-76ef-4948-98a3-87e3baeb59d7"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8640bb92-6908-45f3-bdca-773e114bfd65"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("86927e80-97d5-4779-96f9-8403d1e782ad"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("875e2434-6d8e-43b2-957e-07d242eb4939"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("875e2434-6d8e-43b2-957e-07d242eb4939"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("87e3b0e8-f8e5-4ef2-aa15-4a6ea82cd045"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("88707c5d-982f-4b82-a11b-503d396e5f8a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("893ae561-3c5d-4652-b2c9-6c99248262d7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89559865-8e2e-403a-8621-174cbd4761fc"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("899b0b47-ccf5-4242-b167-4bbc48b5fe9d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89dcbf65-a17a-4a5b-868e-590e2610d4c6"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89fc2e36-4bf7-446b-ba41-643cedeeaaf6"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89fc2e36-4bf7-446b-ba41-643cedeeaaf6"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("89fc2e36-4bf7-446b-ba41-643cedeeaaf6"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a18c3dd-3808-454b-a3bb-95fdf68de41f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a7bd92a-d33e-4b11-b300-49b86b05bfb0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a7bd92a-d33e-4b11-b300-49b86b05bfb0"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a91d213-6b7c-4be7-9606-50d837334822"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a91d213-6b7c-4be7-9606-50d837334822"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a980fa2-0e79-40fa-9b7f-a8ba9104e5d9"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a980fa2-0e79-40fa-9b7f-a8ba9104e5d9"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8a9c7df9-5e79-4cf9-8b48-0e363df09658"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8b117d8b-f893-4f1c-b02f-56699861f7f7"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8bcc2987-2327-427d-abe6-737bf4056a1d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8bd1cc68-211e-4b64-9dc8-2da885aa2ade"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8c167fb8-26e5-4719-980e-09f2665242c7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8c1ee69b-4714-4687-8d5b-a08f2400ff58"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8cdb05aa-1529-40ca-9a28-5722338bfef7"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8cdb05aa-1529-40ca-9a28-5722338bfef7"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8d8d1048-55e5-4bc3-9530-90d7d7cb9c05"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8d8da4bd-e831-48e7-993e-ed8d891482c1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8dbfa201-cc30-45b5-b9a5-838fef9e459a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8dd4512a-7d55-46de-bc0f-7203f1181e6a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8e66ae26-36e0-4d42-aaa9-b95a7f6883f3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8fa03423-6b02-48db-bfe4-c01e7b1f0ff8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8fa03423-6b02-48db-bfe4-c01e7b1f0ff8"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8fd82819-5f79-41d5-989b-ba6446658905"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8fd82819-5f79-41d5-989b-ba6446658905"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("8fd82819-5f79-41d5-989b-ba6446658905"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("905f6262-4d53-496e-90d6-9351dc37132d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("90d5f91f-50d9-4bf4-a9fa-2fd03d60bed4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("91c02482-6dfe-4ada-8767-5b13734578d1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("924c889d-c720-4dbf-a449-311184bdc9fe"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9295d89b-91d8-40ed-8934-cbddec92b531"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("92a375f6-f1e3-4061-aaf8-7558e9f8eb59"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("94453329-fced-489b-865f-b2ba6093eee8"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("946ffbd1-b509-4bc3-bd3b-b06a3f0338c3"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("947a2452-f869-4920-bfba-a4a98f025b78"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("949d8536-0a27-4171-a662-4c97066ddcb9"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("949d8536-0a27-4171-a662-4c97066ddcb9"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("949d8536-0a27-4171-a662-4c97066ddcb9"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("951341d9-d163-4eef-a0f0-efd07c150e78"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("95632818-9300-4f78-925a-852116bff6d9"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("95632818-9300-4f78-925a-852116bff6d9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("95632818-9300-4f78-925a-852116bff6d9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("95cd6039-fd74-417e-b1d1-f5b208dd980c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("95fbd752-375e-4025-83ff-e1b646e8146e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9621c2d2-a7e6-45b0-8fe0-948b0f0d03b5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("966942fc-a330-4679-be97-efe0ec6ef1da"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("96784121-d630-432a-b694-6845bec0ee53"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("96d40769-4c20-4ec6-8138-d409bfc73b61"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("96d40769-4c20-4ec6-8138-d409bfc73b61"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("96d40769-4c20-4ec6-8138-d409bfc73b61"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("96d55c76-1854-4c1e-953e-64a2f6289eb7"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("977a6f30-87cb-4246-85d6-e4e175c02179"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9805e6e4-56c2-492c-a652-f7b26119aae8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("981330ed-85db-419f-9fd1-667bb8c7777f"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("981330ed-85db-419f-9fd1-667bb8c7777f"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("981330ed-85db-419f-9fd1-667bb8c7777f"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9897a264-858e-4e69-837e-32859333952c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9897a264-858e-4e69-837e-32859333952c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9897a264-858e-4e69-837e-32859333952c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("993c0023-034f-47d0-b2d4-0bc7fff94eec"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("993d3431-456a-4e8a-bb34-a0ef7c62e933"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("99c292ef-cd8f-433a-a85c-3bc06f524f6e"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9a47d6e7-d7c2-4c25-93ea-11fd4d48eaf0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9a47d6e7-d7c2-4c25-93ea-11fd4d48eaf0"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9a47d6e7-d7c2-4c25-93ea-11fd4d48eaf0"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9ba4220e-4a85-4c1a-9902-71edcf2bd6b9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9c286fcd-bd97-401c-83e2-241a15ebbfa0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9c3b49ec-245e-45ea-ae9a-87f1937fe960"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9c66b420-1615-4575-b2d6-d27dadb18cf3"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9cf65c84-886e-42f9-bad2-35eb880e54dd"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9cfbb711-de98-421b-9f69-165e564453c8"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9df58131-5c43-402b-9254-551b33e4567c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9dff65b0-8e5b-43c6-a243-25ee2a5e706b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9dff65b0-8e5b-43c6-a243-25ee2a5e706b"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9dff65b0-8e5b-43c6-a243-25ee2a5e706b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9e0aab2a-09a4-44b7-bb6c-b3372eefcaa2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9e0aab2a-09a4-44b7-bb6c-b3372eefcaa2"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9e7a417c-918a-4bb8-8fcd-886c2ccc7a6e"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9f7978a3-34bf-4b46-bdc8-43fd0b0ba548"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9f7a0f4e-532a-40fe-bf67-dae776b4272d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9fadb179-1166-440b-9c3a-69232d75eadd"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9fd19ef1-e9d1-4122-ac58-594858351be1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("9fd233b4-d289-4bea-9bec-bb42058dd8f2"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a04027db-eb29-43c4-9c24-6408abe65168"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a04027db-eb29-43c4-9c24-6408abe65168"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a0753898-b1b1-4303-83d1-5f266f4195a9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a0ce5a4b-0067-4f26-9706-b7514adcd91e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a168fcee-8393-408c-b1bb-cc6440205ffa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a168fcee-8393-408c-b1bb-cc6440205ffa"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a18acbfc-6922-4330-9556-983f274dd254"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a18acbfc-6922-4330-9556-983f274dd254"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a225f6a1-244d-47c5-9f99-1d04de93dbc5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2b0816c-5723-434d-9ce3-21f08f34e08c"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2bc7d18-2880-4ce8-ba90-b094adaeb7f5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2bc7d18-2880-4ce8-ba90-b094adaeb7f5"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2bc7d18-2880-4ce8-ba90-b094adaeb7f5"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2d5e505-27f0-40fc-8371-925ebfc222bc"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2d5e505-27f0-40fc-8371-925ebfc222bc"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2e88c1b-330c-4beb-af74-15e079ac1ba0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a2ecd62a-b7d4-413c-b412-b5259eb066e0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a36e25f1-c2bd-4371-b541-88611bb63bce"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a38b5ac2-f3b3-4867-abc3-603344bd71cd"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a3bd0448-dec5-401f-9103-3f863a46fc62"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a3f563f6-1777-4c5d-8558-0c6f0ed832c6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a46a91ab-2396-4c2a-ae80-fc663519b740"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a47d988e-20e8-4540-ad51-8113b22ae1cd"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a50bce83-67b3-4c14-9386-9f183de08eaa"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a54a940e-bb58-446b-bcbc-514d091ac643"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a5bd80b2-b61d-4aba-95be-7403507c7805"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a5bd80b2-b61d-4aba-95be-7403507c7805"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a5bd80b2-b61d-4aba-95be-7403507c7805"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a5e26917-ac79-4b6d-a029-b201da877ff5"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a5f8ce06-5fb2-4833-9702-c0b4e94ade3b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a6422093-c606-40b8-87c5-c471fee80c99"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a6b156fb-6af5-4db0-b0b2-fc10120502b5"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a709cfb3-245f-4174-a3fa-495a0655dcf1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a784967e-5f92-4877-b999-18d3949442a3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a7b32132-945c-4d2a-a4d2-a56bed92ed20"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a8176082-1037-4f87-9b8c-b34be107d6e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a87dfb37-3d60-4f1c-ab9c-ca3f4e649982"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a87dfb37-3d60-4f1c-ab9c-ca3f4e649982"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a8cff047-8e8a-46e1-a2d3-b29ba03a5872"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("a9b9507f-a00a-429e-b906-0515d9df84cd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aa513b87-5e05-4d5c-a5a6-693781d711b9"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ab55a98f-2a3d-48ab-a81f-e7a600174434"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ab7a7c93-aca1-40a0-89e0-48629e24b357"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ab8183c2-f715-4ba8-ba71-a1e87804b494"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("abb5275b-865d-4278-ba8e-09377de7a835"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("abb5275b-865d-4278-ba8e-09377de7a835"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("abc65167-8795-4093-a7c9-9e4a0c4b1f70"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("abc65167-8795-4093-a7c9-9e4a0c4b1f70"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ac13ca28-6cd4-4654-915a-e2ebf8308bef"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aceacb23-5279-4c40-b087-b17eb82d02e9"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aceacb23-5279-4c40-b087-b17eb82d02e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aceacb23-5279-4c40-b087-b17eb82d02e9"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aced262c-e886-412d-a68d-33583fb553d9"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aced262c-e886-412d-a68d-33583fb553d9"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ad2f0520-4f27-41f0-b51f-0458987db57d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ad713a35-f353-409c-b472-b4b9e8c108b3"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ad713a35-f353-409c-b472-b4b9e8c108b3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("add283f7-12c7-4216-a55b-e88664ec4cfa"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ae1f41f4-128c-4713-846d-f24a8ad0c171"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ae1f41f4-128c-4713-846d-f24a8ad0c171"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ae1f41f4-128c-4713-846d-f24a8ad0c171"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ae57d948-1360-469f-ae24-4555bf807ed7"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ae8a0121-c626-422e-8eba-49b876f26af0"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aed8a849-149c-474e-b19b-bdd1e36120eb"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("aefb7cfa-b51b-45e7-9363-7182f1df2535"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("af52840d-15e4-44c2-b26e-3d0e09d9cd27"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("af52840d-15e4-44c2-b26e-3d0e09d9cd27"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("afb9086b-407a-48db-a6f0-ba6be1b656e0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b00caf8d-1100-48b6-b3da-5cd942816bdc"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b0899259-5e02-40ec-952b-8963b97feeeb"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b1829a12-8703-443e-b226-b36764ff4f10"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b1995afc-2f20-47da-9dd3-e2e172c28817"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b1db1dc3-8097-4a24-99e6-2930a11b3997"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b1ee5bb2-50db-45ea-8d6e-71c4fd4276a5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b1ee5bb2-50db-45ea-8d6e-71c4fd4276a5"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b24db990-676c-46a1-97b7-e9f45fc76cdb"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b2a9c12f-c059-4296-8f43-411f0ed080bf"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b2a9c12f-c059-4296-8f43-411f0ed080bf"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b2a9c12f-c059-4296-8f43-411f0ed080bf"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b2f18cd7-d8e3-4419-9187-ceaffd1d8c9f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b2fb1d79-dda7-474d-9c62-8cc294798246"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b2fb1d79-dda7-474d-9c62-8cc294798246"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b3d4e5a6-b370-4c45-9f8c-89b04a9424d9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b40aa816-9028-4330-8214-08da11e5293f"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b40aa816-9028-4330-8214-08da11e5293f"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b457005d-f2c5-46de-9c5b-14e1743abe85"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b51f9ec3-368e-46d8-9db0-8d2ad999990d"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b5f18e51-9eba-4d39-8efc-40ff175f7e03"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b637438e-750e-4a30-bd3c-6fac412bc1a8"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b637438e-750e-4a30-bd3c-6fac412bc1a8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b686794b-f0f5-4bd3-9b36-e886f6e0875b"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b6c03432-4d97-466f-b240-c9287639a2d6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b7a1aade-0714-49b8-a44b-06fd0a24a3a9"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b88ac3cf-24ee-4389-8079-87ddb5cfea19"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b88ac3cf-24ee-4389-8079-87ddb5cfea19"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b88d1d8d-681f-48e8-a5f9-7d816dc6d2dc"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b890dafc-8515-4587-a686-cca89b03d8cd"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b8a52ae0-392c-48f3-aad2-5c2b3d481b06"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b9524485-d932-4593-a2bf-f99e5eea41e8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b9524485-d932-4593-a2bf-f99e5eea41e8"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b972f098-f15f-47d1-9ac8-f76a14229253"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ba2805b1-4d6b-4337-9ca8-27a772617d26"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ba31457e-49d1-465d-9652-d50a5d611d1e"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ba3ea20a-6f76-4c26-85a8-e380a6c1c566"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ba8d3ed8-e877-4c3e-afe0-0532c43d6e7d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("baa6f2ad-1835-4bd8-87e9-9afc914adb60"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("baa6f2ad-1835-4bd8-87e9-9afc914adb60"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("baa6f2ad-1835-4bd8-87e9-9afc914adb60"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bb0d72e2-7644-45e6-81f2-1cafc5427aec"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bb1105f1-4b6c-4731-b34c-728901beacdc"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bb942c64-ee95-40e9-8702-2c4a9b46dc86"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bbac4a9c-6e87-4230-aee9-cba3b4a400e3"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bce280dd-7f43-4a3c-a980-a5fb18992549"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bce280dd-7f43-4a3c-a980-a5fb18992549"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bcf2cd9d-0c38-4d0f-8928-ae0b36ebe2ea"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bd6b64b0-283a-4695-8b6d-3a84121dd8ff"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("be3f4576-315e-43c8-afe1-1629be7e782c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("be71bba3-c2a3-4035-8fd7-15972649e982"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("beb95f82-44fb-4291-91fc-b322d29c9949"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bf89e821-6c85-466d-817e-be5c830ca77b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("bf9bacb3-d52b-4bfc-9a96-a4be1e16b82c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c0bb34ce-a453-4801-bbc7-ce423306f288"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c0d69d2c-eb40-4899-a5ed-1373c4982ae7"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c0d69d2c-eb40-4899-a5ed-1373c4982ae7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c0d69d2c-eb40-4899-a5ed-1373c4982ae7"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c12803a0-d95a-4e6c-9dc2-1e2e25ccf015"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c1301dd2-f61a-4b42-8f66-68b686a99125"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c131cd96-9f7f-4bb1-960a-5ede42287241"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c131cd96-9f7f-4bb1-960a-5ede42287241"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c131cd96-9f7f-4bb1-960a-5ede42287241"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c2bf3fef-0394-490d-870e-d1c61bb73f82"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c2d3f1d4-7f75-471a-8aba-33100a6d8b42"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c2fff5b4-d468-48d7-966e-5752b0dccaeb"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c363ca01-19b6-44d3-a3e2-ce545ace3c16"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c3fd5707-3488-40e1-ad59-b561cc4cda5c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c45b261e-56c1-4e4b-887b-1ed0f182adfe"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c47ef9ac-66eb-4399-ad5e-5c5089b22aad"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c4a5a136-1ed0-4de5-97fb-cfc24ec77e43"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c4bf2322-9e53-445a-aff2-5f3ce70ea435"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c4d1d8ee-114f-4e76-8eb6-1f30447196e4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c4d1d8ee-114f-4e76-8eb6-1f30447196e4"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c4d1d8ee-114f-4e76-8eb6-1f30447196e4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c4f4334f-04ca-4267-9c34-082474ed2ea3"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c5520eea-3291-4654-9df9-7d74ae195197"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c5eb6807-817f-4011-9d6b-62a6ad997ba0"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c5eb6807-817f-4011-9d6b-62a6ad997ba0"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c5eb6807-817f-4011-9d6b-62a6ad997ba0"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c60d92e3-c721-4a10-9ac4-2ebfe7f030f2"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c60d92e3-c721-4a10-9ac4-2ebfe7f030f2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c61c3bcb-a50f-45ba-ab13-c4cd29896ea4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c61c3bcb-a50f-45ba-ab13-c4cd29896ea4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c635bb79-bd11-42eb-b4ff-6c0de5c3ad96"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c67d5089-2a4e-4563-9809-4c18e03278f1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c6af527b-0a95-40ef-9390-7c0a82d19483"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c8a79627-e1c4-4432-afcc-fc376405ff94"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c8d4d987-25d0-46cb-9e8e-0c512bbd5c0e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c8d59b36-edfd-4b53-aaaa-954069b63e6c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c9030b13-163a-4ce3-a517-dff8de60a183"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c9030b13-163a-4ce3-a517-dff8de60a183"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c9030b13-163a-4ce3-a517-dff8de60a183"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("c9b9f60c-d314-45a9-9cd3-82e9059e7358"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ca24f4fa-c851-4daa-9761-a6d0e2f7f607"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ca46f7e2-1085-4ac7-a1d2-ad53005a809b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ca46f7e2-1085-4ac7-a1d2-ad53005a809b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ca4c57d6-9f7a-49e3-a31c-13662ee9b746"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ca913d84-5308-4c3e-a79f-ecad5421ecc8"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("caeeb667-5342-4333-86cb-c017740b8493"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cc33a8b4-2d68-4420-846f-e01e514534d1"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cca3d26b-b8f7-4a93-a2df-fc1bacd3934f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ccff565f-a15b-4d70-bcde-c34f8521c459"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cd129d73-e1e3-4270-912d-472f11a65be1"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cd623c02-e5b4-402e-bee3-e01a2713de62"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cd623c02-e5b4-402e-bee3-e01a2713de62"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cdb3e39e-be24-4d6d-8c17-3f886e163508"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cdbeac0e-fff9-42f5-ab40-b4db1d0ad0d0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cdec08cb-90b8-4122-b2e9-537844598338"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cf39fd3f-c0a0-4bad-9b9f-51af6bafb65b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cfaca0eb-3f77-402a-9cfe-bad0c9b343c7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("cfc198f8-c782-401b-b93f-aed4cfbf9717"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d0594d74-aaa0-4850-a403-b740e4d12c59"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d0594d74-aaa0-4850-a403-b740e4d12c59"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d0d77d01-cea4-4988-8efd-c0341119b5db"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d1059ecf-858a-4241-a7bb-ce544f6622f4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d113bf0b-8c06-4db9-8cfe-8998f5700a09"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d113bf0b-8c06-4db9-8cfe-8998f5700a09"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d113bf0b-8c06-4db9-8cfe-8998f5700a09"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d146650d-3e7a-4b8a-ab1e-59ce84b280af"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d14863e8-ebb1-4491-a298-1a93903d3c2e"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d1ed0210-8660-4b90-bc66-e9e5ead64f6b"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d2a83057-3221-4c7b-8abc-2d6b54f3f984"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d2a83057-3221-4c7b-8abc-2d6b54f3f984"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d2ce968f-1c6a-4bab-892a-62d2bb5f93a3"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d35f82bb-ff38-4e7b-8023-af5b979e31e3"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d3645d2f-8f92-4b5d-9158-689310b41459"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d3645d2f-8f92-4b5d-9158-689310b41459"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d3645d2f-8f92-4b5d-9158-689310b41459"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d38fe649-a559-4706-bec2-54ad806aa7c9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d38fe649-a559-4706-bec2-54ad806aa7c9"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d38fe649-a559-4706-bec2-54ad806aa7c9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d3c545d2-8044-487b-a289-b15b6671a498"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d41f7a79-1296-42a0-946b-2ee65fa42b93"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d49e05e7-802d-49be-adde-dac80f7a90e9"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d49e05e7-802d-49be-adde-dac80f7a90e9"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d49e05e7-802d-49be-adde-dac80f7a90e9"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d54e79f7-8af5-478f-bdc7-498c5cf8ba47"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5d022fa-3d62-4546-9ace-278a5ef0133a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d61a2ee6-8046-40dd-9bd7-d4b640449b06"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d642e26c-9504-49ce-bbd3-3416e2b1639a"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d642e26c-9504-49ce-bbd3-3416e2b1639a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d642e26c-9504-49ce-bbd3-3416e2b1639a"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d6adf44f-7000-4478-958a-9424e13050b9"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d6b59e92-3738-4a87-bf5d-119a7d3621b0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d737f6a4-9eb9-477a-aee4-ed91940cf3ec"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d788617a-9444-44f2-9d8a-4b9f83e850b6"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d7add9b6-5911-42fc-acb3-2d45dda1a0a7"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d873a2f7-e446-49e7-b22d-391e6338f39a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d8efb712-d98e-484e-b6da-4daa2a960f90"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d8efb712-d98e-484e-b6da-4daa2a960f90"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d906b7be-5bd1-419e-9d1a-7affe95fbab4"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d9a6c84f-e488-4e6e-9837-eff0dfb4d70e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("d9d224cc-979e-4149-bf8e-c9f9bf633a4e"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("da288d05-b88a-498d-8ae2-1dc72de495bf"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("da7d4439-666f-4382-9cbd-d8291e2074f4"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dc3d8c7a-3781-40dc-b776-99195b515eda"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dcedc8b2-601e-4e49-a18d-26b97d26f5be"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dcedc8b2-601e-4e49-a18d-26b97d26f5be"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dd340f22-8618-480c-9285-685424e56c19"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dd340f22-8618-480c-9285-685424e56c19"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dd7f24a8-40c0-4dfe-8e52-16cdedc713f1"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dd852c2b-7634-49f5-a3b1-17e193574a23"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dd852c2b-7634-49f5-a3b1-17e193574a23"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("de3cd5eb-984d-497a-a3e4-ba953c0a0cc3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("de54976a-9a81-49cc-9ac4-df43bd462986"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("def9204a-4651-4fd4-afda-4ee75cee0c06"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dfed7839-3c52-4145-a9f1-7c719e462ddd"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("dff1b3c6-e471-4d04-a94a-41b72d9380dc"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e01eee4e-53a6-44d8-a57f-5ee0ea45ce98"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e03a1cc2-fcd9-4b83-a439-42c1470acad5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e041e289-8dc2-499e-a0a9-c575f44252c0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e052ee4c-5063-41b4-b884-3a011e215965"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e0612234-1974-432e-87f9-83cab6d967b0"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e099beec-45ee-4d2b-ba4b-61c1717bac1c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e18c7842-3ba2-4bb4-befe-b59160308a76"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e1b8dd25-73f2-4b93-86ac-2efe1e56a03c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e339951d-285b-4500-8880-5e94c7286fe7"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e3aa784d-1cda-425c-bd56-cd855ef9dbb6"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e4164904-e888-410d-8112-70b92ea76a84"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e49e7b13-ae38-4b27-94ad-35b3b125bf5c"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e4e55d38-94e7-4ee5-b239-527e436e802e"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e4e7eb33-7dc5-4571-85b6-98ee1e817abd"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e4e7eb33-7dc5-4571-85b6-98ee1e817abd"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e4e7eb33-7dc5-4571-85b6-98ee1e817abd"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e4ecad75-7601-464f-94f9-ca2a7c6ea2af"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e5ae80ad-0c90-42b5-9c54-7341d66e134f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e5ddb88a-839e-4d63-abbb-be23db90eb78"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e6c85de9-c27f-4562-81a4-c1719bc48f28"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e6c85de9-c27f-4562-81a4-c1719bc48f28"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e6c85de9-c27f-4562-81a4-c1719bc48f28"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e705c2c8-bafc-4da8-960b-e05dd0b3b22c"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e764ceba-14c2-4b32-abd4-0788bd648364"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e7962602-aae7-4181-96dc-f7c6f68c9a14"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e79a8299-b138-47d4-a1e6-2191ab4f4377"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e7a121db-58e0-4b7c-9f94-fc511c337cce"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e7aa37d0-e570-4458-827a-727f9d05f1f7"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e81665e2-fb80-4c97-b209-14642212e881"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e8f51a6a-4ca2-4768-9b77-ec6c812c15a2"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e965febd-0b4b-440f-bb09-3e59902c2399"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e965febd-0b4b-440f-bb09-3e59902c2399"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e965febd-0b4b-440f-bb09-3e59902c2399"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("e9c28291-477b-473d-8776-0a3db97842a4"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea415ad3-2e85-4b6e-b45f-945bb68a8142"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea534973-8899-4a8c-851b-42cde00f6a67"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea534973-8899-4a8c-851b-42cde00f6a67"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea534973-8899-4a8c-851b-42cde00f6a67"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea54e41c-ab2d-4d92-9339-2e30404cf88d"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea86aedb-2c5e-4b32-a529-9df13fcd5721"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea86aedb-2c5e-4b32-a529-9df13fcd5721"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eb691079-3f26-466e-b67f-d0b39434cfa6"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eb79b804-7a08-46e9-beb2-9de097e6f368"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eb79b804-7a08-46e9-beb2-9de097e6f368"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ec1387f8-fdc4-4e4d-8b1a-6d1e738a64a5"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ec4aaf33-7cd6-4a0c-800c-92a31e2b2d98"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ec9884eb-7f89-4cdc-9c33-d2630f5f12a8"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eceec044-9278-4ec1-8b97-7d457629806c"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eda2e505-b9e2-4b84-b926-1bcf33720b06"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("edf2d4ad-6e2c-4390-bdb2-20e2aa8f8eb6"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("edf2d4ad-6e2c-4390-bdb2-20e2aa8f8eb6"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee37bb5a-2c0e-4648-b76e-e3add486c621"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee37bb5a-2c0e-4648-b76e-e3add486c621"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee60044d-4565-4af6-a76d-985018874bc3"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee60044d-4565-4af6-a76d-985018874bc3"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee60044d-4565-4af6-a76d-985018874bc3"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee6279a8-2df0-4498-9938-09dac608da98"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee6279a8-2df0-4498-9938-09dac608da98"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ee6279a8-2df0-4498-9938-09dac608da98"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eed21aee-6d0b-438a-9016-b216bd7b9d9f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eed3f7b6-ea31-42ae-9b0d-4b685fb8fd6a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ef16b574-39d1-43ad-828a-db41314642bb"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ef16b574-39d1-43ad-828a-db41314642bb"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ef25dd91-7fe4-4dae-b0e7-7bcfd35e2425"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efbd8eca-c91b-4183-9215-ca5613e983a7"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efbe250b-86a3-4fe1-8ff3-9383fcbe1d0c"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efbe250b-86a3-4fe1-8ff3-9383fcbe1d0c"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efbe250b-86a3-4fe1-8ff3-9383fcbe1d0c"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efee4712-fe34-4f58-98d8-9b58b710671b"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("efee4712-fe34-4f58-98d8-9b58b710671b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("eff24c3c-6f68-405a-ae42-a006447fe5e2"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f10d9951-4f13-452d-9893-34a0d486f143"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f20f368e-86e2-43e7-b2b9-1063a6d3c625"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f2289b92-afc2-4126-bfcd-a7a6d3613ebb"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f26165b6-6a06-45b7-b3fa-8b37eb75e556"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f26165b6-6a06-45b7-b3fa-8b37eb75e556"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f2b114cd-abdd-44bc-b788-ab9da2faeb60"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f3c1fa6e-46e8-4f3d-8d71-cf83543c131a"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f3c1fa6e-46e8-4f3d-8d71-cf83543c131a"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f3c1fa6e-46e8-4f3d-8d71-cf83543c131a"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f428c1da-e893-4cbd-ae57-0b80c9230051"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f44a12cf-e423-4c54-a811-0d14f01528fc"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f47f166d-670f-49ce-bcd4-592fcc1b5d91"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f490e23c-96d9-460c-90c1-628752ac5d2b"), new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f490e23c-96d9-460c-90c1-628752ac5d2b"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f51d2181-5315-4cba-80f5-197a5283e8f0"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f51dd0ee-2c29-4820-807d-20d8d85d2695"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f5c50e0e-ece6-43ae-8923-28dff36f92fd"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f5cadcad-abe5-4775-a26d-c4382607b8ce"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f66194bb-1845-4d29-b21f-e5686073c59a"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f7230109-6165-40b3-a3f5-a0fb5bce7aef"), new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f7230109-6165-40b3-a3f5-a0fb5bce7aef"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f72486a8-8b13-4e47-9ec3-992cf7b7362f"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f77c24ea-9ba1-4f93-83ce-7798dc8b956d"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f879e6d7-2077-4d09-a968-1cf4efe451d5"), new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f879e6d7-2077-4d09-a968-1cf4efe451d5"), new Guid("dafc3197-e127-40ce-80de-15eaa218545c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f91b7ba7-3d35-41ba-8abc-a69d22b6e858"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("f9491fca-7311-417e-a271-8a85a377d38e"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fa5bcc2d-828c-4126-ae38-c3b87bb46c0f"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fbb9dd03-82da-41a5-a98b-80c3384365b3"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fbbbd115-33ff-4f70-aff0-dfa7be3f2a2b"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fbcbe747-c66b-41ab-9f89-528168c50374"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fca79d4d-77db-4f9c-9a00-aea576fe1218"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fca79d4d-77db-4f9c-9a00-aea576fe1218"), new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fca79d4d-77db-4f9c-9a00-aea576fe1218"), new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd30fe6b-e47b-410f-a3d9-14cadc56039f"), new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd30fe6b-e47b-410f-a3d9-14cadc56039f"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd344e91-99cc-4c6b-8bf2-ebc6628210d3"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fd8a3493-b144-4774-921b-d479beafd644"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fdb12144-5a75-4356-895c-6297d616b5d8"), new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("fdf9d6d2-5094-4432-819b-bf811ac8628b"), new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ff6305dc-bfc8-4c93-91d9-194eb76e0add"), new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ffd906a3-d894-4bc3-b79a-72f0e82fce77"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ffd906a3-d894-4bc3-b79a-72f0e82fce77"), new Guid("e60e0787-c6c6-4189-8ace-83e292429414") });
+
+            migrationBuilder.DeleteData(
+                table: "Participants",
+                keyColumns: new[] { "DogID", "EventID" },
+                keyValues: new object[] { new Guid("ffeb8764-401a-43d0-bf4d-1be7730837d1"), new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49") });
 
             migrationBuilder.DeleteData(
                 table: "Persons",
