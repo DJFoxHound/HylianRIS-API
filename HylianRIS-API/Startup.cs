@@ -25,8 +25,7 @@ namespace HylianRIS_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DbaseContext>(options => options.UseSqlServer("Server=tcp:hylian.database.windows.net,1433;Initial Catalog=HylianRIS-DEV;Persist Security Info=False;User ID=HylianDEV;Password=x7f+sd4enQm$-uG5;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;", x => x.UseNetTopologySuite().MigrationsAssembly("HylianRIS-API")));
-            //services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration[Environment.GetEnvironmentVariable("SqlConnectionKeyName")], x => x.UseNetTopologySuite().MigrationsAssembly("HylianRIS-API")));
+            services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration[Environment.GetEnvironmentVariable("SqlConnectionKeyName")], x => x.UseNetTopologySuite().MigrationsAssembly("HylianRIS-API")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hylian RIS API", Version = "v1" });
