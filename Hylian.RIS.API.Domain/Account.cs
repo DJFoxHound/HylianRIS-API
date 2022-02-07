@@ -13,8 +13,7 @@ namespace Hylian.RIS.API.Domain
         [Required]
         public string Email { get; set; }
         public string? Phone { get; set; }
-        [Required]
-        public Guid AddressID { get; set; }
+        public Guid? AddressID { get; set; }
         public DateTime? Deleted { get; set; }
         public DateTime? Anonymised { get; set; }
 

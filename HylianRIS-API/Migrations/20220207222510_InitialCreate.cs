@@ -327,7 +327,7 @@ namespace HylianRIS_API.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AddressID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    AddressID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Deleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Anonymised = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -338,8 +338,7 @@ namespace HylianRIS_API.Migrations
                         name: "FK_Accounts_Addresses_AddressID",
                         column: x => x.AddressID,
                         principalTable: "Addresses",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -783,9 +782,9 @@ namespace HylianRIS_API.Migrations
                     ID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     DogID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     RaceClassID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CompetitionID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     LicenseNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    RaceCompetitionID = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -797,11 +796,10 @@ namespace HylianRIS_API.Migrations
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_RaceLicenses_Competitions_CompetitionID",
-                        column: x => x.CompetitionID,
+                        name: "FK_RaceLicenses_Competitions_RaceCompetitionID",
+                        column: x => x.RaceCompetitionID,
                         principalTable: "Competitions",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "ID");
                     table.ForeignKey(
                         name: "FK_RaceLicenses_Dogs_DogID",
                         column: x => x.DogID,
@@ -1074,11 +1072,6 @@ namespace HylianRIS_API.Migrations
                 column: "CountryID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RaceLicenses_CompetitionID",
-                table: "RaceLicenses",
-                column: "CompetitionID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_RaceLicenses_DogID",
                 table: "RaceLicenses",
                 column: "DogID");
@@ -1087,6 +1080,11 @@ namespace HylianRIS_API.Migrations
                 name: "IX_RaceLicenses_RaceClassID",
                 table: "RaceLicenses",
                 column: "RaceClassID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RaceLicenses_RaceCompetitionID",
+                table: "RaceLicenses",
+                column: "RaceCompetitionID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Races_BreedID",

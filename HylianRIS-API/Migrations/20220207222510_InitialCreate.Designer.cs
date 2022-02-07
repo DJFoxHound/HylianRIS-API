@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220131233732_InitialCreate")]
+    [Migration("20220207222510_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,7 +76,7 @@ namespace HylianRIS_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("AddressID")
+                    b.Property<Guid?>("AddressID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("Anonymised")
@@ -702,9 +702,6 @@ namespace HylianRIS_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CompetitionID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("DogID")
                         .HasColumnType("uniqueidentifier");
 
@@ -718,13 +715,16 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("RaceClassID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("ID");
+                    b.Property<Guid?>("RaceCompetitionID")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.HasIndex("CompetitionID");
+                    b.HasKey("ID");
 
                     b.HasIndex("DogID");
 
                     b.HasIndex("RaceClassID");
+
+                    b.HasIndex("RaceCompetitionID");
 
                     b.ToTable("RaceLicenses", (string)null);
                 });
@@ -1058,9 +1058,7 @@ namespace HylianRIS_API.Migrations
                 {
                     b.HasOne("Hylian.RIS.API.Domain.Address", "Address")
                         .WithMany()
-                        .HasForeignKey("AddressID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AddressID");
 
                     b.Navigation("Address");
                 });
@@ -1366,12 +1364,6 @@ namespace HylianRIS_API.Migrations
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.RaceLicense", b =>
                 {
-                    b.HasOne("Hylian.RIS.API.Domain.RaceCompetition", "Competition")
-                        .WithMany("Licenses")
-                        .HasForeignKey("CompetitionID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Hylian.RIS.API.Domain.Dog", "Dog")
                         .WithMany("Licenses")
                         .HasForeignKey("DogID")
@@ -1384,7 +1376,9 @@ namespace HylianRIS_API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Competition");
+                    b.HasOne("Hylian.RIS.API.Domain.RaceCompetition", null)
+                        .WithMany("Licenses")
+                        .HasForeignKey("RaceCompetitionID");
 
                     b.Navigation("Dog");
 

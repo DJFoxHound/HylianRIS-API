@@ -840,7 +840,7 @@ namespace HylianRIS_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("AddressID")
+                    b.Property<Guid?>("AddressID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("Anonymised")
@@ -29087,9 +29087,6 @@ namespace HylianRIS_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CompetitionID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("DogID")
                         .HasColumnType("uniqueidentifier");
 
@@ -29103,13 +29100,16 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("RaceClassID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("ID");
+                    b.Property<Guid?>("RaceCompetitionID")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.HasIndex("CompetitionID");
+                    b.HasKey("ID");
 
                     b.HasIndex("DogID");
 
                     b.HasIndex("RaceClassID");
+
+                    b.HasIndex("RaceCompetitionID");
 
                     b.ToTable("RaceLicenses", (string)null);
 
@@ -29117,7 +29117,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("03c89e93-3057-43b0-aef3-cc89771380f8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("892d9c9d-810a-44f9-8a8c-546caf0c2f97"),
                             IsActive = false,
                             LicenseNumber = "UNKNOWN",
@@ -29126,7 +29125,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d812c5a9-9394-45fe-a9a1-083445f3ac1a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("05a4ff53-b063-450e-99f7-cbbb6ffbe5ea"),
                             IsActive = false,
                             LicenseNumber = "UNKNOWN",
@@ -29135,7 +29133,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("97400c72-2640-447a-ab83-20f8a7043f26"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("66b3ef61-d2db-4860-9190-6f3d4f6c1f1f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29144,7 +29141,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7b659637-1e05-495d-9237-957be7dfaa84"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ef16b574-39d1-43ad-828a-db41314642bb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29153,7 +29149,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d91cb4e3-9dc7-47ac-842c-809ed46f456b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0011c36a-553a-47b2-b35b-5899a8da2816"),
                             IsActive = true,
                             LicenseNumber = "PLIT028",
@@ -29162,7 +29157,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("803cf0c5-f6de-47ed-8320-02b66f794ee5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b05f3fac-b228-4f19-b531-f60a8741b557"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29171,7 +29165,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3972eab0-888f-4217-b282-9190f9437500"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("55b07067-c87f-4fe0-bb02-b551218c2edc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29180,7 +29173,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cf9c60ac-7d7c-46a6-a0be-9102e6f4b792"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2b8d2baf-cae7-4d6f-9b3c-45c184844b9b"),
                             IsActive = true,
                             LicenseNumber = "WHR0881",
@@ -29189,7 +29181,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("87a7ba22-4493-4498-9282-5408ff8c6e44"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e79a8299-b138-47d4-a1e6-2191ab4f4377"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29198,7 +29189,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dc6bb88a-e87a-44b0-8755-f2c8ae9fee29"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4f9fb9a0-39c2-4947-ace2-95420ded2ecc"),
                             IsActive = true,
                             LicenseNumber = "WHR0938",
@@ -29207,7 +29197,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f0e5b523-6584-4d8e-a483-5953d1d06b05"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f5e6c1e4-bcd5-4d41-9bd0-be943343898c"),
                             IsActive = true,
                             LicenseNumber = "SAT1566",
@@ -29216,7 +29205,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("689f2a11-21b7-4447-a9c8-1d978e04668b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e984b79b-e830-4af2-9913-982398f5443d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29225,7 +29213,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e87841df-c922-4065-bc18-02e2fda7b587"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("51ccf59e-5a39-4c51-8a29-9c2c1c68df23"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29234,7 +29221,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("387edb19-f19c-4f8f-a18e-e47d715bf909"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2e6485f5-4ad3-417f-978c-6fab660dbb12"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29243,7 +29229,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("44e586e5-a955-4272-b678-b4afaee82aa5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("92bc9784-066e-4730-aac4-2f932c8a679c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29252,7 +29237,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2ef8381b-6dbc-4544-9e33-11fe257cf7f8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6721a557-ac75-4702-9358-eb076f078cc3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29261,7 +29245,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5f3b5ab7-f3d3-464c-a8f2-bbafa7244698"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8bad35f0-3d50-45ff-a59d-f5fd258b8929"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29270,7 +29253,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("96802888-0807-4ad3-bf56-e9a8c1420afb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e5ab0365-dd23-4e86-81df-4b22077c4850"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29279,7 +29261,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4e4a279b-4011-479f-98cc-0798645af4e0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("83556726-3b02-4e30-b606-91a43315c887"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29288,7 +29269,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("83eeb8f7-5270-4861-8dfc-d7c14c9951b6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("df373cfc-701e-426b-a10d-b2f988d8fe38"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29297,7 +29277,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dc232a74-4cca-48f9-82a7-c2729194ccbf"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("512f3a3e-7cba-4fcc-abfe-5fc994bedce0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29306,7 +29285,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("64ceed28-e3f4-4c2e-9749-62464622a798"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8fd82819-5f79-41d5-989b-ba6446658905"),
                             IsActive = true,
                             LicenseNumber = "PLIR033",
@@ -29315,7 +29293,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("446b7abb-73f1-423a-b8b1-53b24f342564"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("348072d1-867a-4c1b-9453-967e7f8b354d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29324,7 +29301,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("57071f0c-72c5-43b1-bf13-bc67fa12fabc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b686794b-f0f5-4bd3-9b36-e886f6e0875b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29333,7 +29309,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d7c3bb8-bad7-4afc-8150-0b744d7c85c0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f490e23c-96d9-460c-90c1-628752ac5d2b"),
                             IsActive = true,
                             LicenseNumber = "WHT0340",
@@ -29342,7 +29317,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6a0b5ba5-1e99-4dcc-81a2-e28f1d2397e6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a305a55a-0991-46a8-89ae-9eb5244199a5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29351,7 +29325,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("52ba2168-0e2b-412a-a0aa-08d28b83d0e5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("99ab1e2e-47de-4194-88ed-911d649f3313"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29360,7 +29333,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e6bb9455-bece-444f-87d7-f3013793a038"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5c61780b-5b2c-40a6-a579-03b5257f7ddd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29369,7 +29341,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("df0a97d5-937e-45d0-b725-6c39883e7d98"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2789a0f2-46a9-4c99-8cec-754fd3c6d776"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29378,7 +29349,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0aa3a447-6e8a-491c-88ad-c4ee263f5927"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dcf7f548-98aa-47d6-aec4-f309e974225c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29387,7 +29357,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d0c39312-a5b0-4ffc-b97a-db00e7261ddb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("209911b6-e5bb-4d6f-8e39-0f7687d5403f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29396,7 +29365,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("477cac7e-1717-4c75-87dd-a0d8ee713dfd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("575930e3-b357-4ae6-86c0-bea09b09a27d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29405,7 +29373,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("acb1a9b0-459a-4758-bd23-f967f5a50c7c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("411e527b-17a8-4177-b50b-c27969aa3bbd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29414,7 +29381,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9d4ea519-4bbd-4ac7-b363-b3b9d0dd7714"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b9c5cc25-25a9-42e1-a80f-fbb2afde69f4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29423,7 +29389,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d41f564-c2a9-42bc-9321-b6547d55b0c6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0da332e1-9e77-47b4-8928-a47bf7311f9d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29432,7 +29397,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1cb6ebde-387e-41cf-996c-9169ee8f0da4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e3f5d882-65c7-4005-8f2c-914227ac84d1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29441,7 +29405,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("22440582-f260-4afb-bcc2-832a8c365a8d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7e20922b-8cda-4b71-8a0c-2c374dc5a63d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29450,7 +29413,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b5a79101-532f-4d43-8689-6cffaca33c61"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("70a26cfd-d69d-4b5a-b890-42ce7fcce7aa"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29459,7 +29421,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c40f914b-4271-4c68-9ce1-b0dd4e3aa4ae"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ecbaf5d5-88ea-4a4c-91b9-55d4bbbf8e20"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29468,7 +29429,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3e280bf5-3f55-4370-90af-88aadf4ff5da"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c0ce9cc7-88a3-40c5-af46-0b37456afe51"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29477,7 +29437,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("db3bc01e-cc8a-4976-82e5-75847897d8cb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2e05f98a-9060-4f1a-814f-7b563e3115db"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29486,7 +29445,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3be50ffa-2e7c-4eda-8de6-d812a1464f2b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2fe73fc6-5682-4320-a600-afd52b8ee761"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29495,7 +29453,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("41095614-ca0b-420d-9e64-5307542ed13a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e2d649b6-0c57-4596-9b87-4d9d9b61b5e1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29504,7 +29461,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("56736406-68de-4ce6-abad-530744da5777"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4ca94ad6-6603-4da7-9617-52cafb679c7c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29513,7 +29469,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("50ad89f6-0d5b-4642-8a9d-4033eb32ad05"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("678418f5-7873-4a9a-979a-8b2005be1d41"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29522,7 +29477,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("325cf825-5ffb-47c6-bb4f-72249ebfe6b8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c4a5a136-1ed0-4de5-97fb-cfc24ec77e43"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29531,7 +29485,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("59768eed-5edf-4ad0-b6b8-2524294f4cd2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("61d95f81-717b-4bbb-880d-61c2e506748f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29540,7 +29493,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("40a7972e-a63a-4414-9847-d4da87debaca"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("92a375f6-f1e3-4061-aaf8-7558e9f8eb59"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29549,7 +29501,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3f5339e1-6d23-4fff-bf49-b9318d95da16"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("aefb7cfa-b51b-45e7-9363-7182f1df2535"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29558,7 +29509,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("09323309-a89b-48a4-ad22-db6b002e218f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7cc1dae9-8771-4973-afd9-bf0269b921d6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29567,7 +29517,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b652570c-aa9c-4511-b291-ec8fa9cd9f97"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6b75334f-242f-46df-870f-6bb294db4a34"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29576,7 +29525,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9478eda9-f80c-45ac-ba12-def9c9fe0521"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a0753898-b1b1-4303-83d1-5f266f4195a9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29585,7 +29533,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e9c7b5e4-e5fb-41e7-b7f3-2dc24eb34d23"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2374f867-12cc-4843-83f7-fa9063ceeee3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29594,7 +29541,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("91290937-b5a2-401d-848e-340cf14293e9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0960a00c-62cc-4672-b4ca-1d9245e8a323"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29603,7 +29549,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3587c279-8bd7-46a3-b1ff-e4b1bf92cb79"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e8f51a6a-4ca2-4768-9b77-ec6c812c15a2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29612,7 +29557,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("db804db1-4a91-4920-bc20-a726cc9f6c38"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8c1ee69b-4714-4687-8d5b-a08f2400ff58"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29621,7 +29565,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("03f44098-7932-4f65-b33a-85b819327a66"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ec4aaf33-7cd6-4a0c-800c-92a31e2b2d98"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29630,7 +29573,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c1290424-0a37-425f-9802-c2078aa45304"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("83c94ee9-4fe5-46c1-a94d-00af5f073d18"),
                             IsActive = true,
                             LicenseNumber = "AFT1187",
@@ -29639,7 +29581,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a30840e1-d70e-48f5-9289-38f86eadcc72"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("35367b85-55e6-46ed-9685-51199101b81f"),
                             IsActive = true,
                             LicenseNumber = "AFT1181",
@@ -29648,7 +29589,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c0235492-100a-4de0-a0b4-6ad520c7e6f4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2f2fc1dd-0570-4d24-8446-a8438d13c467"),
                             IsActive = true,
                             LicenseNumber = "AFR1445",
@@ -29657,7 +29597,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b4dcdfcd-4439-4b92-bf48-1e383843b373"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cdbeac0e-fff9-42f5-ab40-b4db1d0ad0d0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29666,7 +29605,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("24a2d390-d228-42d4-9a11-8b09ad47142b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("17b88be3-8221-4326-8e48-387a8c5bb249"),
                             IsActive = true,
                             LicenseNumber = "BAT0023",
@@ -29675,7 +29613,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("688de16d-6301-4602-b5f0-18d1a3ff16c9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("87e3b0e8-f8e5-4ef2-aa15-4a6ea82cd045"),
                             IsActive = true,
                             LicenseNumber = "BAT0020",
@@ -29684,7 +29621,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f9fa5612-8cc4-42d4-b7ca-7885dc3010dd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f72fd21e-64f0-483a-896a-6f90062e938a"),
                             IsActive = true,
                             LicenseNumber = "BAR0030",
@@ -29693,7 +29629,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2fe91777-bd75-41a5-a534-b83a42d28522"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8fa03423-6b02-48db-bfe4-c01e7b1f0ff8"),
                             IsActive = true,
                             LicenseNumber = "BAR0027",
@@ -29702,7 +29637,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1dceccf3-9ff9-4334-a6fe-46f9a6715745"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8dd4512a-7d55-46de-bc0f-7203f1181e6a"),
                             IsActive = true,
                             LicenseNumber = "BAR0024",
@@ -29711,7 +29645,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a427efbe-ec3d-4da2-af0e-1fae4ab01d1d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c3fd5707-3488-40e1-ad59-b561cc4cda5c"),
                             IsActive = true,
                             LicenseNumber = "BAR0026",
@@ -29720,7 +29653,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f90fb82a-e5b4-426f-868b-bbd237ff56bc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a46a91ab-2396-4c2a-ae80-fc663519b740"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29729,7 +29661,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b7a9630d-1b76-4ace-bd6e-3e5a760b6ff3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("96d40769-4c20-4ec6-8138-d409bfc73b61"),
                             IsActive = true,
                             LicenseNumber = "PHAT001",
@@ -29738,7 +29669,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0c8ee5a5-ae00-4c82-8fe8-aaf91f468e4e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d38fe649-a559-4706-bec2-54ad806aa7c9"),
                             IsActive = true,
                             LicenseNumber = "PHAT002",
@@ -29747,7 +29677,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("898bc16e-f3ef-443f-86bb-94a0a597c19f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e1b8dd25-73f2-4b93-86ac-2efe1e56a03c"),
                             IsActive = true,
                             LicenseNumber = "PLIR031",
@@ -29756,7 +29685,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("27ed76c6-af27-4ba2-b91c-6016aa920eba"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7b0d9bd8-6636-4ead-a66c-0280a2b84653"),
                             IsActive = true,
                             LicenseNumber = "SAT1569",
@@ -29765,7 +29693,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c4ef5e8c-ab5b-430a-9661-75cbb97d9b01"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("16c115e0-3728-47f7-af94-930a27d6efc1"),
                             IsActive = true,
                             LicenseNumber = "SAT1567",
@@ -29774,7 +29701,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a7de09e7-4225-43e8-baac-a0a0bd0907aa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b637438e-750e-4a30-bd3c-6fac412bc1a8"),
                             IsActive = true,
                             LicenseNumber = "SAR0823",
@@ -29783,7 +29709,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e3044306-cf39-4118-9349-53688aba8f88"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("96d55c76-1854-4c1e-953e-64a2f6289eb7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29792,7 +29717,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d855d154-49f0-4b37-b48c-204d67225d45"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c61c3bcb-a50f-45ba-ab13-c4cd29896ea4"),
                             IsActive = true,
                             LicenseNumber = "SLGR001",
@@ -29801,7 +29725,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6fc52206-1c6c-4102-92ff-39b9c49c2e50"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("273a982f-e5c9-4523-8789-6c1a384bcf22"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29810,7 +29733,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("38497fc1-d338-4cf9-9dbc-169e5db129f1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0bb2125a-61db-48a2-8f10-e1942004c9dc"),
                             IsActive = true,
                             LicenseNumber = "WHT0387",
@@ -29819,7 +29741,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ecfe0591-d5c9-41d5-8bbc-1cfd4f07ebbb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e052ee4c-5063-41b4-b884-3a011e215965"),
                             IsActive = true,
                             LicenseNumber = "WHT0378",
@@ -29828,7 +29749,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fdc77d81-8582-4fe8-92e3-8577fcb70a24"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d5f27b84-5207-4e9a-ba49-83ad2363e3df"),
                             IsActive = true,
                             LicenseNumber = "WHT0385",
@@ -29837,7 +29757,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("235773db-9211-410d-9eb3-8a7b06e3a1bf"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a23020f3-45cd-448d-8d7b-c954abfafb05"),
                             IsActive = true,
                             LicenseNumber = "WHT0338",
@@ -29846,7 +29765,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("db0e70c1-20cd-494c-9fa1-7d02722bb03d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2993141e-fff7-4300-9c8e-a0791d1cffc3"),
                             IsActive = true,
                             LicenseNumber = "WHT0406",
@@ -29855,7 +29773,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("25e594ab-07f7-4de8-b6ba-f74ed25c231a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e5110b7b-9588-477b-8de7-f13cdf92f783"),
                             IsActive = true,
                             LicenseNumber = "WHT0404",
@@ -29864,7 +29781,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("44b310da-860c-49c6-9a09-bbe7cb2676b5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("efbe250b-86a3-4fe1-8ff3-9383fcbe1d0c"),
                             IsActive = true,
                             LicenseNumber = "WHT0353",
@@ -29873,7 +29789,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1ae6d6fb-1695-4960-88e3-bd87c9fad8fb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("34b1f2e7-c1e1-43e3-8399-04615bc2056b"),
                             IsActive = true,
                             LicenseNumber = "WHT0386",
@@ -29882,7 +29797,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("66535639-2010-4639-a950-11966a01bd6f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("95632818-9300-4f78-925a-852116bff6d9"),
                             IsActive = true,
                             LicenseNumber = "WHT0374",
@@ -29891,7 +29805,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a30802b8-c26f-4e04-8e48-d9ad031cf3ab"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9172e887-0c3f-422b-9484-a13f9ff1cfbc"),
                             IsActive = true,
                             LicenseNumber = "WHT0400",
@@ -29900,7 +29813,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c4357efe-a8f7-49cf-98cc-4c83ae9faa98"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("20df5b35-d202-4986-9440-d7747e48e5fb"),
                             IsActive = true,
                             LicenseNumber = "WHR0936",
@@ -29909,7 +29821,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("72de3d12-52b6-4d69-8450-320f729e5188"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f3c1fa6e-46e8-4f3d-8d71-cf83543c131a"),
                             IsActive = true,
                             LicenseNumber = "WHR0929",
@@ -29918,7 +29829,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3e38a19b-6fb8-4c0d-80a7-9373d8cbf066"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fd30fe6b-e47b-410f-a3d9-14cadc56039f"),
                             IsActive = true,
                             LicenseNumber = "WHR0922",
@@ -29927,7 +29837,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("21e92a72-174a-49dc-a676-ef3d5131a29e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b308e7cf-762b-4578-a6bf-c9e94361bac7"),
                             IsActive = true,
                             LicenseNumber = "WHR0932",
@@ -29936,7 +29845,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("606af833-d177-42ee-b9fd-36f470231fc8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0dad6dbe-2afe-4da7-a251-d12ae27b5e66"),
                             IsActive = true,
                             LicenseNumber = "WHR0944",
@@ -29945,7 +29853,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6b07c9d9-9e85-4777-8758-d80a3a92cb89"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("280ea1f4-22e3-4bd2-ac9b-9e032d80cdba"),
                             IsActive = true,
                             LicenseNumber = "WHR0902",
@@ -29954,7 +29861,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cb7f4199-8103-4011-9005-fe6d4f3c66b8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8a18c3dd-3808-454b-a3bb-95fdf68de41f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -29963,7 +29869,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("076a7fa7-b60b-43b7-91e9-a8e355f656c1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6844bdd0-6b29-4d91-a4c0-e7c2495c2e2f"),
                             IsActive = true,
                             LicenseNumber = "WHR0948",
@@ -29972,7 +29877,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("805b6d20-ae4a-41d9-a50e-5d57032c2947"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("13a3007b-52ff-4f7e-8f9b-29b510b168ff"),
                             IsActive = true,
                             LicenseNumber = "WHR0939",
@@ -29981,7 +29885,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9630d413-4d45-48f7-905e-feaad315570c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b1db1dc3-8097-4a24-99e6-2930a11b3997"),
                             IsActive = true,
                             LicenseNumber = "WHR0907",
@@ -29990,7 +29893,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6fd72213-ac0b-4d37-928c-8e40c5ada9ee"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("26044d02-3997-441f-8c77-7d56c9c815e9"),
                             IsActive = true,
                             LicenseNumber = "WHR0933",
@@ -29999,7 +29901,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c29d982c-0a01-4562-aec5-c7abc99d3f8c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1ea1055a-3192-4fcd-9b8f-dbeba19c9146"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30008,7 +29909,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("277f7167-1d32-4417-9ce4-cdef1d1f5421"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b88ac3cf-24ee-4389-8079-87ddb5cfea19"),
                             IsActive = true,
                             LicenseNumber = "WHR0911",
@@ -30017,7 +29917,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7d93d85a-2c99-46c4-94e4-c9ec3bddc73d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6978c46c-1043-4d9e-820c-35bcd6cbced1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30026,7 +29925,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("04f803c2-a76e-40c1-94a8-786df864ce8f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0f9dcf52-75bd-4d24-b387-09560d1cf5e4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30035,7 +29933,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("17745728-d35e-480c-b446-59f77fa1fbdc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("40af2614-038c-4bec-9ffa-130dff714595"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30044,7 +29941,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c7da5cf9-6327-444f-8266-7b41b21c094c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("77402f13-849d-4ed0-b5b5-119996a29ce7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30053,7 +29949,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b7557dc9-9e4d-42c5-a974-92a896f7c0f2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("129b0e31-1023-47b0-9c58-6d6b6c3d0e31"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30062,7 +29957,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fe9b7532-2c53-4668-8b71-71205b1ae728"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8c167fb8-26e5-4719-980e-09f2665242c7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30071,7 +29965,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("98429991-63c3-46e3-a042-c504d4e94738"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b51f9ec3-368e-46d8-9db0-8d2ad999990d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30080,7 +29973,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6c2f71b5-273e-480e-bbbe-216bb6b3b3cb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0b337456-da5d-4960-9d28-11141a1dd7ea"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30089,7 +29981,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fd925c1f-62f8-4e31-990b-7e28c5b44527"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0e1c22e5-77f3-4bef-b574-6507cffc8a06"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30098,7 +29989,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a0f9e9aa-0e62-4cab-a4da-d0a4df13dbb4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ca46f7e2-1085-4ac7-a1d2-ad53005a809b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30107,7 +29997,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("68f4341a-e4ad-4d09-bb49-e9ef7085beaa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9c286fcd-bd97-401c-83e2-241a15ebbfa0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30116,7 +30005,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bae09de4-bc9d-42ce-9fe7-2a88e72fbd03"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c0bb34ce-a453-4801-bbc7-ce423306f288"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30125,7 +30013,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("60f43762-0362-49e1-aa85-0f75171fc8e1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e4164904-e888-410d-8112-70b92ea76a84"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30134,7 +30021,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("95cd98cb-99b2-4045-8662-2384f68195ad"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a5e26917-ac79-4b6d-a029-b201da877ff5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30143,7 +30029,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6b8553fa-dc86-4610-9e1e-4a4a40dd215c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b3d4e5a6-b370-4c45-9f8c-89b04a9424d9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30152,7 +30037,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8aa49797-099a-4ff5-806d-09c1fce1560a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cd129d73-e1e3-4270-912d-472f11a65be1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30161,7 +30045,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1b483447-19b9-40c5-a059-865ad642c737"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("768454c4-d896-4608-a903-1b7bfb02858f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30170,7 +30053,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c1790c8d-5f8d-4fe5-8568-9bf5f8a5fbb6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("993c0023-034f-47d0-b2d4-0bc7fff94eec"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30179,7 +30061,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("431e5e3a-a326-43f1-87d9-eb2da0dfdf6c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ad2f0520-4f27-41f0-b51f-0458987db57d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30188,7 +30069,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0733f859-2c82-4b9e-abab-ab19e00c5018"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4c79374f-c757-4c52-a8d1-7ac4f148a06d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30197,7 +30077,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5efe2d52-1887-4ce8-a5fc-1ec63d6f816c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1f327474-7371-4f76-9380-f76a4ed9c47c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30206,7 +30085,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("534143ca-6b46-4fab-9a95-1716520e0a7f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("95cd6039-fd74-417e-b1d1-f5b208dd980c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30215,7 +30093,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0ad2122b-090d-48c5-93f9-e7abdb84410e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("552e0e95-31c9-4b8d-8d58-b2cbac0aa379"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30224,7 +30101,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b1f36e27-7fff-412b-a2e2-7e341a056afe"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("88707c5d-982f-4b82-a11b-503d396e5f8a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30233,7 +30109,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8e1e0889-e546-475f-85fa-9b2057501455"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("61f1482f-18e4-46ee-8b8d-e9477b4a12d3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30242,7 +30117,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5b96fa0e-8596-491c-a345-08ad44e6b5a9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6af0dd3c-45dc-45eb-87cd-e52c1db2a05f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30251,7 +30125,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("64c6733b-9d53-4915-8cdc-de73837e0c54"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("59aae70e-1511-47e2-afc8-35184233136a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30260,7 +30133,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d93954f4-6f5e-490e-969d-1b07278d0213"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a5f8ce06-5fb2-4833-9702-c0b4e94ade3b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30269,7 +30141,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5362d02b-4d31-406d-aea8-6f4740337dea"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("20a27df8-b20d-444a-bf30-c6a611c9ba4c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30278,7 +30149,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d51161b-ac09-4cd7-986d-b9ea6baf0112"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0528de09-f1dd-4288-83be-16e584d919a9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30287,7 +30157,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fb839366-11c6-4e8a-857f-d06b2c4f279a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fbcbe747-c66b-41ab-9f89-528168c50374"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30296,7 +30165,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4dc6d421-3694-479a-8df2-55d86c2111f3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6d640755-79c0-4db7-8054-d81c7bf87622"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30305,7 +30173,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8e57b551-ac30-43d3-8a1a-cfb41dc9bdce"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2037f122-7c0f-4a1b-97d7-da68af9ca0f5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30314,7 +30181,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("31f9884e-384d-44f5-95d0-0f828ae66107"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e339951d-285b-4500-8880-5e94c7286fe7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30323,7 +30189,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d1a435aa-d352-4702-acf7-873e1dbb71e8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a8cff047-8e8a-46e1-a2d3-b29ba03a5872"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30332,7 +30197,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1f69655c-9a82-4d75-bff6-524d7c30f11c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("61ca91f4-d7d2-481f-96ee-e2b47a0e2373"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30341,7 +30205,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9ad3836a-ad07-49a6-b231-2ac2bab08c92"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7a5cf84b-b123-4e6c-8002-0a9a7a80bca9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30350,7 +30213,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("71aca744-7c3b-4146-957b-70a7c3b8ab6b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f72486a8-8b13-4e47-9ec3-992cf7b7362f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30359,7 +30221,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("456b204f-6d01-45ce-9f58-c22eafd42536"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("411fdcfa-ef5d-42f8-bfd8-17d9d6e879b9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30368,7 +30229,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("639d9778-870d-4fff-9448-2508a8d53ba8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d0d77d01-cea4-4988-8efd-c0341119b5db"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30377,7 +30237,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("65027b4b-f5d1-4975-a0cf-ba26db36da55"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a7b32132-945c-4d2a-a4d2-a56bed92ed20"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30386,7 +30245,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a99f7731-70cf-4119-bcc7-6285de5b263c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("428071b8-8cbe-4c79-9b28-b5323fd42ff4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30395,7 +30253,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a3c7b57d-3f67-4ba2-b7b9-ab9b7a62d898"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("66f25eb4-fca6-4397-be0b-d2976bdc2236"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30404,7 +30261,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d43cd3fa-ad90-44c7-9991-e8cdb181e3ce"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9df58131-5c43-402b-9254-551b33e4567c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30413,7 +30269,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4ae49d03-bdb4-45bb-886e-795f2d84ede8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dff1b3c6-e471-4d04-a94a-41b72d9380dc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30422,7 +30277,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9419628a-95f3-4a63-ac63-296427449bf1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0a509b3f-6a30-4016-9540-401f5c60ae20"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30431,7 +30285,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("193af8ff-5a93-4d83-8bc5-b4b305bf4ed2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bf9bacb3-d52b-4bfc-9a96-a4be1e16b82c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30440,7 +30293,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4d2c48b2-90f2-4b69-890e-ff8fedb8a7f9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1e84572c-a545-456f-8ac9-e8783a30bc44"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30449,7 +30301,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("249d7511-5ce3-4117-b354-acf85d0440a4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a2e88c1b-330c-4beb-af74-15e079ac1ba0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30458,7 +30309,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("16707f88-d720-47b9-9a1c-1c1d2acbb61c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7e5deb4d-33cb-44a3-b053-59123775c4ba"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30467,7 +30317,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4a938a0a-6913-482a-bb5f-a7b881207602"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("59c5ca16-7334-4cb3-b83a-4e2ee6b2aec6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30476,7 +30325,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("85347bb4-692c-4e7a-a720-c275035d73a9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c9b9f60c-d314-45a9-9cd3-82e9059e7358"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30485,7 +30333,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e9784e0f-fa83-436f-b6da-4645b2c894f7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2ee99651-7729-4fc4-841f-8e1c38cb07a5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30494,7 +30341,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ec56dd84-71ec-41a7-a357-640957907654"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f66194bb-1845-4d29-b21f-e5686073c59a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30503,7 +30349,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d5c5b832-1cc1-4292-834f-41a58e64347a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("be3f4576-315e-43c8-afe1-1629be7e782c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30512,7 +30357,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c08269b6-93c5-48e9-ae2c-095f410b9bd6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6b0874e6-832e-41b1-9d7f-8d65a0bd5b20"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30521,7 +30365,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("eb42b9cc-4a4b-4c56-b27b-0007bf2eba21"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("240e03bb-f29e-4406-9508-24500184e109"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30530,7 +30373,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cc78b729-3273-4cd2-9fc0-835464bf7a10"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("993d3431-456a-4e8a-bb34-a0ef7c62e933"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30539,7 +30381,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("49cee6de-c492-48cc-9f5e-f4457c43b9aa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("004f055c-6d45-423c-80f0-e0ac16ab4a90"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30548,7 +30389,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8571b5e4-f2ab-432e-b4a0-739a86f045e7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e4ecad75-7601-464f-94f9-ca2a7c6ea2af"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30557,7 +30397,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9587778b-c089-464f-8ea8-62f0594b1cb5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0075ff83-cf87-472c-8545-3b0f958f8bc1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30566,7 +30405,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b354aef8-51e9-4959-bafe-30ade6b9a1c4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0118a119-ec04-41f6-b56b-c65e3129815c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30575,7 +30413,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0aaa23a3-9a72-453b-8c07-d8ef71aa3a68"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("70e9d7a6-ba78-404d-a489-1bbd4267aa21"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30584,7 +30421,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fa28eae3-3d86-48eb-87ac-caff1080457c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9621c2d2-a7e6-45b0-8fe0-948b0f0d03b5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30593,7 +30429,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d6d64109-8406-4e5d-b036-4bcc2987d04d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e5ae80ad-0c90-42b5-9c54-7341d66e134f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30602,7 +30437,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("666f8818-fefd-4684-bb62-9e6a2fc82849"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e01eee4e-53a6-44d8-a57f-5ee0ea45ce98"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30611,7 +30445,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("312efc02-17d4-4568-8977-7156578dd62b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("17840f8c-456b-4674-b807-6da94e65f26b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30620,7 +30453,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("adbfe9c4-59d3-4316-901b-674eec551266"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("50e03542-d86a-43c3-b6d7-6e2a1661cf73"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30629,7 +30461,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bdec0c73-eeb9-49cb-bfce-e4ce6c140fb7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("007cbcdc-7b90-4cf6-956b-9a2ee7b2394f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30638,7 +30469,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("96af38da-de9c-4598-ad26-57f76f078cb8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("def9204a-4651-4fd4-afda-4ee75cee0c06"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30647,7 +30477,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b9a528ce-1bac-438c-83ac-40da2f6c62cc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9fd233b4-d289-4bea-9bec-bb42058dd8f2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30656,7 +30485,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("55e35a91-b5ec-45d6-b006-0b1b31cf1119"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("96784121-d630-432a-b694-6845bec0ee53"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30665,7 +30493,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("07bd2af8-cf01-4962-a11f-6b9fb84cc1b3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ff6305dc-bfc8-4c93-91d9-194eb76e0add"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30674,7 +30501,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("89e225c3-bb7f-4be5-bff8-c6339511976b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d54e79f7-8af5-478f-bdc7-498c5cf8ba47"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30683,7 +30509,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1f3eaa94-ad76-455d-8524-877b06dfd3b1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ec1387f8-fdc4-4e4d-8b1a-6d1e738a64a5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30692,7 +30517,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("69453c51-6b13-4dad-b3d5-572f7148a7ca"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5ff3546d-e3eb-4fa6-9945-2eb9065d67d4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30701,7 +30525,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d05f08c7-622c-4b16-b453-15d16d2e9b97"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("02cc99f7-3375-43bc-8145-dead12dbc702"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30710,7 +30533,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b0f53538-28ce-498e-b8d7-2d78c9850448"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("05062b1a-4748-46dc-b554-646aca44f96b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30719,7 +30541,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("94addf5f-65d1-49bd-9a14-70764c0c7163"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("eda2e505-b9e2-4b84-b926-1bcf33720b06"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30728,7 +30549,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("39398f9e-40e1-45e5-99f6-552323eb0f70"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("695bb3e4-819b-4fcf-95e3-9a54211078b5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30737,7 +30557,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e304aa94-a990-4221-ad88-786d9a2a6255"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("04fbf194-b6f2-49d6-b949-c13a4c2dc68c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30746,7 +30565,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("aa79b69e-e8a4-46fd-82b0-7b1b42349c80"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b9524485-d932-4593-a2bf-f99e5eea41e8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30755,7 +30573,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0c411594-22af-4b36-8728-4ea0478011d2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("09e9c91c-0304-4fd8-88b8-525bbbfc025d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30764,7 +30581,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("28f18caa-279a-4e1d-94f1-f7536061fda0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d3c545d2-8044-487b-a289-b15b6671a498"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30773,7 +30589,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("25477366-ca29-4552-bbe8-b54bfd6341a6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("229e8860-7671-42b7-8377-976a13bf1b28"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30782,7 +30597,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b65630c0-102c-401b-9ed0-c14f52b2a84c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1b6f497e-b823-4aea-8c89-73477b66e93c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30791,7 +30605,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("99f15394-6617-4135-b5ce-91f47a365834"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2f71f6cd-0858-4a3d-9531-4a58bf7c2aea"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30800,7 +30613,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("84e9448d-4f86-4ba1-bac8-af31f41edd49"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4b8727da-9ec2-49d7-b4bd-76018ed2637b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30809,7 +30621,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ca80fe70-6984-4a3c-87fb-12a0a0d1a1b8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8d8da4bd-e831-48e7-993e-ed8d891482c1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30818,7 +30629,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1cf03582-ad2a-470d-b126-a20e24e7a9b9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("33d67d38-4769-49ce-be25-cb4cf64707e3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30827,7 +30637,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5cf9fcba-af7a-4177-b176-6252eaccd7a2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5f7779cd-cb06-404a-83e3-72589ee13935"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30836,7 +30645,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("02eb0c83-8fd6-455c-a373-cd3fbeb5548c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("90d5f91f-50d9-4bf4-a9fa-2fd03d60bed4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30845,7 +30653,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("08cb6062-9105-4d8b-8355-2efe11da7726"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e041e289-8dc2-499e-a0a9-c575f44252c0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30854,7 +30661,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cee57278-a354-4e1c-b796-553b6e1059c1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("eff24c3c-6f68-405a-ae42-a006447fe5e2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30863,7 +30669,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("51b2342c-bc4b-4988-9d3f-ee44ad37e82d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a2ecd62a-b7d4-413c-b412-b5259eb066e0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30872,7 +30677,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("58454e52-e6ee-485f-99e7-daa740711e72"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6e1b5b0e-8686-432a-b05d-d6c3a3875d05"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30881,7 +30685,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0cd8f8ed-d3c5-4cc8-84dd-4948aacd0015"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("eed21aee-6d0b-438a-9016-b216bd7b9d9f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30890,7 +30693,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b30b3556-ce00-4cd3-bb0a-da347b395726"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c1301dd2-f61a-4b42-8f66-68b686a99125"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30899,7 +30701,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7fd509a7-67df-47c9-b857-7ca4ac5b8a81"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f26165b6-6a06-45b7-b3fa-8b37eb75e556"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30908,7 +30709,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2ec9f2c5-d308-481d-b718-23b216bfc761"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("951341d9-d163-4eef-a0f0-efd07c150e78"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30917,7 +30717,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ff3f9d0a-633a-49ff-b3bf-b781a66fb0aa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("62f8b22e-1503-46c6-bd00-50473e0a345e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30926,7 +30725,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a7f469ee-e1a8-41fb-a7ba-b7c383aeec05"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("64e6a877-fc60-4a32-ba65-73558b9e5bdd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30935,7 +30733,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bad48143-e1cc-489e-ab2d-99fbca91b587"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e965febd-0b4b-440f-bb09-3e59902c2399"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30944,7 +30741,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ba8fab2f-59c9-4c6f-9466-b70dcb37d7e8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e9c28291-477b-473d-8776-0a3db97842a4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30953,7 +30749,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2c182d38-63c2-45fe-9b0e-b4263c1acd94"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("40d76ba1-b03c-4040-bcb2-e448cc34f4af"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30962,7 +30757,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("556d9da6-a3d7-4e20-b193-781d70c7236b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("835e8747-893c-4e13-a762-721fc729bb8f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30971,7 +30765,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("69d71875-8546-4a00-bcd1-c9732236e061"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9805e6e4-56c2-492c-a652-f7b26119aae8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30980,7 +30773,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4fac9c10-146c-4f35-8596-b6a316c1976d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("55066c54-68cf-46b4-8bd0-639ef396605d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30989,7 +30781,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("24e382f5-62f8-47ff-8cc9-1f5355a66831"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("09a333aa-74ce-41f3-873d-607936ee1457"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -30998,7 +30789,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("39ad348e-ffa5-4117-ac5a-a2d82d100674"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b890dafc-8515-4587-a686-cca89b03d8cd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31007,7 +30797,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8be925ae-7518-4db7-b2f4-b4c82e20b85c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3a84afe2-f075-4619-b51b-56ea5075e968"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31016,7 +30805,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0307eec6-d1f5-4114-a2e4-d8843b9fc54a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("11fc71d3-6fda-428c-a2ce-90efe839d2a9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31025,7 +30813,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("51abab16-adb3-4fd9-b32b-ecae63d65b1b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("68084996-e9ee-4bcf-beac-4a36556d38b2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31034,7 +30821,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("edff9580-a320-4f42-83b7-77cfd47735ce"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0b2ef7ec-ab54-4665-b215-41c9252df612"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31043,7 +30829,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e223148a-5828-43ae-9354-16fd20311916"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("54a1570a-590d-48a2-a060-f4e5402970e4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31052,7 +30837,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e5b37bd6-39ff-4535-84d4-1760f02bb446"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5f3fa814-2c8f-4d84-a39b-2e77dd0f3b74"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31061,7 +30845,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("08dfb732-9fd9-4f49-a4b6-1ac540a42085"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ba3ea20a-6f76-4c26-85a8-e380a6c1c566"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31070,7 +30853,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5b378318-93a5-4adb-ad3b-ae6184e69b19"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d788617a-9444-44f2-9d8a-4b9f83e850b6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31079,7 +30861,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fc067e4f-d7d4-4edf-9139-0269e182909c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3ba3bd14-dfcf-43fc-8ba4-15006edf75e3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31088,7 +30869,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("62e9fca9-0b43-42ad-ba02-7651cd0bf549"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e7a121db-58e0-4b7c-9f94-fc511c337cce"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31097,7 +30877,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4575e6cf-939d-4837-ada3-e36edc0a3a84"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fbb9dd03-82da-41a5-a98b-80c3384365b3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31106,7 +30885,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7efde903-eb5b-4ff8-ad99-95f4be7d2b25"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3b72144c-cf88-4064-8e0d-5ca70621a99b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31115,7 +30893,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7807e26e-b562-496e-884c-c02ea0241bcc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3f4a012f-29a9-43c8-801c-9663deef4b15"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31124,7 +30901,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7cd8d78d-64e8-4896-a690-c35fbd3da17b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("beb95f82-44fb-4291-91fc-b322d29c9949"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31133,7 +30909,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("deece2c5-a6be-4e58-aaed-ad6369633f55"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f44a12cf-e423-4c54-a811-0d14f01528fc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31142,7 +30917,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5cb1c159-e27a-4364-a3dd-658cf636695b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("042773f0-ccec-42a5-8cc4-c702b3ed0eba"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31151,7 +30925,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("afcc6ac3-642c-4900-813b-9882e7c72954"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("aa513b87-5e05-4d5c-a5a6-693781d711b9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31160,7 +30933,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a490f99a-5134-4c55-8720-1ce03e73f6ed"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0a09573c-5825-4d1d-a3de-ecdd59610f13"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31169,7 +30941,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a1fcda9d-7805-4273-af62-8959f2dcc7a2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c6af527b-0a95-40ef-9390-7c0a82d19483"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31178,7 +30949,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c06ef63e-5d89-4a94-9633-a58a1ee52a06"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("148a8652-ab72-4b25-96ef-dd8651fc4382"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31187,7 +30957,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c224df64-7988-40e9-84d0-6b5e5dd0296f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0714d2f3-001d-4a4c-8532-7efcf6a9f959"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31196,7 +30965,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fb74e2d7-7845-4c9f-95bf-66d6b6ae29e3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6f476815-e7b3-4243-bf7c-d20c74537fe4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31205,7 +30973,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("84a3155b-1d09-4334-a2c3-abd1be86a15b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9ceff2a3-64fd-4e1f-b5a3-df25c82a118a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31214,7 +30981,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bc54e066-0752-45f2-9e52-5c807718389c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5743e0cd-4045-4957-9d42-1fa4730d1b93"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31223,7 +30989,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("515e872a-7587-4916-8dc2-8867aaed6a8a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7341f50f-9cb5-4a54-bf9c-1d277c4abbce"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31232,7 +30997,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("665d2e7b-2d4d-44fc-a209-518fc285c468"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1ccca19d-e50f-402d-9493-4c5261e6b843"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31241,7 +31005,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3f022ba2-e4b8-476e-b088-ff2f38188d73"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("398cf6b7-eee3-44dc-b001-66d6320b7898"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31250,7 +31013,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ea45533c-0481-433d-a3dc-9b9dba3136b3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("21dd3f80-1a59-4de4-9a36-9a80f13fe356"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31259,7 +31021,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0daec564-f856-4a8c-a72b-64cc41ae1ffe"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8d8d1048-55e5-4bc3-9530-90d7d7cb9c05"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31268,7 +31029,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7555736f-458b-4015-af3f-efd3fe1b332c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ab55a98f-2a3d-48ab-a81f-e7a600174434"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31277,7 +31037,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bc097fbc-8fba-4f5c-a45c-ec6e955d5e1a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("609e4c91-5dad-4388-aba8-03bd88d1573b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31286,7 +31045,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dace413b-a6fb-40dd-b345-c49a61206998"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d41f7a79-1296-42a0-946b-2ee65fa42b93"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31295,7 +31053,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5203b68a-3a76-4c80-84f0-ab70e97e9114"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("44a0065a-5060-4750-bd8e-e428cf198815"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31304,7 +31061,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("83209448-49ce-47bb-a319-5c7a35722f94"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("977a6f30-87cb-4246-85d6-e4e175c02179"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31313,7 +31069,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("42768776-4b40-4576-baad-9e790235ae3d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2c97c0a3-d611-49c6-84ac-2ff1deb7b751"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31322,7 +31077,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("792176f1-a8e2-45c3-a861-cd1748d6ea0f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("06d078ae-56f6-4cd8-ab5e-7e7f2d6c8bee"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31331,7 +31085,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d18b306f-6d01-4885-b152-713c74078529"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c60d92e3-c721-4a10-9ac4-2ebfe7f030f2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31340,7 +31093,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b016aec7-42ce-4306-84b9-449426fed748"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cb12df24-5938-453f-b6ae-78a5cef8f84b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31349,7 +31101,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d6de2fac-e7c6-4971-8b4b-b90d8be7f436"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4749836e-7bcd-41c0-b1bd-b5e892091283"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31358,7 +31109,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9535c4d3-c469-4cad-9187-e82dd148e400"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a168fcee-8393-408c-b1bb-cc6440205ffa"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31367,7 +31117,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4552bf0b-005c-46f7-b6dd-333356d2e9f3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("51bc2bf0-5597-4673-a599-73a12d3d6c46"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31376,7 +31125,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("648f49c2-b910-4624-be52-e7ce377fa4bc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("674a0f47-570c-45d6-ba34-82865d913849"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31385,7 +31133,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e76f59c0-9190-4419-b236-88afefffd096"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a709cfb3-245f-4174-a3fa-495a0655dcf1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31394,7 +31141,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cbd5357e-d357-4ef3-9617-3e0e22ffb2fb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d146650d-3e7a-4b8a-ab1e-59ce84b280af"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31403,7 +31149,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e50d5a01-07bb-4916-b490-f53f8bb2d08e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("875e2434-6d8e-43b2-957e-07d242eb4939"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31412,7 +31157,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("37666ce1-ad4f-41bd-8f27-7dbfe7831b39"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2bd8c60e-2ee4-4e98-add4-c8454bd441aa"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31421,7 +31165,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a420fdc7-821a-481e-b131-3711148ebd79"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6c7a8fd4-e1e6-474d-ab97-23e41a785646"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31430,7 +31173,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3517aa8d-6d45-4c04-b409-28ffd6512ad0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b24db990-676c-46a1-97b7-e9f45fc76cdb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31439,7 +31181,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("15875ae7-effb-41a9-9513-5461dce761f5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ca913d84-5308-4c3e-a79f-ecad5421ecc8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31448,7 +31189,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("15ccd64e-ae31-418b-ab77-1d3e96a944dc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8640bb92-6908-45f3-bdca-773e114bfd65"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31457,7 +31197,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f9d56f7e-1e3b-4486-b660-50354400f486"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b8a52ae0-392c-48f3-aad2-5c2b3d481b06"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31466,7 +31205,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fdb47f72-37ec-40cd-b0ca-5dbeedbe6403"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5dd7f374-ad57-4e5b-9fb9-e3e22e529ff8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31475,7 +31213,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("609ba9cf-6491-47a9-8c3e-6b068dedb43a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c2d3f1d4-7f75-471a-8aba-33100a6d8b42"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31484,7 +31221,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("daf0cc30-6a1f-4bc5-9a7d-53b903114940"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("266b1338-3976-4ef6-a284-9a634375b1b9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31493,7 +31229,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4be3aa1a-8825-4f50-a49e-27eba981d190"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("89fc2e36-4bf7-446b-ba41-643cedeeaaf6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31502,7 +31237,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e30684a2-b459-4bf8-9533-079ab3063b5a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0f1d36ef-9a82-48d4-8b15-23cbb8e822eb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31511,7 +31245,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("da4581b5-3c65-4c18-8cd5-cdef7853b14b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d1ed0210-8660-4b90-bc66-e9e5ead64f6b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31520,7 +31253,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9469294e-f1e5-4c2f-9054-ba9a0e7e602e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a3f563f6-1777-4c5d-8558-0c6f0ed832c6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31529,7 +31261,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("07612823-94b2-4a75-971b-21313332b5ff"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3874925e-472c-423c-bfb4-7595c8feeb5b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31538,7 +31269,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("48c8f24b-ee09-4aca-8218-22964ac10a9c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ba8d3ed8-e877-4c3e-afe0-0532c43d6e7d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31547,7 +31277,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2d53a4f0-aaad-4635-9c15-cd030d0e8220"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e49e7b13-ae38-4b27-94ad-35b3b125bf5c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31556,7 +31285,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ba93117c-d471-4a12-981d-6e1c964caaa4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c2bf3fef-0394-490d-870e-d1c61bb73f82"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31565,7 +31293,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("55ca72bb-704c-4960-a571-d0a27cd72048"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("89dcbf65-a17a-4a5b-868e-590e2610d4c6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31574,7 +31301,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("56a7c86b-cfa5-4ae5-9909-958c2efcbe79"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a3bd0448-dec5-401f-9103-3f863a46fc62"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31583,7 +31309,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("beb34b93-acbf-41d4-9fe0-fcdd53f47bfa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("73a80ce7-51de-4469-8872-c4b36b8bb545"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31592,7 +31317,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("735b3777-f648-48d8-ab8d-b5720ecd8e6a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0c44fad5-2ddd-4605-bd28-15173d71f3de"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31601,7 +31325,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b97febe6-4dde-45c5-b1e4-35fc5442bb08"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("924c889d-c720-4dbf-a449-311184bdc9fe"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31610,7 +31333,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5ed966b4-f005-447c-a682-31c31bab4b37"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f2289b92-afc2-4126-bfcd-a7a6d3613ebb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31619,7 +31341,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0a5679fc-ff7d-4ba3-8a21-7eca439300aa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3360242f-400b-4e10-906a-13668538c611"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31628,7 +31349,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fa853c96-d697-4842-be11-6b79238c2e5a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("55e0bedf-5af7-48ca-8713-7cba291201cf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31637,7 +31357,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("60cef636-10d0-4f7f-9847-7f6ce23e577e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("50f305cf-e331-4e95-bed0-9f3d6dd8e156"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31646,7 +31365,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f518af91-23d8-491b-80fe-176804083963"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("176cc8ca-481b-4c75-b754-b1591fd58cbb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31655,7 +31373,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("10d3550e-c827-403b-b5d2-db9ea3f7fde5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5dcc8725-8505-4ac2-a885-81b913ca39c5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31664,7 +31381,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("59956d7d-80bb-488b-94ed-1c9164414b23"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f428c1da-e893-4cbd-ae57-0b80c9230051"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31673,7 +31389,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0f1f75d7-f35e-4b5c-9844-c6932e1eeb09"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a6b156fb-6af5-4db0-b0b2-fc10120502b5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31682,7 +31397,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6f8d2f71-5ec5-4c49-aa35-60cbf4cad72d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9fadb179-1166-440b-9c3a-69232d75eadd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31691,7 +31405,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("058c82e4-1eb7-424f-bca0-b7087e41dfa0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7c4c92f2-be4b-482e-9d92-0b04307bf18e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31700,7 +31413,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c74e2488-2ee2-4142-a88d-07b33f2659a5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1b43139e-a1ec-4311-a4c3-541b0cd5ccd4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31709,7 +31421,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("652f9ac8-10a7-41f3-877b-e1da36180435"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("101c9a2b-7b9a-434a-8725-cf5dc0d05c05"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31718,7 +31429,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3b7789b1-4cca-4f2e-a62e-a9bae9d9c030"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c2fff5b4-d468-48d7-966e-5752b0dccaeb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31727,7 +31437,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0843fccb-0e8c-406d-8c53-fbb63217738a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9295d89b-91d8-40ed-8934-cbddec92b531"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31736,7 +31445,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3f5c7802-1728-417e-b2f0-75b737afa5dd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9cf65c84-886e-42f9-bad2-35eb880e54dd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31745,7 +31453,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dfff3b13-a07b-4202-a080-a2d5a38a87f1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("71955ec6-9cf9-41b7-84c4-dda6ff43c7cf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31754,7 +31461,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7838a8c2-9141-40ad-b9cd-71c9392cf22c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1d81312c-4ea0-4bfc-89dc-6f16f2257255"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31763,7 +31469,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("99f89637-6a13-43ba-b895-b67d74b7d948"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("606347c6-b9f7-4f76-8492-6a4f5995f04e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31772,7 +31477,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b45de078-ce2f-42d0-9833-9a5710ae883e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("50bfa050-4ba7-4fdb-8e3b-67eb51bcb30f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31781,7 +31485,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("217be27e-6e9a-431d-bbbe-a2d0c25e7228"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2a17462f-ba12-4aa0-9256-add51bffb702"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31790,7 +31493,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7d090a86-a168-4ef5-bfff-071a28478a8f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("946ffbd1-b509-4bc3-bd3b-b06a3f0338c3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31799,7 +31501,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dd6fd733-0674-4f6f-a029-5c2956a0ba5f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("210039d6-97c6-423a-80bc-f9ebab3e4902"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31808,7 +31509,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("41bd4740-3c22-461e-bbb1-0399f54f4857"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8dbfa201-cc30-45b5-b9a5-838fef9e459a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31817,7 +31517,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("39f7f520-2ae0-4c02-9036-6cea21684ee7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7c87df54-0e69-42a5-b0ee-3c6a7bd0961f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31826,7 +31525,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d611187-9208-40ed-9aea-f55ac1b06a77"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2d46364d-558e-435e-ae88-44b3d7792109"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31835,7 +31533,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f727835e-a22b-4eff-afe6-45b38075d6dd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b6c03432-4d97-466f-b240-c9287639a2d6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31844,7 +31541,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e59bb756-0223-46c4-87fb-b08386bd0091"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("73b03858-1ac5-41c1-bc02-3f224a23095f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31853,7 +31549,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("87e5222a-09c6-4ca5-ba7e-5f92f41e74e7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3bb3ada7-6d73-4301-9ef6-4c666c87b214"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31862,7 +31557,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f1a9901d-5b9a-4007-b77d-68be27384c3c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("95fbd752-375e-4025-83ff-e1b646e8146e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31871,7 +31565,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("67c10090-a8aa-479e-b784-6c689a8426f0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5eea8f30-924f-4517-b45a-b256c43caf5f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31880,7 +31573,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0566576b-2611-46ba-9094-69ab0892ed77"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2bf185a7-63d0-4791-8231-9d2e08c121a4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31889,7 +31581,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d775c23c-eee8-4afb-bbbb-206fab6db658"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("620ab630-a27b-4de3-ab4d-9c28864e7fb9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31898,7 +31589,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("925cdc4c-4745-41f1-989c-c0c7ecbcc37e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("62295c53-eaeb-43e3-81ed-6bc211ec4652"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31907,7 +31597,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7af2e019-6517-4484-96ba-2d5695b42f80"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c45b261e-56c1-4e4b-887b-1ed0f182adfe"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31916,7 +31605,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8fdcd55d-1f0f-4e7c-90d5-c74621532d45"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("80c8f0b9-c5d1-4b5c-91ae-3f32eb790c93"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31925,7 +31613,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("37c294d2-867a-4953-bbee-2792adb410c0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2d386c26-29de-414c-8909-678ab564fe71"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31934,7 +31621,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2f2701d2-9eda-46db-adfb-ad3c6dabb410"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e3aa784d-1cda-425c-bd56-cd855ef9dbb6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31943,7 +31629,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("faa93dae-422d-4810-bd54-c5fb9c3f03dc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("966942fc-a330-4679-be97-efe0ec6ef1da"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31952,7 +31637,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a161c9c3-279e-4e36-9c40-8e1f968e96ca"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d1059ecf-858a-4241-a7bb-ce544f6622f4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31961,7 +31645,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3d5e80dc-d6c8-4bb6-b769-2e7368fbc281"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fdb12144-5a75-4356-895c-6297d616b5d8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31970,7 +31653,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("407d456b-3dee-42da-948f-d15dc52c4d4e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d873a2f7-e446-49e7-b22d-391e6338f39a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31979,7 +31661,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8c391c65-dc75-40c4-9b8a-3f128ddc417a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1d95cf95-9fb7-4123-acc5-593b81ab08e9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31988,7 +31669,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9749ac76-3052-4eda-9d3b-dbf7b2df3afe"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d61a2ee6-8046-40dd-9bd7-d4b640449b06"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -31997,7 +31677,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c98abcf7-e663-43ca-ace1-3f64e0b61c97"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b7a1aade-0714-49b8-a44b-06fd0a24a3a9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32006,7 +31685,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("363d7479-648e-4c9d-99fe-d9f47c0c9692"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("eed3f7b6-ea31-42ae-9b0d-4b685fb8fd6a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32015,7 +31693,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d96bd38c-30be-4d60-9086-baf07209a5bf"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ba31457e-49d1-465d-9652-d50a5d611d1e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32024,7 +31701,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2be39143-d917-4ff2-ade4-7f55a9b090b1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7c12679b-f588-474a-bfdd-496a0fe09845"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32033,7 +31709,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8214d8ae-c44f-469f-8bcc-f446e0cab2b1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3ce6967a-327b-4c31-b909-6c1b0e63f2e7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32042,7 +31717,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("aa79b0fc-1403-4294-a40e-1f9211321565"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("47463f33-3b39-4a8c-ac50-4a3f24ee8e14"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32051,7 +31725,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ebf261ea-80a9-457d-8117-b5fd480dfe56"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("43b9231e-ef7c-46ff-a555-1c0b1de69de9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32060,7 +31733,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1f4ad046-9d57-4d23-9f92-c8e70eb606ef"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("35a725d1-7c3e-4ba2-8ec5-75e17ec6d954"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32069,7 +31741,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("59b76682-db7c-4447-8473-0066ac08abdd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dd7f24a8-40c0-4dfe-8e52-16cdedc713f1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32078,7 +31749,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1622a08e-df9d-4023-b109-eae23e82b3e5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c363ca01-19b6-44d3-a3e2-ce545ace3c16"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32087,7 +31757,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("156c0957-c34f-41c7-b989-4c97f7e55d53"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b1995afc-2f20-47da-9dd3-e2e172c28817"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32096,7 +31765,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4359ed54-708d-46d8-a08e-014b6baa0c12"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("58c60ca5-eb3f-4e68-8326-13d8d5afb901"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32105,7 +31773,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7ae36dd4-afd5-4887-b6c3-a09718ec1060"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ccff565f-a15b-4d70-bcde-c34f8521c459"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32114,7 +31781,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ba24ca74-62f7-4859-84b1-1cefd438b9d8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("825d4aa8-d2d6-4ea2-ad40-0a6b30b08cc3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32123,7 +31789,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d188a14e-fcd7-4e90-8bdd-1ff1edbce7d7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2387c0cb-d302-404f-aa61-192c6a21a026"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32132,7 +31797,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dbdffc7f-8a03-4b88-8de6-5d719c490e4f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("288be86d-a5b0-42fc-b244-339aa7a1befe"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32141,7 +31805,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0fa1ef82-9ffa-4780-b9ad-10db2095e7cd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d6adf44f-7000-4478-958a-9424e13050b9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32150,7 +31813,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4e667ca3-fd40-4691-9a7d-12c413b50157"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1d94c660-de2a-4a08-bbb6-236664f3267e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32159,7 +31821,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("78c7518d-c366-45ca-a6a7-f6d314b0bae3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ea54e41c-ab2d-4d92-9339-2e30404cf88d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32168,7 +31829,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ff35531d-283d-42e7-aab8-c69dd08913a9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dc3d8c7a-3781-40dc-b776-99195b515eda"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32177,7 +31837,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("73cb1e38-3acf-4812-87cf-0ca6b0e863bd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3281e49f-a786-4e5e-8f24-baa140a2925b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32186,7 +31845,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("54ad810b-a470-446b-89ef-66d64e6e3bba"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d906b7be-5bd1-419e-9d1a-7affe95fbab4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32195,7 +31853,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bc3beeaa-2aca-4276-9d17-3636ee44e30b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a225f6a1-244d-47c5-9f99-1d04de93dbc5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32204,7 +31861,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3a7a472c-2408-48c6-88db-b3f622da88dd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2f5a5c33-f020-4a07-b27e-84a125d58948"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32213,7 +31869,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("28354631-1cae-483f-81aa-e2d4f969858a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("56f472f3-aaff-4d55-a86c-d6b463155768"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32222,7 +31877,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ed7d7e17-40fd-4061-8057-eeb61f46b027"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("69560bc7-3bd5-46fb-a9e8-9d5a4ec105a9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32231,7 +31885,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("602fa66b-2fbb-4781-a7c5-efc67c59f0d8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2499e384-ad38-49dd-bedf-e48a3e703b34"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32240,7 +31893,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8b80bc1f-b241-49cf-9fa3-347f36311553"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3d9afba7-1b4c-44e5-a468-d043cb366613"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32249,7 +31901,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8bafe108-fb68-46f1-863c-dc59a8fb12a4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("add283f7-12c7-4216-a55b-e88664ec4cfa"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32258,7 +31909,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1ff1089e-596f-4d96-83ca-47f9c77d7e9a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("80c8a17d-8677-4089-a0f0-490bfe3136e0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32267,7 +31917,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a641365a-9dcb-4361-a45b-2b2e5493c465"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("308a01bd-138d-455a-8b9c-b1a3050da7e5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32276,7 +31925,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("315afcbc-1a02-4aaf-b45d-76e17c1a5968"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f51dd0ee-2c29-4820-807d-20d8d85d2695"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32285,7 +31933,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("844f8b1f-9eaf-4390-bdf7-cffab4757fcd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5a3008e3-7c20-4251-8ec3-bc0e8fb73f95"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32294,7 +31941,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("818359d6-b932-4b21-9594-ac778cf9fd02"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("38c16dff-6fc4-4db1-b5a6-da24c6252b6a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32303,7 +31949,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e581f65a-9c80-406a-8fcd-c1ba052b9793"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d737f6a4-9eb9-477a-aee4-ed91940cf3ec"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32312,7 +31957,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("813484f1-8381-49eb-a4da-ec1fc469c81e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d5d022fa-3d62-4546-9ace-278a5ef0133a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32321,7 +31965,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("46598905-a7d7-41dd-8e8b-9b2971ed1deb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("36d10a39-2226-462f-bec8-c0293b730d0f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32330,7 +31973,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c1d90de4-9230-4402-94ae-2b05a034c277"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d6b59e92-3738-4a87-bf5d-119a7d3621b0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32339,7 +31981,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("444d9776-ae77-45ea-a74e-b30d8312b402"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("766b2f45-79d2-49b2-a957-5193eeefbf67"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32348,7 +31989,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8349e813-1eca-4944-8de6-2dc330059754"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d9d224cc-979e-4149-bf8e-c9f9bf633a4e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32357,7 +31997,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fef5e358-cd6e-4461-aab9-3f3c4cb6f8f4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b88d1d8d-681f-48e8-a5f9-7d816dc6d2dc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32366,7 +32005,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("898e4a30-7355-4682-a542-d82a710b0aa8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8bcc2987-2327-427d-abe6-737bf4056a1d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32375,7 +32013,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cf1cde48-ed4d-4979-a238-e7f06a6f68c0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("65570dc4-4b36-4c11-893a-0400db1db82d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32384,7 +32021,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("950e1962-6c4f-4657-9032-c8b39be28692"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9ba4220e-4a85-4c1a-9902-71edcf2bd6b9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32393,7 +32029,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b1342280-48fc-4a45-9c55-922115742839"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6a29b69f-9cdd-443b-a18c-5e2699054527"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32402,7 +32037,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ae8df786-fc75-42b7-a5f0-40de3b62132d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9f7978a3-34bf-4b46-bdc8-43fd0b0ba548"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32411,7 +32045,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2852b6ed-2b9b-44ef-a0e7-6d0fbe23a0e1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5699a79e-6b57-4934-8f50-fd25e95aa869"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32420,7 +32053,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6b76b8ce-4b23-435e-80c7-9a7dbb1e86f2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cca3d26b-b8f7-4a93-a2df-fc1bacd3934f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32429,7 +32061,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dad87593-92b2-4563-ae52-1161a42d8659"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1faebd6a-a050-4f28-bf0e-d79471d39178"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32438,7 +32069,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("580239a9-c242-4139-8e45-b74866cdcdae"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b972f098-f15f-47d1-9ac8-f76a14229253"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32447,7 +32077,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("14854a5d-53ac-40b9-8b11-633b5df284ee"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0d636317-3d39-453f-96bc-59817413d5ee"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32456,7 +32085,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ef1452f1-c010-4096-ad56-872b61e66f23"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1d636958-a189-4297-8940-1672dc544cb2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32465,7 +32093,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b136c97a-e052-44f3-af57-759f0eeeebd3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e1941bac-f78d-43da-85b1-8db1970950b2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32474,7 +32101,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("57fbb1e3-d030-4897-bf11-23f863d40a6e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1a260fd9-2e61-4a39-89b9-dc49f83c1ee4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32483,7 +32109,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("16854ba8-e164-4e41-a90c-5bfa6c34a683"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("643e12c8-6619-4a98-8d02-65ea515d8e1e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32492,7 +32117,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fd3f3ee7-99f9-4c29-acf0-f8bfa922912a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("15018e4f-accc-4be3-ab13-b936a3caf6c6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32501,7 +32125,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f308a24a-0412-443f-ac0c-20b3f437aa59"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d2ce968f-1c6a-4bab-892a-62d2bb5f93a3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32510,7 +32133,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("72f22557-5f0d-4bbb-b53e-ed0559f44deb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("20a0fd13-5812-4a37-ac2c-1803851cb36e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32519,7 +32141,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4d7f2419-4deb-48e8-9f9e-8eb0f308685d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8e66ae26-36e0-4d42-aaa9-b95a7f6883f3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32528,7 +32149,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ef613a52-3096-4f93-ae04-f440a126eaa7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5c91d054-b217-4ce1-bcb1-02ef492414bb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32537,7 +32157,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("39dae382-3a5e-43b7-b455-06468445493d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1c94c0fe-8856-416c-9669-1d22dc9ecde6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32546,7 +32165,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8a79fd7c-6a7d-492c-9cba-c476e53ce9b6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("905f6262-4d53-496e-90d6-9351dc37132d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32555,7 +32173,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("168d4e6c-ad78-4f8d-a83f-fd9f41ac6f30"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f5cadcad-abe5-4775-a26d-c4382607b8ce"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32564,7 +32181,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("07d5f6e4-9fa5-485a-ae31-6df7cd678f83"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("08e420b8-9ec2-488f-aa87-4f685b584ce0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32573,7 +32189,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6e874efb-20d6-4ad6-b40f-95c9febc15f6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("636c29a4-11c2-4012-a5e0-75370c2bc705"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32582,7 +32197,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0b90b203-09e0-4743-bb52-922effdb9c8b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("be71bba3-c2a3-4035-8fd7-15972649e982"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32591,7 +32205,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d4c1e924-06eb-443b-be17-16d63a0219df"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("68fb90aa-ac75-45ba-a526-f6be44f5cee0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32600,7 +32213,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2e24bc4c-8bb3-462a-ae36-22824ff25929"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1242906f-23f4-4a9b-b827-6b07d64a28b1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32609,7 +32221,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6f2b0c9d-2003-44f8-8059-c1f7018d83d4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("547cb3b2-f354-4b49-9b43-cf4364d6b35d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32618,7 +32229,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("37e258eb-9503-4191-b6a7-9005dfef7f42"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("253560e5-29e6-41f5-be0c-6c36ebdef1d0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32627,7 +32237,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9f17957c-7150-415b-aff5-22d7c1e6e40a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2d84de06-79c7-4476-a220-34b3623a91f5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32636,7 +32245,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e97861d4-ecf6-43c8-a9e8-2f1192c36324"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("25a0cf66-1095-4eb1-b9f8-2db665a3fd10"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32645,7 +32253,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4b9613ec-7bde-4f22-ae03-388032e6e77a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cc33a8b4-2d68-4420-846f-e01e514534d1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32654,7 +32261,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b3e305e4-5af6-4d4f-a5a3-08650b93bd09"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5ea6c7b0-14fe-4100-ab7d-61a2f2c11768"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32663,7 +32269,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9fdcb2c3-a527-4d19-a3a5-4d2225e9393f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("02e972e1-c28f-4234-8200-5375a53aefa9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32672,7 +32277,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a69e548e-c9a8-451c-81ec-9f5525768e39"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("69f97501-b017-4d04-9e36-5e3aa8ed829b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32681,7 +32285,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2e8a4242-ec4f-4a23-a89d-ab68eb8cb45d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("784d07ca-e671-4db1-8be9-847dab5efeaf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32690,7 +32293,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fee058d5-6bc1-4a71-b0fc-ae3e399a0810"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("11680657-4695-44c7-85df-fccb83aeb1ae"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32699,7 +32301,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7a04b35b-9bd9-4e49-a814-c32fbe23c667"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("23b3126e-1fd6-4c36-a62e-16b8feda9d1d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32708,7 +32309,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d2afd5f6-023c-42f8-b586-23fc369b77dc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("111b56ea-afff-4857-b279-7ffab0f026ea"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32717,7 +32317,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ddcffd2f-5a8e-42f8-b765-884fa15c26a8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6bc3a409-7d09-423c-8645-a64040da501a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32726,7 +32325,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("94ac518d-9873-4586-8b80-4e780a9d1d24"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d9a6c84f-e488-4e6e-9837-eff0dfb4d70e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32735,7 +32333,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("281fa249-671e-463b-929a-021059a13c31"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d35f82bb-ff38-4e7b-8023-af5b979e31e3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32744,7 +32341,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9e25f283-0f5d-43a1-907b-b3f63eac0a5c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("65e5a7da-50d3-4d90-aac1-b2117da2df84"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32753,7 +32349,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("916e85dd-0e5a-402c-93fe-8323137974df"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("433ba464-43cb-422c-a83b-155f5c45d909"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32762,7 +32357,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("79ff9b8a-b8ec-4564-a8f2-815d3200d3a3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9f7a0f4e-532a-40fe-bf67-dae776b4272d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32771,7 +32365,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4a735ca5-d102-4859-a22f-67ab3a1a42b9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8bd1cc68-211e-4b64-9dc8-2da885aa2ade"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32780,7 +32373,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4831222b-dc53-4388-8e87-fb795dfdbbcc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("00f3d0f3-d95a-4dbb-88a9-af6d90dace6c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32789,7 +32381,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3684149b-d837-46b1-94c2-7b02d903dc36"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f51d2181-5315-4cba-80f5-197a5283e8f0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32798,7 +32389,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("425acab7-00ad-411f-a06c-e4665a7d2a7f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e7aa37d0-e570-4458-827a-727f9d05f1f7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32807,7 +32397,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0329130a-7740-4274-9f2a-b659fa070e7b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6df078b3-6035-4639-9b7e-f82cb68ef47a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32816,7 +32405,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2b5ab0ba-5f58-4886-8ce5-1e07361f1615"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7878a0bf-3ed7-4ea2-bd9f-5d25c996a54a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32825,7 +32413,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d72b96a-3039-4e8a-be7b-cf67d0d033ec"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a50bce83-67b3-4c14-9386-9f183de08eaa"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32834,7 +32421,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e4ebbfd5-bac1-4b39-91e1-7dbcf87e89eb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("37267a22-feff-4e2f-9447-8d4854165528"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32843,7 +32429,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0ff0c3aa-381e-4ad3-91af-8f5e259e6d9e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c8a79627-e1c4-4432-afcc-fc376405ff94"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32852,7 +32437,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b0023842-f6bf-4d1b-ae7b-cd96ac38bb68"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("859f1403-d2f1-4adb-9cf7-443e1a3fd835"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32861,7 +32445,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a8e98635-4039-4443-9fcd-e704e0ad417c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f10d9951-4f13-452d-9893-34a0d486f143"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32870,7 +32453,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("983e3b12-c210-403b-a7d9-9a8951aa576c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8a9c7df9-5e79-4cf9-8b48-0e363df09658"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32879,7 +32461,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c7175e77-b78a-4158-ac60-1b091e5ad2d8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cfaca0eb-3f77-402a-9cfe-bad0c9b343c7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32888,7 +32469,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a02f32ce-06af-4bf5-9971-ec99537b16ae"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5dcab3f5-ba1e-4430-bff6-45bd7687752e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32897,7 +32477,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cde862fb-a28d-49a1-9abe-19a810ef325b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c47ef9ac-66eb-4399-ad5e-5c5089b22aad"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32906,7 +32485,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e4d93549-a236-4fe8-b555-f0017031b9f5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f77c24ea-9ba1-4f93-83ce-7798dc8b956d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32915,7 +32493,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("66990028-35ec-4a96-8efb-f6f6a0dedd11"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("85deb67d-76ef-4948-98a3-87e3baeb59d7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32924,7 +32501,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cf34a7ca-8dff-4c19-a6ad-d4a557026315"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("947a2452-f869-4920-bfba-a4a98f025b78"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32933,7 +32509,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("21e43094-3f49-4625-a51b-061c27800ca3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("91c02482-6dfe-4ada-8767-5b13734578d1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32942,7 +32517,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0bbe1ec4-2098-4f38-ad8c-1d4d4fef796a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e0612234-1974-432e-87f9-83cab6d967b0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32951,7 +32525,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dbccf8ae-b374-4ed0-87cc-7dd9d965f5fa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a47d988e-20e8-4540-ad51-8113b22ae1cd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32960,7 +32533,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ba029cde-c935-4993-bdc9-5f9f40345274"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("79b6e80e-5157-4ab9-be23-811b95c8559f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32969,7 +32541,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2a220faa-903c-46bf-898b-440bb3d535e8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0bb58496-1353-4ae9-9104-607af0264f2d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32978,7 +32549,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("26f1d323-df27-4097-a9dd-fe04c4ede067"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("531c65d7-79c0-43df-ab97-2a65c48fd0c0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32987,7 +32557,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2559a0f2-afe5-4f32-9f97-a7fc2aaddf16"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f5c50e0e-ece6-43ae-8923-28dff36f92fd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -32996,7 +32565,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a0ba116d-d925-4de4-a819-7d13791c7b09"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1e3b84ff-5d2f-4384-ae78-56879cfbd8c8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33005,7 +32573,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("51d18b0f-f539-4dc5-88ee-1b4798bd1c61"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ae57d948-1360-469f-ae24-4555bf807ed7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33014,7 +32581,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("824fcead-3af3-4091-99ec-0b66664bfb8b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ca4c57d6-9f7a-49e3-a31c-13662ee9b746"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33023,7 +32589,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cfd1127e-1b31-493e-9c62-a1a67e681936"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7d3185da-9c06-4762-9430-6a69684e06b6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33032,7 +32597,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("89c58692-39a5-4b93-a388-3de1f09b37b2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dd852c2b-7634-49f5-a3b1-17e193574a23"),
                             IsActive = true,
                             LicenseNumber = "WHR0949",
@@ -33041,7 +32605,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4860ee21-370e-43d8-ab7a-0a49ea0ace5b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2bebee7c-acbd-4303-9df5-83a88046230a"),
                             IsActive = true,
                             LicenseNumber = "WHR0928",
@@ -33050,7 +32613,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fd9b8bc5-6a70-447f-81d6-9d6fc7bb448a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1fe1e3cc-8277-4fab-a8bf-1885228ad92d"),
                             IsActive = true,
                             LicenseNumber = "WHR0910",
@@ -33059,7 +32621,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("da962e20-5729-44f4-9a16-b4ba03575595"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cd623c02-e5b4-402e-bee3-e01a2713de62"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33068,7 +32629,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4289dc08-9222-4ca7-b0a0-20e76dfeeb67"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4a1f747e-162e-48ee-b4ea-74706904abe1"),
                             IsActive = true,
                             LicenseNumber = "WHR0951",
@@ -33077,7 +32637,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e9bdb949-4209-4352-9c4a-0d2bed7063cf"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cf39fd3f-c0a0-4bad-9b9f-51af6bafb65b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33086,7 +32645,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d470d465-5ca5-41fb-81ab-d903e4e0ab0f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("84927d8e-86e5-4d03-a7da-8cb18f6510fa"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33095,7 +32653,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d2e2cabc-fc4f-43ed-bf84-941cb2bd005d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0611b1ad-f9ab-4588-b057-9ea759354160"),
                             IsActive = true,
                             LicenseNumber = "WHR0896",
@@ -33104,7 +32661,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f7ca5f5b-1a1d-47f8-b06a-bb4ad4d1f11c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("21837fca-bf01-4b8b-8628-771305d1c803"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33113,7 +32669,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e43af948-0dbf-4a7a-ac3e-6b988d199f89"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f1677606-e9c9-434d-904f-b0cfabf943e6"),
                             IsActive = true,
                             LicenseNumber = "WHT0371",
@@ -33122,7 +32677,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c35c5c98-05de-411f-843d-c025beb41895"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bb0d72e2-7644-45e6-81f2-1cafc5427aec"),
                             IsActive = true,
                             LicenseNumber = "WHT0403",
@@ -33131,7 +32685,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("aae3ab7b-579e-4257-a47d-f2b23e006f40"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e31d3550-3fcf-43cf-9fec-7091bf85603b"),
                             IsActive = true,
                             LicenseNumber = "WHT0414",
@@ -33140,7 +32693,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("16b25c9b-d22d-4813-ae6d-818d79a5223e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("67764e5a-8050-47de-9eb0-bceaec3f3c55"),
                             IsActive = true,
                             LicenseNumber = "WHT0380",
@@ -33149,7 +32701,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("56ec8c6d-583d-45cc-9224-c674d20aab92"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("efca8861-f5a5-44f0-9120-e25c4f07b878"),
                             IsActive = true,
                             LicenseNumber = "AFT1186",
@@ -33158,7 +32709,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c1ea4923-89cf-4260-9fce-631bacf0e1d2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8db10bc7-7a14-47f0-b473-89256cf29a1e"),
                             IsActive = true,
                             LicenseNumber = "GRT0620",
@@ -33167,7 +32717,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5e54265f-0a3a-420a-bcf3-b48d6439a14e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("51c334ef-1992-4c42-a5f3-389719c252fd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33176,7 +32725,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("303326c4-2e9a-476c-8376-9b9cd2c85b37"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("581ce754-5013-4050-a41a-2eb010e9751c"),
                             IsActive = true,
                             LicenseNumber = "SAR0825",
@@ -33185,7 +32733,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("29d48048-dfc5-4505-bfd6-3466121400f2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8a91d213-6b7c-4be7-9606-50d837334822"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33194,7 +32741,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5aec4688-c852-4fdb-b6b8-86792f3715c4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1afe62f4-3e4d-4562-85b2-db6fa116b374"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33203,7 +32749,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("98975991-b3da-4ef8-b7ba-151a4e149f98"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0a2ef219-9748-4a05-b249-71b7744177ae"),
                             IsActive = true,
                             LicenseNumber = "WHR0940",
@@ -33212,7 +32757,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e46dccf5-2aa6-4444-bb7b-74ecc79c95ce"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5de25826-26d3-4992-a497-dcc07f121c65"),
                             IsActive = true,
                             LicenseNumber = "WHT0335",
@@ -33221,7 +32765,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("19114cc1-8362-4e6b-bdd5-7d6d96da246e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e1a00f29-c8d5-449c-9bd6-c7120cb9bb68"),
                             IsActive = true,
                             LicenseNumber = "WHT0393",
@@ -33230,7 +32773,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f8eb8461-1597-4441-aea3-3c6a5804d35f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("70052268-08aa-4e8a-94f8-b8c235f42c35"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33239,7 +32781,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f3e0add1-e57a-4025-b538-84fad74a86bc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("75c1e0ee-412c-4f1f-8886-d81b7916ac3b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33248,7 +32789,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e4e09957-88ea-400a-a4aa-752d6f600906"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4cebbf08-a70e-4dd6-9235-fb8315405fc2"),
                             IsActive = true,
                             LicenseNumber = "WHR0891",
@@ -33257,7 +32797,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b82b7599-4215-4173-b72a-6d85529656ce"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("eb691079-3f26-466e-b67f-d0b39434cfa6"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33266,7 +32805,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3eb07b8d-63e2-4bc2-806a-17cc856294b9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fd581f1e-4618-4016-8bc1-5db5f71ae4b4"),
                             IsActive = true,
                             LicenseNumber = "WHR0955",
@@ -33275,7 +32813,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("64e1644c-ec4f-4599-966d-f9b2e2fb0697"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("11a5953a-3bfc-4a86-a9c3-fca427f5d0da"),
                             IsActive = true,
                             LicenseNumber = "WHR0885",
@@ -33284,7 +32821,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b6bdc31c-5223-43d6-a894-118483fcecec"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d642e26c-9504-49ce-bbd3-3416e2b1639a"),
                             IsActive = true,
                             LicenseNumber = "WHR0894",
@@ -33293,7 +32829,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4efa8e97-7795-47a3-bcaa-0664f8b05162"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a2d5e505-27f0-40fc-8371-925ebfc222bc"),
                             IsActive = true,
                             LicenseNumber = "WHT0331",
@@ -33302,7 +32837,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d78baa8-1ad4-4859-a6d8-3bb6785e9da3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("45c543c7-b445-49d1-8a41-ec64a4d4ca03"),
                             IsActive = true,
                             LicenseNumber = "WHT0392",
@@ -33311,7 +32845,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6f24312a-4805-48d6-9e5f-3ac14c90517c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("470b2059-60c2-408d-aed0-1fa87822ddfc"),
                             IsActive = true,
                             LicenseNumber = "WHT0368",
@@ -33320,7 +32853,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0410854e-01f9-4d3a-a616-5f46c7e8d8fc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("87e5c4eb-5167-4093-a270-7b2d149a688d"),
                             IsActive = true,
                             LicenseNumber = "WHT0381",
@@ -33329,7 +32861,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b34675bb-061d-4d54-adbf-f225a58b7bd3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b2a9c12f-c059-4296-8f43-411f0ed080bf"),
                             IsActive = true,
                             LicenseNumber = "WHT0413",
@@ -33338,7 +32869,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("78d5bd30-d92b-463e-89df-c381444fcb8c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("105d2d35-ed46-46ea-85c0-510c0102bdc0"),
                             IsActive = true,
                             LicenseNumber = "WHT0322",
@@ -33347,7 +32877,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("71f706ee-0b84-421c-bfd7-7e4a7f5e1afa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9b6e8808-0b72-41b3-bd80-ad769c14359c"),
                             IsActive = true,
                             LicenseNumber = "WHT0342",
@@ -33356,7 +32885,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2bc10b73-bb45-4c15-84e5-b48a53e1bd0a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0a1d2767-055e-4e5a-8334-c6286065f74b"),
                             IsActive = true,
                             LicenseNumber = "WHT0410",
@@ -33365,7 +32893,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a4453ef7-7427-4627-bffa-e6668908f45f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a6d43c8f-c8c8-4c0f-8bbd-febe4af10286"),
                             IsActive = true,
                             LicenseNumber = "WHT0418",
@@ -33374,7 +32901,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fdff75e1-4f95-4dad-8bed-4d935347e961"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("029b4d24-a923-4e42-869b-5c2aa025813c"),
                             IsActive = true,
                             LicenseNumber = "WHT0411",
@@ -33383,7 +32909,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("92397c5c-fea9-4aec-ac43-3755822fa598"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("10d8baa0-22e5-4359-9e34-8a7c757b4a9d"),
                             IsActive = true,
                             LicenseNumber = "WHT0351",
@@ -33392,7 +32917,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fc0b723c-d28a-4575-bada-7693b9b5d2f6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ee60044d-4565-4af6-a76d-985018874bc3"),
                             IsActive = true,
                             LicenseNumber = "WHT0325",
@@ -33401,7 +32925,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a3453374-6fe9-4864-a01d-e004ff032e80"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9c66b420-1615-4575-b2d6-d27dadb18cf3"),
                             IsActive = true,
                             LicenseNumber = "WHT0324",
@@ -33410,7 +32933,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b2bd94c0-e5c3-44d4-99d7-b56590e46c18"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("361d1664-4e47-4ef4-b6d1-2a98e6b91db1"),
                             IsActive = true,
                             LicenseNumber = "WHR0864",
@@ -33419,7 +32941,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("21636e7c-2619-413f-b3ab-030750a70423"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fbbbd115-33ff-4f70-aff0-dfa7be3f2a2b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33428,7 +32949,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a647c145-9e73-4fc2-a8fe-795e506d75b6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f47814f1-8eae-41d1-aee8-f1c7c7156baa"),
                             IsActive = true,
                             LicenseNumber = "WHT0407",
@@ -33437,7 +32957,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0e3ed073-329e-4d1a-978e-897e901abf7d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2ab43b83-937f-4f3d-bb30-7993678f5ace"),
                             IsActive = true,
                             LicenseNumber = "WHT0402",
@@ -33446,7 +32965,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("db117fca-aaed-4979-9823-f6bd59184eca"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a2b0816c-5723-434d-9ce3-21f08f34e08c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33455,7 +32973,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("337b48f5-2e7d-490d-a764-3088b3c74ac5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e81665e2-fb80-4c97-b209-14642212e881"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33464,7 +32981,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("96f11df4-6909-402f-a884-f7a0f827940c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dfed7839-3c52-4145-a9f1-7c719e462ddd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33473,7 +32989,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("39004426-6927-413c-9aa3-4b74a7d7a9c8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3c2edcad-ff25-4c50-931c-71411cf681ca"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33482,7 +32997,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5b67f1c1-6744-43ce-9976-468ebf5b9483"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ab7a7c93-aca1-40a0-89e0-48629e24b357"),
                             IsActive = true,
                             LicenseNumber = "GRR0924",
@@ -33491,7 +33005,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8f48a50d-a313-4a99-936f-6451322c4919"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("139020d0-1087-40a2-b1b7-3d14c7d3fa4e"),
                             IsActive = true,
                             LicenseNumber = "GRR0932",
@@ -33500,7 +33013,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4c5c49ff-bdd8-4b53-b6e4-50ea3b4a05ee"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ea87e5d9-199c-4ea0-b2dc-ba9c7443a64c"),
                             IsActive = true,
                             LicenseNumber = "BAS0007",
@@ -33509,7 +33021,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b746df0a-5a1d-4369-82f8-5cd566e65951"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("256581bc-550f-4568-a95e-ce9f175fb61b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33518,7 +33029,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("88ec170a-d68c-4c46-a542-ffcdad4368cc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("58b36d41-d7b8-4c8b-b144-5d252f0f0c81"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33527,7 +33037,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("742626ec-9ae9-4067-a582-37ee87d73b26"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5f18f6c5-53eb-451a-8198-bc004b28d3f6"),
                             IsActive = true,
                             LicenseNumber = "WHT0360",
@@ -33536,7 +33045,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("22be9919-5430-44ed-bb93-55228e618508"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7041f7f7-b44a-4568-8aec-bbb7ed249fdc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33545,7 +33053,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ca278ae8-14e3-462d-8552-6a14c2a253e4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("efee4712-fe34-4f58-98d8-9b58b710671b"),
                             IsActive = true,
                             LicenseNumber = "WHR0884",
@@ -33554,7 +33061,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9b2e6fb5-0c86-4a0d-99f7-3a90cfdc2f93"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4233d6ba-c27b-4966-94ba-e2a627deca00"),
                             IsActive = true,
                             LicenseNumber = "WHR0916",
@@ -33563,7 +33069,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("79438109-7cf4-4e6d-87a3-081c62452d5d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6f8d3cce-89c8-491f-833f-4c6490e4065c"),
                             IsActive = true,
                             LicenseNumber = "WHR0903",
@@ -33572,7 +33077,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ce997236-eb60-4c7d-923d-a21f077765d7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("246256a8-5afd-4416-87be-baf8c3cb1e06"),
                             IsActive = true,
                             LicenseNumber = "WHR0895",
@@ -33581,7 +33085,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("222d165f-59b1-4a86-bd78-d7e93ed09914"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a784967e-5f92-4877-b999-18d3949442a3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33590,7 +33093,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ab168bab-7c03-4757-8ffe-ab0331c9ec15"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("48d5d383-ee7e-47ed-bab9-77e2f34354cf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33599,7 +33101,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b9c4f257-f993-4ef3-96c5-642ec29ba5bb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a87dfb37-3d60-4f1c-ab9c-ca3f4e649982"),
                             IsActive = true,
                             LicenseNumber = "WHT0419",
@@ -33608,7 +33109,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9228f814-fa98-472b-bd1d-5fbdbdeb0fd2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("75775a59-067c-4149-aada-cab39eca08f4"),
                             IsActive = true,
                             LicenseNumber = "WHT0417",
@@ -33617,7 +33117,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("757edb40-9fcd-45f4-a697-e0c4c0b583bc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("85880c44-af6a-4e26-8c94-69c5b89fdd08"),
                             IsActive = true,
                             LicenseNumber = "WHT0416",
@@ -33626,7 +33125,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ad14cce1-49b3-4726-b76b-d0190272445f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bd6b64b0-283a-4695-8b6d-3a84121dd8ff"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33635,7 +33133,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bbd42e38-6606-419e-ab4d-79477644cb3e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("baa6f2ad-1835-4bd8-87e9-9afc914adb60"),
                             IsActive = true,
                             LicenseNumber = "WHR0957",
@@ -33644,7 +33141,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fd04a4b5-cf02-40af-9ac4-66a9bd00b629"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fd8a3493-b144-4774-921b-d479beafd644"),
                             IsActive = true,
                             LicenseNumber = "AFT1182",
@@ -33653,7 +33149,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d8186148-84fc-49f5-9873-f339890ef043"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("744d72dc-a0f2-4ad2-9674-354aceb6bb91"),
                             IsActive = true,
                             LicenseNumber = "AFT1183",
@@ -33662,7 +33157,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("44847809-e6c4-42b7-8990-92f6d1ba934c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1200d253-5935-4b2d-9636-b2ae2e7b5733"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33671,7 +33165,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("75f8f98b-9797-4828-84f8-88b894249467"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2bb38655-35b9-44a3-8fca-78c7e087dc1c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33680,7 +33173,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("543089a6-c0f9-4ef6-945e-488d16d60c51"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("74ce0a84-88d5-42e3-bbaa-91139970b439"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33689,7 +33181,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d7670c11-a8b6-481e-9c9d-21577a027c8b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9c3b49ec-245e-45ea-ae9a-87f1937fe960"),
                             IsActive = true,
                             LicenseNumber = "SAT1564",
@@ -33698,7 +33189,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3a0cebd6-bfc1-4a1a-9c41-8e17d1d843ea"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d3645d2f-8f92-4b5d-9158-689310b41459"),
                             IsActive = true,
                             LicenseNumber = "WHR0859",
@@ -33707,7 +33197,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f1a639ac-b3d1-43c4-affd-0e7a87dfeca4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ea86aedb-2c5e-4b32-a529-9df13fcd5721"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33716,7 +33205,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d50304a2-9f2d-443a-8e21-e117b49b8bd0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("21c4d2a3-7c50-4311-8144-8f6ebe9cfc78"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33725,7 +33213,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a6df6986-ad77-4437-b04e-800462ebcb26"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("94453329-fced-489b-865f-b2ba6093eee8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33734,7 +33221,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b74e7a5d-81fe-42fe-bde1-ae7996c9a53a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b5f18e51-9eba-4d39-8efc-40ff175f7e03"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33743,7 +33229,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("003e2780-869b-4255-b4a5-09c48d3a555c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b0899259-5e02-40ec-952b-8963b97feeeb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33752,7 +33237,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8af745d3-9c30-450b-8ba9-9afeeaf0f2ad"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("001575d4-c182-441a-aa13-916996248bdc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33761,7 +33245,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8361a789-a4be-458e-bc7d-65b8f7066183"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("38f00a30-35c8-4a3b-8cea-75661d2107a8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33770,7 +33253,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b2a93186-a800-46c4-8954-f229b9711336"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("de3cd5eb-984d-497a-a3e4-ba953c0a0cc3"),
                             IsActive = true,
                             LicenseNumber = "WHT0421",
@@ -33779,7 +33261,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3860d5f8-ed9f-4b9d-9b8a-85813ec959e5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("89559865-8e2e-403a-8621-174cbd4761fc"),
                             IsActive = true,
                             LicenseNumber = "WHR0918",
@@ -33788,7 +33269,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bccfdbff-9950-4200-a738-e27ba1bd4bdc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("da288d05-b88a-498d-8ae2-1dc72de495bf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -33797,7 +33277,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("642fd40b-48f5-471d-8141-ac5299b1e88f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e4e55d38-94e7-4ee5-b239-527e436e802e"),
                             IsActive = true,
                             LicenseNumber = "WHT0376",
@@ -33806,7 +33285,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fb6472b7-f957-4706-9b21-19a94a35780c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b00caf8d-1100-48b6-b3da-5cd942816bdc"),
                             IsActive = true,
                             LicenseNumber = "WHR0909",
@@ -33815,7 +33293,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("41ab85ff-95b6-4863-a929-b4a67f7d5b03"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f2d3bc1d-b9a6-4beb-8ab2-40d3d108108d"),
                             IsActive = true,
                             LicenseNumber = "WHT0306",
@@ -33824,7 +33301,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b48c261c-214a-4f9f-9abd-da5eb2320720"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a157ddc0-07d8-4adc-a96a-2496cab66bc5"),
                             IsActive = true,
                             LicenseNumber = "WHR0915",
@@ -33833,7 +33309,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bf3087d4-f63d-4541-b3b7-071e4ab82a15"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bce280dd-7f43-4a3c-a980-a5fb18992549"),
                             IsActive = true,
                             LicenseNumber = "WHT0383",
@@ -33842,7 +33317,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("57a44913-fee5-40cc-9ae4-2a0e9749c34a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8a3b1c3a-0d56-4a98-9bd8-9619e2886332"),
                             IsActive = true,
                             LicenseNumber = "WHR0945",
@@ -33851,7 +33325,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c5dd444e-24b2-4c91-a58a-4cb87c64bf97"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1c4fd471-d665-4829-ba99-527010a6e85e"),
                             IsActive = true,
                             LicenseNumber = "WHR0946",
@@ -33860,7 +33333,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("767f7ec8-7a53-431a-8cb7-c10e4675f480"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6f9f8d23-6621-4f19-9eec-257b0ac34892"),
                             IsActive = true,
                             LicenseNumber = "GRT0616",
@@ -33869,7 +33341,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("249ae815-21a0-4cf1-894e-81a29faf16b2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3f3f0245-17c4-470d-979a-5d3cdd83e29e"),
                             IsActive = true,
                             LicenseNumber = "PLIT029",
@@ -33878,7 +33349,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5f926e81-0020-44af-b204-1602fc9486fc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("25ac36e7-a894-484a-968f-1dc2aa7d8ad4"),
                             IsActive = true,
                             LicenseNumber = "WHR0920",
@@ -33887,7 +33357,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("080efb16-dcbc-444e-a622-adf655d1dee5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ad713a35-f353-409c-b472-b4b9e8c108b3"),
                             IsActive = true,
                             LicenseNumber = "WHR0906",
@@ -33896,7 +33365,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a7ef74ed-0f55-48ec-9f6c-bb39c4f9e600"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("39ae666b-3cee-4cd8-a10c-88a5f72eb696"),
                             IsActive = true,
                             LicenseNumber = "WHT0373",
@@ -33905,7 +33373,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c08424ac-a5a3-4cbc-83a9-7f44f1901f7b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4747950b-ac80-49bf-bc02-77bbdc19ca15"),
                             IsActive = true,
                             LicenseNumber = "GRR0926",
@@ -33914,7 +33381,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("38e3ed47-267f-4977-8786-6b4daa10e2a2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("183161d3-85fd-4f02-8c2c-92f4b4741314"),
                             IsActive = true,
                             LicenseNumber = "WHT0323",
@@ -33923,7 +33389,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c1094621-c585-4fe0-b70b-1fdc6aed2730"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ba0a4835-704d-4d1d-84be-6beb2264f3ca"),
                             IsActive = true,
                             LicenseNumber = "WHR0937",
@@ -33932,7 +33397,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a79b4aed-a5bd-4259-9ffb-8a88dbd879bf"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2be39fa2-485f-475c-9ceb-0511ae2e640b"),
                             IsActive = true,
                             LicenseNumber = "WHR0914",
@@ -33941,7 +33405,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("08480ebb-ad46-4c27-999f-1dabf568d6f8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5cbb7717-2d85-46fe-8e69-6ba4ac73ba98"),
                             IsActive = true,
                             LicenseNumber = "WHR0871",
@@ -33950,7 +33413,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6c5f8e62-6c6b-4ebd-b275-81830bf2acb7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("89d05f43-1268-4329-baa0-2aef912ff696"),
                             IsActive = true,
                             LicenseNumber = "WHR0886",
@@ -33959,7 +33421,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("eb746ba6-059a-409e-96c4-e741b36c1af6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b215d7c7-e02d-4999-96f2-55f5e6e090bb"),
                             IsActive = true,
                             LicenseNumber = "WHR0856",
@@ -33968,7 +33429,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c1ffd930-0fce-4733-a2f5-bd44b2929b59"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("096b3a65-a2fa-48de-b087-fb918a2c40b6"),
                             IsActive = true,
                             LicenseNumber = "AFR1442",
@@ -33977,7 +33437,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f5c3677b-d25c-4dd3-a14c-2ca7e973e70c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("74095ab0-5d57-4777-b138-48f4d3ae0bc1"),
                             IsActive = true,
                             LicenseNumber = "WHR0853",
@@ -33986,7 +33445,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c9f8dbe5-2bd0-4151-af9d-688141aeeb20"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("026b09c3-fd2d-4567-b9fa-ab7e28292524"),
                             IsActive = true,
                             LicenseNumber = "WHT0408",
@@ -33995,7 +33453,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("369c86e4-44c7-4ff5-94e1-8383b8e8f7df"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("badca3f6-9a28-4155-a2a7-4e90cd639bef"),
                             IsActive = true,
                             LicenseNumber = "WHR0900",
@@ -34004,7 +33461,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e32b7616-a55d-4e43-8ea2-d3fbaacd58a6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0a365640-017f-4bc8-9b84-8aa3b7aa70d2"),
                             IsActive = true,
                             LicenseNumber = "PLIT026",
@@ -34013,7 +33469,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("932591ee-56c5-433d-a844-8e868b8278e5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3fb40c56-2b7f-4ea7-9536-cf821875a3be"),
                             IsActive = true,
                             LicenseNumber = "PLIR035",
@@ -34022,7 +33477,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("534c5e06-86a2-4aec-8947-c1eb455adbd2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("564e7d45-6a2d-4c97-a0f9-50d4882196e2"),
                             IsActive = true,
                             LicenseNumber = "PLIR032",
@@ -34031,7 +33485,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0eb892b5-eb44-4a75-9d84-35be72c26673"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("98aa9236-9712-40ea-8b32-df2f69b06ef0"),
                             IsActive = true,
                             LicenseNumber = "GRR0930",
@@ -34040,7 +33493,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("42b05296-7676-40be-9ef7-935de9a752cd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e8ff55d4-2434-4d9b-84a6-4d264f8d6b91"),
                             IsActive = true,
                             LicenseNumber = "AFR1438",
@@ -34049,7 +33501,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6a59d38a-ffcb-494d-a0f3-a938e6bcfc2a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8be70553-5e72-4715-b81c-7e03efbf910d"),
                             IsActive = true,
                             LicenseNumber = "AFR1444",
@@ -34058,7 +33509,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d3199639-4634-4f00-9093-c1ebeb7b135c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("eceec044-9278-4ec1-8b97-7d457629806c"),
                             IsActive = true,
                             LicenseNumber = "GRR0927",
@@ -34067,7 +33517,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8185ef26-bad2-4faa-b53a-116ba72db3c1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dd448a33-734c-48bc-99ac-dabc90eaf51c"),
                             IsActive = true,
                             LicenseNumber = "GRR0928",
@@ -34076,7 +33525,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("afd52e70-f7a0-4fc0-8b48-b5bb8eabe56a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a5bd80b2-b61d-4aba-95be-7403507c7805"),
                             IsActive = true,
                             LicenseNumber = "WHT0394",
@@ -34085,7 +33533,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9c03eed9-3180-445c-bfce-f6d76e088872"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8c1bbeb9-3cd7-490e-be3d-fd5795f9f037"),
                             IsActive = true,
                             LicenseNumber = "SLGT001",
@@ -34094,7 +33541,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4a1849e4-6a60-4061-b6ab-a503274fba81"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("009ba8bf-5d8d-47b3-8cd1-2e0ff742bf52"),
                             IsActive = true,
                             LicenseNumber = "AFR1441",
@@ -34103,7 +33549,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2d46ce38-cd0b-4880-b8fa-c2826a28360d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c9a00a50-331c-492c-96f1-a242c494d0f4"),
                             IsActive = true,
                             LicenseNumber = "SAT1568",
@@ -34112,7 +33557,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6f6ef9df-b547-4272-92db-501050545a33"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ea3ef7a8-3485-46ca-9f44-6b571995b172"),
                             IsActive = true,
                             LicenseNumber = "WHT0326",
@@ -34121,7 +33565,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1f01dd13-57d7-43d1-a826-03b1496552b2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5c164f52-885d-40ed-a1ed-f080f90e20be"),
                             IsActive = true,
                             LicenseNumber = "WHR0950",
@@ -34130,7 +33573,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("93317aa5-172b-4a9a-94aa-7fca7cfd63eb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("626a01b1-bf36-4667-ad33-2414c14b1380"),
                             IsActive = true,
                             LicenseNumber = "WHT0388",
@@ -34139,7 +33581,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0af07af2-f3f3-4ed0-8515-a507505c3fc5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d428f3e7-8917-446a-b3b6-ed6e9a59cfe9"),
                             IsActive = true,
                             LicenseNumber = "WHT0345",
@@ -34148,7 +33589,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6d2d7ac3-dad4-40d5-8d66-bb1fb3dd7327"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d14863e8-ebb1-4491-a298-1a93903d3c2e"),
                             IsActive = true,
                             LicenseNumber = "WHT0405",
@@ -34157,7 +33597,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2b021548-afb1-4ae0-8326-cf72189de4c9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ee6279a8-2df0-4498-9938-09dac608da98"),
                             IsActive = true,
                             LicenseNumber = "WHT0409",
@@ -34166,7 +33605,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3e84959a-8a6d-47ec-afd6-8185ed378eac"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0c2995cc-1dfa-49ab-91f9-48badb65beed"),
                             IsActive = true,
                             LicenseNumber = "WHR0901",
@@ -34175,7 +33613,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bcd29d72-84bd-4298-998b-1dfaffc57405"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ee5b92ff-a26a-4fc2-9c64-948247d23c8a"),
                             IsActive = true,
                             LicenseNumber = "WHT0355",
@@ -34184,7 +33621,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ddcfdb33-a1fe-4e73-a159-7d864b61ce10"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("edd5543c-ca82-4a17-851a-10e0df9b9ae5"),
                             IsActive = true,
                             LicenseNumber = "WHR0959",
@@ -34193,7 +33629,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fffa295f-33ba-4a9d-92e6-a29de447f0ea"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c4d1d8ee-114f-4e76-8eb6-1f30447196e4"),
                             IsActive = true,
                             LicenseNumber = "AFT1188",
@@ -34202,7 +33637,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a48de61d-79a7-43ad-8c5a-192a67b5f325"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c0d69d2c-eb40-4899-a5ed-1373c4982ae7"),
                             IsActive = true,
                             LicenseNumber = "AFR1449",
@@ -34211,7 +33645,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5fc27740-bac3-4a22-b3ae-45b4e90057b9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0986ac65-def2-4dbf-b4bf-f754df3cdcb9"),
                             IsActive = true,
                             LicenseNumber = "GRR0929",
@@ -34220,7 +33653,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("abf9572a-840b-4435-88d0-bbdd6008ad2e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c1625253-0b4d-434c-93a3-ff88f26fba0f"),
                             IsActive = true,
                             LicenseNumber = "WHR0956",
@@ -34229,7 +33661,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("23d18a5a-d794-4dff-89cf-461fe20a1708"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("848e28c3-ddec-4368-b097-155bad397ab4"),
                             IsActive = true,
                             LicenseNumber = "AFT1190",
@@ -34238,7 +33669,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2ed2fe7d-01c4-44b7-8261-2eb59729b4ac"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("056ced4d-cb7b-4bbe-b232-cf9ee7f9a1ba"),
                             IsActive = true,
                             LicenseNumber = "PLIR034",
@@ -34247,7 +33677,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4943143b-2ad7-48f9-8aa7-ba53b73b90d9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6723532a-7c2f-49ce-8f5b-9c1af16ce68c"),
                             IsActive = true,
                             LicenseNumber = "AFT1189",
@@ -34256,7 +33685,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7afa0bab-1a6d-44b9-ada2-f106bcf0d28e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("08ed05e7-02b4-4814-a130-d6c9d3118638"),
                             IsActive = true,
                             LicenseNumber = "AFR1446",
@@ -34265,7 +33693,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8636ad50-8e8b-4384-a9d2-cfb276ff080b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("773c055c-03f7-4362-a1f9-56d8d2168eee"),
                             IsActive = true,
                             LicenseNumber = "WHT0415",
@@ -34274,7 +33701,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e0076b62-5427-41cb-a4a3-fcf738561b58"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("10d8556d-c2c3-43b9-b88b-02bcbf718749"),
                             IsActive = true,
                             LicenseNumber = "WHR0953",
@@ -34283,7 +33709,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c5305846-d7b8-424c-90b9-9eac275a788c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4875e3dd-df5a-4589-a8c4-fb7507b47661"),
                             IsActive = true,
                             LicenseNumber = "WHT0365",
@@ -34292,7 +33717,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c48b8f5a-e9c6-4494-b70d-ed3cbedb91d4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2f77c240-1068-459a-b431-dd91daab2b6b"),
                             IsActive = true,
                             LicenseNumber = "WHR0958",
@@ -34301,7 +33725,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ffbaebc6-4d38-4d41-8a22-66c1e28d8efa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9789b2b2-a228-4791-96df-9ea44a839c63"),
                             IsActive = true,
                             LicenseNumber = "GRT0626",
@@ -34310,7 +33733,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9d747f29-c2dc-4419-9926-5d2da1e5cd26"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7633df89-62a3-49f8-827e-e043e69be42b"),
                             IsActive = true,
                             LicenseNumber = "WHT0320",
@@ -34319,7 +33741,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5850d9eb-4fe5-4045-8c0a-8740bc0edf2c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8114bbb0-d683-4dec-855a-e7f0f2e84a3e"),
                             IsActive = true,
                             LicenseNumber = "WHT0412",
@@ -34328,7 +33749,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b045f3b5-5844-4fb1-b5eb-3afbbc4533a1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4efef0e7-3965-4516-8a41-00ca071fd4ba"),
                             IsActive = true,
                             LicenseNumber = "GRT0624",
@@ -34337,7 +33757,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b1b9832a-f648-41e9-b518-2d6ecd753e1f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("708ca543-07c7-42f8-85b2-d5df29b6605d"),
                             IsActive = true,
                             LicenseNumber = "BAT0021",
@@ -34346,7 +33765,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d1541b06-cb8a-4e20-8d99-1a20a766b62d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7ad1ef39-7809-4742-9eca-1d31c6fc5a26"),
                             IsActive = true,
                             LicenseNumber = "BAR0028",
@@ -34355,7 +33773,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a45e0376-d13a-4598-8ded-a25b81acc626"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("aa39e622-3a67-41f3-b7ed-68d4a17116df"),
                             IsActive = true,
                             LicenseNumber = "BAR0029",
@@ -34364,7 +33781,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c84acf35-d48d-43d4-8605-60d8127dbff9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("36970120-d30c-4db5-9577-869bd6424c62"),
                             IsActive = true,
                             LicenseNumber = "WHT0420",
@@ -34373,7 +33789,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("976dc9f6-e43f-4c33-870f-80b3ccd54fb2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("7fe7e004-6c5d-41b3-8440-71ba0ee6cb3b"),
                             IsActive = true,
                             LicenseNumber = "WHT0377",
@@ -34382,7 +33797,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("aeabd151-86cf-452c-9146-bd81ec58f955"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9897a264-858e-4e69-837e-32859333952c"),
                             IsActive = true,
                             LicenseNumber = "WHT0384",
@@ -34391,7 +33805,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0ae5a907-cc2e-461d-b43e-25e7ee0762a1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f143b24f-3a62-4231-ac38-6873394669d0"),
                             IsActive = true,
                             LicenseNumber = "WHT0361",
@@ -34400,7 +33813,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dce9637b-a227-44e1-9f4e-5daa5177c6d0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("110665a4-04d9-46de-baa2-694307932b71"),
                             IsActive = true,
                             LicenseNumber = "GRT0625",
@@ -34409,7 +33821,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6e2952bd-65bc-41f2-8513-a1272b51abd1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("32c6e1fd-278a-434d-b8a1-416ce083ba54"),
                             IsActive = true,
                             LicenseNumber = "WHT0366",
@@ -34418,7 +33829,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("66aca907-ab80-4374-8433-5352afbc73ca"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b310987c-f05c-4a99-8b48-b07dc5c47da1"),
                             IsActive = true,
                             LicenseNumber = "AZWR001",
@@ -34427,7 +33837,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("527c129f-42a5-47d1-bf96-75909c5cf822"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8cdb05aa-1529-40ca-9a28-5722338bfef7"),
                             IsActive = true,
                             LicenseNumber = "WHR0935",
@@ -34436,7 +33845,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d83df04b-189f-458a-ad9b-8f4b85cdeefd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("73f782cc-b3a3-4f13-868e-f0419cb82846"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34445,7 +33853,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("068448ff-acb7-4130-b7f3-a8c79b7a45bb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("12c8e5e5-1301-48c3-aa34-ede655970fdf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34454,7 +33861,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("054418b3-0288-4211-a742-8dd09f388b77"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e18c7842-3ba2-4bb4-befe-b59160308a76"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34463,7 +33869,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("730166c2-4b30-494a-a689-8f3cebeb8102"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c5520eea-3291-4654-9df9-7d74ae195197"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34472,7 +33877,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d8e16d6-ba00-4b1f-a5ec-003a995d6031"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ed1c243e-246e-4059-a106-d25f9e3a912d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34481,7 +33885,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("39e66d27-dd24-4ed6-8d43-d2806333b658"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("78b13e8d-1f15-4e5b-b806-cdb65a5d4ef8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34490,7 +33893,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("33a3a046-b8e0-4748-b576-4b079642c78d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("286c688d-732d-4403-8a10-b1cf00f57b8e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34499,7 +33901,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("83bcac25-f1b4-4da7-9744-daec347a56bb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("de54976a-9a81-49cc-9ac4-df43bd462986"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34508,7 +33909,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5bce1d55-ca49-48e7-9a8d-06734204b40b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0d2582e9-8c80-4d7c-a2d8-749873a557ac"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34517,7 +33917,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fc7c0988-6baa-43d7-beb6-bb3c71e171cb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("899b0b47-ccf5-4242-b167-4bbc48b5fe9d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34526,7 +33925,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bfb9d3c6-60bf-4d02-b283-31e0eaec72b5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3b9c98e1-bdf4-435f-a628-30cdfd371b63"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34535,7 +33933,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("59bd8cb2-097c-48d5-b048-288e61879877"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b9d237d9-9825-4553-89b0-154b886f86ec"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34544,7 +33941,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7e9175ad-eaaa-46f3-b4bc-b1dd758da563"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("07a2c50d-9e6f-4c2f-8e19-3f49d091b02a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34553,7 +33949,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("01568302-be5b-4347-9178-bd64314c1341"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("506cd0c4-a949-436c-b298-bc350ac2e050"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34562,7 +33957,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6b8eb292-ff3f-4340-9acc-7db1364e4cbb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6a936ecf-95af-4764-aed0-f3d2dc7adddd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34571,7 +33965,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e0e8802a-9db3-45b9-94c8-861729ed976b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3f1845d5-6920-4970-b168-9def1ae4005e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34580,7 +33973,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("891fcea8-d45a-4833-8b78-31d8d8dccb1f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("18304646-ef40-427f-ba81-e39b7f0b5a19"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34589,7 +33981,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d325bc3c-4b68-48d1-9f00-7d849337d07b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ffd906a3-d894-4bc3-b79a-72f0e82fce77"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34598,7 +33989,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d0eb978f-ad1a-49e4-9f30-6819c8d898a1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b457005d-f2c5-46de-9c5b-14e1743abe85"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34607,7 +33997,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0014a76d-7c4c-414b-b42b-169a171e96fe"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("784d2ba1-5f05-4c50-92db-4e9bc28430bb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34616,7 +34005,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("19fab03e-6dfa-4b1e-937c-302348f7aa46"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d49e05e7-802d-49be-adde-dac80f7a90e9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34625,7 +34013,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a31e3821-faae-4e58-892b-4a014c40037c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a0ce5a4b-0067-4f26-9706-b7514adcd91e"),
                             IsActive = true,
                             LicenseNumber = "WHR0965",
@@ -34634,7 +34021,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d06b2320-f22d-4d09-af8a-762f990ac78b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("599a9647-2a2e-4f8a-91f5-cda97a6349ec"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34643,7 +34029,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("af6e9700-7233-4bc0-9e63-44921a700e91"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3b46c150-b4b0-492b-9e32-c7a7f545e0c2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34652,7 +34037,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4fc4a560-6bfb-4a3b-88d2-069b41ecd257"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("828e1c85-93ea-4e83-818a-8c20eafda155"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34661,7 +34045,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("db239824-1097-4aa3-ae21-90ce20fd1078"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cfc198f8-c782-401b-b93f-aed4cfbf9717"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34670,7 +34053,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3e0ddda3-812e-443b-a3f5-eb4a592ae789"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1316ac97-5c66-4da7-bf37-9902bce24bc1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34679,7 +34061,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7fbdb90c-6a9a-4a4d-ba49-d4105d29231f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a38b5ac2-f3b3-4867-abc3-603344bd71cd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34688,7 +34069,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e94cee92-ce35-4060-9357-ecc9c8ef0a51"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("abc65167-8795-4093-a7c9-9e4a0c4b1f70"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34697,7 +34077,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ff9285d0-c9cf-4730-97e8-63748326b96c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("52086444-7fe7-4070-960d-69327b7caf8e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34706,7 +34085,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e8d3b4e0-aefc-40c6-b4e7-3667cf2e3476"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9dff65b0-8e5b-43c6-a243-25ee2a5e706b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34715,7 +34093,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7fe6dcdb-1584-43b3-addb-53c9e8783bf8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d8efb712-d98e-484e-b6da-4daa2a960f90"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34724,7 +34101,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2accd85e-49d0-46f4-b99e-8370bc8fc16a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c5eb6807-817f-4011-9d6b-62a6ad997ba0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34733,7 +34109,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c14e2775-dc91-46ec-955e-62bca2ce98a0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("011d872c-35d7-4317-b143-a7b0dfef0bee"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34742,7 +34117,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4cff0a6a-9c99-4f55-972b-2a7649eccb96"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5ca4e7fd-6b50-4b5e-834a-8ca78ba2bc14"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34751,7 +34125,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d9814d64-f56a-4545-89aa-43896fe43cea"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("893ae561-3c5d-4652-b2c9-6c99248262d7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34760,7 +34133,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7f134a54-5c03-42fc-ba0a-3cd62997e967"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2b1e7a70-1b54-4b9e-8eb5-228d23a4f686"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34769,7 +34141,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ff2f97e3-d1dd-4c5d-a20c-1d6abc7489ac"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c131cd96-9f7f-4bb1-960a-5ede42287241"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34778,7 +34149,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("18a68038-5740-4134-a5df-2d3574e58d51"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("aceacb23-5279-4c40-b087-b17eb82d02e9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34787,7 +34157,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5a2bebf5-60e9-459c-9dca-4072d9722de2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5397b29f-a9df-4cce-91da-03a104726362"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34796,7 +34165,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("48ab8081-cbc9-4a2f-836e-5bcd07b43813"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("10f776bd-bd00-43dc-bce3-142611a4316c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34805,7 +34173,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3e8ebf48-55d6-4782-a729-2d7443e4d705"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2476a4bf-141c-4544-982b-434c31127e07"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34814,7 +34181,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("12f3aba1-8761-4acc-89dd-f82b18c60c4a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ee37bb5a-2c0e-4648-b76e-e3add486c621"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34823,7 +34189,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fc0fe4a5-cc65-4f7c-929a-b5e346ac3228"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("377ee5fd-b1f0-4fa1-b554-90c53d2fc3a4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34832,7 +34197,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d12abf60-8578-4ea6-a8c2-fe1a189a1a15"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dcedc8b2-601e-4e49-a18d-26b97d26f5be"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34841,7 +34205,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("09d6f205-c4fe-4b82-b7ff-e22f8654b2e2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fca79d4d-77db-4f9c-9a00-aea576fe1218"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34850,7 +34213,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("031524a8-6532-4678-b98e-9b4566d6efe2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("852e3450-062b-45fc-a3be-16378c294831"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34859,7 +34221,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2d4533a3-451a-4731-8033-9bf22727a1bb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("526d468c-7f60-48d2-b491-eb3876afc321"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34868,7 +34229,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0e50347d-5cd7-4098-b45e-8ebe50c01008"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a2bc7d18-2880-4ce8-ba90-b094adaeb7f5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34877,7 +34237,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5e0b51c8-95d2-41df-af24-fd5d0e0815a3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f47f166d-670f-49ce-bcd4-592fcc1b5d91"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34886,7 +34245,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1a597b66-5790-466e-87e1-5194534ad55c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2ff452af-cb2a-41db-a54c-9e650f79c1b0"),
                             IsActive = true,
                             LicenseNumber = "GRT0631",
@@ -34895,7 +34253,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2b67ccd6-c648-4df3-8751-1bb23a813c34"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("163a0901-37b0-46dc-821f-0c9d22d880e9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34904,7 +34261,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9c90e50d-1ec1-40a5-bf79-b31e5d11f38e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b1ee5bb2-50db-45ea-8d6e-71c4fd4276a5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34913,7 +34269,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bbdae2e1-dffc-4567-aa9f-7375167a459f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0adeb239-44d7-4047-881a-eabd8242a38b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34922,7 +34277,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3656fdf2-3c08-4f52-b6a2-ccaa43b210d4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e7962602-aae7-4181-96dc-f7c6f68c9a14"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34931,7 +34285,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("06b23b09-3eeb-490a-956a-4cab8d06476c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("43855f5a-5989-4a74-95a7-df6231f5f3be"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34940,7 +34293,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1bc09b2d-03c0-42c6-8a13-50b3c9d4fa34"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1f71c9ff-d5cc-4bbd-8755-a5edcc191cf3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34949,7 +34301,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3a2999b6-e67d-4a6f-baa7-1a37d08bc356"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b2fb1d79-dda7-474d-9c62-8cc294798246"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34958,7 +34309,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("843f81de-e3fa-4ee8-87ad-eed8ad568b1a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("40cebd59-def1-472b-b7fe-084a6725394d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34967,7 +34317,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8c5a7462-72ee-49cd-a4d3-ff774776fea2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5ef5c7f1-ad70-4ad5-995b-e5a1bd471bfb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34976,7 +34325,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("435e0d6d-d743-43a9-a7a3-4953f3bbe56f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c4f4334f-04ca-4267-9c34-082474ed2ea3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34985,7 +34333,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("67916952-8c3a-4ba1-ac5c-b95c2b5dbebc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5dad6d81-5b62-4d45-a93a-be54372d2360"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -34994,7 +34341,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0221b11b-70db-4363-81e6-35b69aeb5593"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5eaa39e2-a395-4e07-92fa-47d8708a2e86"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35003,7 +34349,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3e228cd6-5d76-4e9b-bc16-6de3043a8c37"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("484af3d9-5ef7-4cfb-bd57-dd05da3d79f0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35012,7 +34357,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2fcd75ee-beba-4f12-bd9a-da515be08022"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ca24f4fa-c851-4daa-9761-a6d0e2f7f607"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35021,7 +34365,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("932fe322-d567-4b81-b26f-848d27d107fb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e4e7eb33-7dc5-4571-85b6-98ee1e817abd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35030,7 +34373,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ccbfb7d4-4b2f-4f3d-9430-23a3b04a89be"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("79630ddf-dcd5-43b4-93a6-29a28aea4df9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35039,7 +34381,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("674ff83c-d67b-4011-ae81-995f5346de4a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ae1f41f4-128c-4713-846d-f24a8ad0c171"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35048,7 +34389,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("858b422d-37c1-430b-a174-a6545d208fde"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1e15ce30-96b4-4732-a430-c4ab67758378"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35057,7 +34397,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ee2cff3f-b82b-4a72-a6aa-e521d5708eac"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d7add9b6-5911-42fc-acb3-2d45dda1a0a7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35066,7 +34405,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ca076d30-0528-49d7-ada7-4ada1596cb6d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d113bf0b-8c06-4db9-8cfe-8998f5700a09"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35075,7 +34413,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0f2b659f-3dd4-40ef-9a3c-de8b05c133d3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8aa65c00-cc20-4428-aaea-214c943f8114"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35084,7 +34421,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d4ed02d9-4b68-4509-915d-b546f8489196"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a8176082-1037-4f87-9b8c-b34be107d6e9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35093,7 +34429,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ef4bd02c-d5ae-444e-9db0-a3349543c4b0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0f38554a-28da-4a10-b6b4-1982d3198cbd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35102,7 +34437,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ac1ce1bc-c21b-4203-ace1-0bf74741dea5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("838ed159-f7ba-4b1b-962e-a59b66abfecf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35111,7 +34445,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1b3c31f3-f90f-4d1f-83ec-bc7cb081f58c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5099d6cb-8c1e-4739-b708-2fcd82e2c44e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35120,7 +34453,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e6d84bd1-6a5a-4b98-9637-0af3448deb07"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("42665431-9f43-4e4a-8455-cd9f25d5e8cc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35129,7 +34461,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9acd8122-8c8e-49e0-a44f-5b2af9945dec"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a04027db-eb29-43c4-9c24-6408abe65168"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35138,7 +34469,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("75ca10df-ba85-4103-ac1c-86e8cc6fb77b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("64049267-294e-45e4-841b-f86b997d2793"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35147,7 +34477,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c42d1395-8905-4137-a41c-2d0dc04bfbc5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("20e3e575-65ee-4220-a0fa-0cfe9ca9326d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35156,7 +34485,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bb226ec6-c9ca-4f49-9e49-408ea08addf6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9a47d6e7-d7c2-4c25-93ea-11fd4d48eaf0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35165,7 +34493,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a3f60ec7-9a5f-48d7-847a-54bd03f6e801"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1f7e40be-861e-4268-97ca-e9d037cbd446"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35174,7 +34501,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d80fb40b-3a6a-4ffc-bfc4-92be7a39dfa2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1226d737-112b-4d38-afa9-3f000cdfeece"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35183,7 +34509,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b7439cd8-652a-421b-b8cc-a7337d231fcc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("264819f9-18d5-4429-b4f4-aae17f4be8b0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35192,7 +34517,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0935e1a4-d3fa-4240-9026-13d3015b283b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d0594d74-aaa0-4850-a403-b740e4d12c59"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35201,7 +34525,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("41743749-156d-49e7-bd02-264c2c6eab00"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("18d64121-baa2-43a3-85f9-15895bdd58fc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35210,7 +34533,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("789c9d2d-9f73-4fa1-9ebb-8c7424e7a682"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c9030b13-163a-4ce3-a517-dff8de60a183"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35219,7 +34541,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0dbff886-54a9-450f-993f-539b9cad9481"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0326d839-4b65-46cb-8d09-13cf0e2e1f90"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35228,7 +34549,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a566177a-05a3-4a79-b5d6-95989f9e4c26"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4a8ddac5-8c14-4691-8062-0d88c92de541"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35237,7 +34557,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ad89d5e6-c475-400f-b1ce-ccc569a3c229"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1483c59b-5928-41a2-ab76-c28e25b5c28a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35246,7 +34565,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d9fd41f9-fbc8-411b-b7d3-90cc03542c79"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6c2fabef-849d-427c-997b-e6ad6f1ba270"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35255,7 +34573,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7da0e7f0-07a0-4b7e-9377-60f678734970"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6f8dddbf-bcc8-4249-afc7-c1d2d820cf71"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35264,7 +34581,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f4fb4d54-f34c-4801-88cd-287d2a9fb8fd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e764ceba-14c2-4b32-abd4-0788bd648364"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35273,7 +34589,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("3c3727b8-dce2-4c55-af30-89d24b1238a3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e6c85de9-c27f-4562-81a4-c1719bc48f28"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35282,7 +34597,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("dc396855-9268-4f80-9e88-8c276de93d0a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("56ae67dc-3154-45ae-a91b-310305bf156d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35291,7 +34605,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9efc53c7-9479-4836-82ee-f0a53dacff04"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4b124784-f183-4871-93ce-4dc908dcaa6a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35300,7 +34613,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d4ec1ac9-6f87-4b5f-b19b-b9d0332a32dc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9e7a417c-918a-4bb8-8fcd-886c2ccc7a6e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35309,7 +34621,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("56293ab6-23db-4cfa-9093-af5b18225703"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3a2bf568-de89-4b11-80aa-21ab984917fb"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35318,7 +34629,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("01bd3e65-189e-47fc-ad6e-bd38647ed03c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("aced262c-e886-412d-a68d-33583fb553d9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35327,7 +34637,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("02d0f5ba-91b6-47a5-bfe8-f01432785d88"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8a980fa2-0e79-40fa-9b7f-a8ba9104e5d9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35336,7 +34645,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("aedb892d-1234-433b-b34d-1508f2b345b5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("68e59327-0418-4806-a476-76418aaf392d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35345,7 +34653,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f45e5391-ee61-48e0-9397-23811ca49cfe"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ab8183c2-f715-4ba8-ba71-a1e87804b494"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35354,7 +34661,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("53dd0448-1579-417f-9dac-4c2bc2995659"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8a7bd92a-d33e-4b11-b300-49b86b05bfb0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35363,7 +34669,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("18f706ec-4425-422d-8357-4d8a5c968297"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a18acbfc-6922-4330-9556-983f274dd254"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35372,7 +34677,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("42ff4ea6-67de-431d-bb14-97587393da61"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c4bf2322-9e53-445a-aff2-5f3ce70ea435"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35381,7 +34685,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("411b7649-efd6-4eda-bfc5-af0756f678f5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("2eb8ebf8-a527-481a-856a-4a5191e4a606"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35390,7 +34693,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7bb01c9a-281f-461e-adf8-a380e949cef7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("05d46981-a1c8-4dae-b9e8-ac1243444476"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35399,7 +34701,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("64d26d7c-e0b6-4b79-8ac0-ea1c08447c90"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f879e6d7-2077-4d09-a968-1cf4efe451d5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35408,7 +34709,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e6b1f150-39bb-4814-a4e6-6be7f060cd27"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("99c292ef-cd8f-433a-a85c-3bc06f524f6e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35417,7 +34717,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2d05f2b4-b6d0-4877-a58d-14cde40e99d4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("d2a83057-3221-4c7b-8abc-2d6b54f3f984"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35426,7 +34725,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6b2dac04-f44b-4a71-b640-148bae70c211"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("8b117d8b-f893-4f1c-b02f-56699861f7f7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35435,7 +34733,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ecc50522-1b67-4534-a967-e63db5909e8f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("459f4962-bfe2-4189-975d-afbe230c8a8c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35444,7 +34741,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5674c992-cbbf-44bd-afb6-d04c90e3a223"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cdec08cb-90b8-4122-b2e9-537844598338"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35453,7 +34749,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fbe1b01b-48c7-4a06-878e-dfe05c228d93"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("981330ed-85db-419f-9fd1-667bb8c7777f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35462,7 +34757,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("88f7e3af-0464-45e6-87dc-1ed79be2826c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3bf16ad1-11ee-429d-9f87-c3780ed06160"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35471,7 +34765,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("af5d6e0c-7cb0-4b12-ad70-bb762412d06d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ea534973-8899-4a8c-851b-42cde00f6a67"),
                             IsActive = true,
                             LicenseNumber = "GR 806 R",
@@ -35480,7 +34773,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("aa2f813e-4bfc-40eb-9f54-487e3316866b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("64ed9b88-8d2b-4591-9eda-170c6693fdc0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35489,7 +34781,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cfdff1c9-077d-48df-b7d5-520fdc1b2f66"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("63b8ef1f-3b6c-4787-8f15-2f647a60640a"),
                             IsActive = true,
                             LicenseNumber = "IKC A42289",
@@ -35498,7 +34789,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("67271213-a4a7-4b40-ad39-768187c5f481"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ef25dd91-7fe4-4dae-b0e7-7bcfd35e2425"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35507,7 +34797,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("52d98741-6e56-4128-afd8-ffea157ecdae"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0503ebb2-13f2-4244-8135-202fbc01b38b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35516,7 +34805,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9890a84d-6dfc-41e4-bee8-3df0cdb9bde1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("dd340f22-8618-480c-9285-685424e56c19"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35525,7 +34813,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("430fc835-faf8-416b-bd0c-4b510b78d585"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("efbd8eca-c91b-4183-9215-ca5613e983a7"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35534,7 +34821,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("f447b635-b8b2-47ea-8e54-dfacb26a42d1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0d7463d9-19d3-4751-a47c-c343700b7df0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35543,7 +34829,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("aec59cd3-765b-43a3-a7e0-eda481ff8bb9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a36e25f1-c2bd-4371-b541-88611bb63bce"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35552,7 +34837,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("89811894-6e7a-4651-a898-cacb778e3fab"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("949d8536-0a27-4171-a662-4c97066ddcb9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35561,7 +34845,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0eb5fb7e-2937-4831-a944-704521c9d07d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("69597e07-33d8-4446-9964-43ae09c7e78d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35570,7 +34853,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7ad034a9-3fa0-4983-b988-f019500ec66a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a54a940e-bb58-446b-bcbc-514d091ac643"),
                             IsActive = true,
                             LicenseNumber = "A03487",
@@ -35579,7 +34861,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c0b31c70-af36-454b-88cc-98e4ae4af34f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("51917c60-f568-49c3-9365-1a6f50983b2d"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35588,7 +34869,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("28c80289-03bb-4c55-9fdd-5dd43a82345e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("af52840d-15e4-44c2-b26e-3d0e09d9cd27"),
                             IsActive = true,
                             LicenseNumber = "IKCA72614",
@@ -35597,7 +34877,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("947a3907-80f9-47d5-8105-65c329d50f5b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("edf2d4ad-6e2c-4390-bdb2-20e2aa8f8eb6"),
                             IsActive = true,
                             LicenseNumber = "9200646",
@@ -35606,7 +34885,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c8e54f4c-7c16-4a85-8fc8-1c5c8ecbd6e4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3d4043e8-f69b-4ec3-990c-8284da3a7304"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35615,7 +34893,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("385020b5-68fd-46f8-bdc7-8572f2d5bc21"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("aed8a849-149c-474e-b19b-bdd1e36120eb"),
                             IsActive = true,
                             LicenseNumber = "G 8311",
@@ -35624,7 +34901,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e637ed24-a22e-4c84-87f2-017c3a01a036"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("32353038-94e4-4271-8806-6c6fdd9f4ed8"),
                             IsActive = true,
                             LicenseNumber = "G 8215",
@@ -35633,7 +34909,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("79fdd639-5505-4f25-b527-c07c49eef810"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b40aa816-9028-4330-8214-08da11e5293f"),
                             IsActive = true,
                             LicenseNumber = "G 8323",
@@ -35642,7 +34917,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1163072d-3f2a-4b8f-8b84-5b9908cb11e7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("13d53982-2a96-45c7-8752-bea4b3b3aac1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35651,7 +34925,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("87db246b-6144-41c4-8088-271d207d3585"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ae8a0121-c626-422e-8eba-49b876f26af0"),
                             IsActive = true,
                             LicenseNumber = "GR 805 T",
@@ -35660,7 +34933,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("648e1947-fa33-4ca1-bfbf-fd770d160d0c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6b30c129-6c88-4832-b918-796283a14bb1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35669,7 +34941,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0f8ffd8b-7d15-4d8d-b264-df5104dbaca5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("eb79b804-7a08-46e9-beb2-9de097e6f368"),
                             IsActive = true,
                             LicenseNumber = "G 8406",
@@ -35678,7 +34949,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("413a0688-4ad9-4177-81aa-66b43dac65f2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f7230109-6165-40b3-a3f5-a0fb5bce7aef"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35687,7 +34957,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a2cbe3c9-58c2-4199-9df6-1f606f08f4cc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("74db332f-8ef3-47a4-81ae-0f65e3a4404e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35696,7 +34965,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("60b3789c-fa6c-4973-a6f8-31c7df769b74"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3fffdbc3-663c-41aa-91ed-3dfca17ad1fc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35705,7 +34973,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("85b914d8-3cf5-4798-90bd-ba0736826671"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6dee4ace-4492-46d7-8a3a-8ef392d896fe"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35714,7 +34981,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1f07b6a6-a416-4f92-9829-9eac4482e298"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("abb5275b-865d-4278-ba8e-09377de7a835"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35723,7 +34989,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("109a7781-2d10-4c8f-a505-5066466ac327"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9e0aab2a-09a4-44b7-bb6c-b3372eefcaa2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35732,7 +34997,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a77037f9-e276-490a-9ca3-a7807a9dcdd5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0629eb6b-4e6f-4606-a5aa-25ff6de32eaf"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35741,7 +35005,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("804fc4d4-9858-48c5-99d2-3068864683f3"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5030fd75-0c07-4dcc-9b78-fbef8b28cf44"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35750,7 +35013,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e9963b1f-f047-43da-a891-d58c146ebb25"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bbac4a9c-6e87-4230-aee9-cba3b4a400e3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35759,7 +35021,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9f5dae88-1e78-425e-a7ba-7f1fbdaa1cc1"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fdf9d6d2-5094-4432-819b-bf811ac8628b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35768,7 +35029,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("801acc39-da39-4c02-9652-9629b054e676"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ea415ad3-2e85-4b6e-b45f-945bb68a8142"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35777,7 +35037,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4cf848af-f0da-47d2-aff0-c5d5b397878e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("145e7a3e-3d0f-4777-8e2b-1fac42a070b5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35786,7 +35045,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e24ce4aa-dc52-427a-8067-6db706422ad9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("19f7cd7a-4314-4144-ad71-81724d775c7a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35795,7 +35053,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("843da3be-47b0-4990-bda7-31a60f740a2d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c12803a0-d95a-4e6c-9dc2-1e2e25ccf015"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35804,7 +35061,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bf88b239-c60e-4f2c-bc3a-1ec95c39e4f9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e705c2c8-bafc-4da8-960b-e05dd0b3b22c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35813,7 +35069,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("06c1ff6e-26b7-4ff5-9579-788368124e1a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("75caaff9-e50f-4f12-884a-17448043bf93"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35822,7 +35077,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("53b266e7-aa82-46d4-b449-8e1b8a4f857e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("52c15276-0f3c-4fca-bdd9-c007799b2bb8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35831,7 +35085,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7b70d686-0205-4fe8-bdf1-5087cc62a7d4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("3e5786b8-e9c3-4372-b378-f1c68f8a2d11"),
                             IsActive = true,
                             LicenseNumber = "730R",
@@ -35840,7 +35093,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1b8c8d2b-af9c-4feb-9398-2384ab682932"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4e9a6523-d6e6-40e3-b21e-b03cdfb61cd1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35849,7 +35101,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("6a655f53-1a80-4ead-9d8d-604c8a1aa240"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f91b7ba7-3d35-41ba-8abc-a69d22b6e858"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35858,7 +35109,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5eae5d7d-6059-4250-92cd-361406d66d8a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0fef2efc-7aef-45d4-8a8c-6d168e36ed4a"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35867,7 +35117,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("049cf934-ca2e-456f-98e5-52ec22535363"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("66ad3787-5ee8-43bc-9faa-54235ee32287"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35876,7 +35125,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cc20c287-b741-44de-8f97-4f6c41675b45"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("1ce408a1-e97b-4116-891a-27324db5b0d2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35885,7 +35133,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("974a6e90-ecf2-4534-b5d1-4bd3de504007"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bb1105f1-4b6c-4731-b34c-728901beacdc"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35894,7 +35141,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b2482949-b83a-4067-92f0-da141565c70b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("6b678663-0cc3-4db1-a308-b1c97f0adc95"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35903,7 +35149,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ddcf4b9e-c89d-4190-a47a-a85a82bb375d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e5ddb88a-839e-4d63-abbb-be23db90eb78"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35912,7 +35157,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1566edf8-12e8-4e79-9178-585ded099b1e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("249cd0e6-6a89-4073-8121-ea94caaf32d9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35921,7 +35165,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c5e51a7a-1e2e-4bd5-98b2-00dcc8e07e9e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bb942c64-ee95-40e9-8702-2c4a9b46dc86"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35930,7 +35173,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ffec1dcf-199a-4040-b0fe-f08b211db576"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ba2805b1-4d6b-4337-9ca8-27a772617d26"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35939,7 +35181,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0d29180b-be5e-48e3-a540-cd2281b9222d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e03a1cc2-fcd9-4b83-a439-42c1470acad5"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35948,7 +35189,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d7e21ad8-75a5-401c-a60b-b2ddd2cf8d1e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("da7d4439-666f-4382-9cbd-d8291e2074f4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35957,7 +35197,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b958d63b-a29d-46e8-a024-61b9ee1f10fe"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("e099beec-45ee-4d2b-ba4b-61c1717bac1c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35966,7 +35205,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0f02db58-0518-4261-975a-1d8ccc6fdccd"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("caeeb667-5342-4333-86cb-c017740b8493"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35975,7 +35213,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cabd8c33-c18c-4024-b84e-0dafb842b357"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a9b9507f-a00a-429e-b906-0515d9df84cd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35984,7 +35221,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("48b31bcb-b03d-4ec9-b236-37a111da3ca2"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("704270a8-e17e-4270-bc34-cb832df8a982"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -35993,7 +35229,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1765fe81-ee0c-429c-8025-4479efa35f64"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("130a45e4-7af8-43be-b64c-6aa980f4b5bd"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36002,7 +35237,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("0638be95-caca-4ffa-a618-41b1dfaa5dae"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("afb9086b-407a-48db-a6f0-ba6be1b656e0"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36011,7 +35245,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("017f8470-0ae9-469d-8e72-978a330cbd83"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("0204a862-3c08-4497-bebd-bdbc87c85ec1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36020,7 +35253,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8385f9b0-ea8a-4645-a889-b497a0376ef6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("00cee974-6ba6-438c-946d-4fa04f179ca9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36029,7 +35261,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a34c1e81-479e-49c3-9cb3-847ff1fa21f9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("cdb3e39e-be24-4d6d-8c17-3f886e163508"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36038,7 +35269,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("4d8d6c79-ad9e-43f1-a844-1a81f6f3adf0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bf89e821-6c85-466d-817e-be5c830ca77b"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36047,7 +35277,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2b7a20c3-f114-484c-aef2-c7ac178acb30"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5dc85a7a-3e0e-453a-808e-61f949661957"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36056,7 +35285,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("afe1843a-f251-4cdb-8d75-d0e82fdd9c77"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("510e6ea6-0c0f-4ed9-b7a8-866dd423bc78"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36065,7 +35293,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("172998ed-66c3-4c98-ab3c-24466daf457b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c67d5089-2a4e-4563-9809-4c18e03278f1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36074,7 +35301,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("d8ba3fbc-dcfc-4c0c-a707-63c3c8f092e5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("17d191d2-3a0a-41ec-844c-ee96428bb617"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36083,7 +35309,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("8b19326c-3b69-43ec-bfd0-7280dc709f6a"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b2f18cd7-d8e3-4419-9187-ceaffd1d8c9f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36092,7 +35317,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("9b58fb5f-07d2-4201-b78d-b6a0a21a5f86"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("bcf2cd9d-0c38-4d0f-8928-ae0b36ebe2ea"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36101,7 +35325,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("815933f6-7398-4067-9cfc-a0341417d441"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("351c2142-2c31-4923-82ba-d54fa508ead2"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36110,7 +35333,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("51cacf4d-dab2-4723-8ccd-3e0c3975a48f"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fa5bcc2d-828c-4126-ae38-c3b87bb46c0f"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36119,7 +35341,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("35abfb07-263a-4a66-9804-832815c7aef7"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("b1829a12-8703-443e-b226-b36764ff4f10"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36128,7 +35349,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("1821a697-20b8-455a-a2ed-c678a9481f3c"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9fd19ef1-e9d1-4122-ac58-594858351be1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36137,7 +35357,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("68beb66e-e784-41bd-a672-f445780988c5"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("70aa8f57-8e52-4b21-b9b2-68c058d829f9"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36146,7 +35365,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("87456b1f-3322-4951-81bf-718b3dbaacbc"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c8d4d987-25d0-46cb-9e8e-0c512bbd5c0e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36155,7 +35373,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("fdd7c288-e709-4459-a0a5-c08fcdeb3208"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5775945b-cb4d-4469-b567-7c6813586721"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36164,7 +35381,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7145b52e-7ede-4e80-b62b-5ed930efef74"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("a6422093-c606-40b8-87c5-c471fee80c99"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36173,7 +35389,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("46c13516-b5cd-4761-9186-e2de9b9683a9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("86927e80-97d5-4779-96f9-8403d1e782ad"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36182,7 +35397,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a368883c-93c6-4196-bd38-707c3624bce8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ec9884eb-7f89-4cdc-9c33-d2630f5f12a8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36191,7 +35405,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a4a5b337-823e-4a12-9b2b-83db8e9812f0"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("9cfbb711-de98-421b-9f69-165e564453c8"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36200,7 +35413,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ee685091-17b9-4b9a-9e6a-5753ba47d59b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("78907ebf-456f-4953-9334-428ba0a51cf4"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36209,7 +35421,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("ecc46353-d86e-4a4e-ad21-acffe8eb55aa"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c8d59b36-edfd-4b53-aaaa-954069b63e6c"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36218,7 +35429,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("95fe39df-cc1c-4143-842f-4cc250a4af9d"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("53764c02-4d7d-44ea-89e4-0a36e104ff53"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36227,7 +35437,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("b533af72-859a-4492-9331-eedc2450fec6"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("fd344e91-99cc-4c6b-8bf2-ebc6628210d3"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36236,7 +35445,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("c70a29a6-00fa-4399-ae62-b5337840a459"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("521b93e4-01e5-4a2c-9ee3-74853fc61d84"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36245,7 +35453,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("5fe787f6-2947-4803-ae45-a652b4594dfb"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("5ed43167-46c9-4984-8f3a-6cb271cb8a37"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36254,7 +35461,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("7cd12d44-98f1-4144-853e-4618615e3b71"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f2b114cd-abdd-44bc-b788-ab9da2faeb60"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36263,7 +35469,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("e5b04274-4444-41b7-bf4d-ce661789d97e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("10bb404c-1754-4ff8-aaf0-624e6cdc6983"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36272,7 +35477,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bf249496-65a8-4a8c-be74-275c56c1670b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f20f368e-86e2-43e7-b2b9-1063a6d3c625"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36281,7 +35485,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("cd61a090-40cd-4334-8470-c573c5a8777b"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ac13ca28-6cd4-4654-915a-e2ebf8308bef"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36290,7 +35493,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("2785edb6-8ddc-4e57-8114-d11687a1ea8e"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("f9491fca-7311-417e-a271-8a85a377d38e"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36299,7 +35501,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("615ddd04-0c3c-45aa-8711-8d3d070a3ab4"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("ffeb8764-401a-43d0-bf4d-1be7730837d1"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36308,7 +35509,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("bb6dc276-789f-47c6-b3c1-6a1b8c6af2ab"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("4c7a17bc-6cdb-4c83-83d4-7221b18180da"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36317,7 +35517,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("057aa677-a835-4ac4-b61f-81622ba4f5a9"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("64605b15-4eab-4544-b4fd-63251b5d90ad"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -36326,7 +35525,6 @@ namespace HylianRIS_API.Migrations
                         new
                         {
                             ID = new Guid("a4fcd7ba-a7f5-4759-a95e-5af4a967fea8"),
-                            CompetitionID = new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"),
                             DogID = new Guid("c635bb79-bd11-42eb-b4ff-6c0de5c3ad96"),
                             IsActive = true,
                             LicenseNumber = "UNKNOWN",
@@ -59095,9 +58293,7 @@ namespace HylianRIS_API.Migrations
                 {
                     b.HasOne("Hylian.RIS.API.Domain.Address", "Address")
                         .WithMany()
-                        .HasForeignKey("AddressID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AddressID");
 
                     b.Navigation("Address");
                 });
@@ -59403,12 +58599,6 @@ namespace HylianRIS_API.Migrations
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.RaceLicense", b =>
                 {
-                    b.HasOne("Hylian.RIS.API.Domain.RaceCompetition", "Competition")
-                        .WithMany("Licenses")
-                        .HasForeignKey("CompetitionID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Hylian.RIS.API.Domain.Dog", "Dog")
                         .WithMany("Licenses")
                         .HasForeignKey("DogID")
@@ -59421,7 +58611,9 @@ namespace HylianRIS_API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Competition");
+                    b.HasOne("Hylian.RIS.API.Domain.RaceCompetition", null)
+                        .WithMany("Licenses")
+                        .HasForeignKey("RaceCompetitionID");
 
                     b.Navigation("Dog");
 

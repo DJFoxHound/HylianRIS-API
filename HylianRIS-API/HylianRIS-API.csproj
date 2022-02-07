@@ -25,4 +25,13 @@
     <ProjectReference Include="..\Hylian.RIS.API.Repository\Hylian.RIS.API.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Migrations\CreateIsSimilarFunctions.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Migrations\DropIsSimilarFunctions.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

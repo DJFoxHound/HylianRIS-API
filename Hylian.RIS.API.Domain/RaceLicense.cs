@@ -12,8 +12,6 @@ namespace Hylian.RIS.API.Domain
         [Required]
         public Guid RaceClassID { get; set; }
         [Required]
-        public Guid CompetitionID { get; set; }
-        [Required]
         public string LicenseNumber { get; set; }
         [Required]
         [DefaultValue(true)]
@@ -21,6 +19,5 @@ namespace Hylian.RIS.API.Domain
 
         public virtual Dog Dog { get; set; }
         public virtual RaceClass RaceClass { get; set; }
-        public virtual RaceCompetition Competition { get; set; }
     }
 }
