@@ -10,7 +10,7 @@ namespace HylianRIS_API.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            var dirBase = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,@"Migrations");
+            var dirBase = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Migrations");
             migrationBuilder.Sql(File.ReadAllText(Path.Combine(dirBase, @"CreateIsSimilarFunctions.sql")));
         }
 

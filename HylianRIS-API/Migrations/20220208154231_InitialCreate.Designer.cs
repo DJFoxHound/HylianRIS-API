@@ -13,8 +13,8 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220207222607_CreateIsSimilarFunctions")]
-    partial class CreateIsSimilarFunctions
+    [Migration("20220208154231_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -676,6 +676,9 @@ namespace HylianRIS_API.Migrations
 
                     b.Property<Guid>("OrganisationID")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("RegistrationCloses")
+                        .HasColumnType("datetime2");
 
                     b.Property<Guid>("TrackID")
                         .HasColumnType("uniqueidentifier");

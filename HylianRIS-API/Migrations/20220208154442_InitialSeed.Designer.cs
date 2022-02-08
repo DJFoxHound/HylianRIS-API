@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220207223047_InitialSeed")]
+    [Migration("20220208154442_InitialSeed")]
     partial class InitialSeed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28892,6 +28892,9 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("OrganisationID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime>("RegistrationCloses")
+                        .HasColumnType("datetime2");
+
                     b.Property<Guid>("TrackID")
                         .HasColumnType("uniqueidentifier");
 
@@ -28918,6 +28921,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2018, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"),
+                            RegistrationCloses = new DateTime(2018, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 1\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 1\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 1\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 1\"}]"
                         },
@@ -28928,6 +28932,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2018, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"),
+                            RegistrationCloses = new DateTime(2018, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 2\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 2\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 2\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 2\"}]"
                         },
@@ -28938,6 +28943,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2018, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"),
+                            RegistrationCloses = new DateTime(2018, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 3\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 3\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 3\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 3\"}]"
                         },
@@ -28948,6 +28954,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2018, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2018, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Beringen Grand Prix\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs van Beringen\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix de Beringen\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis von Beringen\"}]"
                         },
@@ -28958,6 +28965,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2019, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2019, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Spring Price 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Lenteprijs 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Prix de printemps 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Frühlingspreis 2019\"}]"
                         },
@@ -28968,6 +28976,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2019, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2019, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]"
                         },
@@ -28978,6 +28987,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2019, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2019, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]"
                         },
@@ -28988,6 +28998,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2019, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2019, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Belgian Cup 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Beker van België 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Coupe de Belgique 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Belgischer Pokal 2019\"}]"
                         },
@@ -28998,6 +29009,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2019, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2019, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]"
                         },
@@ -29008,6 +29020,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2019, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2019, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Club championship 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Clubkampioenschap 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Championnat de club 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Vereinsmeisterschaft 2019\"}]"
                         },
@@ -29018,6 +29031,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Golden Hare 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gouden Haas 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Lièvre d'or 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Goldener Hase 2021\"}]"
                         },
@@ -29028,6 +29042,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2021, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2021, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"National Race 29 August 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren 29 Augustus 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale 29 août 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen 29 August 2021\"}]"
                         },
@@ -29038,6 +29053,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("b908d4fe-922d-47a7-a168-0b8427ef04f5"),
+                            RegistrationCloses = new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("82e73038-463a-4701-a041-17734c194ea1"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"FCI European Championships 2021 - Sunday\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Europese Kampioenschappen 2021 - zondag\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnats d'Europe 2021 - dimanche\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Europameisterschaften 2021 - Sonntag\"}]"
                         },
@@ -29048,6 +29064,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("dc088fb2-98ba-4725-91fe-eb44056ca577"),
+                            RegistrationCloses = new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"EC Revenge 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"EK Revanche 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"CE Revanche 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"EM Revanche 2021\"}]"
                         },
@@ -29058,6 +29075,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Club championship 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Clubkampioenschap 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Championnat de club 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Vereinsmeisterschaft 2021\"}]"
                         },
@@ -29068,6 +29086,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2021, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("5f3a3747-7252-4946-a7a3-d223dadb4d26"),
+                            RegistrationCloses = new DateTime(2021, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Grand Prix De Coevering 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs De Coevering 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix De Coevering 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis De Coevering 2021\"}]"
                         },
@@ -29078,6 +29097,7 @@ namespace HylianRIS_API.Migrations
                             Date = new DateTime(2021, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsOfficial = true,
                             OrganisationID = new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"),
+                            RegistrationCloses = new DateTime(2021, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TrackID = new Guid("d4665821-75f0-4266-adfd-373266d146e9"),
                             _Names = "[{\"LanguageCode\":\"en\",\"Text\":\"Beringen Grand Prix 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs van Beringen 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix de Beringen 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis von Beringen 2021\"}]"
                         });

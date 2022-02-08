@@ -514,6 +514,7 @@ namespace HylianRIS_API.Migrations
                 {
                     ID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    RegistrationCloses = table.Column<DateTime>(type: "datetime2", nullable: false),
                     OrganisationID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     TrackID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CompetitionID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),

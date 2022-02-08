@@ -10,6 +10,8 @@ namespace Hylian.RIS.API.Domain
         [Required]
         public DateTime Date { get; set; }
         [Required]
+        public DateTime RegistrationCloses { get; set; }
+        [Required]
         public Guid OrganisationID { get; set; }
         [Required]
         public Guid TrackID { get; set; }
