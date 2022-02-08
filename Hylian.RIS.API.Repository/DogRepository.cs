@@ -23,7 +23,7 @@ namespace Hylian.RIS.API.Repository
         }
         public IQueryable<Dog> GetBy(Breed breed = null, Sex sex = null, RaceClass raceClass = null, bool active = true)
         {
-            return db.Dogs.Where(x => breed == null ? x.BreedID == breed.ID : true && sex == null ? x.SexID == sex.ID : true && raceClass == null ? x.Licenses.Any(l => l.RaceClassID == raceClass.ID) : true && active ? x.Active == true : true);
+            return db.Dogs.Where(x => breed != null ? x.BreedID == breed.ID : true && sex != null ? x.SexID == sex.ID : true && raceClass != null ? x.Licenses.Any(l => l.RaceClassID == raceClass.ID) : true && active ? x.Active == true : true);
         }
         public IQueryable<Dog> GetByAccount(Account account, bool active = true)
         {
@@ -32,6 +32,10 @@ namespace Hylian.RIS.API.Repository
         public IQueryable<Dog> GetByOwner(Person owner, bool active = true)
         {
             return db.Dogs.Where(x => x.OwnerID == owner.ID && active ? x.Active == true : true);
+        }
+        public IQueryable<Dog> GetByEvent(RaceEvent raceEvent, bool active = true)
+        {
+            return db.Dogs.Where(x => x.Events.Any(e => e.ID == raceEvent.ID) && active ? x.Active == true : true);
         }
         public IQueryable<Dog> GetByID(Guid id)
         {

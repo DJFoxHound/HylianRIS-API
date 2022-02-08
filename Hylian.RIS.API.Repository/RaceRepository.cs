@@ -18,7 +18,7 @@ namespace Hylian.RIS.API.Repository
         #region Get
         public IQueryable<Race> GetAll(RaceCompetition competition = null)
         {
-            return db.Races.Where(x => competition == null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
+            return db.Races.Where(x => competition != null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
         }
         public IQueryable<Race> GetByEvent(RaceEvent raceEvent)
         {
@@ -26,15 +26,15 @@ namespace Hylian.RIS.API.Repository
         }
         public IQueryable<Race> GetByTrack(RaceTrack track, RaceCompetition competition = null)
         {
-            return db.Races.Where(x => x.Event.TrackID == track.ID && competition == null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
+            return db.Races.Where(x => x.Event.TrackID == track.ID && competition != null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
         }
         public IQueryable<Race> GetByAccount(Account account, RaceCompetition competition = null)
         {
-            return db.Races.Where(x => x.Runs.Any(r => r.Dog.Owner.AccountID == account.ID) && competition == null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
+            return db.Races.Where(x => x.Runs.Any(r => r.Dog.Owner.AccountID == account.ID) && competition != null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
         }
         public IQueryable<Race> GetByDog(Dog dog, RaceCompetition competition = null)
         {
-            return db.Races.Where(x => x.Runs.Any(r => r.DogID == dog.ID) && competition == null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
+            return db.Races.Where(x => x.Runs.Any(r => r.DogID == dog.ID) && competition != null ? x.Event.CompetitionID == competition.ID : true).OrderBy(x => x.Event.Date).ThenBy(x => x.EventID).ThenBy(x => x.OrderNr);
         }
         public IQueryable<Race> GetByID(Guid id)
         {

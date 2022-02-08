@@ -17,11 +17,11 @@ namespace Hylian.RIS.API.Repository
         #region Get
         public IQueryable<RaceClass> GetAll(RaceCompetition competition = null)
         {
-            return db.RaceClasses.Where(x => competition == null ? x.CompetitionID == competition.ID : true);
+            return db.RaceClasses.Where(x => competition != null ? x.CompetitionID == competition.ID : true);
         }
         public IQueryable<RaceClass> GetByBreed(Breed breed, RaceCompetition competition = null)
         {
-            return db.RaceClasses.Where(x => x.Breeds.Any(b => b.ID == breed.ID) && competition == null ? x.CompetitionID == competition.ID : true);
+            return db.RaceClasses.Where(x => x.Breeds.Any(b => b.ID == breed.ID) && competition != null ? x.CompetitionID == competition.ID : true);
         }
         public IQueryable<RaceClass> GetByID(Guid id)
         {

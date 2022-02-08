@@ -21,7 +21,7 @@ namespace Hylian.RIS.API.Repository
         }
         public IQueryable<Person> GetByCountry(Country country = null, bool active = true)
         {
-            return db.Persons.Where(x => country == null ? x.CountryID == country.ID : true && active ? !x.FirstName.StartsWith("Anonymised") : true);
+            return db.Persons.Where(x => country != null ? x.CountryID == country.ID : true && active ? !x.FirstName.StartsWith("Anonymised") : true);
         }
         public IQueryable<Person> GetByAccount(Account account, bool active = true)
         {

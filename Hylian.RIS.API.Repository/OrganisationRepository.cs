@@ -21,7 +21,7 @@ namespace Hylian.RIS.API.Repository
         }
         public IQueryable<Organisation> GetBy(RaceCompetition competition = null, Country country = null, bool active = true)
         {
-            return db.Organisations.Where(x => competition == null ? x.CompetitionID == competition.ID : true && country == null ? x.Address.CountryID == country.ID : true && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true);
+            return db.Organisations.Where(x => competition != null ? x.CompetitionID == competition.ID : true && country != null ? x.Address.CountryID == country.ID : true && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true);
         }
         public IQueryable<Organisation> GetByTrack(RaceTrack track, bool active = true)
         {

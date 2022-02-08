@@ -17,7 +17,7 @@ namespace Hylian.RIS.API.Repository
         #region Get
         public IQueryable<RaceCompetition> GetAll(bool? isProffesional = null)
         {
-            return db.Competitions.Where(x => isProffesional == null ? x.IsProfessional == isProffesional : true);
+            return db.Competitions.Where(x => isProffesional.HasValue ? x.IsProfessional == isProffesional : true);
         }
         public IQueryable<RaceCompetition> GetByID(Guid id)
         {

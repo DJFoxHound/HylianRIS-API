@@ -18,6 +18,7 @@ namespace Hylian.RIS.API.Repository.Interfaces
         IQueryable<Dog> GetByID(Guid id);
         IQueryable<Dog> GetByAccount(Account account, bool active = true);
         IQueryable<Dog> GetByOwner(Person owner, bool active = true);
+        IQueryable<Dog> GetByEvent(RaceEvent raceEvent, bool active = true);
         Task Save(Dog dog, bool saveChanges = true);
     }
 }

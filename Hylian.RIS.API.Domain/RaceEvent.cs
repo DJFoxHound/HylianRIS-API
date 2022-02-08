@@ -20,6 +20,7 @@ namespace Hylian.RIS.API.Domain
         [Required]
         [DefaultValue(false)]
         public bool IsOfficial { get; set; }
+        public DateTime? Deleted { get; set; }
 
         public virtual List<CrewMember>? Crew { get; set; }
         public virtual List<Dog>? Participants { get; set; }
