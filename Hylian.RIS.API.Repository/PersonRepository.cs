@@ -29,7 +29,7 @@ namespace Hylian.RIS.API.Repository
         }
         public IQueryable<Person> GetLikeAccount(Account account, bool active = true)
         {
-            return db.Persons.Where(x => !x.AccountID.HasValue && DbFunctions.IsSimilar(account.FirstName, x.FirstName) && DbFunctions.IsSimilar(account.LastName, x.LastName) && active ? !x.FirstName.StartsWith("Anonymised") : true);
+            return db.Persons.Where(x => !x.AccountID.HasValue && active ? !x.FirstName.StartsWith("Anonymised") : true && DbFunctions.IsSimilar(account.FirstName, x.FirstName) && DbFunctions.IsSimilar(account.LastName, x.LastName));
         }
         public IQueryable<Person> GetByDog(Dog dog, bool active = true)
         {
