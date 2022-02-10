@@ -13,7 +13,7 @@ using NetTopologySuite.Geometries;
 namespace HylianRIS_API.Migrations
 {
     [DbContext(typeof(DbaseContext))]
-    [Migration("20220208154231_InitialCreate")]
+    [Migration("20220210160800_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -671,6 +671,9 @@ namespace HylianRIS_API.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("Deleted")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsOfficial")
                         .HasColumnType("bit");
 
@@ -925,6 +928,9 @@ namespace HylianRIS_API.Migrations
 
                     b.Property<Guid>("SexID")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("TimeTicks")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("TrackID")
                         .HasColumnType("uniqueidentifier");

@@ -28884,6 +28884,9 @@ namespace HylianRIS_API.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("Deleted")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsOfficial")
                         .HasColumnType("bit");
 
@@ -52070,6 +52073,9 @@ namespace HylianRIS_API.Migrations
                     b.Property<Guid>("SexID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<long>("TimeTicks")
+                        .HasColumnType("bigint");
+
                     b.Property<Guid>("TrackID")
                         .HasColumnType("uniqueidentifier");
 
@@ -52087,6 +52093,560 @@ namespace HylianRIS_API.Migrations
                         .IsUnique();
 
                     b.ToTable("TrackRecords", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ID = new Guid("192cec60-802d-40e0-bcad-ab0529717369"),
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            Date = new DateTime(2018, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Novastar D'Amby Bambi",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 230900000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("b914a4c3-6e4d-43de-aac3-0a7b1c5b5541"),
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            Date = new DateTime(2013, 7, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Bono lachkari-khan",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 221300000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("be1a7f61-071d-4909-80e2-169f920785bc"),
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            Date = new DateTime(2015, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Chasing Lane's Funk de Luxe",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 177300000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("26f4a502-1b2a-4423-8c89-572962d53914"),
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            Date = new DateTime(2014, 5, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Darius z Osirisova Domu",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 175900000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("106b83eb-b757-40c8-ae09-5f00cd282771"),
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            Date = new DateTime(2012, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Oochigea's Jazzbleus",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 177600000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("5962dfef-8f86-4661-95cb-b9924422b300"),
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            Date = new DateTime(2018, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Gold Run's Mind Mischief",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 174400000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("fc88499e-b103-4074-8778-4056cbcd602f"),
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            Date = new DateTime(2016, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Kaida Y-Shirvan",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 197600000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("56e6a99e-212b-4336-a991-4691e554f6f3"),
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            Date = new DateTime(2016, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"),
+                            DogName = "Jirkan Y-Shirvan",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 240100000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("62c8a22b-8b44-4829-baf8-d36b857b572c"),
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            Date = new DateTime(2014, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Kavalinya",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 240700000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("4f7a622d-eafd-4b44-b6e6-a1f76a81711f"),
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            Date = new DateTime(2016, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Kassidy",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 241800000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("252c717f-f032-4009-b928-3c40985daa6d"),
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            Date = new DateTime(2012, 5, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Calova des Crocs de la Moliere",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 245400000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("1539b427-2b75-474b-aa51-7b59a19507ab"),
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            Date = new DateTime(2012, 5, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Eristoff de Prjevalsky",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 238800000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("929202d2-ac48-45f4-93d5-b13b0a413234"),
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            Date = new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Javana Ar Ven Uraz",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 257900000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("add4d229-7251-40b2-b548-3c06fc1d8e64"),
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            Date = new DateTime(1993, 11, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "My Wish Siempre el Major",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 200400000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("738d74f7-3abd-49c0-a145-87e07432103a"),
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            Date = new DateTime(1995, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Jackie's Excuse van de Paeltjesoord",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 200400000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("073d2642-f370-4d27-a1b6-bb65d9bcfaac"),
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            Date = new DateTime(2004, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Ectasy's Aragorn",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 200100000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("bf70d50e-8db7-4ac9-981a-ee02b684ad11"),
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            Date = new DateTime(2017, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Novastar D'Amby Bambi",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 268400000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("d28e61d4-3e2c-4335-88c3-9bca93990b30"),
+                            BreedID = new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"),
+                            Date = new DateTime(2013, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Bono lachkari-khan",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 277500000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("8f96e238-78f1-4fd6-a07e-c046b61601cc"),
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            Date = new DateTime(2018, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Fiefoerniek’s Fianna",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 279300000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("a7b9a480-70a7-435e-818f-6f2348629ed9"),
+                            BreedID = new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"),
+                            Date = new DateTime(2017, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Venatorius Nairoby ",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 273100000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("61c90d61-fcf1-4663-9371-ebfccd1eabbc"),
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            Date = new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Rani Y-Shirvan",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 236000000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("32693fa2-1e30-449f-bd48-191419681d7e"),
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            Date = new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Queshan Y-Shirvan",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 229100000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("6ce1f43e-84f4-4d8a-96db-5516ad74daa3"),
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            Date = new DateTime(2014, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Flying Dream",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 213800000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("ab252904-8d66-4223-9157-14f792f6f37b"),
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            Date = new DateTime(2014, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Darius z Osirisova Domu",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 210200000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("1985f9a9-63cc-4777-bb34-aee01bb02cad"),
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            Date = new DateTime(2015, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Wiggy Supersonic",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 210700000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("e57293cc-ce5c-4139-875f-3fde69c78e9d"),
+                            BreedID = new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"),
+                            Date = new DateTime(2017, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
+                            DogName = "Gold Run's Mind Mischief",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 208500000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("a73c3173-a311-4de1-8fa3-7b40565a855b"),
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            Date = new DateTime(2006, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Vaydah van de Bremmen",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 330300000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("624bee68-18f0-482d-8a1f-4514118bac9c"),
+                            BreedID = new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"),
+                            Date = new DateTime(2018, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Fury van de Bremmen",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 339700000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("28eee193-a727-4449-ab7e-1fc88a338486"),
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            Date = new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Bouressa Aula al Sahra",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 358600000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("becc906d-0934-405d-8d6c-97ae374ba14e"),
+                            BreedID = new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"),
+                            Date = new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Ibn Dally Sheik Harris al Sahara",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 343500000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("44d973c9-d80e-4e4a-843f-2434e40e1712"),
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            Date = new DateTime(1991, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Elsa de laïka des Tsars",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 329300000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("bcb7fdc5-a6db-4d2a-8b79-00b9bedd356e"),
+                            BreedID = new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"),
+                            Date = new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Volgai'as Noureev",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 344500000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("3a5d8a50-271e-46bd-82b3-eab68bc39de9"),
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            Date = new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Javana Ar Ven Uraz",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 357900000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("c8cf2c71-6f07-4176-b246-6a88bc6808fb"),
+                            BreedID = new Guid("d670c778-a372-455b-9570-05a1fc330023"),
+                            Date = new DateTime(1997, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Easy Runnez Tamianth",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 399000000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("0e060646-e782-45a5-b03e-ddcde5781ca1"),
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            Date = new DateTime(2003, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Pequina à la Cour du roi Boulou",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 315000000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("48a8819d-e42b-45a7-bcf6-fb47cdc25df9"),
+                            BreedID = new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"),
+                            Date = new DateTime(2005, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Bonito",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 309700000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("bd937f5a-8a13-44bf-846b-b9ea73463e40"),
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            Date = new DateTime(2004, 5, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Zen of the Quick Hunters",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 283200000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("856b9408-e9ca-483c-8fcd-c82451648255"),
+                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
+                            Date = new DateTime(1991, 9, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Moran's Beef",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 280500000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("ee55516f-975e-433f-91e5-9b11c31da4ef"),
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            Date = new DateTime(2018, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Illa-Berek Bakfis",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 315400000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("dedc4ad3-297b-4cba-b7e6-c6f01af2588d"),
+                            BreedID = new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"),
+                            Date = new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Ugy Arpadhazi",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 306300000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("39b37f34-45f2-4b4c-85e7-50545e76b81f"),
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            Date = new DateTime(1991, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Dimcha el Bachram",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 322500000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("1bd7dc44-49cb-489a-8e22-940ef4440628"),
+                            BreedID = new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"),
+                            Date = new DateTime(1995, 4, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Queshan Y-Shirvan",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 320900000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("146a5263-475e-478d-8b29-96bdf4a1de6d"),
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            Date = new DateTime(2018, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Insha Schuru-esch-Schams",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 331800000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("0cb7f91f-879b-4f3c-a8f3-0ee9fb188083"),
+                            BreedID = new Guid("453abb88-6912-42c2-9f77-90582d1d467f"),
+                            Date = new DateTime(2018, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Ganoosh Areen Ksar Ghilane",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 334000000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("fe9ca8ba-c331-45e4-ad88-0b8c617d1dcf"),
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            Date = new DateTime(1994, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Noortje",
+                            IsPreSystem = true,
+                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
+                            TimeTicks = 314000000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        },
+                        new
+                        {
+                            ID = new Guid("d6626a58-1d94-45c5-9d49-e87f522ac363"),
+                            BreedID = new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"),
+                            Date = new DateTime(1994, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DistanceID = new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"),
+                            DogName = "Petoetje",
+                            IsPreSystem = true,
+                            SexID = new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"),
+                            TimeTicks = 317200000L,
+                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
+                        });
                 });
 
             modelBuilder.Entity("Hylian.RIS.API.Domain.TrackSurface", b =>

@@ -23,6 +23,8 @@ namespace Hylian.RIS.API.Domain
         [Required]
         [DefaultValue(true)]
         public bool IsPreSystem { get; set; }
+        [Required]
+        public long TimeTicks { get; set; }
 
         public virtual Distance Distance { get; set; }
         public virtual Breed Breed { get; set; }

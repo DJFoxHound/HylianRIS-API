@@ -2342,33 +2342,33 @@ namespace HylianRIS_API.Migrations
 
             migrationBuilder.InsertData(
                 table: "Events",
-                columns: new[] { "ID", "CompetitionID", "Date", "IsOfficial", "OrganisationID", "RegistrationCloses", "TrackID", "Names" },
+                columns: new[] { "ID", "CompetitionID", "Date", "Deleted", "IsOfficial", "OrganisationID", "RegistrationCloses", "TrackID", "Names" },
                 values: new object[,]
                 {
-                    { new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Spring Price 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Lenteprijs 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Prix de printemps 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Frühlingspreis 2019\"}]" },
-                    { new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2018, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Beringen Grand Prix\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs van Beringen\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix de Beringen\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis von Beringen\"}]" },
-                    { new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"), new DateTime(2018, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 1\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 1\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 1\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 1\"}]" },
-                    { new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]" },
-                    { new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]" },
-                    { new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"), new DateTime(2018, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 2\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 2\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 2\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 2\"}]" },
-                    { new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"), new DateTime(2018, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 3\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 3\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 3\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 3\"}]" },
-                    { new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("5f3a3747-7252-4946-a7a3-d223dadb4d26"), new DateTime(2021, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31"), "[{\"LanguageCode\":\"en\",\"Text\":\"Grand Prix De Coevering 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs De Coevering 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix De Coevering 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis De Coevering 2021\"}]" }
+                    { new Guid("00ec3bbd-f33d-4c6f-8f06-18c9479b5f5c"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Spring Price 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Lenteprijs 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Prix de printemps 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Frühlingspreis 2019\"}]" },
+                    { new Guid("16ed7a91-bb0a-4659-b002-a7e99f76f311"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2018, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Beringen Grand Prix\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs van Beringen\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix de Beringen\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis von Beringen\"}]" },
+                    { new Guid("269b24f2-4bd9-4fa9-921e-e0470699401d"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"), new DateTime(2018, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 1\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 1\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 1\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 1\"}]" },
+                    { new Guid("31931c21-ef9d-4c37-99a6-3b483c1bdf92"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]" },
+                    { new Guid("33bff802-8d22-4fbe-b567-60d6bd1e591c"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]" },
+                    { new Guid("3d201bd1-b1c1-4277-be3e-75d3cfdf8076"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"), new DateTime(2018, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 2\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 2\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 2\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 2\"}]" },
+                    { new Guid("3ec846aa-e008-45fc-96c3-c8aea837b886"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2018, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("8c806bb5-d53f-4827-a82b-1cfa114eed32"), new DateTime(2018, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI World Championships 2018 - Day 3\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Wereldkampioenschappen 2018 - Dag 3\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnat du Monde 2018 - Jour 3\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Weltmeisterschaft 2018 - Tag 3\"}]" },
+                    { new Guid("587d3876-998f-4d22-9c71-6f44b41d0ff8"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("5f3a3747-7252-4946-a7a3-d223dadb4d26"), new DateTime(2021, 10, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("4f061980-a8b0-4dc5-8b04-b65e66174f31"), "[{\"LanguageCode\":\"en\",\"Text\":\"Grand Prix De Coevering 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs De Coevering 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix De Coevering 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis De Coevering 2021\"}]" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Events",
-                columns: new[] { "ID", "CompetitionID", "Date", "IsOfficial", "OrganisationID", "RegistrationCloses", "TrackID", "Names" },
+                columns: new[] { "ID", "CompetitionID", "Date", "Deleted", "IsOfficial", "OrganisationID", "RegistrationCloses", "TrackID", "Names" },
                 values: new object[,]
                 {
-                    { new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("dc088fb2-98ba-4725-91fe-eb44056ca577"), new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca"), "[{\"LanguageCode\":\"en\",\"Text\":\"EC Revenge 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"EK Revanche 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"CE Revanche 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"EM Revanche 2021\"}]" },
-                    { new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Beringen Grand Prix 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs van Beringen 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix de Beringen 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis von Beringen 2021\"}]" },
-                    { new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]" },
-                    { new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Club championship 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Clubkampioenschap 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Championnat de club 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Vereinsmeisterschaft 2019\"}]" },
-                    { new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race 29 August 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren 29 Augustus 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale 29 août 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen 29 August 2021\"}]" },
-                    { new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Golden Hare 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gouden Haas 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Lièvre d'or 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Goldener Hase 2021\"}]" },
-                    { new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Club championship 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Clubkampioenschap 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Championnat de club 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Vereinsmeisterschaft 2021\"}]" },
-                    { new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("b908d4fe-922d-47a7-a168-0b8427ef04f5"), new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("82e73038-463a-4701-a041-17734c194ea1"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI European Championships 2021 - Sunday\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Europese Kampioenschappen 2021 - zondag\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnats d'Europe 2021 - dimanche\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Europameisterschaften 2021 - Sonntag\"}]" },
-                    { new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Belgian Cup 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Beker van België 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Coupe de Belgique 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Belgischer Pokal 2019\"}]" }
+                    { new Guid("6399db2b-453d-49f9-8d65-e9c467827d8d"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("dc088fb2-98ba-4725-91fe-eb44056ca577"), new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca"), "[{\"LanguageCode\":\"en\",\"Text\":\"EC Revenge 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"EK Revanche 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"CE Revanche 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"EM Revanche 2021\"}]" },
+                    { new Guid("75b8d77b-c64c-424f-aaa1-912a7762ac49"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Beringen Grand Prix 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Grote Prijs van Beringen 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Grand Prix de Beringen 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Großer Preis von Beringen 2021\"}]" },
+                    { new Guid("7a0e1762-b599-4554-b218-d8ecfd7394fe"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen\"}]" },
+                    { new Guid("b7661dc0-9190-44e1-8a25-bf40558f230b"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Club championship 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Clubkampioenschap 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Championnat de club 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Vereinsmeisterschaft 2019\"}]" },
+                    { new Guid("c2bfbeee-59f7-4149-a3f4-20d3b1e73045"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"National Race 29 August 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Nationale Ren 29 Augustus 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Course nationale 29 août 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Nationales Rennen 29 August 2021\"}]" },
+                    { new Guid("d428b4f9-a219-4cdf-8830-2ebaf01e05ef"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Golden Hare 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Gouden Haas 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Lièvre d'or 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Goldener Hase 2021\"}]" },
+                    { new Guid("da14151f-ce03-4bf1-ae58-274c2805fbf8"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Club championship 2021\"},{\"LanguageCode\":\"nl\",\"Text\":\"Clubkampioenschap 2021\"},{\"LanguageCode\":\"fr\",\"Text\":\"Championnat de club 2021\"},{\"LanguageCode\":\"de\",\"Text\":\"Vereinsmeisterschaft 2021\"}]" },
+                    { new Guid("dafc3197-e127-40ce-80de-15eaa218545c"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("b908d4fe-922d-47a7-a168-0b8427ef04f5"), new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("82e73038-463a-4701-a041-17734c194ea1"), "[{\"LanguageCode\":\"en\",\"Text\":\"FCI European Championships 2021 - Sunday\"},{\"LanguageCode\":\"nl\",\"Text\":\"FCI Europese Kampioenschappen 2021 - zondag\"},{\"LanguageCode\":\"fr\",\"Text\":\"FCI Championnats d'Europe 2021 - dimanche\"},{\"LanguageCode\":\"de\",\"Text\":\"FCI Europameisterschaften 2021 - Sonntag\"}]" },
+                    { new Guid("e60e0787-c6c6-4189-8ace-83e292429414"), new Guid("64b11d35-97fc-4223-82da-23e09bec1bd6"), new DateTime(2019, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new DateTime(2019, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d4665821-75f0-4266-adfd-373266d146e9"), "[{\"LanguageCode\":\"en\",\"Text\":\"Belgian Cup 2019\"},{\"LanguageCode\":\"nl\",\"Text\":\"Beker van België 2019\"},{\"LanguageCode\":\"fr\",\"Text\":\"Coupe de Belgique 2019\"},{\"LanguageCode\":\"de\",\"Text\":\"Belgischer Pokal 2019\"}]" }
                 });
 
             migrationBuilder.InsertData(
@@ -3352,6 +3352,65 @@ namespace HylianRIS_API.Migrations
                     { new Guid("b908d4fe-922d-47a7-a168-0b8427ef04f5"), new Guid("82e73038-463a-4701-a041-17734c194ea1") },
                     { new Guid("dc088fb2-98ba-4725-91fe-eb44056ca577"), new Guid("21483dc9-22b7-46e1-88c2-870ef978b3ca") },
                     { new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "TrackRecords",
+                columns: new[] { "ID", "BreedID", "Date", "DistanceID", "DogName", "IsPreSystem", "RunID", "SexID", "TimeTicks", "TrackID" },
+                values: new object[,]
+                {
+                    { new Guid("073d2642-f370-4d27-a1b6-bb65d9bcfaac"), new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new DateTime(2004, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Ectasy's Aragorn", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 200100000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("0cb7f91f-879b-4f3c-a8f3-0ee9fb188083"), new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new DateTime(2018, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Ganoosh Areen Ksar Ghilane", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 334000000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("0e060646-e782-45a5-b03e-ddcde5781ca1"), new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new DateTime(2003, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Pequina à la Cour du roi Boulou", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 315000000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("106b83eb-b757-40c8-ae09-5f00cd282771"), new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new DateTime(2012, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Oochigea's Jazzbleus", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 177600000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("146a5263-475e-478d-8b29-96bdf4a1de6d"), new Guid("453abb88-6912-42c2-9f77-90582d1d467f"), new DateTime(2018, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Insha Schuru-esch-Schams", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 331800000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("1539b427-2b75-474b-aa51-7b59a19507ab"), new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new DateTime(2012, 5, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Eristoff de Prjevalsky", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 238800000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "TrackRecords",
+                columns: new[] { "ID", "BreedID", "Date", "DistanceID", "DogName", "IsPreSystem", "RunID", "SexID", "TimeTicks", "TrackID" },
+                values: new object[,]
+                {
+                    { new Guid("192cec60-802d-40e0-bcad-ab0529717369"), new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new DateTime(2018, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Novastar D'Amby Bambi", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 230900000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("1985f9a9-63cc-4777-bb34-aee01bb02cad"), new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new DateTime(2015, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Wiggy Supersonic", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 210700000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("1bd7dc44-49cb-489a-8e22-940ef4440628"), new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new DateTime(1995, 4, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Queshan Y-Shirvan", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 320900000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("252c717f-f032-4009-b928-3c40985daa6d"), new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new DateTime(2012, 5, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Calova des Crocs de la Moliere", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 245400000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("26f4a502-1b2a-4423-8c89-572962d53914"), new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new DateTime(2014, 5, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Darius z Osirisova Domu", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 175900000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("28eee193-a727-4449-ab7e-1fc88a338486"), new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Bouressa Aula al Sahra", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 358600000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("32693fa2-1e30-449f-bd48-191419681d7e"), new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Queshan Y-Shirvan", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 229100000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("39b37f34-45f2-4b4c-85e7-50545e76b81f"), new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new DateTime(1991, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Dimcha el Bachram", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 322500000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("3a5d8a50-271e-46bd-82b3-eab68bc39de9"), new Guid("d670c778-a372-455b-9570-05a1fc330023"), new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Javana Ar Ven Uraz", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 357900000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("44d973c9-d80e-4e4a-843f-2434e40e1712"), new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new DateTime(1991, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Elsa de laïka des Tsars", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 329300000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("48a8819d-e42b-45a7-bcf6-fb47cdc25df9"), new Guid("5e04bdaf-a785-456b-a18e-cc4922a1e776"), new DateTime(2005, 10, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Bonito", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 309700000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("4f7a622d-eafd-4b44-b6e6-a1f76a81711f"), new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new DateTime(2016, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Kassidy", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 241800000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("56e6a99e-212b-4336-a991-4691e554f6f3"), new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new DateTime(2016, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Jirkan Y-Shirvan", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 240100000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("5962dfef-8f86-4661-95cb-b9924422b300"), new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new DateTime(2018, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Gold Run's Mind Mischief", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 174400000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("61c90d61-fcf1-4663-9371-ebfccd1eabbc"), new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Rani Y-Shirvan", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 236000000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("624bee68-18f0-482d-8a1f-4514118bac9c"), new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new DateTime(2018, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Fury van de Bremmen", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 339700000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("62c8a22b-8b44-4829-baf8-d36b857b572c"), new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new DateTime(2014, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Kavalinya", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 240700000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("6ce1f43e-84f4-4d8a-96db-5516ad74daa3"), new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new DateTime(2014, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Flying Dream", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 213800000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("856b9408-e9ca-483c-8fcd-c82451648255"), new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new DateTime(1991, 9, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Moran's Beef", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 280500000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("8f96e238-78f1-4fd6-a07e-c046b61601cc"), new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new DateTime(2018, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Fiefoerniek’s Fianna", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 279300000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("929202d2-ac48-45f4-93d5-b13b0a413234"), new Guid("d670c778-a372-455b-9570-05a1fc330023"), new DateTime(1996, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Javana Ar Ven Uraz", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 257900000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("a73c3173-a311-4de1-8fa3-7b40565a855b"), new Guid("7f991e29-2e61-48e7-b97a-50f90a573cac"), new DateTime(2006, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Vaydah van de Bremmen", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 330300000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("a7b9a480-70a7-435e-818f-6f2348629ed9"), new Guid("b64afe74-5fc1-4d42-bb9c-f2fdd65e90a7"), new DateTime(2017, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Venatorius Nairoby ", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 273100000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("ab252904-8d66-4223-9157-14f792f6f37b"), new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new DateTime(2014, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Darius z Osirisova Domu", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 210200000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("add4d229-7251-40b2-b548-3c06fc1d8e64"), new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new DateTime(1993, 11, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "My Wish Siempre el Major", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 200400000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("b914a4c3-6e4d-43de-aac3-0a7b1c5b5541"), new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new DateTime(2013, 7, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Bono lachkari-khan", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 221300000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("bcb7fdc5-a6db-4d2a-8b79-00b9bedd356e"), new Guid("33bbe8c5-d286-4e45-91a0-0ec52cdea9c8"), new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Volgai'as Noureev", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 344500000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("bd937f5a-8a13-44bf-846b-b9ea73463e40"), new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"), new DateTime(2004, 5, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Zen of the Quick Hunters", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 283200000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("be1a7f61-071d-4909-80e2-169f920785bc"), new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new DateTime(2015, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Chasing Lane's Funk de Luxe", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 177300000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("becc906d-0934-405d-8d6c-97ae374ba14e"), new Guid("4e469cfa-b1f1-452a-b983-70a803aad06c"), new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Ibn Dally Sheik Harris al Sahara", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 343500000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("bf70d50e-8db7-4ac9-981a-ee02b684ad11"), new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new DateTime(2017, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Novastar D'Amby Bambi", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 268400000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("c8cf2c71-6f07-4176-b246-6a88bc6808fb"), new Guid("d670c778-a372-455b-9570-05a1fc330023"), new DateTime(1997, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Easy Runnez Tamianth", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 399000000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("d28e61d4-3e2c-4335-88c3-9bca93990b30"), new Guid("a52bcb82-9d9d-41a7-ad2d-f1b037e937a3"), new DateTime(2013, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Bono lachkari-khan", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 277500000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("d6626a58-1d94-45c5-9d49-e87f522ac363"), new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new DateTime(1994, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Petoetje", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 317200000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("dedc4ad3-297b-4cba-b7e6-c6f01af2588d"), new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new DateTime(1991, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Ugy Arpadhazi", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 306300000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("e57293cc-ce5c-4139-875f-3fde69c78e9d"), new Guid("2bb65b3a-0d1c-4d8e-aa2d-1648358df96c"), new DateTime(2017, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"), "Gold Run's Mind Mischief", true, null, new Guid("818ff154-7208-4f28-880e-19f48ccb94ad"), 208500000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("ee55516f-975e-433f-91e5-9b11c31da4ef"), new Guid("42ac8b3a-bbfb-4243-b104-d608efdcf7b4"), new DateTime(2018, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Illa-Berek Bakfis", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 315400000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("fc88499e-b103-4074-8778-4056cbcd602f"), new Guid("3a366646-a678-4706-a7eb-9eb1cc1b4961"), new DateTime(2016, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("440f210c-e1f0-4aa1-9ac8-71e5cdc6b214"), "Kaida Y-Shirvan", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 197600000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") },
+                    { new Guid("fe9ca8ba-c331-45e4-ad88-0b8c617d1dcf"), new Guid("c1d0390a-a688-498e-a1f1-782ed18b2787"), new DateTime(1994, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("aa13072d-7b03-4f77-baee-7db5b76aa524"), "Noortje", true, null, new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"), 314000000L, new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674") }
                 });
 
             migrationBuilder.InsertData(
@@ -22153,6 +22212,231 @@ namespace HylianRIS_API.Migrations
                 table: "TrackOrganisations",
                 keyColumns: new[] { "OrganisationID", "TrackID" },
                 keyValues: new object[] { new Guid("e6ef488f-c7d2-48a6-92ea-c7cd0353cb3f"), new Guid("d4665821-75f0-4266-adfd-373266d146e9") });
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("073d2642-f370-4d27-a1b6-bb65d9bcfaac"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("0cb7f91f-879b-4f3c-a8f3-0ee9fb188083"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("0e060646-e782-45a5-b03e-ddcde5781ca1"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("106b83eb-b757-40c8-ae09-5f00cd282771"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("146a5263-475e-478d-8b29-96bdf4a1de6d"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("1539b427-2b75-474b-aa51-7b59a19507ab"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("192cec60-802d-40e0-bcad-ab0529717369"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("1985f9a9-63cc-4777-bb34-aee01bb02cad"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("1bd7dc44-49cb-489a-8e22-940ef4440628"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("252c717f-f032-4009-b928-3c40985daa6d"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("26f4a502-1b2a-4423-8c89-572962d53914"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("28eee193-a727-4449-ab7e-1fc88a338486"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("32693fa2-1e30-449f-bd48-191419681d7e"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("39b37f34-45f2-4b4c-85e7-50545e76b81f"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("3a5d8a50-271e-46bd-82b3-eab68bc39de9"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("44d973c9-d80e-4e4a-843f-2434e40e1712"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("48a8819d-e42b-45a7-bcf6-fb47cdc25df9"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("4f7a622d-eafd-4b44-b6e6-a1f76a81711f"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("56e6a99e-212b-4336-a991-4691e554f6f3"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("5962dfef-8f86-4661-95cb-b9924422b300"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("61c90d61-fcf1-4663-9371-ebfccd1eabbc"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("624bee68-18f0-482d-8a1f-4514118bac9c"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("62c8a22b-8b44-4829-baf8-d36b857b572c"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("6ce1f43e-84f4-4d8a-96db-5516ad74daa3"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("856b9408-e9ca-483c-8fcd-c82451648255"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("8f96e238-78f1-4fd6-a07e-c046b61601cc"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("929202d2-ac48-45f4-93d5-b13b0a413234"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("a73c3173-a311-4de1-8fa3-7b40565a855b"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("a7b9a480-70a7-435e-818f-6f2348629ed9"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("ab252904-8d66-4223-9157-14f792f6f37b"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("add4d229-7251-40b2-b548-3c06fc1d8e64"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("b914a4c3-6e4d-43de-aac3-0a7b1c5b5541"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("bcb7fdc5-a6db-4d2a-8b79-00b9bedd356e"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("bd937f5a-8a13-44bf-846b-b9ea73463e40"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("be1a7f61-071d-4909-80e2-169f920785bc"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("becc906d-0934-405d-8d6c-97ae374ba14e"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("bf70d50e-8db7-4ac9-981a-ee02b684ad11"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("c8cf2c71-6f07-4176-b246-6a88bc6808fb"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("d28e61d4-3e2c-4335-88c3-9bca93990b30"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("d6626a58-1d94-45c5-9d49-e87f522ac363"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("dedc4ad3-297b-4cba-b7e6-c6f01af2588d"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("e57293cc-ce5c-4139-875f-3fde69c78e9d"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("ee55516f-975e-433f-91e5-9b11c31da4ef"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("fc88499e-b103-4074-8778-4056cbcd602f"));
+
+            migrationBuilder.DeleteData(
+                table: "TrackRecords",
+                keyColumn: "ID",
+                keyValue: new Guid("fe9ca8ba-c331-45e4-ad88-0b8c617d1dcf"));
 
             migrationBuilder.DeleteData(
                 table: "Breeds",

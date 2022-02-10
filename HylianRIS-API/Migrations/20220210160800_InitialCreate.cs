@@ -519,6 +519,7 @@ namespace HylianRIS_API.Migrations
                     TrackID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CompetitionID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IsOfficial = table.Column<bool>(type: "bit", nullable: false),
+                    Deleted = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Names = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -860,7 +861,8 @@ namespace HylianRIS_API.Migrations
                     RunID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DogName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsPreSystem = table.Column<bool>(type: "bit", nullable: false)
+                    IsPreSystem = table.Column<bool>(type: "bit", nullable: false),
+                    TimeTicks = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
