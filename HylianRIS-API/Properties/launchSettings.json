@@ -29,7 +29,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "AZURE_USERNAME": "debloudts_fox@hotmail.com",
         "VaultUri": "https://hyliankeys.vault.azure.net/",
-        "AZURE_TENANT_ID": "298e3356-fe3e-4ad6-b63f-447b8ad30ef3",
+        "AZURE_TENANT_ID": "77abdbf9-23e0-4bd5-b037-2f38d8b833cf",
         "SqlConnectionKeyName": "HylianRIS-DEV-SqlConnection"
       },
       "dotnetRunMessages": "true",
