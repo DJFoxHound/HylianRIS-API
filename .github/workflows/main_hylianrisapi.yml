@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'HylianRISAPI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_12E920565B68419B8D70A7A3C8591054 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3DF77CE826884EDEB8C6444C192192A9 }}
           package: .
