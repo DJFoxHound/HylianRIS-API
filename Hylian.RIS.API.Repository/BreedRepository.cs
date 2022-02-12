@@ -2,6 +2,7 @@
 using Hylian.RIS.API.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,17 +17,17 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Breed> GetAll()
+        public async Task<IList<Breed>> GetAll()
         {
-            return db.Breeds;
+            return await db.Breeds.ToListAsync();
         }
-        public IQueryable<Breed> GetByID(Guid id)
+        public async Task<Breed> GetByID(Guid id)
         {
-            return db.Breeds.Where(x => x.ID == id);
+            return await db.Breeds.FirstOrDefaultAsync(x => x.ID == id);
         }
-        public IQueryable<Breed> GetByCompetition(RaceCompetition competition)
+        public async Task<IList<Breed>> GetByCompetition(RaceCompetition competition)
         {
-            return db.Breeds.Include(x => x.AgeRestrictions.Where(a => a.CompetitionID == competition.ID)).Include(x => x.Classes.Where(c => c.CompetitionID == competition.ID)).Where(x => x.AgeRestrictions.Any(a => a.CompetitionID == competition.ID) || x.Classes.Any(c => c.CompetitionID == competition.ID));
+            return await db.Breeds.Include(x => x.AgeRestrictions.Where(a => a.CompetitionID == competition.ID)).Include(x => x.Classes.Where(c => c.CompetitionID == competition.ID)).Where(x => x.AgeRestrictions.Any(a => a.CompetitionID == competition.ID) || x.Classes.Any(c => c.CompetitionID == competition.ID)).ToListAsync();
         }
         #endregion
         public async Task Save(Breed breed, bool saveChanges = true)

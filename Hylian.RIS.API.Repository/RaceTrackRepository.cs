@@ -2,6 +2,7 @@
 using Hylian.RIS.API.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,25 +17,25 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<RaceTrack> GetAll(TrackSurface surface = null)
+        public async Task<IList<RaceTrack>> GetAll(TrackSurface surface = null)
         {
-            return db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => surface != null ? x.SurfaceID == surface.ID : true);
+            return await db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => surface != null ? x.SurfaceID == surface.ID : true).ToListAsync();
         }
-        public IQueryable<RaceTrack> GetByCompetition(RaceCompetition competition, TrackSurface surface = null)
+        public async Task<IList<RaceTrack>> GetByCompetition(RaceCompetition competition, TrackSurface surface = null)
         {
-            return db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => x.Organisations.Any(o => o.CompetitionID == competition.ID) && surface != null ? x.SurfaceID == surface.ID : true);
+            return await db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => x.Organisations.Any(o => o.CompetitionID == competition.ID) && surface != null ? x.SurfaceID == surface.ID : true).ToListAsync();
         }
-        public IQueryable<RaceTrack> GetByOrganisation(Organisation organisation, TrackSurface surface = null)
+        public async Task<IList<RaceTrack>> GetByOrganisation(Organisation organisation, TrackSurface surface = null)
         {
-            return db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => x.Organisations.Any(o => o.ID == organisation.ID) && surface != null ? x.SurfaceID == surface.ID : true);
+            return await db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => x.Organisations.Any(o => o.ID == organisation.ID) && surface != null ? x.SurfaceID == surface.ID : true).ToListAsync();
         }
-        public IQueryable<RaceTrack> GetByCountry(Country country, TrackSurface surface = null)
+        public async Task<IList<RaceTrack>> GetByCountry(Country country, TrackSurface surface = null)
         {
-            return db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => x.Address.CountryID == country.ID && surface != null ? x.SurfaceID == surface.ID : true);
+            return await db.RaceTracks.Include(x => x.Distances).Include(d => d.TrackRecords).Include(x => x.Organisations).ThenInclude(c => c.Competition).Where(x => x.Address.CountryID == country.ID && surface != null ? x.SurfaceID == surface.ID : true).ToListAsync();
         }
-        public IQueryable<RaceTrack> GetByID(Guid id)
+        public async Task<RaceTrack> GetByID(Guid id)
         {
-            return db.RaceTracks.Where(x => x.ID == id);
+            return await db.RaceTracks.FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(RaceTrack track, bool saveChanges = true)

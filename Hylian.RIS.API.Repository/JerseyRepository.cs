@@ -2,6 +2,7 @@
 using Hylian.RIS.API.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,13 +17,13 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Jersey> GetAll()
+        public async Task<IList<Jersey>> GetAll()
         {
-            return db.Jerseys.Include(x => x.CompetitionID);
+            return await db.Jerseys.Include(x => x.CompetitionID).ToListAsync();
         }
-        public IQueryable<Jersey> GetByCompetition(RaceCompetition competition)
+        public async Task<IList<Jersey>> GetByCompetition(RaceCompetition competition)
         {
-            return db.Jerseys.Where(x => x.CompetitionID == competition.ID);
+            return await db.Jerseys.Where(x => x.CompetitionID == competition.ID).ToListAsync();
         }
         #endregion
         public async Task Save(Jersey jersey, bool saveChanges = true)

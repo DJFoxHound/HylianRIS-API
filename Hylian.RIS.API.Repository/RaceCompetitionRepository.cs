@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,13 +17,13 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<RaceCompetition> GetAll(bool? isProffesional = null)
+        public async Task<IList<RaceCompetition>> GetAll(bool? isProffesional = null)
         {
-            return db.Competitions.Where(x => isProffesional.HasValue ? x.IsProfessional == isProffesional : true);
+            return await db.Competitions.Where(x => isProffesional.HasValue ? x.IsProfessional == isProffesional : true).ToListAsync();
         }
-        public IQueryable<RaceCompetition> GetByID(Guid id)
+        public async Task<RaceCompetition> GetByID(Guid id)
         {
-            return db.Competitions.Where(x => x.ID == id);
+            return await db.Competitions.FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(RaceCompetition competition, bool saveChanges = true)

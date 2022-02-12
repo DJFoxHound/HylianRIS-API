@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,29 +17,29 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Person> GetAll(bool active = true)
+        public async Task<IList<Person>> GetAll(bool active = true)
         {
-            return db.Persons.Where(x => active ? !x.FirstName.StartsWith("Anonymised") : true);
+            return await db.Persons.Where(x => active ? !x.FirstName.StartsWith("Anonymised") : true).ToListAsync();
         }
-        public IQueryable<Person> GetByCountry(Country country = null, bool active = true)
+        public async Task<IList<Person>> GetByCountry(Country country = null, bool active = true)
         {
-            return db.Persons.Where(x => country != null ? x.CountryID == country.ID : true && active ? !x.FirstName.StartsWith("Anonymised") : true);
+            return await db.Persons.Where(x => country != null ? x.CountryID == country.ID : true && active ? !x.FirstName.StartsWith("Anonymised") : true).ToListAsync();
         }
-        public IQueryable<Person> GetByAccount(Account account, bool active = true)
+        public async Task<IList<Person>> GetByAccount(Account account, bool active = true)
         {
-            return db.Persons.Where(x => x.AccountID == account.ID && active ? !x.FirstName.StartsWith("Anonymised") : true);
+            return await db.Persons.Where(x => x.AccountID == account.ID && active ? !x.FirstName.StartsWith("Anonymised") : true).ToListAsync();
         }
-        public IQueryable<Person> GetLikeAccount(Account account, bool active = true)
+        public async Task<IList<Person>> GetLikeAccount(Account account, bool active = true)
         {
-            return db.Persons.Where(x => !x.AccountID.HasValue && active ? !x.FirstName.StartsWith("Anonymised") : true && DbFunctions.IsSimilar(account.FirstName, x.FirstName) && DbFunctions.IsSimilar(account.LastName, x.LastName));
+            return await db.Persons.Where(x => !x.AccountID.HasValue && active ? !x.FirstName.StartsWith("Anonymised") : true && DbFunctions.IsSimilar(account.FirstName, x.FirstName) && DbFunctions.IsSimilar(account.LastName, x.LastName)).ToListAsync();
         }
-        public IQueryable<Person> GetByDog(Dog dog, bool active = true)
+        public async Task<Person> GetByDog(Dog dog, bool active = true)
         {
-            return db.Persons.Where(x => x.Dogs.Any(d => d.ID == dog.ID) && active ? !x.FirstName.StartsWith("Anonymised") : true);
+            return await db.Persons.FirstOrDefaultAsync(x => x.Dogs.Any(d => d.ID == dog.ID) && active ? !x.FirstName.StartsWith("Anonymised") : true);
         }
-        public IQueryable<Person> GetByID(Guid id)
+        public async Task<Person> GetByID(Guid id)
         {
-            return db.Persons.Where(x => x.ID == id);
+            return await db.Persons.FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(Person person, bool saveChanges = true)

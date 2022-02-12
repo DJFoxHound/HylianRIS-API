@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,13 +17,13 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<TrackSurface> GetAll()
+        public async Task<IList<TrackSurface>> GetAll()
         {
-            return db.TrackSurfaces;
+            return await db.TrackSurfaces.ToListAsync();
         }
-        public IQueryable<TrackSurface> GetByID(Guid id)
+        public async Task<TrackSurface> GetByID(Guid id)
         {
-            return db.TrackSurfaces.Where(x => x.ID == id);
+            return await db.TrackSurfaces.FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(TrackSurface TrackSurface, bool saveChanges = true)

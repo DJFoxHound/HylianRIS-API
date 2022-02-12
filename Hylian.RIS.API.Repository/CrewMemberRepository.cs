@@ -2,6 +2,7 @@
 using Hylian.RIS.API.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,17 +17,17 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<CrewMember> GetAll()
+        public async Task<IList<CrewMember>> GetAll()
         {
-            return db.CrewMembers.Include(c => c.CrewType);
+            return await db.CrewMembers.Include(c => c.CrewType).ToListAsync();
         }
-        public IQueryable<CrewMember> GetByPerson(Person person, DateTime? from = null)
+        public async Task<IList<CrewMember>> GetByPerson(Person person, DateTime? from = null)
         {
-            return db.CrewMembers.Include(c => c.CrewType).Where(x => x.PersonID == person.ID && from.HasValue ? x.Event.Date >= from.Value : true);
+            return await db.CrewMembers.Include(c => c.CrewType).Where(x => x.PersonID == person.ID && from.HasValue ? x.Event.Date >= from.Value : true).ToListAsync();
         }
-        public IQueryable<CrewMember> GetByEvent(RaceEvent raceEvent)
+        public async Task<IList<CrewMember>> GetByEvent(RaceEvent raceEvent)
         {
-            return db.CrewMembers.Include(c => c.CrewType).Where(x => x.EventID == raceEvent.ID);
+            return await db.CrewMembers.Include(c => c.CrewType).Where(x => x.EventID == raceEvent.ID).ToListAsync();
         }
         #endregion
         public async Task Save(CrewMember crewMember, bool saveChanges = true)

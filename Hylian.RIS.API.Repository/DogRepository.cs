@@ -17,33 +17,37 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Dog> GetAll(bool active = true)
+        public async Task<IList<Dog>> GetAll(bool active = true)
         {
-            return db.Dogs.Where(x => active ? x.Active == true : true);
+            return await db.Dogs.Where(x => active ? x.Active == true : true).ToListAsync();
         }
-        public IQueryable<Dog> GetBy(Breed breed = null, Sex sex = null, RaceClass raceClass = null, bool active = true)
+        public async Task<IList<Dog>> GetBy(Breed breed = null, Sex sex = null, RaceClass raceClass = null, bool active = true)
         {
-            return db.Dogs.Where(x => breed != null ? x.BreedID == breed.ID : true && sex != null ? x.SexID == sex.ID : true && raceClass != null ? x.Licenses.Any(l => l.RaceClassID == raceClass.ID) : true && active ? x.Active == true : true);
+            return await db.Dogs.Where(x => breed != null ? x.BreedID == breed.ID : true && sex != null ? x.SexID == sex.ID : true && raceClass != null ? x.Licenses.Any(l => l.RaceClassID == raceClass.ID) : true && active ? x.Active == true : true).ToListAsync();
         }
-        public IQueryable<Dog> GetByAccount(Account account, bool active = true)
+        public async Task<IList<Dog>> GetByAccount(Account account, bool active = true)
         {
-            return db.Dogs.Where(x => x.Owner.AccountID == account.ID && active ? x.Active == true : true);
+            return await db.Dogs.Where(x => x.Owner.AccountID == account.ID && active ? x.Active == true : true).ToListAsync();
         }
-        public IQueryable<Dog> GetByOwner(Person owner, bool active = true)
+        public async Task<IList<Dog>> GetByOwner(Person owner, bool active = true)
         {
-            return db.Dogs.Where(x => x.OwnerID == owner.ID && active ? x.Active == true : true);
+            return await db.Dogs.Where(x => x.OwnerID == owner.ID && active ? x.Active == true : true).ToListAsync();
         }
-        public IQueryable<Dog> GetByEvent(RaceEvent raceEvent, bool active = true)
+        public async Task<IList<Dog>> GetByEvent(RaceEvent raceEvent, bool active = true)
         {
-            return db.Dogs.Where(x => x.Events.Any(e => e.ID == raceEvent.ID) && active ? x.Active == true : true);
+            return await db.Dogs.Where(x => x.Events.Any(e => e.ID == raceEvent.ID) && active ? x.Active == true : true).ToListAsync();
         }
-        public IQueryable<Dog> GetByID(Guid id)
+        public async Task<IList<Dog>> GetByRace(Race race, bool active = true)
         {
-            return db.Dogs.Where(x => x.ID == id);
+            return await db.Dogs.Where(x => x.Runs.Any(r => r.RaceID == race.ID) && active ? x.Active == true : true).ToListAsync();
         }
-        public IQueryable<Dog> GetByChip(string chip)
+        public async Task<Dog> GetByID(Guid id)
         {
-            return db.Dogs.Where(x => x.Chip == chip);
+            return await db.Dogs.FirstOrDefaultAsync(x => x.ID == id);
+        }
+        public async Task<Dog> GetByChip(string chip)
+        {
+            return await db.Dogs.FirstOrDefaultAsync(x => x.Chip == chip);
         }
         #endregion
         public async Task Save(Dog dog, bool saveChanges = true)

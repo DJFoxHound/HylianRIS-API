@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,21 +17,21 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Role> GetAll()
+        public async Task<IList<Role>> GetAll()
         {
-            return db.Roles;
+            return await db.Roles.ToListAsync();
         }
-        public IQueryable<Role> GetByOrganisation(Organisation organisation)
+        public async Task<IList<Role>> GetByOrganisation(Organisation organisation)
         {
-            return db.Roles.Where(x => x.Accounts.Any(a => a.OrganisationID == organisation.ID));
+            return await db.Roles.Where(x => x.Accounts.Any(a => a.OrganisationID == organisation.ID)).ToListAsync();
         }
-        public IQueryable<Role> GetByAccount(Account account)
+        public async Task<IList<Role>> GetByAccount(Account account)
         {
-            return db.Roles.Where(x => x.Accounts.Any(a => a.AccountID == account.ID));
+            return await db.Roles.Where(x => x.Accounts.Any(a => a.AccountID == account.ID)).ToListAsync();
         }
-        public IQueryable<Role> GetByID(Guid id)
+        public async Task<Role> GetByID(Guid id)
         {
-            return db.Roles.Where(x => x.ID == id);
+            return await db.Roles.FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(Role role, bool saveChanges = true)

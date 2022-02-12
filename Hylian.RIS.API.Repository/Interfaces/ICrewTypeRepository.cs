@@ -1,10 +1,11 @@
 ﻿using Hylian.RIS.API.Domain;
-using System.Linq;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository.Interfaces
 {
     public interface ICrewTypeRepository
     {
-        IQueryable<CrewType> GetAll();
+        Task<IList<CrewType>> GetAll();
     }
 }

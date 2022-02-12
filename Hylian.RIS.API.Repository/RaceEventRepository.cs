@@ -2,6 +2,7 @@
 using Hylian.RIS.API.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,37 +17,37 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<RaceEvent> GetAll(DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
+        public async Task<IList<RaceEvent>> GetAll(DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition != null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition != null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date).ToListAsync();
         }
-        public IQueryable<RaceEvent> GetByTrack(RaceTrack track, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, bool includeDeleted = false)
+        public async Task<IList<RaceEvent>> GetByTrack(RaceTrack track, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, bool includeDeleted = false)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.TrackID == track.ID && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.TrackID == track.ID && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date).ToListAsync();
         }
-        public IQueryable<RaceEvent> GetByCountry(Country country, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, bool includeDeleted = false)
+        public async Task<IList<RaceEvent>> GetByCountry(Country country, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, bool includeDeleted = false)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.Track.Address.CountryID == country.ID && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.Track.Address.CountryID == country.ID && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date).ToListAsync();
         }
-        public IQueryable<RaceEvent> GetByOrganisation(Organisation organisation, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, bool includeDeleted = false)
+        public async Task<IList<RaceEvent>> GetByOrganisation(Organisation organisation, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, bool includeDeleted = false)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.OrganisationID == organisation.ID && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.OrganisationID == organisation.ID && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date).ToListAsync();
         }
-        public IQueryable<RaceEvent> GetByAccount(Account account, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
+        public async Task<IList<RaceEvent>> GetByAccount(Account account, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => (x.Participants.Any(p => p.Owner.AccountID == account.ID) || x.Crew.Any(c => c.Person.AccountID == account.ID) || x.Delegates.Any(d => d.AccountID == account.ID)) && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition == null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => (x.Participants.Any(p => p.Owner.AccountID == account.ID) || x.Crew.Any(c => c.Person.AccountID == account.ID) || x.Delegates.Any(d => d.AccountID == account.ID)) && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition == null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date).ToListAsync();
         }
-        public IQueryable<RaceEvent> GetByPerson(Account account, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
+        public async Task<IList<RaceEvent>> GetByPerson(Account account, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => (x.Participants.Any(p => p.Owner.AccountID == account.ID) || x.Crew.Any(c => c.Person.AccountID == account.ID) || x.Delegates.Any(d => d.AccountID == account.ID)) && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition == null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => (x.Participants.Any(p => p.Owner.AccountID == account.ID) || x.Crew.Any(c => c.Person.AccountID == account.ID) || x.Delegates.Any(d => d.AccountID == account.ID)) && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition == null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date).ToListAsync();
         }
-        public IQueryable<RaceEvent> GetByDog(Dog dog, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
+        public async Task<IList<RaceEvent>> GetByDog(Dog dog, DateTime? from = null, DateTime? until = null, bool? isOfficial = false, RaceCompetition competition = null, bool includeDeleted = false)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.Participants.Any(p => p.ID == dog.ID) && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition == null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.Participants.Any(p => p.ID == dog.ID) && from.HasValue ? x.Date.Date >= from.Value.Date : true && until.HasValue ? x.Date.Date <= until.Value.Date : true && isOfficial.HasValue ? x.IsOfficial == isOfficial : true && competition == null ? x.CompetitionID == competition.ID : true && includeDeleted ? true : !x.Deleted.HasValue).OrderBy(x => x.Date).ToListAsync();
         }
-        public IQueryable<RaceEvent> GetByID(Guid id)
+        public async Task<RaceEvent> GetByID(Guid id)
         {
-            return db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).Where(x => x.ID == id);
+            return await db.Events.Include(x => x.Competition).Include(x => x.Organisation).Include(x => x.Track).ThenInclude(t => t.Address).ThenInclude(a => a.Country).FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(RaceEvent raceEvent, bool saveChanges = true)

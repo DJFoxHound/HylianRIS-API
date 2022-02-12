@@ -1,14 +1,14 @@
 ﻿using Hylian.RIS.API.Domain;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository.Interfaces
 {
     public interface ITrackSurfaceRepository
     {
-        IQueryable<TrackSurface> GetAll();
-        IQueryable<TrackSurface> GetByID(Guid id);
+        Task<IList<TrackSurface>> GetAll();
+        Task<TrackSurface> GetByID(Guid id);
         Task Save(TrackSurface TrackSurface, bool saveChanges = true);
     }
 }

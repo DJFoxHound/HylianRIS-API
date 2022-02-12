@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,17 +17,17 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<RunResultType> GetAll()
+        public async Task<IList<RunResultType>> GetAll()
         {
-            return db.RunResultTypes;
+            return await db.RunResultTypes.ToListAsync();
         }
-        public IQueryable<RunResultType> GetByID(Guid id)
+        public async Task<RunResultType> GetByID(Guid id)
         {
-            return db.RunResultTypes.Where(x => x.ID == id);
+            return await db.RunResultTypes.FirstOrDefaultAsync(x => x.ID == id);
         }
-        public IQueryable<RunResultType> GetByCode(string code)
+        public async Task<RunResultType> GetByCode(string code)
         {
-            return db.RunResultTypes.Where(x => x.Code.ToUpperInvariant() == code.ToUpperInvariant());
+            return await db.RunResultTypes.FirstOrDefaultAsync(x => x.Code.ToUpperInvariant() == code.ToUpperInvariant());
         }
         #endregion
         public async Task Save(RunResultType runResultType, bool saveChanges = true)

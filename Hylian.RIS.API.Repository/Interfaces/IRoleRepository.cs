@@ -1,16 +1,16 @@
 ﻿using Hylian.RIS.API.Domain;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository.Interfaces
 {
     public interface IRoleRepository
     {
-        IQueryable<Role> GetAll();
-        IQueryable<Role> GetByAccount(Account account);
-        IQueryable<Role> GetByID(Guid id);
-        IQueryable<Role> GetByOrganisation(Organisation organisation);
+        Task<IList<Role>> GetAll();
+        Task<IList<Role>> GetByAccount(Account account);
+        Task<Role> GetByID(Guid id);
+        Task<IList<Role>> GetByOrganisation(Organisation organisation);
         Task Save(Role role, bool saveChanges = true);
     }
 }

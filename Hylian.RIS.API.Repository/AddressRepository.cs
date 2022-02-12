@@ -3,6 +3,7 @@ using Hylian.RIS.API.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using NetTopologySuite.Geometries;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,17 +18,17 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Address> GetAll()
+        public async Task<IList<Address>> GetAll()
         {
-            return db.Addresses.Include(x => x.Country);
+            return await db.Addresses.Include(x => x.Country).ToListAsync();
         }
-        public IQueryable<Address> GetByID(Guid id)
+        public async Task<Address> GetByID(Guid id)
         {
-            return db.Addresses.Include(x => x.Country).Where(a => a.ID == id);
+            return await db.Addresses.Include(x => x.Country).FirstOrDefaultAsync(a => a.ID == id);
         }
-        public IQueryable<Address> GetByCountry(Country country)
+        public async Task<IList<Address>> GetByCountry(Country country)
         {
-            return db.Addresses.Include(x => x.Country).Where(a => a.CountryID == country.ID);
+            return await db.Addresses.Include(x => x.Country).Where(a => a.CountryID == country.ID).ToListAsync();
         }
         #endregion
         public async Task Save(Address address, bool saveChanges = true)

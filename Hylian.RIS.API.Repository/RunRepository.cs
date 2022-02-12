@@ -2,6 +2,7 @@
 using Hylian.RIS.API.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,21 +19,21 @@ namespace Hylian.RIS.API.Repository
             _trackRecorsRepository = trackRecorsRepository;
         }
         #region Get
-        public IQueryable<Run> GetAll()
+        public async Task<IList<Run>> GetAll()
         {
-            return db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).OrderBy(x => x.Race.Event.Date).ThenBy(x => x.Race.EventID).ThenBy(x => x.Race.OrderNr).ThenBy(x => x.ResultOrder);
+            return await db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).OrderBy(x => x.Race.Event.Date).ThenBy(x => x.Race.EventID).ThenBy(x => x.Race.OrderNr).ThenBy(x => x.ResultOrder).ToListAsync();
         }
-        public IQueryable<Run> GetByRace(Race race)
+        public async Task<IList<Run>> GetByRace(Race race)
         {
-            return db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).Where(x => x.RaceID == race.ID).OrderBy(x => x.ResultOrder);
+            return await db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).Where(x => x.RaceID == race.ID).OrderBy(x => x.ResultOrder).ToListAsync();
         }
-        public IQueryable<Run> GetByDog(Dog dog)
+        public async Task<IList<Run>> GetByDog(Dog dog)
         {
-            return db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).Where(x => x.DogID == dog.ID).OrderBy(x => x.Race.Event.Date).ThenBy(x => x.Race.EventID).ThenBy(x => x.Race.OrderNr).ThenBy(x => x.ResultOrder);
+            return await db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).Where(x => x.DogID == dog.ID).OrderBy(x => x.Race.Event.Date).ThenBy(x => x.Race.EventID).ThenBy(x => x.Race.OrderNr).ThenBy(x => x.ResultOrder).ToListAsync();
         }
-        public IQueryable<Run> GetByID(Guid id)
+        public async Task<Run> GetByID(Guid id)
         {
-            return db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).Where(x => x.ID == id);
+            return await db.Runs.Include(x => x.Dog).ThenInclude(d => d.Owner).ThenInclude(o => o.Country).Include(x => x.Dog).ThenInclude(d => d.Country).Include(x => x.Jersey).Include(x => x.Race).ThenInclude(r => r.Breed).Include(x => x.Race).ThenInclude(r => r.Sex).Include(x => x.Race).ThenInclude(r => r.Class).Include(x => x.Race).ThenInclude(r => r.Distance).FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(Run run, bool saveChanges = true)
@@ -48,12 +49,9 @@ namespace Hylian.RIS.API.Repository
             if (saveChanges)
                 await db.SaveChangesAsync();
         }
-        /// <summary>
-        /// When true, it'll also update the record!
-        /// </summary>
-        public async Task<bool> IsTrackRecord(Run run, RaceTrack track, bool saveChanges = true)
+        public async Task<bool> IsTrackRecord(Run run, RaceTrack track)
         {
-            return await _trackRecorsRepository.IsTrackRecord(run, track, saveChanges);
+            return await _trackRecorsRepository.IsTrackRecord(run, track);
         }
     }
 }

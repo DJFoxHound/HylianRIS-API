@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,17 +17,17 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<RaceClass> GetAll(RaceCompetition competition = null)
+        public async Task<IList<RaceClass>> GetAll(RaceCompetition competition = null)
         {
-            return db.RaceClasses.Where(x => competition != null ? x.CompetitionID == competition.ID : true);
+            return await db.RaceClasses.Where(x => competition != null ? x.CompetitionID == competition.ID : true).ToListAsync();
         }
-        public IQueryable<RaceClass> GetByBreed(Breed breed, RaceCompetition competition = null)
+        public async Task<IList<RaceClass>> GetByBreed(Breed breed, RaceCompetition competition = null)
         {
-            return db.RaceClasses.Where(x => x.Breeds.Any(b => b.ID == breed.ID) && competition != null ? x.CompetitionID == competition.ID : true);
+            return await db.RaceClasses.Where(x => x.Breeds.Any(b => b.ID == breed.ID) && competition != null ? x.CompetitionID == competition.ID : true).ToListAsync();
         }
-        public IQueryable<RaceClass> GetByID(Guid id)
+        public async Task<RaceClass> GetByID(Guid id)
         {
-            return db.RaceClasses.Where(x => x.ID == id);
+            return await db.RaceClasses.FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(RaceClass raceClass, bool saveChanges = true)

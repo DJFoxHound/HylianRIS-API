@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,21 +17,21 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Organisation> GetAll(bool active = true)
+        public async Task<IList<Organisation>> GetAll(bool active = true)
         {
-            return db.Organisations.Where(x => active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true);
+            return await db.Organisations.Where(x => active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
         }
-        public IQueryable<Organisation> GetBy(RaceCompetition competition = null, Country country = null, bool active = true)
+        public async Task<IList<Organisation>> GetBy(RaceCompetition competition = null, Country country = null, bool active = true)
         {
-            return db.Organisations.Where(x => competition != null ? x.CompetitionID == competition.ID : true && country != null ? x.Address.CountryID == country.ID : true && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true);
+            return await db.Organisations.Where(x => competition != null ? x.CompetitionID == competition.ID : true && country != null ? x.Address.CountryID == country.ID : true && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
         }
-        public IQueryable<Organisation> GetByTrack(RaceTrack track, bool active = true)
+        public async Task<IList<Organisation>> GetByTrack(RaceTrack track, bool active = true)
         {
-            return db.Organisations.Where(x => x.RaceTracks.Any(t => t.ID == track.ID) && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true);
+            return await db.Organisations.Where(x => x.RaceTracks.Any(t => t.ID == track.ID) && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
         }
-        public IQueryable<Organisation> GetByID(Guid id)
+        public async Task<Organisation> GetByID(Guid id)
         {
-            return db.Organisations.Where(x => x.ID == id);
+            return await db.Organisations.FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(Organisation organisation, bool saveChanges = true)

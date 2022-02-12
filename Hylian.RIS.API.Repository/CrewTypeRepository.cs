@@ -1,7 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
-
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
@@ -14,9 +15,9 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<CrewType> GetAll()
+        public async Task<IList<CrewType>> GetAll()
         {
-            return db.CrewTypes;
+            return await db.CrewTypes.ToListAsync();
         }
         #endregion
     }

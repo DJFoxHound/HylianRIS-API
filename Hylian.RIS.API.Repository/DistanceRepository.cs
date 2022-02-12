@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,13 +17,13 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Distance> GetAll(bool officialOnly = false)
+        public async Task<IList<Distance>> GetAll(bool officialOnly = false)
         {
-            return db.Distances.Where(x => officialOnly ? x.IsOfficial == true : true);
+            return await db.Distances.Where(x => officialOnly ? x.IsOfficial == true : true).ToListAsync();
         }
-        public IQueryable<Distance> GetByTrack(RaceTrack track, bool officialOnly = false)
+        public async Task<IList<Distance>> GetByTrack(RaceTrack track, bool officialOnly = false)
         {
-            return db.Distances.Where(x => x.Tracks.Any(t => t.ID == track.ID) && officialOnly ? x.IsOfficial == true : true);
+            return await db.Distances.Where(x => x.Tracks.Any(t => t.ID == track.ID) && officialOnly ? x.IsOfficial == true : true).ToListAsync();
         }
         #endregion
         public async Task Save(Distance distance, bool saveChanges = true)

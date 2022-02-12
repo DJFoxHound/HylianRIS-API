@@ -19,25 +19,25 @@ namespace Hylian.RIS.API.Repository
             _personRepository = personRepository;
         }
         #region Get
-        public IQueryable<Account> GetAll(bool activeOnly = true)
+        public async Task<IList<Account>> GetAll(bool activeOnly = true)
         {
-            return db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Where(x => activeOnly ? x.Deleted == null : true);
+            return await db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Where(x => activeOnly ? x.Deleted == null : true).ToListAsync();
         }
-        public IQueryable<Account> GetByID(Guid id, bool activeOnly = true)
+        public async Task<Account> GetByID(Guid id, bool activeOnly = true)
         {
-            return db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).Where(x => x.ID == id && activeOnly ? x.Deleted == null : true);
+            return await db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).FirstOrDefaultAsync(x => x.ID == id && activeOnly ? x.Deleted == null : true);
         }
-        public IQueryable<Account> GetByEmail(string email, bool activeOnly = true)
+        public async Task<IList<Account>> GetByEmail(string email, bool activeOnly = true)
         {
-            return db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).Where(x => x.Email == email && activeOnly ? x.Deleted == null : true);
+            return await db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).Where(x => x.Email == email && activeOnly ? x.Deleted == null : true).ToListAsync();
         }
-        public IQueryable<Account> GetByOrganisation(Organisation organisation, bool activeOnly = true)
+        public async Task<IList<Account>> GetByOrganisation(Organisation organisation, bool activeOnly = true)
         {
-            return db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).Where(x => x.Roles.Any(r => r.OrganisationID == organisation.ID) && activeOnly ? x.Deleted == null : true);
+            return await db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).Where(x => x.Roles.Any(r => r.OrganisationID == organisation.ID) && activeOnly ? x.Deleted == null : true).ToListAsync();
         }
-        public IQueryable<Account> GetByRole(Role role, bool activeOnly = true)
+        public async Task<IList<Account>> GetByRole(Role role, bool activeOnly = true)
         {
-            return db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).Where(x => x.Roles.Any(r => r.RoleID == role.ID) && activeOnly ? x.Deleted == null : true);
+            return await db.Accounts.Include(x => x.Roles).ThenInclude(r => r.Role).Include(x => x.Address).ThenInclude(a => a.Country).Where(x => x.Roles.Any(r => r.RoleID == role.ID) && activeOnly ? x.Deleted == null : true).ToListAsync();
         }
         #endregion
         public async Task Delete(Account account)

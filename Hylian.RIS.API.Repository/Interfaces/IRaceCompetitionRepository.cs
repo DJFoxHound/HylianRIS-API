@@ -1,14 +1,14 @@
 ﻿using Hylian.RIS.API.Domain;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository.Interfaces
 {
     public interface IRaceCompetitionRepository
     {
-        IQueryable<RaceCompetition> GetAll(bool? isProffesional = null);
-        IQueryable<RaceCompetition> GetByID(Guid id);
+        Task<IList<RaceCompetition>> GetAll(bool? isProffesional = null);
+        Task<RaceCompetition> GetByID(Guid id);
         Task Save(RaceCompetition competition, bool saveChanges = true);
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Hylian.RIS.API.Domain;
 using Hylian.RIS.API.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,13 +17,13 @@ namespace Hylian.RIS.API.Repository
             db = dbContext;
         }
         #region Get
-        public IQueryable<Language> GetAll(bool translatedOnly = false)
+        public async Task<IList<Language>> GetAll(bool translatedOnly = false)
         {
-            return db.Languages.Where(x => translatedOnly ? x.Translated == true : true);
+            return await db.Languages.Where(x => translatedOnly ? x.Translated == true : true).ToListAsync();
         }
-        public IQueryable<Language> GetByCode(string code)
+        public async Task<Language> GetByCode(string code)
         {
-            return db.Languages.Where(x => x.Code == code.ToLowerInvariant());
+            return await db.Languages.FirstOrDefaultAsync(x => x.Code == code.ToLowerInvariant());
         }
         #endregion
         public async Task Save(Language language, bool saveChanges = true)
