@@ -350,4 +350,4 @@ MigrationBackup/
 .ionide/
 
 # POC resultfile folder
-POC/**
+/HylianRIS-API/POC/**
