@@ -52265,18 +52265,6 @@ namespace HylianRIS_API.Migrations
                         },
                         new
                         {
-                            ID = new Guid("738d74f7-3abd-49c0-a145-87e07432103a"),
-                            BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
-                            Date = new DateTime(1995, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DistanceID = new Guid("d9ae6e63-1eb3-4c53-ab2c-94471e183120"),
-                            DogName = "Jackie's Excuse van de Paeltjesoord",
-                            IsPreSystem = true,
-                            SexID = new Guid("3eb13e00-2006-40bd-a15f-aecb206a5c72"),
-                            TimeTicks = 200400000L,
-                            TrackID = new Guid("1b1db07d-5a98-4298-9e2a-4f91aa476674")
-                        },
-                        new
-                        {
                             ID = new Guid("073d2642-f370-4d27-a1b6-bb65d9bcfaac"),
                             BreedID = new Guid("0b50ff12-d15f-4995-9f0f-4b21e96f862b"),
                             Date = new DateTime(2004, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
