@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class SexRepository : ISexRepository
+    internal class SexRepository : ISexRepository
     {
         DbaseContext db;
 

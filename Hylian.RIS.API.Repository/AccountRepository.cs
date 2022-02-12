@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class AccountRepository : IAccountRepository
+    internal class AccountRepository : IAccountRepository
     {
         DbaseContext db;
         IPersonRepository _personRepository;

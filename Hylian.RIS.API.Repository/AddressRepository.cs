@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class AddressRepository : IAddressRepository
+    internal class AddressRepository : IAddressRepository
     {
         DbaseContext db;
 

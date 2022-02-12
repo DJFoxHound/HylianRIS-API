@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class ContactTypeRepository : IContactTypeRepository
+    internal class ContactTypeRepository : IContactTypeRepository
     {
         DbaseContext db;
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class JerseyRepository : IJerseyRepository
+    internal class JerseyRepository : IJerseyRepository
     {
         DbaseContext db;
 

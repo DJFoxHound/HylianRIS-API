@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -23,6 +23,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hylian.RIS.API.Repository\Hylian.RIS.API.Repository.csproj" />
+    <ProjectReference Include="..\Hylian.RIS.Api.Services\Hylian.RIS.API.Services.csproj" />
+    <ProjectReference Include="..\Hylian.RIS.API.ViewModels\Hylian.RIS.API.ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>

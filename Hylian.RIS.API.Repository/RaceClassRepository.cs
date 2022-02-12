@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class RaceClassRepository : IRaceClassRepository
+    internal class RaceClassRepository : IRaceClassRepository
     {
         DbaseContext db;
 

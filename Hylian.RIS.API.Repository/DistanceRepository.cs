@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class DistanceRepository : IDistanceRepository
+    internal class DistanceRepository : IDistanceRepository
     {
         DbaseContext db;
 

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hylian.RIS.API.Repository\Hylian.RIS.API.Repository.csproj" />
+    <ProjectReference Include="..\Hylian.RIS.API.ViewModels\Hylian.RIS.API.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

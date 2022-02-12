@@ -19,19 +19,19 @@ namespace Hylian.RIS.API.Repository
         #region Get
         public async Task<IList<Organisation>> GetAll(bool active = true)
         {
-            return await db.Organisations.Where(x => active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
+            return await db.Organisations.Include(x => x.RaceTracks).Include(x => x.Competition).Where(x => active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
         }
         public async Task<IList<Organisation>> GetBy(RaceCompetition competition = null, Country country = null, bool active = true)
         {
-            return await db.Organisations.Where(x => competition != null ? x.CompetitionID == competition.ID : true && country != null ? x.Address.CountryID == country.ID : true && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
+            return await db.Organisations.Include(x => x.RaceTracks).Include(x => x.Competition).Where(x => competition != null ? x.CompetitionID == competition.ID : true && country != null ? x.Address.CountryID == country.ID : true && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
         }
         public async Task<IList<Organisation>> GetByTrack(RaceTrack track, bool active = true)
         {
-            return await db.Organisations.Where(x => x.RaceTracks.Any(t => t.ID == track.ID) && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
+            return await db.Organisations.Include(x => x.RaceTracks).Include(x => x.Competition).Where(x => x.RaceTracks.Any(t => t.ID == track.ID) && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
         }
         public async Task<Organisation> GetByID(Guid id)
         {
-            return await db.Organisations.FirstOrDefaultAsync(x => x.ID == id);
+            return await db.Organisations.Include(x => x.RaceTracks).Include(x => x.Competition).FirstOrDefaultAsync(x => x.ID == id);
         }
         #endregion
         public async Task Save(Organisation organisation, bool saveChanges = true)

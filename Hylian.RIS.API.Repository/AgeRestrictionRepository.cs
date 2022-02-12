@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hylian.RIS.API.Repository
 {
-    public class AgeRestrictionRepository : IAgeRestrictionRepository
+    internal class AgeRestrictionRepository : IAgeRestrictionRepository
     {
         DbaseContext db;
 

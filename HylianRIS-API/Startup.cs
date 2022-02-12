@@ -1,4 +1,6 @@
 using Hylian.RIS.API.Repository;
+using Hylian.RIS.API.Services;
+using Hylian.RIS.API.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +27,7 @@ namespace HylianRIS_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DbaseContext>(options => options.UseSqlServer(Configuration[Environment.GetEnvironmentVariable("SqlConnectionKeyName")], x => x.UseNetTopologySuite().MigrationsAssembly("HylianRIS-API")));
+            ServicesInjector.InjectServices(services, Configuration[Environment.GetEnvironmentVariable("SqlConnectionKeyName")]);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hylian RIS API", Version = "v1" });
