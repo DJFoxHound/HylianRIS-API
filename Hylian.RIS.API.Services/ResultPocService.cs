@@ -23,28 +23,33 @@ namespace Hylian.RIS.API.Services
                 new DirectoryInfo(dir).Create();
             }
             var organisation = await _organisationRepository.GetByID(raceResult.OrganisationID);
-            var jerseys = await _jerseyRepository.GetByCompetition(organisation.Competition);
-            var fileName = $"{organisation.Name.Replace(" ","").Replace(".", "")}_{raceResult.Date.ToString("yyyy-MM-dd")}.txt";
-            var sb = new StringBuilder();
-            sb.AppendLine($"Race: {raceResult.RaceNumber}");
-            sb.AppendLine("Results:");
-            if (raceResult.Results != null && raceResult.Results.Any())
+            if (organisation != null)
             {
-                var results = Sort(raceResult.Results);
-                for (int count = 0; count < results.Count; count++)
+                var jerseys = await _jerseyRepository.GetByCompetition(organisation.Competition);
+                var fileName = $"{organisation.Name.Replace(" ", "").Replace(".", "")}_{raceResult.Date.ToString("yyyy-MM-dd")}.txt";
+                var sb = new StringBuilder();
+                sb.AppendLine($"Race: {raceResult.RaceNumber}");
+                sb.AppendLine("Results:");
+                if (raceResult.Results != null && raceResult.Results.Any())
                 {
-                    var run = results[count];
-                    var isOK = run.ResultCode.ToUpperInvariant() == "OK";
-                    var pos = isOK ? $"{count + 1}." : "  ";
-                    var jerseyName = jerseys.FirstOrDefault(j => j.Number == run.JerseyNr)?.Names.First(n => n.LanguageCode == "en").Text;
-                    sb.AppendLine($"    {pos}  {run.JerseyNr} {jerseyName?.PadRight(12)} {(isOK ? $"{new TimeOnly(run.TimeTicks).Second.ToString().PadLeft(3)}.{new TimeOnly(run.TimeTicks).Millisecond.ToString("000")}" : run.ResultCode.ToUpperInvariant().PadLeft(4))} ");
+                    var results = Sort(raceResult.Results);
+                    for (int count = 0; count < results.Count; count++)
+                    {
+                        var run = results[count];
+                        var isOK = run.ResultCode.ToUpperInvariant() == "OK";
+                        var pos = isOK ? $"{count + 1}." : "  ";
+                        var jerseyName = jerseys.FirstOrDefault(j => j.Number == run.JerseyNr)?.Names.First(n => n.LanguageCode == "en").Text;
+                        sb.AppendLine($"    {pos}  {run.JerseyNr} {jerseyName?.PadRight(12)} {(isOK ? $"{new TimeOnly(run.TimeTicks).Second.ToString().PadLeft(3)}.{new TimeOnly(run.TimeTicks).Millisecond.ToString("000")}" : run.ResultCode.ToUpperInvariant().PadLeft(4))} ");
+                    }
                 }
-            }
-            sb.AppendLine();
-            sb.AppendLine();
+                sb.AppendLine();
+                sb.AppendLine();
 
-            var filepath = Path.Combine(dir, fileName);
-            await File.AppendAllTextAsync(filepath, sb.ToString());
+                var filepath = Path.Combine(dir, fileName);
+                await File.AppendAllTextAsync(filepath, sb.ToString());
+            }
+            else
+                throw new UnauthorizedAccessException("Invalid Organisation");
         }
 
         private List<RunResult> Sort(IList<RunResult> results)

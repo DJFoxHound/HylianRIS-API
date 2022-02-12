@@ -1,8 +1,10 @@
 ﻿using Hylian.RIS.API.Services.Interfaces;
 using Hylian.RIS.API.ViewModels;
+using HylianRIS_API.Attributes;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -24,12 +26,20 @@ namespace HylianRIS_API.Controllers
             _service = service;
         }
 
+        [ClientAppApiKey]
         [HttpPost]
         public async Task<IActionResult> PostResult(RaceResult raceResult)
         {
-            var dir = Path.Combine(_env.ContentRootPath, "POC");
-            await _service.PostResult(raceResult, dir);
-            return Ok();
+            try
+            {
+                var dir = Path.Combine(_env.ContentRootPath, "POC");
+                await _service.PostResult(raceResult, dir);
+                return Ok();
+            }
+            catch (UnauthorizedAccessException er)
+            {
+                return Unauthorized(er.Message);
+            }
         }
     }
 }
