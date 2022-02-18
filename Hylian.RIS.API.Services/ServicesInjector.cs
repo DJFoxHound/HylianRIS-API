@@ -12,6 +12,7 @@ namespace Hylian.RIS.API.Services
             RepositoryInjector.InjectRepository(serviceCollection, dbConnectionString);
 
             serviceCollection.AddScoped<IResultPocService, ResultPocService>();
+            serviceCollection.AddScoped<IOrganisationService, OrganisationService>();
             /*serviceCollection.AddScoped<IAccountService, AccountService>();
             serviceCollection.AddScoped<IAddressService, AddressService>();
             serviceCollection.AddScoped<IAgeRestrictionService, AgeRestrictionService>();
@@ -24,7 +25,7 @@ namespace Hylian.RIS.API.Services
             serviceCollection.AddScoped<IDogService, DogService>();
             serviceCollection.AddScoped<IJerseyService, JerseyService>();
             serviceCollection.AddScoped<ILanguageService, LanguageService>();
-            serviceCollection.AddScoped<IOrganisationService, OrganisationService>();
+            
             serviceCollection.AddScoped<IPersonService, PersonService>();
             serviceCollection.AddScoped<IRaceClassService, RaceClassService>();
             serviceCollection.AddScoped<IRaceCompetitionService, RaceCompetitionService>();

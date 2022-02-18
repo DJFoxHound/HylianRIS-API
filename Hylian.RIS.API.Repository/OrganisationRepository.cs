@@ -29,9 +29,13 @@ namespace Hylian.RIS.API.Repository
         {
             return await db.Organisations.Include(x => x.RaceTracks).Include(x => x.Competition).Where(x => x.RaceTracks.Any(t => t.ID == track.ID) && active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true).ToListAsync();
         }
-        public async Task<Organisation> GetByID(Guid id)
+        public async Task<Organisation> GetByID(Guid id, bool active = true)
         {
-            return await db.Organisations.Include(x => x.RaceTracks).Include(x => x.Competition).FirstOrDefaultAsync(x => x.ID == id);
+            return await db.Organisations.Include(x => x.RaceTracks).Include(x => x.Competition).FirstOrDefaultAsync(x => x.ID == id && (active ? (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today) : true));
+        }
+        public async Task<bool> IsValidID(Guid id)
+        {
+            return await db.Organisations.AnyAsync(x => x.ID == id && (x.LicenseExpires == null || x.LicenseExpires >= DateTime.Today));
         }
         #endregion
         public async Task Save(Organisation organisation, bool saveChanges = true)
